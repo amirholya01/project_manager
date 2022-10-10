@@ -1,10 +1,6 @@
 <?php
-    require '../../dbconn.php';
+    $sql = 'SELECT * FROM users';
 
-    $sql = 'SELECT * FROM users'
-?>
-
-<?php
     require '../partials/header.php';
 ?>
 
@@ -15,7 +11,7 @@
     }
 ?>
 
-<form method="post" action="/<?php echo $URL ?>/models/editProfile.php">
+<form method="post" action="/<?php echo $URL ?>/controllers/editProfile.php">
     <fieldset>
         <legend>Edit Profile</legend>
         <div>

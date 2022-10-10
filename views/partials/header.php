@@ -47,7 +47,7 @@
                         <a href="/<?php echo $URL ?>/views/login/profile.php">Profile</a>
                     </li>
                     <li>
-                        <a href="/<?php echo $URL ?>/models/logout.php">Logout</a>
+                        <a href="/<?php echo $URL ?>/controllers/logout.php">Logout</a>
                     </li>
                 <?php
                     }

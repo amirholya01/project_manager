@@ -15,7 +15,7 @@
     }
 ?>
 
-<form method="post" action="/<?php echo $URL ?>/models/login.php">
+<form method="post" action="/<?php echo $URL ?>/controllers/login.php">
     <fieldset>
         <legend>Login</legend>
         <div>
