@@ -5,14 +5,12 @@
     }
     require $connPath;
 
-
+    
     $name = $_POST['name'];
     $password = $_POST['password'];
     
-    
-    $nameCheckSql = "SELECT name FROM users WHERE name=$name"; /* <-- Model */
-
-    $data = $pdo->query($nameCheckSql)->fetch(); /* <- 🔥 */
+    $sql = "SELECT name FROM users WHERE name = '$name'";
+    $data = $pdo->query($sql)->fetchAll();
 
     $validName = true;
     if($data[0]){
