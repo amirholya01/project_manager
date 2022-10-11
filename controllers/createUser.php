@@ -9,7 +9,7 @@
     $name = $_POST['name'];
     $password = $_POST['password'];
     
-    $sql = "SELECT name FROM users WHERE name = '$name'";
+    $sql = "SELECT name FROM users WHERE name = '$name'"; /* <-- Model */
     $data = $pdo->query($sql)->fetchAll();
 
     $validName = true;
