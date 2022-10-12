@@ -11,6 +11,6 @@ class Users{
     public $deleteUser = 'DELETE FROM users WHERE `user_id` = :user_id';
     
     //Advanced queries
-    public $checkIfUserExists = 'SELECT name FROM users WHERE name = `$name`';
+    public $checkIfUserExists = 'SELECT name FROM users WHERE name = :name';
     
 }
