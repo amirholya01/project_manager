@@ -11,8 +11,6 @@
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    /* $sql = "SELECT name FROM users WHERE name = '$name'";
-    $data = $pdo->query($sql)->fetchAll(); */
     
     $userCheck = $pdo->prepare($Users->checkIfUserExists);
     $userCheck->bindParam(':name', $name);
