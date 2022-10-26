@@ -1,17 +1,22 @@
 <?php
-    $sql = 'SELECT * FROM users';
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
+    }
 
-    require '../partials/header.php';
+    require $rootPath . "views/partials/header.php";
+
+    $sql = 'SELECT * FROM users';
 ?>
 
 <?php 
     //if logged in redirect to /
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == "false"){
-        header("Location:/$URL/index.php");
+        header("Location:/");
     }
 ?>
 
-<form method="post" action="/<?php echo $URL ?>/controllers/editProfile.php">
+<form method="post" action="/controllers/editProfile.php">
     <fieldset>
         <legend>Edit Profile</legend>
         <div>
@@ -37,5 +42,5 @@
 ?>
 
 <?php
-    require '../partials/footer.php';
+    require $rootPath . "views/partials/footer.php";
 ?>

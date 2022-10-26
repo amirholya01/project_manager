@@ -34,7 +34,7 @@
         $_SESSION['name'] = $name;
         $_SESSION['loggedin'] = "true";
         
-        header("Location: /$URL/");
+        header("Location: /");
     }else{
-        header("Location: /$URL/views/login/signup.php?err=invalidname");
+        header("Location: /signup?err=invalidname");
     }

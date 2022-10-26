@@ -1,9 +1,9 @@
 <?php
-    $connPath = "views/partials/header.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
     }
-    require $connPath;
+    require $rootPath . "views/partials/header.php";
 
 
     $currentName = $_SESSION['name'];
@@ -34,7 +34,7 @@
     
         $_SESSION['name'] = $name;
     
-        header("Location: /$URL/");
+        header("Location: /");
     }else{
-        header("Location: /$URL/views/login/profile.php?err=nameempty");
+        header("Location: /profile?err=nameempty");
     }

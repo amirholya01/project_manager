@@ -1,15 +1,15 @@
-<?php
-    $connPath = "dbconn.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
+<?php    
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
     }
-    require $connPath;
+    require $rootPath . "dbconn.php";
     
 
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true"){
         $_SESSION["name"] = $data[''];
         $_SESSION["loggedin"] = "false";
-        header("Location:/$URL/index.php");
+        header("Location:/");
     }
 
 

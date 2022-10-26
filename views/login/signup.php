@@ -1,21 +1,21 @@
 <?php
-    $sql = 'SELECT * FROM users';
-    
-    $connPath = "views/partials/header.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
     }
-    require $connPath;
+    require $rootPath . "views/partials/header.php";
+
+    $sql = 'SELECT * FROM users';
 ?>
 
 <?php 
     //if logged in redirect to /
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true"){
-        header("Location:/$URL/index.php");
+        header("Location:/");
     }
 ?>
 
-<form method="post" action="/<?php echo $URL ?>/controllers/createUser.php">
+<form method="post" action="/controllers/createUser.php">
     <fieldset>
         <legend>Sign up</legend>
         <div>
@@ -41,9 +41,5 @@
 ?>
 
 <?php 
-    $connPath = "views/partials/footer.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
-    }
-    require $connPath;
+    require $rootPath . "views/partials/footer.php";
 ?>

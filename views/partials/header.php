@@ -1,9 +1,9 @@
 <?php
-    $connPath = "dbconn.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
     }
-    require $connPath;
+    require $rootPath . "dbconn.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,17 +24,17 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/<?php echo $URL /* $URL comes from config.php */ ?>/">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 
                 <?php 
                     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == "false"){
                 ?>
                     <li>
-                        <a href="/<?php echo $URL ?>/views/login/login.php">login</a>
+                        <a href="/login">login</a>
                     </li>
                     <li>
-                        <a href="/<?php echo $URL ?>/views/login/signup.php">signup</a>
+                        <a href="/signup">signup</a>
                     </li>
                 <?php
                     }
@@ -44,10 +44,10 @@
                     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true"){
                 ?>
                     <li>
-                        <a href="/<?php echo $URL ?>/views/login/profile.php">Profile</a>
+                        <a href="/profile">Profile</a>
                     </li>
                     <li>
-                        <a href="/<?php echo $URL ?>/controllers/logout.php">Logout</a>
+                        <a href="/controllers/logout.php">Logout</a>
                     </li>
                 <?php
                     }

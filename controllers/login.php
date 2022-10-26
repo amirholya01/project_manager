@@ -1,9 +1,9 @@
 <?php
-    $connPath = "dbconn.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
+    $rootPath = "";
+    while(!file_exists($rootPath . "index.php")){
+        $rootPath = "../$rootPath";
     }
-    require $connPath;
+    require $rootPath . "dbconn.php";
 
 
     $name = $_POST['name'];
@@ -18,7 +18,7 @@
         $_SESSION["name"] = $data[0]['name'];
         $_SESSION["loggedin"] = "true";
 
-        header("Location:/$URL/index.php");
+        header("Location:/");
     }else{
-        header("Location: /$URL/views/login/login.php?err=wronginfo");
+        header("Location: /login?err=wronginfo");
     }

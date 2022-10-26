@@ -8,4 +8,3 @@ $db = 'bowties';
 $user = 'root'; /* <-- not safe */
 $password = ''; /* <-- not safe */
 
-$URL = "Bowtie-Shop";

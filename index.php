@@ -1,31 +1,12 @@
 <?php
-    $stepUps = "";
-    $connPath = "views/partials/header.php";
-    while(!file_exists($connPath)){
-        $stepUps = "../$stepUps";
-    }
-    require $stepUps . $connPath;
+    include "Router.php";
 
-    require $stepUps . "controllers/getProducts.php"
-?>
+    $request = $_SERVER["REQUEST_URI"];
+    $router = new Router($request);
 
-<?php
-    foreach($data as $indData){
-?>
-    <div>
-        <p><?php echo $indData['name'] ?></p>
-        <p><?php echo $indData['type'] ?></p>
-        <p><?php echo $indData['description'] ?></p>
-        <p><?php echo $indData['price'] ?> DKK</p>
-    </div>
-<?php
-    }
-?>
+    $router->get('/', 'views/frontend/home');
+    $router->get('/p', 'views/frontend/🍍');
+    $router->get('/login', 'views/login/login');
+    $router->get('/signup', 'views/login/signup');
+    $router->get('/profile', 'views/login/profile');
 
-<?php 
-    $connPath = "views/partials/footer.php";
-    while(!file_exists($connPath)){
-        $connPath = "../$connPath";
-    }
-    require $connPath;
-?>
