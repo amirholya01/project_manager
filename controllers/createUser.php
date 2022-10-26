@@ -15,7 +15,7 @@
     $data = $pdo->query($sql)->fetchAll(); */
     
     $userCheck = $pdo->prepare($Users->checkIfUserExists);
-    $userCheck->bindParam(':name', $name, PDO::PARAM_STR);
+    $userCheck->bindParam(':name', $name);
     $userCheck->execute();
 
     $data = $userCheck->fetch();
@@ -27,8 +27,8 @@
 
     if($validName && $name != ""){
         $createUser = $pdo->prepare($Users->createUser);
-        $createUser->bindParam(':name', $name, PDO::PARAM_STR);
-        $createUser->bindParam(':password', $password, PDO::PARAM_STR);
+        $createUser->bindParam(':name', $name);
+        $createUser->bindParam(':password', $password);
         $createUser->execute();
         
         $_SESSION['name'] = $name;
