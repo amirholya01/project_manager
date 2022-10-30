@@ -1,4 +1,15 @@
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php [QSA,L]
+#RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+
+# ModRewrite activate
 RewriteEngine On
+
+# Let files and folder through
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+
+# rewrite URL
+RewriteRule (.+) index.php?path=$0 [L,QSA]
