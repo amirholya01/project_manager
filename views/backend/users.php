@@ -5,6 +5,9 @@
     }
     
     require $rootPath . "views/partials/adminStart.php";
+
+    /* 🔥 Needs to check if the user is allowed to be here */
+    require $rootPath . "controllers/editUser.php";
     require $rootPath . "controllers/deleteUser.php";
     require $rootPath . "controllers/getUsersWithFilters.php";
 ?>
@@ -24,8 +27,14 @@
         <p>Delete <?php echo $indData['user_id'] ?></p>
         <p>Edit <?php echo $indData['user_id'] ?></p>
 
+        <form method="POST" action="adminEditUser">
+            <input type="hidden" name="id" value="<?php echo $indData['user_id'] ?>">
+            <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
+            <input type="submit" value="Edit">
+        </form>
+
         <form method="POST" action="adminUsers">
-            <input type="text" name="delete" value="<?php echo $indData['user_id'] ?>">
+            <input type="hidden" name="delete" value="<?php echo $indData['user_id'] ?>">
             <input type="submit" value="Delete">
         </form>
     </div>

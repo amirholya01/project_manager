@@ -13,5 +13,6 @@
     /* Admin */
     $router->get('/adminProducts', 'views/backend/home');
     $router->get('/adminUsers', 'views/backend/users');
-    //$router->get('/adminUsers/delete', 'views/backend/users');
+    $router->get('/adminEditUser', 'views/backend/editUser');
+    
 
