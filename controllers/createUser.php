@@ -1,4 +1,5 @@
 <?php
+    /* 📒 */
     $rootPath = "";
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
@@ -6,7 +7,7 @@
     require $rootPath . "dbconn.php";
     require $rootPath . "models/users.php";
 
-    $Users = new Users();
+    //$Users = new Users();
     
     $name = $_POST['name'];
     $password = $_POST['password'];

@@ -1,4 +1,5 @@
 <?php
+    /* 📒 */
     $rootPath = "";
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
@@ -6,7 +7,7 @@
     require $rootPath . "views/partials/header.php";
     require $rootPath . "models/users.php";
 
-    $Users = new Users();
+    //$Users = new Users();
 
     $currentName = $_SESSION['name'];
 
