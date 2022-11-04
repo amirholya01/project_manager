@@ -13,10 +13,10 @@ if(isset($_POST['editUser'])){
     
     // Runs queries depending on if there is a password or not
     if($password != "" && $password != null){
-        $editUser = $pdo->prepare("UPDATE users SET name = :name, password = :password WHERE `user_id` = :id");
+        $editUser = $pdo->prepare($Users->updateUserById);
         $editUser->bindParam(':password', $password);
     }else{
-        $editUser = $pdo->prepare("UPDATE users SET name = :name WHERE `user_id` = :id");
+        $editUser = $pdo->prepare($Users->updateUserByIdWithoutPassword);
     }
     
     $editUser->bindParam(':id', $id);

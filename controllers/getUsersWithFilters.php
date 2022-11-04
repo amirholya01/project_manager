@@ -8,10 +8,10 @@
     */
     if( isset( $_POST['id'] ) && $_POST['id'] != ""){
         $id = $_POST['id'];
-        $getUsers = $pdo->prepare("SELECT * FROM users WHERE name LIKE :name AND user_id = :id");
+        $getUsers = $pdo->prepare($Users->getUsersByIdAndName);
         $getUsers->bindParam(':id', $id);
     }else{
-        $getUsers = $pdo->prepare("SELECT * FROM users WHERE name LIKE :name ");
+        $getUsers = $pdo->prepare($Users->getUsersByName);
     }
     
     if ( isset( $_POST['name'] ) ){
