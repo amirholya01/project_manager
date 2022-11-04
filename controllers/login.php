@@ -10,7 +10,7 @@
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    $sql = "SELECT name, password FROM users WHERE name='$name' AND password='$password'"; /* <-- Model */
+    $sql = "SELECT name, password FROM users WHERE name='$name' AND password='$password'"; /* <-- ✒️ Model */
 
     $data = $pdo->query($sql)->fetchAll();
     

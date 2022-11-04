@@ -1,2 +1,3 @@
-🔥 = Error
+🔥 = Error / Security Issue
 📒 = Needs explenation comments
+✒️ = Needs editing
