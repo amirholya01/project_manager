@@ -5,8 +5,10 @@
     }
     
     require $rootPath . "views/partials/adminStart.php";
+    require $rootPath . "models/users.php";
 
     /* 🔥 Needs to check if the user is allowed to be here */
+    require $rootPath . "controllers/createUser.php";
     require $rootPath . "controllers/editUser.php";
     require $rootPath . "controllers/deleteUser.php";
     require $rootPath . "controllers/getUsersWithFilters.php";
@@ -18,15 +20,13 @@
     <input type="submit">
 </form>
 <a href="/adminUsers">Reset</a>
+<a href="/adminCreateUser">Create new user</a>
 
 <?php
     foreach($data as $indData){
 ?>
     <div>
         <p><?php echo $indData['name'] ?></p>
-        <p>Delete <?php echo $indData['user_id'] ?></p>
-        <p>Edit <?php echo $indData['user_id'] ?></p>
-
         <form method="POST" action="adminEditUser">
             <input type="hidden" name="id" value="<?php echo $indData['user_id'] ?>">
             <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">

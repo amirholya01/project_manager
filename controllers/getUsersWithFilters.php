@@ -1,14 +1,7 @@
 <?php
-    $rootPath = "";
-    while(!file_exists($rootPath . "index.php")){
-        $rootPath = "../$rootPath";
-    }
-    require $rootPath . "models/users.php";
-
     // Default Name to wildcard (Wildcard = Select everything)
     $name = "%";
 
-    // $args[0] = ID
     /* 
         We can't use a wildcard on an int(id) so we have to structure the query
         differently depending on weather we have an id or not

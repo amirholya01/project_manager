@@ -1,16 +1,9 @@
 <?php
     /* 📒 */
-    $rootPath = "";
-    while(!file_exists($rootPath . "index.php")){
-        $rootPath = "../$rootPath";
-    }
-    require $rootPath . "dbconn.php";
-    require $rootPath . "models/users.php";
 
-    //$Users = new Users();
-    
-    $name = $_POST['name'];
-    $password = $_POST['password'];
+if( isset( $_POST['createUser'] ) ){
+    $name = $_POST['createName'];
+    $password = $_POST['createpassword'];
 
     
     $userCheck = $pdo->prepare($Users->checkIfUserExists);
@@ -24,16 +17,10 @@
         $validName = false;
     }
 
-    if($validName && $name != ""){
+    if($validName && $name != "" && $name != null){
         $createUser = $pdo->prepare($Users->createUser);
         $createUser->bindParam(':name', $name);
         $createUser->bindParam(':password', $password);
         $createUser->execute();
-        
-        $_SESSION['name'] = $name;
-        $_SESSION['loggedin'] = "true";
-        
-        header("Location: /");
-    }else{
-        header("Location: /signup?err=invalidname");
     }
+}

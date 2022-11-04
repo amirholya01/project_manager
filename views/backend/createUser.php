@@ -11,13 +11,12 @@
 
 <form method="POST" action="adminUsers">
     <!-- 
-        i send editUser to tell the controller that it should run edit user
+        i send createUser to tell the controller that it should run create user
     -->
-    <input type="hidden" name="editUser" value="true">
+    <input type="hidden" name="createUser" value="true">
 
-    <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-    <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-    <input type="text" name="password">
+    <input type="text" name="createName">
+    <input type="text" name="createpassword">
     <input type="submit">
 </form>
 

@@ -15,7 +15,7 @@
     }
 ?>
 
-<form method="post" action="/controllers/createUser.php">
+<form method="post" action="/controllers/signup.php">
     <fieldset>
         <legend>Sign up</legend>
         <div>
