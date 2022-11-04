@@ -10,7 +10,8 @@ class Users{
     public $updateUserByName = 'UPDATE users SET name = :name, password = :password WHERE name = :currentName';
     public $updateUserByNameWithoutPassword = 'UPDATE users SET name = :name WHERE name = :currentName';
 
-    public $deleteUser = 'DELETE FROM users WHERE `user_id` = :user_id';
+    public $deleteUserById = 'DELETE FROM users WHERE `user_id` = :user_id';
+    public $deleteUserByName = 'DELETE FROM users WHERE `name` = :name';
     
     //Advanced queries
     public $checkIfUserExists = 'SELECT name FROM users WHERE name = :name';

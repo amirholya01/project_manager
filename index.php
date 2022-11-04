@@ -6,7 +6,6 @@
 
     /* Frontend */
     $router->get('/', 'views/frontend/home');
-    $router->get('/p', 'views/frontend/🍍');
     $router->get('/login', 'views/login/login');
     $router->get('/signup', 'views/login/signup');
     $router->get('/profile', 'views/login/profile');
@@ -14,4 +13,5 @@
     /* Admin */
     $router->get('/adminProducts', 'views/backend/home');
     $router->get('/adminUsers', 'views/backend/users');
+    //$router->get('/adminUsers/delete', 'views/backend/users');
 

@@ -5,33 +5,16 @@
     }
     
     require $rootPath . "views/partials/adminStart.php";
+    require $rootPath . "controllers/deleteUser.php";
     require $rootPath . "controllers/getUsersWithFilters.php";
 ?>
 
-<form method="POST" action="controllers/adminUsers.php">
+<form method="POST" action="adminUsers">
     <input type="text" name="id" placeholder="ID">
     <input type="text" name="name" placeholder="Name">
-    <input type="text" name="url" value="" id="url">
     <input type="submit">
 </form>
-<script>
-    /* Hmm probably not the solution */
-
-    const url = document.querySelector('#url');
-
-    url.value = window.location.href;
-
-    let trimCount = 7; /* Trim of http or https */
-    if(url.value[4] == "s"){
-        trimCount++;
-    }
-
-    url.value = url.value.substring(trimCount);
-
-    url.value = url.value.split("/")[0];
-    
-</script>
-
+<a href="/adminUsers">Reset</a>
 
 <?php
     foreach($data as $indData){
@@ -40,6 +23,11 @@
         <p><?php echo $indData['name'] ?></p>
         <p>Delete <?php echo $indData['user_id'] ?></p>
         <p>Edit <?php echo $indData['user_id'] ?></p>
+
+        <form method="POST" action="adminUsers">
+            <input type="text" name="delete" value="<?php echo $indData['user_id'] ?>">
+            <input type="submit" value="Delete">
+        </form>
     </div>
 <?php
     }
