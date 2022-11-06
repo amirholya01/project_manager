@@ -5,17 +5,31 @@ class Products{
     public $getProductsDynamicSearch = "SELECT p.products_id, p.name, p.description, p.price, pt.type
                                         FROM products p, product_types pt
                                         WHERE p.type = pt.id
-                                        AND p.product_id LIKE :id
-                                        AND pt.type LIKE :search
-                                        AND p.name LIKE :search
-                                        AND p.description LIKE :search";
+                                        AND (p.product_id LIKE :id
+                                        OR p.name LIKE :search
+                                        OR p.description LIKE :search)
+                                        AND pt.type = :type";
 
     public $getProductsDynamicSearchWithoutId = "SELECT p.products_id, p.name, p.description, p.price, pt.type
                                                  FROM products p, product_types pt
                                                  WHERE p.type = pt.id
-                                                 AND pt.type LIKE :search
-                                                 AND p.name LIKE :search
-                                                 AND p.description LIKE :search";
+                                                 AND (p.name LIKE :search
+                                                 OR p.description LIKE :search)
+                                                 AND pt.type = :type";
+
+                                                 
+    public $getProductsDynamicSearchWithoutType = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+                                                  FROM products p, product_types pt
+                                                  WHERE p.type = pt.id
+                                                  AND (p.product_id LIKE :id
+                                                  OR p.name LIKE :search
+                                                  OR p.description LIKE :search)";
+
+    public $getProductsDynamicSearchWithoutIdAndType = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+                                                        FROM products p, product_types pt
+                                                        WHERE p.type = pt.id
+                                                        AND (p.name LIKE :search
+                                                        OR p.description LIKE :search)";
     
     //Advanced queries
 
