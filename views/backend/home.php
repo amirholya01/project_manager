@@ -5,7 +5,10 @@
     }
     
     require $rootPath . "views/partials/adminStart.php";
-    require $rootPath . "controllers/getProducts.php";
+    require $rootPath . "models/products.php";
+
+    //require $rootPath . "controllers/getProducts.php";
+    require $rootPath . "controllers/getProductsWithFilters.php";
 ?>
 
 <?php

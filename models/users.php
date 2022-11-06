@@ -17,6 +17,6 @@ class Users{
     
     //Advanced queries
     public $checkIfUserExists = 'SELECT name FROM users WHERE name = :name';
-    }
+}
 
-    $Users = new Users();
+$Users = new Users();
