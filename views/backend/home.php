@@ -24,7 +24,7 @@
     </select>
     <input type="submit">
 </form>
-<a href="/">Reset</a>
+<a href="/adminProducts">Reset</a>
 <a href="/adminCreateProduct">Create new product</a>
 
 <?php
