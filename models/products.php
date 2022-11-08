@@ -2,6 +2,8 @@
 
 class Products{
     //Basic Crud
+    public $createProduct = "INSERT INTO products (name, type, description, price) VALUES (:name, :type, :description, :price)";
+
     public $getProductsDynamicSearch = "SELECT p.products_id, p.name, p.description, p.price, pt.type
                                         FROM products p, product_types pt
                                         WHERE p.type = pt.id
