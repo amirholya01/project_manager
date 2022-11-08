@@ -31,6 +31,8 @@ class Products{
                                                         AND (p.name LIKE :search
                                                         OR p.description LIKE :search)";
     
+    public $updateProductById = "UPDATE products SET name = :name, description = :description, price = :price WHERE products_id = :id";
+
     public $deleteProductById = "DELETE FROM products WHERE `products_id` = :id";
 
     //Advanced queries

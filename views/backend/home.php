@@ -8,6 +8,7 @@
     require $rootPath . "models/products.php";
 
     /* 🔥 Needs to check if the user is allowed to be here */
+    require $rootPath . "controllers/editProduct.php";
     require $rootPath . "controllers/deleteProduct.php";
     require $rootPath . "controllers/getProductsWithFilters.php";
 ?>
@@ -36,6 +37,14 @@
         <p><?php echo $indData['description'] ?></p>
         <p><?php echo $indData['price'] ?> DKK</p>
         
+        <form method="POST" action="adminEditProduct">
+            <input type="hidden" name="id" value="<?php echo $indData['products_id'] ?>">
+            <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
+            <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
+            <input type="hidden" name="price" value="<?php echo $indData['price'] ?>">
+            <input type="submit" value="Edit">
+        </form>
+
         <form method="POST" action="adminProducts">
             <input type="hidden" name="delete" value="<?php echo $indData['products_id'] ?>">
             <input type="submit" value="Delete">

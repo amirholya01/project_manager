@@ -15,5 +15,6 @@
     $router->get('/adminUsers', 'views/backend/users');
     $router->get('/adminEditUser', 'views/backend/editUser');
     $router->get('/adminCreateUser', 'views/backend/createUser');
+    $router->get('/adminEditProduct', 'views/backend/editProduct');
     
 
