@@ -11,7 +11,7 @@
     $router->get('/profile', 'views/login/profile');
 
     /* Admin */
-    $router->get('/adminProducts', 'views/backend/home');
+    $router->get('/adminProducts', 'views/backend/products');
     $router->get('/adminUsers', 'views/backend/users');
 
     $router->get('/adminEditUser', 'views/backend/editUser');
