@@ -21,6 +21,7 @@
     <input type="text" name="search" placeholder="Search Something!">
     <select name="type" id="type">
         <option value="">Nothing</option>
+        <!-- Adds types to the search select field -->
         <?php
             foreach($allTypes as $type){
         ?>
@@ -40,7 +41,7 @@
     <div>
         <p><?php echo $indData['name'] ?></p>
         <p><?php echo $indData['type'] ?></p>
-        <!-- Color foreach color => if productId = color.productId : Paste -->
+        <!-- Adds colors -->
         <?php 
             foreach($allColors as $color){
                 if($indData['products_id'] == $color['product_id']){

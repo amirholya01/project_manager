@@ -1,5 +1,6 @@
 <?php
 
+/* ✒️ Needs to syncronise deletes, updates and creates all the tables in use */
 class Products{
     //Basic Crud
     public $createProduct = "INSERT INTO products (name, type, description, price) VALUES (:name, :type, :description, :price)";
@@ -42,7 +43,7 @@ class Products{
     public $getAllColors = "SELECT actp.product_id, pc.color
                             FROM assign_colors_to_products actp, product_colors pc
                             WHERE actp.color_id = pc.id";
-
+    public $getAllRawColors = "SELECT * FROM product_colors";
 }
 
 $Products = new Products();
