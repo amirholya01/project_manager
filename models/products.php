@@ -38,6 +38,7 @@ class Products{
     public $deleteProductById = "DELETE FROM products WHERE `products_id` = :id";
 
     //Advanced queries
+    public $getAllTypes = "SELECT id, type FROM product_types";
 
 }
 

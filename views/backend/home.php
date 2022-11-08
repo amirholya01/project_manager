@@ -12,6 +12,8 @@
     require $rootPath . "controllers/editProduct.php";
     require $rootPath . "controllers/deleteProduct.php";
     require $rootPath . "controllers/getProductsWithFilters.php";
+
+    require $rootPath . "controllers/adminProducts.php";
 ?>
 
 <form method="POST" action="adminProducts">
@@ -19,10 +21,13 @@
     <input type="text" name="search" placeholder="Search Something!">
     <select name="type" id="type">
         <option value="">Nothing</option>
-
-        <!-- ✒️ Needs to be loaded from the DB -->
-        <option value="Pineapple">pineapple</option>
-        <option value="Aaargh">aaargh</option>
+        <?php
+            foreach($allTypes as $type){
+        ?>
+            <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+        <?php
+            }
+        ?>
     </select>
     <input type="submit">
 </form>
