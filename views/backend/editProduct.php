@@ -22,6 +22,15 @@
     <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
     <input type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
     <input type="text" name="editPrice" value="<?php echo $_POST['price'] ?>">
+    <select name="editType">
+        <?php 
+            foreach($allTypes as $type){
+        ?>
+            <option value="<?php echo $type['id'] ?>"><?php echo $type['type'] ?></option>
+        <?php
+            }
+        ?>
+    </select>
     <select name="editColors[]" multiple>
         <?php 
             foreach($allColors as $color){

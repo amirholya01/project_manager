@@ -6,10 +6,14 @@ if(isset($_POST['editProduct'])){
     $name = $_POST['editName'];
     $description = $_POST['editDescription'];
     $price = $_POST['editPrice'];
-    $colors = $_POST['editColors'];
+    $type = $_POST['editType'];
+    $colors = null;
+    if(isset($_POST['editColors'])){
+        $colors = $_POST['editColors'];
+    }
 
     try {
-        /* 🔥🔥🔥🔥🔥 */
+        /* 🔥 edit type missing & sql need to go to Models */
         $pdo->beginTransaction();
 
         //Deletes the colors that was previously assigned to the product
@@ -35,6 +39,7 @@ if(isset($_POST['editProduct'])){
         $editUser->bindParam(':name', $name);
         $editUser->bindParam(':description', $description);
         $editUser->bindParam(':price', $price);
+        $editUser->bindParam(':type', $type);
         $editUser->execute();
 
         $pdo->commit();
