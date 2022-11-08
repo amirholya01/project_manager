@@ -39,6 +39,9 @@ class Products{
 
     //Advanced queries
     public $getAllTypes = "SELECT id, type FROM product_types";
+    public $getAllColors = "SELECT actp.product_id, pc.color
+                            FROM assign_colors_to_products actp, product_colors pc
+                            WHERE actp.color_id = pc.id";
 
 }
 

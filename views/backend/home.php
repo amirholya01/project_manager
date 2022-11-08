@@ -40,6 +40,16 @@
     <div>
         <p><?php echo $indData['name'] ?></p>
         <p><?php echo $indData['type'] ?></p>
+        <!-- Color foreach color => if productId = color.productId : Paste -->
+        <?php 
+            foreach($allColors as $color){
+                if($indData['products_id'] == $color['product_id']){
+        ?>
+            <p><?php echo $color['color'] ?></p>
+        <?php
+                }
+            }
+        ?>
         <p><?php echo $indData['description'] ?></p>
         <p><?php echo $indData['price'] ?> DKK</p>
         
