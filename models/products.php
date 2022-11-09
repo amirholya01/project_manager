@@ -39,12 +39,14 @@ class Products{
     public $deleteProductById = "DELETE FROM products WHERE `products_id` = :id";
 
     //Advanced queries
+    public $createProductColor = "INSERT INTO assign_colors_to_products (product_id, color_id) VALUES (:product_id, :color_id)";
     public $getAllTypes = "SELECT id, type FROM product_types";
     public $getAllColors = "SELECT actp.product_id, pc.color
                             FROM assign_colors_to_products actp, product_colors pc
                             WHERE actp.color_id = pc.id";
     public $getAllRawColors = "SELECT * FROM product_colors";
     public $deleteProductColorByProductId = "DELETE FROM assign_colors_to_products WHERE product_id = :id";
+    
 }
 
 $Products = new Products();
