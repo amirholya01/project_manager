@@ -1,7 +1,8 @@
 <?php
-    /* 📒 */
 
+/* Check if there is sent a post */
 if( isset( $_POST['createProduct'] ) ){
+    /* Gets all the values from the post request */
     $name = $_POST['createName'];
     $type = $_POST['createType'];
     $description = $_POST['createDescription'];

@@ -13,7 +13,6 @@ if(isset($_POST['editProduct'])){
     }
 
     try {
-        /* 🔥 edit type missing & sql need to go to Models */
         $pdo->beginTransaction();
 
         //Deletes the colors that was previously assigned to the product

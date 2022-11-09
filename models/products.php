@@ -1,6 +1,5 @@
 <?php
 
-/* ✒️ Needs to syncronise creates on all the tables in use (i did Read, Update and Delete)*/
 class Products{
     //Basic Crud
     public $createProduct = "INSERT INTO products (name, type, description, price) VALUES (:name, :type, :description, :price)";
