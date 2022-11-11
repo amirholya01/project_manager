@@ -1,6 +1,5 @@
 <?php
-
-define("BASE_URL", "http://bowtie.test");
+    define("BASE_URL", "http://bowtie.test");
 
     include "Router.php";
 

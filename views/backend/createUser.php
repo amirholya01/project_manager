@@ -13,6 +13,7 @@
     <!-- 
         i send createUser to tell the controller that it should run create user
     -->
+    <input type="hidden" name="validated" value="true">
     <input type="hidden" name="createUser" value="true">
 
     <input type="text" name="createName">
