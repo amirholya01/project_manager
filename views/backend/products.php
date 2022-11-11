@@ -10,6 +10,7 @@
     /* 🔥 Needs to check if the user is allowed to be here */
     
     require $rootPath . "security/formSpam.php";
+    require $rootPath . "security/stringSanitation.php";
 
     require $rootPath . "controllers/createProduct.php";
     require $rootPath . "controllers/editProduct.php";
