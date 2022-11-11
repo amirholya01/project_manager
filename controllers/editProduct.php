@@ -21,14 +21,14 @@ if(isset($_POST['editProduct'])){
             $pdo->beginTransaction();
     
             //Deletes the colors that was previously assigned to the product
-            $deletePeviouslyAssignedColors = $pdo->prepare($Products->createProductColor);
+            $deletePeviouslyAssignedColors = $pdo->prepare($Products->deleteProductColorByProductId);
             $deletePeviouslyAssignedColors->bindParam(':id', $id);
             $deletePeviouslyAssignedColors->execute();
         
             //Uploads every a new relation for each color that was selected
             if($colors != [] && $colors != null){
                 foreach ($colors as $color) {
-                    $assignColorToProduct = $pdo->prepare($Products->deleteProductColorByProductId);
+                    $assignColorToProduct = $pdo->prepare($Products->createProductColor);
                     $assignColorToProduct->bindParam(':product_id', $id);
                     $assignColorToProduct->bindParam(':color_id', $color);
                     $assignColorToProduct->execute();
