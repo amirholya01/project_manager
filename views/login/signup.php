@@ -3,7 +3,7 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "views/partials/header.php";
+    require $rootPath . "views/backend/partials/header.php";
 
     $sql = 'SELECT * FROM users';
 ?>
@@ -41,5 +41,5 @@
 ?>
 
 <?php 
-    require $rootPath . "views/partials/footer.php";
+    require $rootPath . "views/backend/partials/footer.php";
 ?>

@@ -15,6 +15,15 @@
 </head>
 <body>
     <aside>
+        <?php
+            if(isset($_SESSION['name'])){
+        ?>
+            <p>
+                <?php echo $_SESSION['name']; ?>
+            </p>
+        <?php
+            }
+        ?>
         <nav>
             <ul>
                 <li>

@@ -4,6 +4,8 @@
         $rootPath = "../$rootPath";
     }
     
+    var_dump($_SESSION);
+
     require $rootPath . "views/backend/partials/adminStart.php";
     require $rootPath . "models/products.php";
 
