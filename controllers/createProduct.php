@@ -34,7 +34,7 @@ if($validated == true){
             $id = $pdo->lastInsertId();
         
             /* Assigns the colors to the product */
-            if($_POST['createColors']){
+            if( isset($_POST['createColors']) ){
                 $colors = $_POST['createColors'];
         
                 foreach($colors as $color){
