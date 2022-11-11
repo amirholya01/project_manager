@@ -4,7 +4,7 @@
         $rootPath = "../$rootPath";
     }
     
-    require $rootPath . "views/partials/adminStart.php";
+    require $rootPath . "views/backend/partials/adminStart.php";
     
     /* 🔥 Needs to check if the user is allowed to be here */
 ?>
@@ -22,5 +22,5 @@
 </form>
 
 <?php 
-    require $rootPath . "views/partials/adminEnd.php";
+    require $rootPath . "views/backend/partials/adminEnd.php";
 ?>

@@ -4,7 +4,7 @@
         $rootPath = "../$rootPath";
     }
     
-    require $rootPath . "views/partials/adminStart.php";
+    require $rootPath . "views/backend/partials/adminStart.php";
     require $rootPath . "models/products.php";
 
     require $rootPath . "controllers/adminCreateProduct.php";
@@ -43,5 +43,5 @@
 </form>
 
 <?php 
-    require $rootPath . "views/partials/adminEnd.php";
+    require $rootPath . "views/backend/partials/adminEnd.php";
 ?>
