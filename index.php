@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     include "Router.php";
 
     $request = $_SERVER["REQUEST_URI"];
