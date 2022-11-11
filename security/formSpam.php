@@ -2,7 +2,7 @@
 
 $validated = false;
 
-if(isset($_POST['validate'])){
+if(isset($_POST['validated'])){
     if( isset($_SESSION['name']) ){
         $name = $_SESSION['name'];
 

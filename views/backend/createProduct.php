@@ -16,6 +16,7 @@
     <!-- 
         i send createProduct to tell the controller that it should run create user
     -->
+    <input type="hidden" name="validated" value="true">
     <input type="hidden" name="createProduct" value="true">
 
     <input type="text" name="createName" placeholder="Name">
