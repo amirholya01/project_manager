@@ -9,21 +9,18 @@ if(!empty($_POST)){
 
         $securityData = $getSecurityData->fetchAll()[0];
 
-        print_r($securityData);
-
         if($name == $securityData['name']){
             $startTime = new DateTime($securityData['time']);
             $endTime = new DateTime();
 
             $time = $startTime->diff($endTime);
-            print_r("<br>");
-            print_r($time);
-            if($time['y'] == 0 && $time['m'] == 0 && $time['d'] == 0 && $time['h'] == 0 && $time['i'] == 0 && $time['s'] < 3){
+
+            if($time->y == 0 && $time->m == 0 && $time->d == 0 && $time->h == 0 && $time->i == 0 && $time->s < 3){
                 header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
             }
         }
 
     }else{
-        header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        //✒️ You have to be logged in
     }
 }
