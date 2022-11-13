@@ -16,7 +16,7 @@
     }
 ?>
 
-<form method="post" action="/controllers/login.php">
+<form method="post" action="/loginFunction">
     <fieldset>
         <legend>Login</legend>
         <div>

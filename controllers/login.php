@@ -1,5 +1,5 @@
 <?php
-session_start();
+
     /* 
         ✒️ 
         * Needs password hashing
@@ -25,7 +25,6 @@ session_start();
     /* Checks if the user exists */
     if($data[0]['name']){
         //login
-        /* This does not carry over to any other site */
         $_SESSION["name"] = $data[0]['name'];
         $_SESSION["loggedin"] = "true";
         $_SESSION["pineapple"] = "true";
@@ -33,16 +32,8 @@ session_start();
         echo $_SESSION['name'];
         echo "<br>";
         echo $_SESSION['loggedin'];
-?>
-    <p>
-        <a href="/adminProducts">Admin page</a>
-    </p>
-    <script>
-        console.log("FUCKING BURNING");
-    </script>
-<?php
 
-        //header("Location:/adminProducts");
+        header("Location:/adminProducts");
     }else{
         header("Location: /login?err=wronginfo");
     }
