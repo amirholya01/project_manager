@@ -4,7 +4,6 @@ $validated = false;
 
 if(isset($_POST['validated'])){
     if( isset($_SESSION['name']) ){
-        echo "meepers";
         $name = $_SESSION['name'];
 
         $getSecurityData = $pdo->prepare("SELECT name, time FROM spam_prevention WHERE id = 1;");
