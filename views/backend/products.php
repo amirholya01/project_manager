@@ -138,6 +138,7 @@
 ?>
 
 <?php
+    echo "<br>";
     /* Previous button */
     if($page > 0){
 ?>

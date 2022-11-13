@@ -1,10 +1,13 @@
 <?php
 
+/* 🔥 Needs sanitation */
+
 /* Checks if there is a createUser request */
 if( isset( $_POST['createUser'] ) ){
     /* Gets the data from the post request */
     $name = $_POST['createName'];
-    $password = $_POST['createpassword'];
+    $password = $_POST['createPassword'];
+    $role = $_POST['createRole'];
 
     /* Checks if there already exist a user with the same name */
     $userCheck = $pdo->prepare($Users->checkIfUserExists);
@@ -27,6 +30,7 @@ if( isset( $_POST['createUser'] ) ){
         $createUser = $pdo->prepare($Users->createUser);
         $createUser->bindParam(':name', $name);
         $createUser->bindParam(':password', $password);
+        $createUser->bindParam(':role', $role);
         $createUser->execute();
     }
 }

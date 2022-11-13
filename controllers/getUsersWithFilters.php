@@ -6,11 +6,32 @@
         We can't use a wildcard on an int(id) so we have to structure the query
         differently depending on weather we have an id or not
     */
-    if( isset( $_POST['id'] ) && $_POST['id'] != ""){
+
+    //if id & role
+    if( (isset( $_POST['id'] ) && $_POST['id'] != "") && (isset( $_POST['role'] ) && $_POST['role'] != "") ){
+        $id = $_POST['id'];
+        $role = $_POST['role'];
+        $getUsers = $pdo->prepare($Users->getUsersByIdAndNameAndRole);
+        $getUsers->bindParam(':id', $id);
+        $getUsers->bindParam(':role', $role);
+    }else
+
+    //if !id & role    
+    if( !(isset( $_POST['id'] ) && $_POST['id'] != "") && (isset( $_POST['role'] ) && $_POST['role'] != "") ){
+        $role = $_POST['role'];
+        $getUsers = $pdo->prepare($Users->getUsersByNameAndRole);
+        $getUsers->bindParam(':role', $role);
+    }else
+
+    //if id & !role
+    if( (isset( $_POST['id'] ) && $_POST['id'] != "") && !(isset( $_POST['role'] ) && $_POST['role'] != "") ){
         $id = $_POST['id'];
         $getUsers = $pdo->prepare($Users->getUsersByIdAndName);
         $getUsers->bindParam(':id', $id);
-    }else{
+    }else
+    
+    //if !id & !role
+    {
         $getUsers = $pdo->prepare($Users->getUsersByName);
     }
     

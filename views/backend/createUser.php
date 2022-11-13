@@ -17,7 +17,11 @@
     <input type="hidden" name="createUser" value="true">
 
     <input type="text" name="createName">
-    <input type="text" name="createpassword">
+    <input type="text" name="createPassword">
+    <select name="createRole">
+        <option value="0">Customer</option>
+        <option value="1">Admin</option>
+    </select>
     <input type="submit">
 </form>
 
