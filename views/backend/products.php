@@ -18,19 +18,38 @@
     require $rootPath . "controllers/getProductsWithFilters.php";
 
     require $rootPath . "controllers/adminProducts.php";
+
+    $id = null;
+    if(isset($_POST['id'])){
+        $id = $_POST['id'];
+    }
+    $search = null;
+    if(isset($_POST['search'])){
+        $search = $_POST['search'];
+    }
+    $searchType = null;
+    if(isset($_POST['type'])){
+        $searchType = $_POST['type'];
+    }
 ?>
 
 <form method="POST" action="adminProducts">
-    <input type="text" name="id" placeholder="ID">
-    <input type="text" name="search" placeholder="Search Something!">
+    <input type="text" name="id" placeholder="ID" value="<?php echo ($id != null) ? $id : ""; ?>">
+    <input type="text" name="search" placeholder="Search Something!" value="<?php echo ($search != null) ? $search : ""; ?>">
     <select name="type" id="type">
         <option value="">Nothing</option>
         <!-- Adds types to the search select field -->
         <?php
             foreach($allTypes as $type){
+                if($type['type'] == $searchType){
+        ?>
+            <option selected value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+        <?php
+                } else {
         ?>
             <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
         <?php
+                }
             }
         ?>
     </select>
@@ -40,6 +59,25 @@
 <a href="/adminCreateProduct">Create new product</a>
 
 <?php
+    $pageNr = 0;
+    $pageMinIndex = $pageNr * 4;
+    $pageMaxIndex = $pageMinIndex + 4;
+
+    for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
+        $indData = $data[$i];
+        echo "<br>";
+        echo $indData['name'];
+    }
+?>
+
+<form method="POST" action="adminProducts">
+    <input type="text" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
+    <input type="text" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
+    <input type="text" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
+</form>
+
+<?php
+
     foreach($data as $indData){
 ?>
     <div>
