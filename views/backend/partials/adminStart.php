@@ -20,6 +20,8 @@
         ?>
             <p>
                 <?php echo $_SESSION['name']; ?>
+                &nbsp;
+                <a href="/logoutFunction">Log out</a>
             </p>
         <?php
             }

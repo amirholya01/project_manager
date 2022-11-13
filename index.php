@@ -13,6 +13,7 @@
     $router->get('/login', 'views/login/login');
     $router->get('/loginFunction', 'controllers/login');
     $router->get('/signupFunction', 'controllers/signup');
+    $router->get('/logoutFunction', 'controllers/logout');
     $router->get('/signup', 'views/login/signup');
     $router->get('/profile', 'views/login/profile');
     $router->get('/Product', 'views/frontend/Product');
