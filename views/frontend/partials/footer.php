@@ -140,10 +140,14 @@
                         <div class="empty-space col-xs-b30"></div>
                         <input class="simple-input" type="text" name="name" value="" placeholder="Your name" />
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
+
+                        <!-- 🔥 Is not in use yet -->
                         <input class="simple-input" type="text" name="email" value="" placeholder="Your email" />
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
                         <input class="simple-input" type="password" name="password" value="" placeholder="Enter password" />
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
+
+                        <!-- 🔥 Is not in use yet -->
                         <input class="simple-input" type="password" name="passwordCheck" value="" placeholder="Repeat password" />
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
                         <div class="row">

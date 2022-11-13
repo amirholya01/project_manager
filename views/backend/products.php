@@ -101,7 +101,6 @@
 ?>
 
 <?php
-    //foreach($data as $indData){
     for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
         $indData = $data[$i];
 ?>
