@@ -27,7 +27,6 @@
         //login
         $_SESSION["name"] = $data[0]['name'];
         $_SESSION["loggedin"] = "true";
-        $_SESSION["pineapple"] = "true";
         
         echo $_SESSION['name'];
         echo "<br>";

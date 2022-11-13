@@ -2,7 +2,6 @@
 
 class Router{
     private $request;
-    public $pineapple = "pineapple";
     public function __construct($requestPara){ /* Auto run when file is loaded */
         $this->request = $requestPara;
     }
