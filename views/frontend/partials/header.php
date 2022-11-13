@@ -27,9 +27,60 @@ nav>ul>li>a:hover,
 nav>ul>li.active>a {
     background-color: #B2A6CE;
 }
+
 .swiper-pagination-bullet-active {
-  border: 2px #B2A6CE solid;
-  }
+    border: 2px #B2A6CE solid;
+}
+.header-top .cart-toggle, .megamenu {
+  border-top: 5px #B2A6CE solid;
+}
+.button.style-3 {
+  background: #B2A6CE;
+}
+.checkbox-entry input:checked + span::before {
+  border-color: #B2A6CE;
+  background-color: #B2A6CE;
+}
+.header-top a:hover, .header-top a:hover .fa, .header-top a:hover b {
+  color: #B2A6CE;
+}
+.simple-input:focus, .SumoSelect.open > .CaptionCont {
+  border-color: #B2A6CE;
+}
+.SumoSelect > .optWrapper > .options li.opt.selected:not(.disabled) {
+  background-color: #B2A6CE;
+}
+.SumoSelect > .optWrapper > .options li.opt:hover {
+  background-color: #B2A6CE;
+}
+.button-close{
+    background: url(../../../assets/img/icon-5.png) 50% 50% no-repeat !important;
+}
+button{
+    border: none !important;
+}
+.simple-article h1 a:hover, .h1 a:hover, .simple-article h2 a:hover, .h2 a:hover, .simple-article h3 a:hover, .h3 a:hover, .simple-article h4 a:hover, .h4 a:hover, .simple-article h5 a:hover, .h5 a:hover, .simple-article h6 a:hover, .h6 a:hover {
+  color: #B2A6CE !important;
+}
+.product-shortcode:hover .animate-to-green {
+  color: #B2A6CE;
+}
+.product-shortcode.style-7 .product-label {
+  top: 19px;
+}
+.swiper-wrapper {
+  cursor: url(../../../assets/img/drag.png) 16 9, ew-resize;
+}
+.slider-product-preview {
+  top: 55px;
+  bottom: 55px;
+}
+.slider-product-preview > img {
+  left: 60%;
+}
+.simple-article.light ul li::before {
+  background-image: url(../../../assets/img/icon-21.png);
+}
 </style>
 
 
@@ -54,7 +105,7 @@ nav>ul>li.active>a {
                             <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o"
                                         aria-hidden="true"></i></a></div>
                             <div class="entry hidden-xs hidden-sm cart">
-                                <a href="cart.html">
+                                <a href="Checkout">
                                     <b class="hidden-xs">Your bag</b>
                                     <span class="cart-icon">
                                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
