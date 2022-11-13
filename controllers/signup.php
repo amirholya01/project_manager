@@ -28,6 +28,7 @@
         $createUser = $pdo->prepare($Users->createUser);
         $createUser->bindParam(':name', $name);
         $createUser->bindParam(':password', $password);
+        $createUser->bindParam(':role', 0);
         $createUser->execute();
         
         $_SESSION['name'] = $name;

@@ -3,8 +3,11 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+    require $rootPath . "dbconn.php";
     
     require $rootPath . "views/backend/partials/adminStart.php";
+    require $rootPath . "models/users.php";
+    require $rootPath . "security/adminCheck.php";
     require $rootPath . "models/products.php";
 
     require $rootPath . "controllers/adminCreateProduct.php";
