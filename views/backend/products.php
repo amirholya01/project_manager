@@ -3,8 +3,8 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+    require $rootPath . "dbconn.php";
 
-    require $rootPath . "views/backend/partials/adminStart.php";
     require $rootPath . "models/products.php";
     require $rootPath . "models/users.php";
     require $rootPath . "security/adminCheck.php";
@@ -20,6 +20,8 @@
     require $rootPath . "controllers/getProductsWithFilters.php";
 
     require $rootPath . "controllers/adminProducts.php";
+
+    require $rootPath . "views/backend/partials/adminStart.php";
 
     /* This is to make so search data dosent disapear after search */
     $id = null;

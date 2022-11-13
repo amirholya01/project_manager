@@ -1,10 +1,3 @@
-<?php
-    $rootPath = "";
-    while(!file_exists($rootPath . "index.php")){
-        $rootPath = "../$rootPath";
-    }
-    require $rootPath . "dbconn.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
