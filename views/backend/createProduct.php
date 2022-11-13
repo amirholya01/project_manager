@@ -6,6 +6,7 @@
     
     require $rootPath . "views/backend/partials/adminStart.php";
     require $rootPath . "models/products.php";
+    require $rootPath . "security/adminCheck.php";
 
     require $rootPath . "controllers/adminCreateProduct.php";
     

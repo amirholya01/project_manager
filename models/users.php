@@ -20,6 +20,8 @@ class Users{
     
     //Advanced queries
     public $checkIfUserExists = 'SELECT name FROM users WHERE name = :name';
+
+    public $checkIfUserIsAdmin = 'SELECT role FROM users WHERE name = :name';
 }
 
 $Users = new Users();

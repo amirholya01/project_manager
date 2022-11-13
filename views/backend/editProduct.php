@@ -7,6 +7,7 @@
     require $rootPath . "views/backend/partials/adminStart.php";
 
     require $rootPath . "models/products.php";
+    require $rootPath . "security/adminCheck.php";
     require $rootPath . "controllers/adminEditProduct.php";
     
     /* 🔥 Needs to check if the user is allowed to be here */

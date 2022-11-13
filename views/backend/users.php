@@ -3,9 +3,10 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    
     require $rootPath . "views/backend/partials/adminStart.php";
+    
     require $rootPath . "models/users.php";
+    require $rootPath . "security/adminCheck.php";
 
     /* 🔥 Needs to check if the user is allowed to be here */
     require $rootPath . "controllers/createUser.php";
