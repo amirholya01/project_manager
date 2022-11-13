@@ -1,7 +1,5 @@
 <?php
     session_start();
-    $_SESSION['test2'] = "string";
-    $_SESSION['test'] = "test";
 
     define("BASE_URL", "http://bowtie.test");
 
