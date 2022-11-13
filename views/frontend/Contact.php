@@ -36,8 +36,6 @@
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
                     <a href="tel:+35235551238745">+3 (523) 555 123 8745</a>
-                    <br />
-                    <a href="tel:+35235557585238">+3 (523) 555 758 5238</a>
                 </div>
             </div>
         </div>
@@ -52,11 +50,8 @@
             <div class="icon-description-shortcode style-1">
                 <img class="icon" src="assets/img/icon-26.png" alt="">
                 <div class="title h6">Follow us</div>
-                <div class="follow light">
-                    <a class="entry" href="#"><i class="fa fa-facebook"></i></a>
-                    <a class="entry" href="#"><i class="fa fa-twitter"></i></a>
-                    <a class="entry" href="#"><i class="fa fa-linkedin"></i></a>
-                    <a class="entry" href="#"><i class="fa fa-google-plus"></i></a>
+                <div class="description simple-article size-2" style="line-height: 26px;">
+                    <a href="tel:+35235551238745">To see the last news about our bowties</a>
                 </div>
             </div>
         </div>
