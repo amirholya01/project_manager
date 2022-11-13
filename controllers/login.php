@@ -27,10 +27,6 @@
         //login
         $_SESSION["name"] = $data[0]['name'];
         $_SESSION["loggedin"] = "true";
-        
-        echo $_SESSION['name'];
-        echo "<br>";
-        echo $_SESSION['loggedin'];
 
         header("Location:/adminProducts");
     }else{
