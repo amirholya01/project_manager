@@ -25,6 +25,41 @@
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
+<style>
+.flex {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.button-size{
+    width: 12vw;
+}
+.button-wrapper{display: block; overflow: hidden; border-radius: inherit; -webkit-border-radius: inherit; position: relative;}
+</style>
+
+<div class="container flex ">
+    <a class="button size-2 style-2 button-size" href="#">
+        <span class="button-wrapper">
+            <span class="text">Normal</span>
+        </span>
+    </a>
+
+    <a class="button size-2 style-2 button-size" href="#">
+        <span class="button-wrapper">
+            <span class="text">Special Theme</span>
+        </span>
+    </a>
+
+
+    <a class="button size-2 style-2 button-size" href="#">
+        <span class="button-wrapper">
+            <span class="text">Costumized</span>
+        </span>
+    </a>
+</div>
+
+
+<div class="empty-space col-xs-b35 col-md-b70"></div>
+
 <div class="container">
     <div class="small-items-line">
         <div class="row nopadding">

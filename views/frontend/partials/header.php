@@ -22,6 +22,17 @@
 
 </head>
 
+<style>
+nav>ul>li>a:hover,
+nav>ul>li.active>a {
+    background-color: #B2A6CE;
+}
+.swiper-pagination-bullet-active {
+  border: 2px #B2A6CE solid;
+  }
+</style>
+
+
 <body>
 
     <div id="content-block">

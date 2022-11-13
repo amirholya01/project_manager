@@ -397,6 +397,26 @@
     <script src="<?php echo BASE_URL ?>/views/frontend/partials/js/jquery.throttle.js"></script>
 
     
+<script>
+const elements = document.querySelectorAll('*');
+elements.forEach(element => {
+    if(window.getComputedStyle( element ,null).getPropertyValue('background-color') == "rgb(184, 205, 6)"){
+        element.style.backgroundColor = "#B2A6CE";
+    }
+    if(window.getComputedStyle(element ,null).getPropertyValue('background') == "rgb(184, 205, 6)"){
+        element.style.background = "#B2A6CE";
+    }
+    if(window.getComputedStyle(element ,null).getPropertyValue('color') == "rgb(184, 205, 6)"){
+        element.style.color = "#B2A6CE";
+    }
+    if(window.getComputedStyle(element ,null).getPropertyValue('border') == "rgb(184, 205, 6)"){
+        element.style.border = "#B2A6CE";
+    }
+});
+
+
+
+</script>
 
 </body>
 </html>
