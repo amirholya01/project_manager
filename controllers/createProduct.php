@@ -51,6 +51,8 @@ if($validated == true){
                 echo "createImage is making it here!";
                 $imageUpload->uploadImage($_FILES['createImage']);
             }
+
+            /* ✒️ Needs to connect the uploaded image to the product */
         }
     }
 }

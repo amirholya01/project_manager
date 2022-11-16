@@ -1,6 +1,6 @@
 <?php
 
-/* Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
+/* ✒️ Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
 class imageUpload {
     function uploadImage ($img) {
         $rootPath = "";
@@ -9,9 +9,8 @@ class imageUpload {
         }    
         require $rootPath . "dbconn.php";
 
-        $imageValidated = true;
 
-        print_r($img);
+        $imageValidated = true;
 
         /* Checks for file type */
         if($imageValidated == true){
@@ -55,8 +54,8 @@ class imageUpload {
             }else{
                 move_uploaded_file($img['tmp_name'], $rootPath . "uploads/" . $img['name']);
         
-                $testName = "pineapple";
-                $createImageRefOnDb = $pdo->prepare("INSERT INTO media (media_id, name) VALUES (:id, :name)");
+                $testName = "pineapple"; /* ✒️ Should take file name */
+                $createImageRefOnDb = $pdo->prepare("INSERT INTO media (media_id, name) VALUES (:id, :name)"); /* ✒️ Should be in models */
                 $createImageRefOnDb->execute(array(
                     ":id" => $img['name'],
                     ":name" => $testName
