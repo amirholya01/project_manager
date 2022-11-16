@@ -35,107 +35,109 @@
      }
 ?>
 
-<form method="POST" action="adminUsers">
-    <input type="text" name="id" placeholder="ID"  value="<?php echo ($id != null) ? $id : ""; ?>">
-    <input type="text" name="name" placeholder="Name"  value="<?php echo ($name != null) ? $name : ""; ?>">
-    <select name="role">
-        <option value="">None</option>
-        <option <?php echo ($role === "0") ? "selected" : ""; ?> value="0">Customer</option>
-        <option <?php echo ($role == 1) ? "selected" : ""; ?> value="1">Admin</option>
-    </select>
-    <input type="submit">
-</form>
-<a href="/adminUsers">Reset</a>
-<a href="/adminCreateUser">Create new user</a>
+<div class="wrapper">
+    <form method="POST" action="adminUsers">
+        <input type="text" name="id" placeholder="ID"  value="<?php echo ($id != null) ? $id : ""; ?>">
+        <input type="text" name="name" placeholder="Name"  value="<?php echo ($name != null) ? $name : ""; ?>">
+        <select name="role">
+            <option value="">None</option>
+            <option <?php echo ($role === "0") ? "selected" : ""; ?> value="0">Customer</option>
+            <option <?php echo ($role == 1) ? "selected" : ""; ?> value="1">Admin</option>
+        </select>
+        <input type="submit">
+    </form>
+    <a href="/adminUsers">Reset</a>
+    <a href="/adminCreateUser">Create new user</a>
 
 
-<?php
-    $pageNr = $page;
-    $usersPrPage = 4;
-    $pageMinIndex = $pageNr * $usersPrPage;
-    $pageMaxIndex = $pageMinIndex + $usersPrPage;
-?>
+    <?php
+        $pageNr = $page;
+        $usersPrPage = 4;
+        $pageMinIndex = $pageNr * $usersPrPage;
+        $pageMaxIndex = $pageMinIndex + $usersPrPage;
+    ?>
 
-<?php
-    /* Previous button */
-    if($page > 0){
-?>
+    <?php
+        /* Previous button */
+        if($page > 0){
+    ?>
+        <form method="POST" action="adminUsers">
+            <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
+            <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
+            <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
+            <input type="submit" value="Prev">
+        </form>
+    <?php
+        }
+    ?>
+
+    <?php
+        /* Next button */
+        if($page < (count($data) / $usersPrPage) - 1){
+    ?>
     <form method="POST" action="adminUsers">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
-        <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
-        <input type="submit" value="Prev">
+        <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
+        <input type="submit" value="Next">
     </form>
-<?php
-    }
-?>
+    <?php
+        }
+    ?>
 
-<?php
-    /* Next button */
-    if($page < (count($data) / $usersPrPage) - 1){
-?>
-<form method="POST" action="adminUsers">
-    <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
-    <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
-    <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
-    <input type="submit" value="Next">
-</form>
-<?php
-    }
-?>
+    <?php
+        for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
+            $indData = $data[$i];
+    ?>
+            <div>
+                <p><?php echo $indData['name'] ?></p>
+                <p><?php echo array('Customer', 'Admin')[$indData['role']] ?></p>
+                <form method="POST" action="adminEditUser">
+                    <input type="hidden" name="id" value="<?php echo $indData['user_id'] ?>">
+                    <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
+                    <input type="hidden" name="role" value="<?php echo $indData['role'] ?>">
+                    <input type="submit" value="Edit">
+                </form>
 
-<?php
-    for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
-        $indData = $data[$i];
-?>
-        <div>
-            <p><?php echo $indData['name'] ?></p>
-            <p><?php echo array('Customer', 'Admin')[$indData['role']] ?></p>
-            <form method="POST" action="adminEditUser">
-                <input type="hidden" name="id" value="<?php echo $indData['user_id'] ?>">
-                <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
-                <input type="hidden" name="role" value="<?php echo $indData['role'] ?>">
-                <input type="submit" value="Edit">
-            </form>
+                <form method="POST" action="adminUsers">
+                    <input type="hidden" name="delete" value="<?php echo $indData['user_id'] ?>">
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+    <?php
+        }
+    ?>
 
-            <form method="POST" action="adminUsers">
-                <input type="hidden" name="delete" value="<?php echo $indData['user_id'] ?>">
-                <input type="submit" value="Delete">
-            </form>
-        </div>
-<?php
-    }
-?>
+    <?php
+        /* Previous button */
+        echo "<br>";
+        if($page > 0){
+    ?>
+        <form method="POST" action="adminUsers">
+            <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
+            <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
+            <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
+            <input type="submit" value="Prev">
+        </form>
+    <?php
+        }
+    ?>
 
-<?php
-    /* Previous button */
-    echo "<br>";
-    if($page > 0){
-?>
+    <?php
+        /* Next button */
+        if($page < (count($data) / $usersPrPage) - 1){
+    ?>
     <form method="POST" action="adminUsers">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
-        <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
-        <input type="submit" value="Prev">
+        <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
+        <input type="submit" value="Next">
     </form>
-<?php
-    }
-?>
+    <?php
+        }
+    ?>
 
-<?php
-    /* Next button */
-    if($page < (count($data) / $usersPrPage) - 1){
-?>
-<form method="POST" action="adminUsers">
-    <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
-    <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
-    <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
-    <input type="submit" value="Next">
-</form>
-<?php
-    }
-?>
-
-<?php 
-    require $rootPath . "views/backend/partials/footer.php";
-?>
+    <?php 
+        require $rootPath . "views/backend/partials/footer.php";
+    ?>
+</div>
