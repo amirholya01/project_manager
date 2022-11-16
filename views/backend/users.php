@@ -60,7 +60,7 @@
     /* Previous button */
     if($page > 0){
 ?>
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminUsers">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
         <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
@@ -74,7 +74,7 @@
     /* Next button */
     if($page < (count($data) / $usersPrPage) - 1){
 ?>
-<form method="POST" action="adminProducts">
+<form method="POST" action="adminUsers">
     <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
     <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
     <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
@@ -112,7 +112,7 @@
     echo "<br>";
     if($page > 0){
 ?>
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminUsers">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
         <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
@@ -126,7 +126,7 @@
     /* Next button */
     if($page < (count($data) / $usersPrPage) - 1){
 ?>
-<form method="POST" action="adminProducts">
+<form method="POST" action="adminUsers">
     <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
     <input type="hidden" name="name" value="<?php echo ($name != null) ? $name : ""; ?>">
     <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
