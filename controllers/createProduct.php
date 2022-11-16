@@ -12,6 +12,7 @@ if($validated == true){
         $price = $_POST['createPrice'];
         $colors = null;
 
+        
         $validStrings = $stringSanitation->getValidationStatus();
     
         /* Checks if all the strings pass validation */
@@ -43,6 +44,12 @@ if($validated == true){
                     $createProductColor->bindParam(':product_id', $id);
                     $createProductColor->execute();
                 }
+            }
+
+            /* Upload Image */
+            if(isset($_FILES['createImage'])){
+                echo "createImage is making it here!";
+                $imageUpload->uploadImage($_FILES['createImage']);
             }
         }
     }

@@ -15,7 +15,7 @@
     /* 🔥 Needs to check if the user is allowed to be here */
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminProducts" enctype="multipart/form-data">
         <!-- 
             i send createProduct to tell the controller that it should run create user
         -->
@@ -43,10 +43,12 @@
                 }
             ?>
         </select>
+        <input type="file" name="createImage">
         <input type="submit">
     </form>
 
-    <?php 
-        require $rootPath . "views/backend/partials/footer.php";
-    ?>
 </div>
+
+<?php 
+    require $rootPath . "views/backend/partials/footer.php";
+?>

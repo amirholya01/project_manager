@@ -14,6 +14,8 @@
     require $rootPath . "security/formSpam.php";
     require $rootPath . "security/stringSanitation.php";
 
+    require $rootPath . "controllers/imageUpload.php";
+
     require $rootPath . "controllers/createProduct.php";
     require $rootPath . "controllers/editProduct.php";
     require $rootPath . "controllers/deleteProduct.php";
@@ -74,6 +76,7 @@
         $pageMaxIndex = $pageMinIndex + $productsPrPage;
     ?>
 
+    <!-- ✒️ Should keep you on the same page when deleting or editing a product -->
     <?php
         /* Previous button */
         if($page > 0){
@@ -172,7 +175,8 @@
         }
     ?>
 
-    <?php 
-        require $rootPath . "views/backend/partials/footer.php";
-    ?>
 </div>
+
+<?php 
+    require $rootPath . "views/backend/partials/footer.php";
+?>

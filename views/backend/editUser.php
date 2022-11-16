@@ -28,7 +28,8 @@
         <input type="submit">
     </form>
 
-    <?php 
-        require $rootPath . "views/backend/partials/footer.php";
-    ?>
 </div>
+
+<?php 
+    require $rootPath . "views/backend/partials/footer.php";
+?>
