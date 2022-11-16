@@ -1,57 +1,32 @@
-<?php
-    $rootPath = "";
-    while(!file_exists($rootPath . "index.php")){
-        $rootPath = "../$rootPath";
-    }
-    require $rootPath . "dbconn.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Bowties</title>
+    <title>Admin Panel</title>
 </head>
 <body>
-    <header>
+    <aside>
         <?php
-            if(isset($_SESSION["name"]) && $_SESSION["name"] != ""){
-                echo $_SESSION["name"];
+            if(isset($_SESSION['name'])){
+        ?>
+            <p>
+                <?php echo $_SESSION['name']; ?>
+                &nbsp;
+                <a href="/logoutFunction">Log out</a>
+            </p>
+        <?php
             }
         ?>
         <nav>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/adminProducts">Products</a>
                 </li>
-                
-                <?php 
-                    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == "false"){
-                ?>
-                    <li>
-                        <a href="/login">login</a>
-                    </li>
-                    <li>
-                        <a href="/signup">signup</a>
-                    </li>
-                <?php
-                    }
-                ?>
-
-                <?php 
-                    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true"){
-                ?>
-                    <li>
-                        <a href="/profile">Profile</a>
-                    </li>
-                    <li>
-                        <a href="/controllers/logout.php">Logout</a>
-                    </li>
-                <?php
-                    }
-                ?>
+                <li>
+                    <a href="/adminUsers">Users</a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </aside>

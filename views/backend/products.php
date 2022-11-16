@@ -21,7 +21,7 @@
 
     require $rootPath . "controllers/adminProducts.php";
 
-    require $rootPath . "views/backend/partials/adminStart.php";
+    require $rootPath . "views/backend/partials/header.php";
 
     /* This is to make so search data dosent disapear after search */
     $id = null;
@@ -173,5 +173,5 @@
 ?>
 
 <?php 
-    require $rootPath . "views/backend/partials/adminEnd.php";
+    require $rootPath . "views/backend/partials/footer.php";
 ?>

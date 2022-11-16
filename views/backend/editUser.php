@@ -5,7 +5,7 @@
     }
     require $rootPath . "dbconn.php";
     
-    require $rootPath . "views/backend/partials/adminStart.php";
+    require $rootPath . "views/backend/partials/header.php";
     require $rootPath . "models/users.php";
     require $rootPath . "security/adminCheck.php";
     
@@ -29,5 +29,5 @@
 </form>
 
 <?php 
-    require $rootPath . "views/backend/partials/adminEnd.php";
+    require $rootPath . "views/backend/partials/footer.php";
 ?>
