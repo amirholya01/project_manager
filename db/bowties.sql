@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1:3306
--- Genereringstid: 15. 11 2022 kl. 10:03:37
+-- Genereringstid: 20. 11 2022 kl. 12:28:11
 -- Serverversion: 5.7.36
 -- PHP-version: 7.4.26
 
@@ -76,7 +76,41 @@ INSERT INTO `assign_colors_to_products` (`product_id`, `color_id`) VALUES
 (42, 1),
 (42, 2),
 (43, 1),
-(43, 2);
+(43, 2),
+(50, 1),
+(50, 2),
+(51, 1),
+(51, 2),
+(55, 1),
+(55, 2),
+(57, 1),
+(57, 2),
+(58, 1),
+(58, 2),
+(59, 1),
+(59, 2),
+(60, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `assign_media_to_products`
+--
+
+DROP TABLE IF EXISTS `assign_media_to_products`;
+CREATE TABLE IF NOT EXISTS `assign_media_to_products` (
+  `product_id` int(11) NOT NULL,
+  `media_id` int(11) NOT NULL,
+  PRIMARY KEY (`product_id`,`media_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `assign_media_to_products`
+--
+
+INSERT INTO `assign_media_to_products` (`product_id`, `media_id`) VALUES
+(59, 0),
+(60, 0);
 
 -- --------------------------------------------------------
 
@@ -86,11 +120,20 @@ INSERT INTO `assign_colors_to_products` (`product_id`, `color_id`) VALUES
 
 DROP TABLE IF EXISTS `media`;
 CREATE TABLE IF NOT EXISTS `media` (
-  `media_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(250) COLLATE utf8_bin NOT NULL,
-  `type` varchar(20) COLLATE utf8_bin NOT NULL,
+  `media_id` varchar(250) COLLATE utf8_bin NOT NULL,
+  `name` varchar(50) COLLATE utf8_bin DEFAULT '',
+  `type` int(11) DEFAULT NULL,
   PRIMARY KEY (`media_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `media`
+--
+
+INSERT INTO `media` (`media_id`, `name`, `type`) VALUES
+('6374dc23a3c27.jpg', 'pineapple', NULL),
+('6374d14b8aebd.jpg', 'pineapple', NULL),
+('6374dd3bd666f.jpg', 'pineapple', NULL);
 
 -- --------------------------------------------------------
 
@@ -106,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `description` varchar(250) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   PRIMARY KEY (`products_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
 
 --
 -- Data dump for tabellen `products`
@@ -120,7 +163,13 @@ INSERT INTO `products` (`products_id`, `name`, `type`, `description`, `price`) V
 (16, 'iamEvil', 5, ':33', '1'),
 (18, 'meep', 1, 'now i have colors!', '123'),
 (27, 'im tottally new', 1, '1', '1'),
-(43, 'doubleNew', 1, 'meep', '10');
+(43, 'doubleNew', 1, 'meep', '10'),
+(55, 'plzz', 1, 'work', '23'),
+(56, 'testingsf', 1, 'ngi', '23'),
+(57, 'more testing', 1, '1234', '324'),
+(58, 'AAAAAAAARG', 1, 'me me scared', '123'),
+(59, 'plzz bind', 1, 'i hope this works!', '4390'),
+(60, 'plzzzz', 1, 'plzzzzzzzzzz', '23');
 
 -- --------------------------------------------------------
 
@@ -197,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `spam_prevention` (
 --
 
 INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
-(1, 'Niclas', '2022-11-13 09:25:26');
+(1, 'Niclas', '2022-11-16 11:53:15');
 
 -- --------------------------------------------------------
 
