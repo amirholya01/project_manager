@@ -7,13 +7,16 @@
     
     We need to set it up with tokens instead
 */
-/* 
-$getUserData = $pdo->prepare($Users->checkIfUserIsAdmin);
+
+/* $getUserData = $pdo->prepare($Users->checkIfUserIsAdmin);
 $getUserData->bindParam(':name', $_SESSION['name']);
-$getUserData->execute();
+$getUserData->execute(); */
 
-$role = $getUserData->fetch()['role'];
-
-if($role != 1){
-    header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-} */
+if(isset($_SESSION['name'])){
+    $role = $UsersHandler->getUserRole($_SESSION['name']);
+    if($role == 0){
+        header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }
+} else {
+    header("location: /"/* Login */);
+}

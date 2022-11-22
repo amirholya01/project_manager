@@ -4,20 +4,13 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require_once $rootPath . "dbconn.php";
-    require_once $rootPath . "models/users.php";
-
-    //$Users = new Users();
+    require $rootPath . "dbconn.php";
+    require $rootPath . "models/users.php";
     
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    
-    $userCheck = $pdo->prepare($Users->checkIfUserExists);
-    $userCheck->bindParam(':name', $name);
-    $userCheck->execute();
-
-    $data = $userCheck->fetch();
+    $data = $UsersHandler->checkIfUserExists($name);
 
     $validName = true;
     if(isset($data[0])){
@@ -25,11 +18,7 @@
     }
 
     if($validName && $name != ""){
-        $createUser = $pdo->prepare($Users->createUser);
-        $createUser->bindParam(':name', $name);
-        $createUser->bindParam(':password', $password);
-        $createUser->bindParam(':role', 0);
-        $createUser->execute();
+        $UsersHandler->createUser($name, $password, 0);
         
         $_SESSION['name'] = $name;
         $_SESSION['loggedin'] = "true";

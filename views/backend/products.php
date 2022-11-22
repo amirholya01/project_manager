@@ -5,23 +5,22 @@
     }
     require_once $rootPath . "dbconn.php";
 
-    //require_once $rootPath . "models/handlers/ProductsHandler.php";
-    require_once $rootPath . "models/sql/users.php"; /* Needs to call handler instead */
+    require_once $rootPath . "models/handlers/productsHandler.php";
+    require_once $rootPath . "models/handlers/usersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
-    /* 🔥 Needs to check if the user is allowed to be here */
     
-    require_once $rootPath . "security/formSpam.php";
+    //require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
-    require_once $rootPath . "controllers/imageUpload.php";
+    //require_once $rootPath . "controllers/imageUpload.php";
 
-    require_once $rootPath . "controllers/createProduct.php";
+    //require_once $rootPath . "controllers/createProduct.php";
     require_once $rootPath . "controllers/editProduct.php";
-    require_once $rootPath . "controllers/deleteProduct.php";
-    require_once $rootPath . "controllers/getProductsWithFilters.php";
+    //require_once $rootPath . "controllers/deleteProduct.php";
 
     require_once $rootPath . "controllers/adminProducts.php";
+    require_once $rootPath . "controllers/getProductsWithFilters.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
 
@@ -116,8 +115,8 @@
                 <p><?php echo $indData['type'] ?></p>
                 <!-- Adds colors -->
                 <?php 
-                    foreach($allColors as $color){
-                        if($indData['products_id'] == $color['product_id']){
+                    foreach($colorAssignments as $color){
+                        if($color['product_id'] == $indData['products_id']){
                 ?>
                     <p><?php echo $color['color'] ?></p>
                 <?php

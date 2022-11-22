@@ -1,12 +1,5 @@
 <?php
 
-$getColors = $pdo->prepare($Products->getAllRawColors);
-$getColors->execute();
+$allTypes = $ProductsHandler->getTypes();
 
-$allColors = $getColors->fetchAll();
-
-
-$getTypes = $pdo->prepare($Products->getAllTypes);
-$getTypes->execute();
-
-$allTypes = $getTypes->fetchAll();
+$allColors = $ProductsHandler->getColors();

@@ -9,7 +9,7 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require_once $rootPath . "dbconn.php";
+    require $rootPath . "dbconn.php";
 
     /* gets the information from the post request */
     $name = $_POST['name'];
@@ -18,7 +18,7 @@
     $sql = "SELECT name, password, role FROM users WHERE name='$name' AND password='$password'"; /* <-- ✒️ Model */
 
     /* Fetches the data from the db */
-    $data = $pdo->query($sql)->fetchAll();
+    $data = $db->query($sql)->fetchAll();
     
     /* 🔥 Sessions don't work here */
 

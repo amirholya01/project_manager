@@ -3,36 +3,44 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require_once_once $rootPath . "dbconn.php";
+    require_once $rootPath . "dbconn.php";
     
-    require_once $rootPath . "views/backend/partials/header.php";
     
-    require_once $rootPath . "models/users.php";
+    require_once $rootPath . "models/handlers/usersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
+    
 
-    /* 🔥 Needs to check if the user is allowed to be here */
-    require_once $rootPath . "controllers/createUser.php";
-    require_once $rootPath . "controllers/editUser.php";
-    require_once $rootPath . "controllers/deleteUser.php";
+    //require_once $rootPath . "security/formSpam.php";
+    //require_once $rootPath . "security/stringSanitation.php";
+
+
+
+    //require_once $rootPath . "controllers/createUser.php";
+    //require_once $rootPath . "controllers/editUser.php";
+    //require_once $rootPath . "controllers/deleteUser.php";
+
+
     require_once $rootPath . "controllers/getUsersWithFilters.php";
 
-     /* This is to make so search data dosent disapear after search */
-     $id = null;
-     if(isset($_POST['id'])){
-         $id = $_POST['id'];
-     }
-     $name = null;
-     if(isset($_POST['name'])){
-         $name = $_POST['name'];
-     }
-     $role = null;
-     if(isset($_POST['role'])){
-         $role = $_POST['role'];
-     }
-     $page = 0;
-     if(isset($_POST['page'])){
-         $page = $_POST['page'];
-     }
+    require_once $rootPath . "views/backend/partials/header.php";
+
+    /* This is to make so search data dosent disapear after search */
+    $id = null;
+    if(isset($_POST['id'])){
+        $id = $_POST['id'];
+    }
+    $name = null;
+    if(isset($_POST['name'])){
+        $name = $_POST['name'];
+    }
+    $role = null;
+    if(isset($_POST['role'])){
+        $role = $_POST['role'];
+    }
+    $page = 0;
+    if(isset($_POST['page'])){
+        $page = $_POST['page'];
+    }
 ?>
 
 <div class="wrapper">
@@ -140,5 +148,5 @@
 </div>
 
 <?php 
-    require_once $rootPath . "views/backend/partials/footer.php";
+    require $rootPath . "views/backend/partials/footer.php";
 ?>

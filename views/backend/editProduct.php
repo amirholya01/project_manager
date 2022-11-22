@@ -5,15 +5,13 @@
     }
     require_once $rootPath . "dbconn.php";
     
-    require_once $rootPath . "views/backend/partials/header.php";
-
-    require_once $rootPath . "models/users.php";
+    require_once $rootPath . "models/handlers/usersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
-    require_once $rootPath . "models/products.php";
+    require_once $rootPath . "models/handlers/productsHandler.php";
     
     require_once $rootPath . "controllers/adminEditProduct.php";
     
-    /* 🔥 Needs to check if the user is allowed to be here */
+    require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
     <form method="POST" action="adminProducts">
@@ -39,6 +37,7 @@
             <?php 
                 foreach($allColors as $color){
             ?>
+                <!-- ✒️ Needs to select already selected colors -->
                 <option value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?></option>
             <?php
                 }
@@ -50,5 +49,5 @@
 </div>
 
 <?php 
-    require_once $rootPath . "views/backend/partials/footer.php";
+    require $rootPath . "views/backend/partials/footer.php";
 ?>

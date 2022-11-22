@@ -1,10 +1,7 @@
 <?php
     session_start();
-    
-    /* require "dbconn.php";
-    $pdo = new dbconn(); */
 
-    define("BASE_URL", "http://bowties5.test");
+    define("BASE_URL", "http://bowtie.test");
 
     include "Router.php";
 
@@ -13,26 +10,25 @@
 
     /* Frontend */
     $router->get('/', 'views/frontend/home');
-    $router->get('/login', 'views/login/login');
+    //$router->get('/login', 'views/login/login');
+    //$router->get('/signup', 'views/login/signup');
+    //$router->get('/profile', 'views/login/profile');
     $router->get('/loginFunction', 'controllers/login');
     $router->get('/signupFunction', 'controllers/signup');
     $router->get('/logoutFunction', 'controllers/logout');
-    $router->get('/signup', 'views/login/signup');
-    $router->get('/profile', 'views/login/profile');
     $router->get('/Product', 'views/frontend/Product');
     $router->get('/AboutUS', 'views/frontend/AboutUS');
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');
-    $router->get('/ProductShow', 'views/frontend/ProductShow');
-    $router->get('/BreadCrump', 'views/frontend/BreadCrump');
 
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');
     $router->get('/adminUsers', 'views/backend/users');
 
-    $router->get('/adminEditUser', 'views/backend/editUser');
-    $router->get('/adminCreateUser', 'views/backend/createUser');
+    //$router->get('/adminEditUser', 'views/backend/editUser');
+    //$router->get('/adminCreateUser', 'views/backend/createUser');
 
     $router->get('/adminEditProduct', 'views/backend/editProduct');
-    $router->get('/adminCreateProduct', 'views/backend/createProduct');
+    //$router->get('/adminCreateProduct', 'views/backend/createProduct');
     
+

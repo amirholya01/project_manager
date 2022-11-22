@@ -12,7 +12,7 @@ class Router{
         if($uri[0] == trim($route, "/")){
             array_shift($uri);
             $args = $uri;
-            require $file . ".php";
+            require_once $file . ".php";
         }
     }
 }

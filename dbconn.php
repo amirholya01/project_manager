@@ -1,32 +1,25 @@
 <?php
 
-require 'config.php';
-class dbconn extends config {
+require_once 'config.php';
 
+class dbconn extends config {
+        
     public $pdo;
 
-    /* public function __construct() {
-        $this->pdo = $this->DbConnect();
-        var_dump($this->pdo);
-        return $this->pdo;
-    } */
-    public function DbConnect() {
-        $dsn = "mysql:host=$this->host;dbname=$this->db;charset=UTF8";
-        
-        var_dump($this->host);
-        var_dump($this->db);
-
+    public function DbConnect() { 
         try {
+            $dsn = "mysql:host=".$this->host.";dbname=".$this->db.";charset=UTF8";
+            
             $pdo = new PDO($dsn, $this->user, $this->password);
-            $this->pdo = $pdo;
+
             // Connected to the db database successfully!;
             return $pdo;
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
+}
 
-    // $pdo = $this->DbConnect();
- }
- 
- $pdo = new dbconn();
+$dbconn = new dbconn();
+/* db = database connection */
+$db = $dbconn->DbConnect();
