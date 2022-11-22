@@ -4,84 +4,21 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheCustomTies</title>
 
     <link href="https://fonts.googleapis.com/css?family=Questrial|Raleway:700,900" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/TheCostumCSS.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/bootstrap.extension.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/style.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/swiper.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/sumoselect.css" rel="stylesheet">
     <link href="<?php echo BASE_URL ?>/views/frontend/partials/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    
 
 </head>
-
-<style>
-nav>ul>li>a:hover,
-nav>ul>li.active>a {
-    background-color: #B2A6CE;
-}
-
-.swiper-pagination-bullet-active {
-    border: 2px #B2A6CE solid;
-}
-.header-top .cart-toggle, .megamenu {
-  border-top: 5px #B2A6CE solid;
-}
-.button.style-3 {
-  background: #B2A6CE;
-}
-.checkbox-entry input:checked + span::before {
-  border-color: #B2A6CE;
-  background-color: #B2A6CE;
-}
-.header-top a:hover, .header-top a:hover .fa, .header-top a:hover b {
-  color: #B2A6CE;
-}
-.simple-input:focus, .SumoSelect.open > .CaptionCont {
-  border-color: #B2A6CE;
-}
-.SumoSelect > .optWrapper > .options li.opt.selected:not(.disabled) {
-  background-color: #B2A6CE;
-}
-.SumoSelect > .optWrapper > .options li.opt:hover {
-  background-color: #B2A6CE;
-}
-.button-close{
-    background: url(../../../assets/img/icon-5.png) 50% 50% no-repeat !important;
-}
-button{
-    border: none !important;
-}
-.simple-article h1 a:hover, .h1 a:hover, .simple-article h2 a:hover, .h2 a:hover, .simple-article h3 a:hover, .h3 a:hover, .simple-article h4 a:hover, .h4 a:hover, .simple-article h5 a:hover, .h5 a:hover, .simple-article h6 a:hover, .h6 a:hover {
-  color: #B2A6CE !important;
-}
-.product-shortcode:hover .animate-to-green {
-  color: #B2A6CE;
-}
-.product-shortcode.style-7 .product-label {
-  top: 19px;
-}
-.swiper-wrapper {
-  cursor: url(../../../assets/img/drag.png) 16 9, ew-resize;
-}
-.slider-product-preview {
-  top: 55px;
-  bottom: 55px;
-}
-.slider-product-preview > img {
-  left: 60%;
-}
-.simple-article.light ul li::before {
-  background-image: url(../../../assets/img/icon-21.png);
-}
-</style>
 
 
 <body>

@@ -123,50 +123,7 @@
                             </div>
                         </div>
                         <div class="slider-product-preview align-left" data-swiper-parallax-x="-600">
-                            <img src="assets/img/product-preview-13.png" alt="" />
-                        </div>
-                        <div class="empty-space col-xs-b80 col-sm-b0"></div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(assets/img/background-3.jpg);">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2 col-sm-text-center">
-                                <div class="cell-view page-height">
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                    <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3">PROFESSIONAL EDITION</div>
-                                        <div class="col-xs-b5"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1 light">real beat trx</h1>
-                                        <div class="title-underline light left"><span></span></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-400">
-                                        <div class="simple-article size-4 light transparent">
-                                            <p>In feugiat molestie tortor a malesuada. Etiam a venenatis ipsum. Proin
-                                                pharetra elit at feugiat commodo vel placerat tincidunt sapien nec</p>
-                                            <ul>
-                                                <li>20.000h of high quality music</li>
-                                                <li>Perfect insulation</li>
-                                                <li>5 years guaranteed work</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-b30"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-300">
-                                        <div class="buttons-wrapper">
-                                            <a class="button size-2 style-1" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                                    <span class="text">Learn More</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                </div>
-                            </div>
+                            <img class="slider-2-img" src="assets/img/product-preview-13.png" alt="" />
                         </div>
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
                     </div>
@@ -201,6 +158,77 @@
                         ullamcorper eget porttitor ut, sagittis in justo. Vestibulum egestas nulla nec purus porttitor
                         fermentum. Integer mauris mi, viverra eget nibh at, efficitur consectetur erat. Curabitur et
                         imperdiet enim.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
+    <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-xs-b15 col-md-b0">
+                <div class="banner-shortcode style-4 rounded-image text-center"
+                    style="background-image: url(assets/img/background-5.jpg);">
+                    <div class="valign-middle-cell">
+                        <div class="valign-middle-content">
+                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">RELIABILITY</div>
+                            <h3 class="h3 light">perfect soundfor everyone</h3>
+                            <div class="title-underline light center"><span></span></div>
+                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
+                            <a class="button size-2 style-2" href="#">
+                                <span class="button-wrapper">
+                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                    <span class="text">learn more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="angle-left hidden-xs"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-b15 col-md-b0">
+                <div class="banner-shortcode style-4 rounded-image text-center"
+                    style="background-image: url(assets/img/background-6.jpg);">
+                    <div class="valign-middle-cell">
+                        <div class="valign-middle-content">
+                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">high quality</div>
+                            <h3 class="h3 light">choise of professionals</h3>
+                            <div class="title-underline light center"><span></span></div>
+                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
+                            <a class="button size-2 style-2" href="#">
+                                <span class="button-wrapper">
+                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                    <span class="text">learn more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="angle-left hidden-xs"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-b15 col-md-b0">
+                <div class="banner-shortcode style-4 rounded-image text-center"
+                    style="background-image: url(assets/img/background-7.jpg);">
+                    <div class="valign-middle-cell">
+                        <div class="valign-middle-content">
+                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">convenience</div>
+                            <h3 class="h3 light">satisfaction guarantted</h3>
+                            <div class="title-underline light center"><span></span></div>
+                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
+                            <a class="button size-2 style-2" href="#">
+                                <span class="button-wrapper">
+                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                    <span class="text">learn more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="angle-left hidden-xs"></div>
                 </div>
             </div>
         </div>
@@ -352,107 +380,6 @@
     <div class="empty-space col-xs-b35 col-md-b70"></div>
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-5.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">RELIABILITY</div>
-                            <h3 class="h3 light">perfect soundfor everyone</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="angle-left hidden-xs"></div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-6.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">high quality</div>
-                            <h3 class="h3 light">choise of professionals</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="angle-left hidden-xs"></div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-7.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">convenience</div>
-                            <h3 class="h3 light">satisfaction guarantted</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="angle-left hidden-xs"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="empty-space col-xs-b35 col-md-b70"></div>
-    <div class="empty-space col-xs-b35 col-md-b70"></div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-6">
-                <div class="cell-view simple-banner-height text-center">
-                    <div class="empty-space col-sm-b35"></div>
-                    <div class="simple-article grey uppercase size-5 col-xs-b5"><span class="color">special
-                            offers</span> for subscribers</div>
-                    <h3 class="h3 col-xs-b15">new offers every week <span class="color">+</span> discount system <span
-                            class="color">+</span> best prices</h3>
-                    <div class="simple-article size-3 col-xs-b25 col-sm-b50">Praesent nec finibus massa. Phasellus id
-                        auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est
-                        lacinia sit amet.</div>
-                    <div class="single-line-form">
-                        <input class="simple-input" type="text" value="" placeholder="Enter your email">
-                        <div class="button size-2 style-3">
-                            <span class="button-wrapper">
-                                <span class="icon"><img src="assets/img/icon-4.png" alt=""></span>
-                                <span class="text">submit</span>
-                            </span>
-                            <input type="submit" value="">
-                        </div>
-                    </div>
-                    <div class="empty-space col-xs-b35"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row-background left hidden-xs">
-            <img src="assets/img/background-8.jpg" alt="" />
-        </div>
-    </div>
 
 </div>
 
