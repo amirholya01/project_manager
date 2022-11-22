@@ -70,3 +70,10 @@ button {
 .FirstBannerImage img{
     left: 65% !important;
 }
+.Slider-wrapper-next {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+  

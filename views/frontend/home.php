@@ -13,8 +13,12 @@
 <div class="content-margins grey">
     <!--  Main slider for homepage  -->
     <div class="slider-wrapper">
-        <div class="swiper-button-prev visible-lg"></div>
-        <div class="swiper-button-next visible-lg"></div>
+        <div class="swiper-button-prev Slider-wrapper-next">
+            <span class="icon"><img src="assets/img/icon-102.png" alt=""></span>
+        </div>
+        <div class="swiper-button-next Slider-wrapper-next">
+            <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+        </div>
         <div class="swiper-container" data-parallax="1" data-auto-height="1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" style="background-image: url(assets/img/background-1.jpg);">

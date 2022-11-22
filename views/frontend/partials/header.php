@@ -196,33 +196,11 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="header-bottom-icon toggle-search"><i class="fa fa-search"
-                                    aria-hidden="true"></i></div>
-                            <div class="header-bottom-icon visible-rd"><i class="fa fa-heart-o" aria-hidden="true"></i>
-                            </div>
+                            <div class="header-bottom-icon visible-rd"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
                             <div class="header-bottom-icon visible-rd">
                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                 <span class="cart-label">5</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="header-search-wrapper">
-                        <div class="header-search-content">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-                                        <form>
-                                            <div class="search-submit">
-                                                <i class="fa fa-search" aria-hidden="true"></i>
-                                                <input type="submit" />
-                                            </div>
-                                            <input class="simple-input style-1" type="text" value=""
-                                                placeholder="Enter keyword" />
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-close"></div>
                         </div>
                     </div>
                 </div>

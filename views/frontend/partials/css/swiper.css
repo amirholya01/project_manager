@@ -145,7 +145,7 @@
 }
 .swiper-button-prev:after,
 .swiper-button-next:after{
-  border: 5px #b8cd06 solid;
+  border: 5px #B2A6CE solid;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transition: all .3s;
