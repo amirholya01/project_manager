@@ -11,10 +11,16 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
+
+<div class="breadcrumbs SiteMap">
+        <a href="/">home</a>
+        <a href="Contact">Contact</a>
+    </div>
+
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5">our contacts</div>
-        <div class="h2">we ready for your questions</div>
+        <div class="simple-article size-3 grey uppercase col-xs-b5">Contact us</div>
+        <div class="h2">You can ask us about everything</div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>

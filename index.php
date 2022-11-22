@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    define("BASE_URL", "http://bowtie.test");
+    define("BASE_URL", "http://bowties5.test");
 
     include "Router.php";
 

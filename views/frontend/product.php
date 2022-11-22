@@ -12,17 +12,16 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
-<div class="row ProductShow-container">
-    <div class="breadcrumbs">
+
+    <div class="breadcrumbs SiteMap">
         <a href="/">home</a>
         <a href="Product">Products</a>
-        <a href="ProductShow">Product-Show</a>
     </div>
 
     <div class="container">
         <div class="text-center">
-            <div class="simple-article size-3 grey uppercase col-xs-b5">accessories</div>
-            <div class="h2">choosing in one style</div>
+            <div class="simple-article size-3 grey uppercase col-xs-b5">Products</div>
+            <div class="h2">choose your favorite bowtie</div>
             <div class="title-underline center"><span></span></div>
         </div>
     </div>
@@ -30,26 +29,6 @@
 
 
     <div class="empty-space col-xs-b35 col-md-b70"></div>
-
-    <style>
-    .flex {
-        display: flex !important;
-        justify-content: space-between !important;
-        margin-top: -30px !important;
-    }
-
-    .button-size {
-        width: 12vw;
-    }
-
-    .button-wrapper {
-        display: block;
-        overflow: hidden;
-        border-radius: inherit;
-        -webkit-border-radius: inherit;
-        position: relative;
-    }
-    </style>
 
     <div class="container flex ">
         <a class="button size-2 style-2 button-size" href="#">
@@ -517,8 +496,6 @@
         </div>
     </div>
 
-
-</div>
 
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
