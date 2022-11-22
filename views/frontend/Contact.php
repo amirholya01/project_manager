@@ -41,7 +41,7 @@
                 <img class="icon" src="assets/img/icon-23.png" alt="">
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    <a href="tel:+35235551238745">+3 (523) 555 123 8745</a>
+                    <a href="tel:+4553525239">+45  53 52 52 39</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
             <div class="icon-description-shortcode style-1">
                 <img class="icon" src="assets/img/icon-28.png" alt="">
                 <div class="title h6">email</div>
-                <div class="description simple-article size-2"><a href="mailto:offce@exzo.com">offce@exzo.com</a></div>
+                <div class="description simple-article size-2"><a href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
             </div>
         </div>
         <div class="col-sm-3">
@@ -57,7 +57,7 @@
                 <img class="icon" src="assets/img/icon-26.png" alt="">
                 <div class="title h6">Follow us</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    <a href="tel:+35235551238745">To see the last news about our bowties</a>
+                    To see the last news about our bowties
                 </div>
             </div>
         </div>

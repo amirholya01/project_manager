@@ -352,8 +352,6 @@ form{position: relative;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* 04 - SWIPER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-.swiper-wrapper{cursor:url(../img/drag.png) 16 9, ew-resize;}
-.swiper-container-vertical .swiper-wrapper{cursor:url(../../../../assets/img/drag-vertical.png) 8 16, ns-resize;}
 .swiper-button-disabled+.swiper-button-disabled+.swiper-wrapper, .swiper-button-disabled+.swiper-button-disabled+.swiper-container > .swiper-wrapper{transform: none!important; -webkit-transform: none!important; cursor: auto; justify-content: center;}
 .swiper-button-disabled+.swiper-button-disabled+.swiper-wrapper .swiper-slide:last-child, .swiper-button-disabled+.swiper-button-disabled+.swiper-container > .swiper-wrapper .swiper-slide:last-child{margin-right: 0!important;}
 .swiper-button-disabled+.swiper-button-disabled+.swiper-wrapper+.swiper-pagination-bullets, .swiper-button-disabled+.swiper-button-disabled+.swiper-container > .swiper-pagination-bullets{display: none!important;}

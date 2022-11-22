@@ -42,8 +42,8 @@
                         <div class="col-sm-6 col-md-3">
                             <h6 class="h6 light">Contact us</h6>
                             <div class="empty-space col-xs-b20"></div>
-                                <div class="footer-contact"><i class="fa fa-mobile" aria-hidden="true"></i> contact us: <a href="tel:+35235551238745">+3  (523) 555 123 8745</a></div>
-                                <div class="footer-contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> email: <a href="mailto:office@exzo.com">office@exzo.com</a></div>
+                                <div class="footer-contact"><i class="fa fa-mobile" aria-hidden="true"></i> contact us: <a href="tel:+4553525239">+45  53 52 52 39</a></div>
+                                <div class="footer-contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> email: <a href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
                                 <div class="footer-contact"><i class="fa fa-map-marker" aria-hidden="true"></i> address: <a href="#">Esbjerg 6700, Denmark</a></div>
                         </div>
                     </div>

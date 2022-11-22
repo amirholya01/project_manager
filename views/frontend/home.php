@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-product-preview" data-swiper-parallax-x="-600">
+                        <div class="slider-product-preview FirstBannerImage" data-swiper-parallax-x="-600">
                             <img src="assets/img/product-preview-12.png" alt="" />
                         </div>
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
@@ -166,6 +166,7 @@
     <div class="empty-space col-xs-b35 col-md-b70"></div>
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
+    <!--  News products section for the homepage  -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-xs-b15 col-md-b0">
@@ -246,7 +247,7 @@
         </div>
     </div>
 
-    <div class="empty-space col-xs-b35 col-md-b70"></div>
+
 
 
     <div class="slider-wrapper">
@@ -258,7 +259,7 @@
                     <div class="container">
                         <div class="row vertical-aligned-columns">
                             <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-24.jpg" class="block-image rounded-image" alt="" />
+                                <img src="assets/img/thumbnail-24.png" class="block-image rounded-image" alt="" />
                             </div>
                             <div class="col-sm-6 col-md-4 col-md-offset-2">
                                 <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
@@ -289,15 +290,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="aligned-middle-image-shortcode hidden-xs hidden-sm" data-swiper-parallax-x="-600">
-                        <img src="assets/img/thumbnail-25.png" alt="" />
-                    </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="container">
                         <div class="row vertical-aligned-columns">
                             <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-24.jpg" class="block-image rounded-image" alt="" />
+                                <img src="assets/img/thumbnail-25.png" class="block-image rounded-image" alt="" />
                             </div>
                             <div class="col-sm-6 col-md-4 col-md-offset-2">
                                 <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
@@ -328,15 +326,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="aligned-middle-image-shortcode hidden-xs hidden-sm" data-swiper-parallax-x="-600">
-                        <img src="assets/img/thumbnail-25.png" alt="" />
-                    </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="container">
                         <div class="row vertical-aligned-columns">
                             <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-24.jpg" class="block-image rounded-image" alt="" />
+                                <img src="assets/img/thumbnail-26.png" class="block-image rounded-image" alt="" />
                             </div>
                             <div class="col-sm-6 col-md-4 col-md-offset-2">
                                 <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
@@ -366,9 +361,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="aligned-middle-image-shortcode hidden-xs hidden-sm" data-swiper-parallax-x="-600">
-                        <img src="assets/img/thumbnail-25.png" alt="" />
                     </div>
                 </div>
             </div>

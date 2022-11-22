@@ -59,3 +59,14 @@ button {
 .SiteMap{
     margin-left: 3.5%;
 }
+.Cart-image{
+    width: 80px !important;
+    height: auto;
+}
+.Cart-image img{
+    width: 100%;
+    height: auto;
+}
+.FirstBannerImage img{
+    left: 65% !important;
+}

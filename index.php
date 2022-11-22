@@ -21,6 +21,7 @@
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');
     $router->get('/ProductShow', 'views/frontend/ProductShow');
+    $router->get('/BreadCrump', 'views/frontend/BreadCrump');
 
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');

@@ -138,7 +138,7 @@
                 <div class="col-md-6">
                     <h4 class="h4 col-xs-b25">your order</h4>
                     <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail" href="#"><img src="assets/img/product-1.png" alt=""></a>
+                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-1.png" alt=""></a>
                         <div class="cart-entry-description">
                             <table>
                                 <tbody>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail" href="#"><img src="assets/img/product-2.png" alt=""></a>
+                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-2.png" alt=""></a>
                         <div class="cart-entry-description">
                             <table>
                                 <tbody>
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail" href="#"><img src="assets/img/product-3.png" alt=""></a>
+                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-3.png" alt=""></a>
                         <div class="cart-entry-description">
                             <table>
                                 <tbody>
