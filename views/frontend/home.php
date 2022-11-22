@@ -123,50 +123,7 @@
                             </div>
                         </div>
                         <div class="slider-product-preview align-left" data-swiper-parallax-x="-600">
-                            <img src="assets/img/product-preview-13.png" alt="" />
-                        </div>
-                        <div class="empty-space col-xs-b80 col-sm-b0"></div>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url(assets/img/background-3.jpg);">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2 col-sm-text-center">
-                                <div class="cell-view page-height">
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                    <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3">PROFESSIONAL EDITION</div>
-                                        <div class="col-xs-b5"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1 light">real beat trx</h1>
-                                        <div class="title-underline light left"><span></span></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-400">
-                                        <div class="simple-article size-4 light transparent">
-                                            <p>In feugiat molestie tortor a malesuada. Etiam a venenatis ipsum. Proin
-                                                pharetra elit at feugiat commodo vel placerat tincidunt sapien nec</p>
-                                            <ul>
-                                                <li>20.000h of high quality music</li>
-                                                <li>Perfect insulation</li>
-                                                <li>5 years guaranteed work</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-b30"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-300">
-                                        <div class="buttons-wrapper">
-                                            <a class="button size-2 style-1" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                                    <span class="text">Learn More</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-b40 col-sm-b80"></div>
-                                </div>
-                            </div>
+                            <img class="slider-2-img" src="assets/img/product-preview-13.png" alt="" />
                         </div>
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
                     </div>

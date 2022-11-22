@@ -20,6 +20,7 @@
     $router->get('/AboutUS', 'views/frontend/AboutUS');
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');
+    $router->get('/ProductShow', 'views/frontend/ProductShow');
 
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');

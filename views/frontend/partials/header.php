@@ -31,55 +31,110 @@ nav>ul>li.active>a {
 .swiper-pagination-bullet-active {
     border: 2px #B2A6CE solid;
 }
-.header-top .cart-toggle, .megamenu {
-  border-top: 5px #B2A6CE solid;
+
+.header-top .cart-toggle,
+.megamenu {
+    border-top: 5px #B2A6CE solid;
 }
+
 .button.style-3 {
-  background: #B2A6CE;
+    background: #B2A6CE;
 }
-.checkbox-entry input:checked + span::before {
-  border-color: #B2A6CE;
-  background-color: #B2A6CE;
+
+.checkbox-entry input:checked+span::before {
+    border-color: #B2A6CE;
+    background-color: #B2A6CE;
 }
-.header-top a:hover, .header-top a:hover .fa, .header-top a:hover b {
-  color: #B2A6CE;
+
+.header-top a:hover,
+.header-top a:hover .fa,
+.header-top a:hover b {
+    color: #B2A6CE;
 }
-.simple-input:focus, .SumoSelect.open > .CaptionCont {
-  border-color: #B2A6CE;
+
+.simple-input:focus,
+.SumoSelect.open>.CaptionCont {
+    border-color: #B2A6CE;
 }
-.SumoSelect > .optWrapper > .options li.opt.selected:not(.disabled) {
-  background-color: #B2A6CE;
+
+.SumoSelect>.optWrapper>.options li.opt.selected:not(.disabled) {
+    background-color: #B2A6CE;
 }
-.SumoSelect > .optWrapper > .options li.opt:hover {
-  background-color: #B2A6CE;
+
+.SumoSelect>.optWrapper>.options li.opt:hover {
+    background-color: #B2A6CE;
 }
-.button-close{
+
+.button-close {
     background: url(../../../assets/img/icon-5.png) 50% 50% no-repeat !important;
 }
-button{
+
+button {
     border: none !important;
 }
-.simple-article h1 a:hover, .h1 a:hover, .simple-article h2 a:hover, .h2 a:hover, .simple-article h3 a:hover, .h3 a:hover, .simple-article h4 a:hover, .h4 a:hover, .simple-article h5 a:hover, .h5 a:hover, .simple-article h6 a:hover, .h6 a:hover {
-  color: #B2A6CE !important;
+
+.simple-article h1 a:hover,
+.h1 a:hover,
+.simple-article h2 a:hover,
+.h2 a:hover,
+.simple-article h3 a:hover,
+.h3 a:hover,
+.simple-article h4 a:hover,
+.h4 a:hover,
+.simple-article h5 a:hover,
+.h5 a:hover,
+.simple-article h6 a:hover,
+.h6 a:hover {
+    color: #B2A6CE !important;
 }
+
 .product-shortcode:hover .animate-to-green {
-  color: #B2A6CE;
+    color: #B2A6CE;
 }
+
 .product-shortcode.style-7 .product-label {
-  top: 19px;
+    top: 19px;
 }
+
 .swiper-wrapper {
-  cursor: url(../../../assets/img/drag.png) 16 9, ew-resize;
+    cursor: url(../../../assets/img/drag.png) 16 9, ew-resize;
 }
+
 .slider-product-preview {
-  top: 55px;
-  bottom: 55px;
+    top: 55px;
+    bottom: 55px;
 }
-.slider-product-preview > img {
-  left: 60%;
+
+.slider-product-preview>img {
+    left: 60%;
 }
+
 .simple-article.light ul li::before {
-  background-image: url(../../../assets/img/icon-21.png);
+    background-image: url(../../../assets/img/icon-21.png);
+}
+
+.slider-2-img {
+    left: 40% !important;
+}
+
+.ProductShow-container {
+    padding: 0 100px 0 30px !important;
+}
+
+.Related-ProductShow-container {
+    padding: 0 150px !important;
+}
+
+.title-underline {
+    color: #B2A6CE;
+}
+
+.product-shortcode .icons .entry:hover {
+    background: #B2A6CE;
+    border-color: #B2A6CE;
+}
+.breadcrumbs{
+    margin-left: 20px;
 }
 </style>
 
