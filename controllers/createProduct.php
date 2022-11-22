@@ -32,7 +32,7 @@ if($validated == true){
         
             /* Get the id */
             /* The id is AI by the db after insert the above data into the db */
-            $id = $pdo->lastInsertId();
+            $productId = $pdo->lastInsertId();
         
             /* Assigns the colors to the product */
             if( isset($_POST['createColors']) ){
@@ -41,18 +41,15 @@ if($validated == true){
                 foreach($colors as $color){
                     $createProductColor = $pdo->prepare($Products->createProductColor);
                     $createProductColor->bindParam(':color_id', $color);
-                    $createProductColor->bindParam(':product_id', $id);
+                    $createProductColor->bindParam(':product_id', $productId);
                     $createProductColor->execute();
                 }
             }
 
             /* Upload Image */
             if(isset($_FILES['createImage'])){
-                echo "createImage is making it here!";
-                $imageUpload->uploadImage($_FILES['createImage']);
+                $imageUpload->uploadImage($_FILES['createImage'], $productId);
             }
-
-            /* ✒️ Needs to connect the uploaded image to the product */
         }
     }
 }

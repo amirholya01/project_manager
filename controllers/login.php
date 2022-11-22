@@ -9,7 +9,7 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once $rootPath . "dbconn.php";
 
     /* gets the information from the post request */
     $name = $_POST['name'];

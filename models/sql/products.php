@@ -1,5 +1,12 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+require_once $rootPath . "dbconn.php";
+
+
 class Products{
     //Basic Crud
     public $createProduct = "INSERT INTO products (name, type, description, price) VALUES (:name, :type, :description, :price)";
@@ -45,5 +52,3 @@ class Products{
     public $deleteProductColorByProductId = "DELETE FROM assign_colors_to_products WHERE product_id = :id";
     
 }
-
-$Products = new Products();

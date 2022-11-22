@@ -4,7 +4,7 @@
         $rootPath = "../$rootPath";
     }
     
-    require $rootPath . "views/frontend/partials/header.php";
+    require_once $rootPath . "views/frontend/partials/header.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -128,5 +128,5 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <?php 
-    require $rootPath . "views/frontend/partials/footer.php";
+    require_once $rootPath . "views/frontend/partials/footer.php";
 ?>

@@ -3,8 +3,8 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "views/partials/header.php";
-    require $rootPath . "models/users.php";
+    require_once_once $rootPath . "views/partials/header.php";
+    require_once_once $rootPath . "models/users.php";
 
     /* gets the name of the user you are currently logged in as */
     $currentName = $_SESSION['name'];
@@ -34,7 +34,7 @@
         }
     }
 
-    /* Checks if the requirements are fulfilled */
+    /* Checks if the require_once_oncements are fulfilled */
     if($name != "" && $validName){
         /* Checks if the user changed their password or not */
         if($password != ""){

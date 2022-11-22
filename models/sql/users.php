@@ -24,4 +24,5 @@ class Users{
     public $checkIfUserIsAdmin = 'SELECT role FROM users WHERE name = :name';
 }
 
+/* This is basicly the same as making it static? */
 $Users = new Users();

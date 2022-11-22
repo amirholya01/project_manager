@@ -2,12 +2,12 @@
 
 /* ✒️ Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
 class imageUpload {
-    function uploadImage ($img) {
+    function uploadImage ($img, $productId) {
         $rootPath = "";
         while(!file_exists($rootPath . "index.php")){
             $rootPath = "../$rootPath";
         }    
-        require $rootPath . "dbconn.php";
+        require_once $rootPath . "dbconn.php";
 
 
         $imageValidated = true;
@@ -61,6 +61,16 @@ class imageUpload {
                     ":name" => $testName
                 ));
             }
+        }
+        $mediaId = $pdo->lastInsertId();
+
+        if(isset($productId)){
+            /* ✒️ check if it works */
+            $assignImageToProduct = $pdo->prepare("INSERT INTO assign_media_to_products (product_id, media_id) VALUES (:product_id, :media_id)");
+            $assignImageToProduct->execute(array(
+                ":product_id" => $productId,
+                ":media_id" => $mediaId
+            ));
         }
     }
 }
