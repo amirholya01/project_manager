@@ -4,7 +4,7 @@
         $rootPath = "../$rootPath";
     }
     
-    require $rootPath . "views/frontend/partials/header.php";
+    require_once $rootPath . "views/frontend/partials/header.php";
 ?>
 
 <!--  Make a empty space  -->
@@ -376,5 +376,5 @@
 </div>
 
 <?php 
-    require $rootPath . "views/frontend/partials/footer.php";
+    require_once $rootPath . "views/frontend/partials/footer.php";
 ?>

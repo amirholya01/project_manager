@@ -3,18 +3,18 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once_once $rootPath . "dbconn.php";
     
-    require $rootPath . "views/backend/partials/header.php";
+    require_once $rootPath . "views/backend/partials/header.php";
     
-    require $rootPath . "models/users.php";
-    require $rootPath . "security/adminCheck.php";
+    require_once $rootPath . "models/users.php";
+    require_once $rootPath . "security/adminCheck.php";
 
     /* 🔥 Needs to check if the user is allowed to be here */
-    require $rootPath . "controllers/createUser.php";
-    require $rootPath . "controllers/editUser.php";
-    require $rootPath . "controllers/deleteUser.php";
-    require $rootPath . "controllers/getUsersWithFilters.php";
+    require_once $rootPath . "controllers/createUser.php";
+    require_once $rootPath . "controllers/editUser.php";
+    require_once $rootPath . "controllers/deleteUser.php";
+    require_once $rootPath . "controllers/getUsersWithFilters.php";
 
      /* This is to make so search data dosent disapear after search */
      $id = null;
@@ -140,5 +140,5 @@
 </div>
 
 <?php 
-    require $rootPath . "views/backend/partials/footer.php";
+    require_once $rootPath . "views/backend/partials/footer.php";
 ?>

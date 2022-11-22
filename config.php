@@ -1,5 +1,8 @@
 <?php
-$host = 'localhost';
-$db = 'bowties';
-$user = 'root'; /* <-- not safe */
-$password = ''; /* <-- not safe */
+
+class config {
+    protected $host = 'localhost';
+    protected $db = 'bowties';
+    protected $user = 'root'; /* ✒️ */
+    protected $password = ''; /* ✒️ */
+}

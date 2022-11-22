@@ -1,5 +1,8 @@
 <?php
     session_start();
+    
+    /* require "dbconn.php";
+    $pdo = new dbconn(); */
 
     define("BASE_URL", "http://bowties5.test");
 
@@ -33,4 +36,3 @@
     $router->get('/adminEditProduct', 'views/backend/editProduct');
     $router->get('/adminCreateProduct', 'views/backend/createProduct');
     
-

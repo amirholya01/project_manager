@@ -3,11 +3,11 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once $rootPath . "dbconn.php";
     
-    require $rootPath . "views/backend/partials/header.php";
-    require $rootPath . "models/users.php";
-    require $rootPath . "security/adminCheck.php";
+    require_once $rootPath . "views/backend/partials/header.php";
+    require_once $rootPath . "models/users.php";
+    require_once $rootPath . "security/adminCheck.php";
     
     /* 🔥 Needs to check if the user is allowed to be here */
 ?>
@@ -31,5 +31,5 @@
 </div>
 
 <?php 
-    require $rootPath . "views/backend/partials/footer.php";
+    require_once $rootPath . "views/backend/partials/footer.php";
 ?>

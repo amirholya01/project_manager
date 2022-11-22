@@ -3,27 +3,27 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once $rootPath . "dbconn.php";
 
-    require $rootPath . "models/products.php";
-    require $rootPath . "models/users.php";
-    require $rootPath . "security/adminCheck.php";
+    //require_once $rootPath . "models/handlers/ProductsHandler.php";
+    require_once $rootPath . "models/sql/users.php"; /* Needs to call handler instead */
+    require_once $rootPath . "security/adminCheck.php";
 
     /* 🔥 Needs to check if the user is allowed to be here */
     
-    require $rootPath . "security/formSpam.php";
-    require $rootPath . "security/stringSanitation.php";
+    require_once $rootPath . "security/formSpam.php";
+    require_once $rootPath . "security/stringSanitation.php";
 
-    require $rootPath . "controllers/imageUpload.php";
+    require_once $rootPath . "controllers/imageUpload.php";
 
-    require $rootPath . "controllers/createProduct.php";
-    require $rootPath . "controllers/editProduct.php";
-    require $rootPath . "controllers/deleteProduct.php";
-    require $rootPath . "controllers/getProductsWithFilters.php";
+    require_once $rootPath . "controllers/createProduct.php";
+    require_once $rootPath . "controllers/editProduct.php";
+    require_once $rootPath . "controllers/deleteProduct.php";
+    require_once $rootPath . "controllers/getProductsWithFilters.php";
 
-    require $rootPath . "controllers/adminProducts.php";
+    require_once $rootPath . "controllers/adminProducts.php";
 
-    require $rootPath . "views/backend/partials/header.php";
+    require_once $rootPath . "views/backend/partials/header.php";
 
     /* This is to make so search data dosent disapear after search */
     $id = null;
@@ -178,5 +178,5 @@
 </div>
 
 <?php 
-    require $rootPath . "views/backend/partials/footer.php";
+    require_once $rootPath . "views/backend/partials/footer.php";
 ?>

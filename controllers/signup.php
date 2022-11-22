@@ -4,8 +4,8 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
-    require $rootPath . "models/users.php";
+    require_once $rootPath . "dbconn.php";
+    require_once $rootPath . "models/users.php";
 
     //$Users = new Users();
     
