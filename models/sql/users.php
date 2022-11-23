@@ -22,4 +22,8 @@ class Users{
     public $checkIfUserExistsQuery = 'SELECT name FROM users WHERE name = :name';
 
     public $getUserRoleQuery = 'SELECT role FROM users WHERE name = :name';
+
+    //Security
+    public $getSecurityDataQuery = "SELECT name, time FROM spam_prevention WHERE id = 1;";
+    public $updateSecurityDataQuery = "UPDATE spam_prevention SET name = :name, time = :time WHERE id = 1;";
 }

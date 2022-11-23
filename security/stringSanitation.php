@@ -36,7 +36,6 @@ class stringSanitation {
     function getValidationStatus (){
         return $this->validated;
     }
-
 }
 
 $stringSanitation = new stringSanitation();

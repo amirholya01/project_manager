@@ -29,6 +29,6 @@
     //$router->get('/adminCreateUser', 'views/backend/createUser');
 
     $router->get('/adminEditProduct', 'views/backend/editProduct');
-    //$router->get('/adminCreateProduct', 'views/backend/createProduct');
+    $router->get('/adminCreateProduct', 'views/backend/createProduct');
     
 

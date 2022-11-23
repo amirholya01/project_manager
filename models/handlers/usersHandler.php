@@ -81,6 +81,22 @@ class UsersHandler extends Users{
         $data = $getUsers->fetchAll();
         return $data;
     }
+
+    /* Security */
+    public function getSecurityData() {
+        $getSecurityData = $this->db->prepare($this->getSecurityDataQuery);
+        $getSecurityData->execute();
+
+        $securityData = $getSecurityData->fetchAll()[0];
+        return $securityData;
+    }
+
+    public function updateSecurityData($name, $dbTimeUpdate) {
+        $updateSecurityData = $this->db->prepare($this->updateSecurityDataQuery);
+        $updateSecurityData->bindParam(":name", $name);
+        $updateSecurityData->bindParam(":time", $dbTimeUpdate);
+        $updateSecurityData->execute();
+    }
 }
 
 $UsersHandler = new UsersHandler($db);
