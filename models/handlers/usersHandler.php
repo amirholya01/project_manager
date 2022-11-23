@@ -83,17 +83,41 @@ class UsersHandler extends Users{
     }
 
     public function editUser($id, $name, $role, $password) {
-        // Runs queries depending on if there is a password or not
-        if($password != "" && $password != null){
-            $editUser = $this->db->prepare($this->updateUserByIdQuery);
-            $editUser->bindParam(':password', $password);
-        }else{
-            $editUser = $this->db->prepare($this->updateUserByIdWithoutPasswordQuery);
+        if($role != null){
+            // Runs queries depending on if there is a password or not
+            if($password != "" && $password != null){
+                $editUser = $this->db->prepare($this->updateUserByIdQuery);
+                $editUser->bindParam(':password', $password);
+            } else {
+                $editUser = $this->db->prepare($this->updateUserByIdWithoutPasswordQuery);
+            }
+            $editUser->bindParam(':role', $role);
+        } else {
+            // Runs queries depending on if there is a password or not
+            if($password != "" && $password != null){
+                $editUser = $this->db->prepare($this->updateUserByIdWithoutRoleQuery);
+                $editUser->bindParam(':password', $password);
+            } else {
+                $editUser = $this->db->prepare($this->updateUserByIdWithoutPasswordAndRoleQuery);
+            }
         }
         
         $editUser->bindParam(':id', $id);
         $editUser->bindParam(':name', $name);
-        $editUser->bindParam(':role', $role);
+        $editUser->execute();
+    }
+
+    public function editUserByName($currentName, $name, $password) {
+        // Runs queries depending on if there is a password or not
+        if($password != "" && $password != null){
+            $editUser = $this->db->prepare($this->updateUserByNameQuery);
+            $editUser->bindParam(':password', $password);
+        } else {
+            $editUser = $this->db->prepare($this->updateUserByNameWithoutPasswordQuery);
+        }
+        
+        $editUser->bindParam(':currentName', $currentName);
+        $editUser->bindParam(':name', $name);
         $editUser->execute();
     }
 

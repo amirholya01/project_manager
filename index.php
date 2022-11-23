@@ -12,7 +12,8 @@
     $router->get('/', 'views/frontend/home');
     //$router->get('/login', 'views/login/login');
     //$router->get('/signup', 'views/login/signup');
-    //$router->get('/profile', 'views/login/profile');
+    $router->get('/profile', 'views/login/profile');
+    $router->get('/editProfileFunction', 'controllers/editProfile');
     $router->get('/loginFunction', 'controllers/login');
     $router->get('/signupFunction', 'controllers/signup');
     $router->get('/logoutFunction', 'controllers/logout');

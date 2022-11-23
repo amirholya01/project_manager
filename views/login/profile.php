@@ -4,9 +4,7 @@
         $rootPath = "../$rootPath";
     }
 
-    require $rootPath . "views/backend/partials/header.php";
-
-    $sql = 'SELECT * FROM users';
+    require_once $rootPath . "views/backend/partials/header.php";
 ?>
 
 <?php 
@@ -16,7 +14,7 @@
     }
 ?>
 
-<form method="post" action="/controllers/editProfile.php">
+<form method="post" action="editProfileFunction">
     <fieldset>
         <legend>Edit Profile</legend>
         <div>
