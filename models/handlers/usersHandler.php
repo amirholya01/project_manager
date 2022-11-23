@@ -82,6 +82,21 @@ class UsersHandler extends Users{
         return $data;
     }
 
+    public function editUser($id, $name, $role, $password) {
+        // Runs queries depending on if there is a password or not
+        if($password != "" && $password != null){
+            $editUser = $this->db->prepare($this->updateUserByIdQuery);
+            $editUser->bindParam(':password', $password);
+        }else{
+            $editUser = $this->db->prepare($this->updateUserByIdWithoutPasswordQuery);
+        }
+        
+        $editUser->bindParam(':id', $id);
+        $editUser->bindParam(':name', $name);
+        $editUser->bindParam(':role', $role);
+        $editUser->execute();
+    }
+
     public function deleteUserById($user_id) {
         $deleteUser = $this->db->prepare($this->deleteUserByIdQuery);
         $deleteUser->bindParam(":user_id", $user_id);
