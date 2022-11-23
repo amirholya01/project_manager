@@ -60,7 +60,7 @@
 
     <?php
         $pageNr = $page;
-        $usersPrPage = 4;
+        $usersPrPage = 10;
         $pageMinIndex = $pageNr * $usersPrPage;
         $pageMaxIndex = $pageMinIndex + $usersPrPage;
     ?>
