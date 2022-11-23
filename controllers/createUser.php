@@ -18,8 +18,6 @@ if( isset( $_POST['createUser'] ) ){
     $validName = true;
     if($data != ""){
         $validName = false;
-        print_r($data);
-        echo "Pineapple";
     }
 
     if($validName && $name != "" && $name != null){
