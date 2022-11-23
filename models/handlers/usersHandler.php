@@ -82,6 +82,12 @@ class UsersHandler extends Users{
         return $data;
     }
 
+    public function deleteUserById($user_id) {
+        $deleteUser = $this->db->prepare($this->deleteUserByIdQuery);
+        $deleteUser->bindParam(":user_id", $user_id);
+        $deleteUser->execute();
+    }
+
     /* Security */
     public function getSecurityData() {
         $getSecurityData = $this->db->prepare($this->getSecurityDataQuery);

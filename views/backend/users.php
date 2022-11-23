@@ -17,7 +17,7 @@
 
     require_once $rootPath . "controllers/createUser.php";
     //require_once $rootPath . "controllers/editUser.php";
-    //require_once $rootPath . "controllers/deleteUser.php";
+    require_once $rootPath . "controllers/deleteUser.php";
 
 
     require_once $rootPath . "controllers/getUsersWithFilters.php";
