@@ -3,12 +3,13 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once $rootPath . "dbconn.php";
     
-    require $rootPath . "views/backend/partials/header.php";
-    require $rootPath . "models/users.php";
-    require $rootPath . "security/adminCheck.php";
+    require_once $rootPath . "models/handlers/usersHandler.php";
+    require_once $rootPath . "security/adminCheck.php";
     
+    require_once $rootPath . "views/backend/partials/header.php";
+
     /* 🔥 Needs to check if the user is allowed to be here */
 ?>
 <div class="wrapper">
@@ -19,8 +20,8 @@
         <input type="hidden" name="validated" value="true">
         <input type="hidden" name="createUser" value="true">
 
-        <input type="text" name="createName">
-        <input type="text" name="createPassword">
+        <input type="text" name="createName" placeholder="Username">
+        <input type="text" name="createPassword" placeholder="Password">
         <select name="createRole">
             <option value="0">Customer</option>
             <option value="1">Admin</option>

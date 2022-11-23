@@ -9,28 +9,21 @@ if( isset( $_POST['createUser'] ) ){
     $password = $_POST['createPassword'];
     $role = $_POST['createRole'];
 
-    /* Checks if there already exist a user with the same name */
-    $userCheck = $pdo->prepare($Users->checkIfUserExists);
-    $userCheck->bindParam(':name', $name);
-    $userCheck->execute();
-
-    $data = $userCheck->fetch();
+    $data = $UsersHandler->checkIfUserExists($name);
 
     /* 
         validName keeps track if the name is already taken or not 
         (True = not taken | Fales = taken) 
     */
     $validName = true;
-    if(isset($data[0])){
+    if($data != ""){
         $validName = false;
+        print_r($data);
+        echo "Pineapple";
     }
 
     if($validName && $name != "" && $name != null){
         /* Creates the user in the db */
-        $createUser = $pdo->prepare($Users->createUser);
-        $createUser->bindParam(':name', $name);
-        $createUser->bindParam(':password', $password);
-        $createUser->bindParam(':role', $role);
-        $createUser->execute();
+        $UsersHandler->createUser($name, $password, $role);
     }
 }
