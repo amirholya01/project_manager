@@ -17,7 +17,7 @@
 
     require_once $rootPath . "controllers/createProduct.php";
     require_once $rootPath . "controllers/editProduct.php";
-    //require_once $rootPath . "controllers/deleteProduct.php";
+    require_once $rootPath . "controllers/deleteProduct.php";
 
     require_once $rootPath . "controllers/adminProducts.php";
     require_once $rootPath . "controllers/getProductsWithFilters.php";

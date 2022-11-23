@@ -140,6 +140,22 @@ class ProductsHandler extends Products{
 
         $this->db->commit();
     }
+
+    public function deleteProductById($product_id) {
+        try{
+            $this->db->beginTransaction();
+            $deleteProduct = $this->db->prepare($this->deleteProductByIdQuery);
+            $deleteProduct->bindParam(":id", $product_id);
+            $deleteProduct->execute();
+            
+            $deleteColorJunction = $this->db->prepare($this->deleteProductColorByProductIdQuery);
+            $deleteColorJunction->bindParam(":id", $product_id);
+            $deleteColorJunction->execute();
+            $this->db->commit();
+        } catch (Throwable $error) {
+            $this->db->rollBack();
+        }
+    }
 }
 
 $ProductsHandler = new ProductsHandler($db);
