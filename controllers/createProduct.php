@@ -24,12 +24,11 @@ if($validated == true){
             }
 
             /* Upload Image */
-            /* if(isset($_FILES['createImage'])){
-                echo "createImage is making it here!";
-                $imageUpload->uploadImage($_FILES['createImage']);
-            } */
+            if(isset($_FILES['createImage'])){
+                $imageUpload->validateImage($_FILES['createImage']);
+            }
 
-            /* ✒️ Needs to connect the uploaded image to the product */
+            /* ✒️ Assign image to product */
         }
     }
 }
