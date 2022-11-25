@@ -2,6 +2,17 @@
     session_start();
 
     include "host.php";
+    /*
+        Make a file called host.php in the root
+        and past this in there and change the url
+        to whatever url you use
+
+        define("BASE_URL", "//URL//");
+
+        Example:
+        <?php
+        define("BASE_URL", "http://bowtie.test");
+    */
 
     include "Router.php";
 
