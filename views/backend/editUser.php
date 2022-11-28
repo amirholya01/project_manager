@@ -3,7 +3,7 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require_once $rootPath . "dbconn.php";
+    require_once $rootPath . "public/dbconn.php";
     
     require_once $rootPath . "views/backend/partials/header.php";
     require_once $rootPath . "models/handlers/usersHandler.php";

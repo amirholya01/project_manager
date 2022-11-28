@@ -16,7 +16,7 @@ class imageUpload extends ProductsHandler{
         while(!file_exists($rootPath . "index.php")){
             $rootPath = "../$rootPath";
         }    
-        require_once $rootPath . "dbconn.php";
+        require_once $rootPath . "public/dbconn.php";
 
 
         $imageValidated = true;
