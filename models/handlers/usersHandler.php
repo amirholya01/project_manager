@@ -5,7 +5,7 @@ while(!file_exists($rootPath . "index.php")){
     $rootPath = "../$rootPath";
 }
 require_once $rootPath . "public/dbconn.php";
-require_once $rootPath . "models/sql/users.php";
+require_once $rootPath . "models/sql/Users.php";
 
 class UsersHandler extends Users{
 
