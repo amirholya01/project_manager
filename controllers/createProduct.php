@@ -11,24 +11,28 @@ if($validated == true){
         $description = $stringSanitation->sanitice($_POST['createDescription']);
         $price = $_POST['createPrice'];
         $colors = null;
+        $medias = null;
 
         
-        $validStrings = $stringSanitation->getValidationStatus();
         /* Checks if all the strings pass validation */
+        $validStrings = $stringSanitation->getValidationStatus();
+
+        /* Disables the data from being send to the database - used for testing*/
+        //$validStrings = false;
+        
         if($validStrings == true){
             if( isset($_POST['createColors']) ){
                 $colors = $_POST['createColors'];
-                $ProductsHandler->createProduct($name, $type, $description, $price, $colors);
-            }else{
-                $ProductsHandler->createProduct($name, $type, $description, $price);
             }
+            if( isset($_POST['media']) ){
+                $medias = $_POST['media'];
+            }
+            $ProductsHandler->createProduct($name, $type, $description, $price, $colors, $medias);
 
-            /* Upload Image */
+            /* Upload Image - ✒️ Should be removed*/
             if(isset($_FILES['createImage'])){
                 $imageUpload->validateImage($_FILES['createImage']);
             }
-
-            /* ✒️ Assign image to product */
         }
     }
 }

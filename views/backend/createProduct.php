@@ -42,10 +42,30 @@
                 }
             ?>
         </select>
-        <input type="file" name="createImage">
+        <!-- <input type="file" name="createImage"> ✒️ Should be in media-->
         <input type="submit">
 
         <!-- Img select system -->
+        
+        <?php
+            for($i = 0; $i < count($mediaData); $i++){
+                $indData = $mediaData[$i];
+        ?>
+                <label for="<?php echo $indData['media_id']; ?>">
+                    <div>
+                        <p><?php echo $indData['name'] ?></p>
+                        <p><?php echo $indData['type'] ?></p>
+                        <figure>
+                            <!-- ✒️ should be styled with seperate css file -->
+                            <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                        </figure>
+                    </div>
+                </label>
+                <input type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+        <?php
+            }
+        ?>
+
     </form>
 
 </div>
