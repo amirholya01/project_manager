@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    include "host.php";
+    include "public/host.php";
     /*
-        Make a file called host.php in the root
+        Make a file called host.php in public
         and past this in there and change the url
         to whatever url you use
 
@@ -14,7 +14,7 @@
         define("BASE_URL", "http://bowtie.test");
     */
 
-    include "Router.php";
+    include "public/Router.php";
 
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
