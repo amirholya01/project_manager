@@ -108,6 +108,36 @@ class ProductsHandler extends Products{
         $products = $getProducts->fetchAll();
         return $products;
     }
+
+    public function getMedia($name, $type) {
+        /* 
+            We need to check if we are searching for types because we have to use different
+            queries depending on if we search for it or not
+        */
+
+        if( isset( $type ) && $type != '' ){
+            /* 
+                We can't use a wildcard on an int(id) so we have to structure the query
+                differently depending on weather we have an id or not
+            */
+            $getMedia = $this->db->prepare($this->getMediaDynamicSearchQuery);
+            $getMedia->bindParam(':type', $type);
+        } else {
+            $getMedia = $this->db->prepare($this->getMediaDynamicSearchWithoutTypeQuery);
+        }
+
+        if ( isset( $name ) ){
+            $name = "%" . $name . "%";
+        }else{
+            $name = "%";
+        }
+        $getMedia->bindParam(':name', $name);    
+        $getMedia->execute();
+
+        $media = $getMedia->fetchAll();
+        return $media;
+    }
+    
     public function editProduct($id, $name, $description, $price, $type, $colors) {
         /* 🔥 It prints 2 errors but it still goes through */
         $this->db->beginTransaction();

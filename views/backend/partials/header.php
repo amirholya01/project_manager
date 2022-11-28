@@ -35,6 +35,9 @@
                 <li>
                     <a href="/adminUsers">Users</a>
                 </li>
+                <li>
+                    <a href="/adminMedia">Media</a>
+                </li>
             </ul>
         </nav>
     </aside>
