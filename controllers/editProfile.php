@@ -4,7 +4,7 @@
         $rootPath = "../$rootPath";
     }
     
-    require_once $rootPath . "models/handlers/usersHandler.php";
+    require_once $rootPath . "models/handlers/Usershandler.php";
 
     /* gets the name of the user you are currently logged in as */
     $currentName = $_SESSION['name'];

@@ -5,7 +5,7 @@
     }
     require_once $rootPath . "public/dbconn.php";
     
-    require_once $rootPath . "models/handlers/usersHandler.php";
+    require_once $rootPath . "models/handlers/Usershandler.php";
     require_once $rootPath . "security/adminCheck.php";
     require_once $rootPath . "models/handlers/productsHandler.php";
     
@@ -44,6 +44,8 @@
         </select>
         <input type="file" name="createImage">
         <input type="submit">
+
+        <!-- Img select system -->
     </form>
 
 </div>
