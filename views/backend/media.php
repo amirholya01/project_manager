@@ -7,16 +7,15 @@
 
     require_once $rootPath . "models/handlers/productsHandler.php";
     require_once $rootPath . "models/handlers/Usershandler.php";
-    require_once $rootPath . "security/adminCheck.php";
 
-    
+    require_once $rootPath . "security/adminCheck.php";
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
     require_once $rootPath . "controllers/imageUpload.php";
 
-    /* require_once $rootPath . "controllers/createProduct.php";
-    require_once $rootPath . "controllers/editProduct.php";
+    require_once $rootPath . "controllers/createMedia.php";
+    /*require_once $rootPath . "controllers/editProduct.php";
     require_once $rootPath . "controllers/deleteProduct.php"; */
 
     /* require_once $rootPath . "controllers/adminProducts.php";
