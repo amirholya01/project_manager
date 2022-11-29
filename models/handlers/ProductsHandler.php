@@ -31,6 +31,24 @@ class ProductsHandler extends Products{
         return $colorAssignments;
     }
 
+    public function getAssignedColorsToProductsByProductId($id) {
+        $getColorAssigments = $this->db->prepare($this->getColorAssigmentsByProductIdQuery);
+        $getColorAssigments->bindParam(":id", $id);
+        $getColorAssigments->execute();
+        
+        $colorAssignments = $getColorAssigments->fetchAll();
+        return $colorAssignments;
+    }
+
+    public function getAssignedMediaToProductsByProductId($id) {
+        $getMediaAssigments = $this->db->prepare($this->getMediaAssigmentsByProductIdQuery);
+        $getMediaAssigments->bindParam(":id", $id);
+        $getMediaAssigments->execute();
+        
+        $mediaAssignments = $getMediaAssigments->fetchAll();
+        return $mediaAssignments;
+    }
+
     public function getTypes() {
         $getTypes = $this->db->prepare($this->getAllTypesQuery);
         $getTypes->execute();
@@ -148,23 +166,38 @@ class ProductsHandler extends Products{
         return $media;
     }
     
-    public function editProduct($id, $name, $description, $price, $type, $colors) {
+    public function editProduct($id, $name, $description, $price, $type, $colors = null, $medias = null) {
         /* 🔥 It prints 2 errors but it still goes through */
         $this->db->beginTransaction();
 
-        //Deletes the colors that was previously assigned to the product
+        //Deletes the colors and media that was previously assigned to the product
         $deletePeviouslyAssignedColors = $this->db->prepare($this->deleteProductColorByProductIdQuery);
         $deletePeviouslyAssignedColors->bindParam(':id', $id);
         $deletePeviouslyAssignedColors->execute();
+
+        
+        $deletePeviouslyAssignedColors = $this->db->prepare($this->deleteProductMediaByProductIdQuery);
+        $deletePeviouslyAssignedColors->bindParam(':id', $id);
+        $deletePeviouslyAssignedColors->execute();
     
-        //Uploads every a new relation for each color that was selected
-        if($colors != [] && $colors != null){
+        //Uploads every new relation for each color that was selected
+        if( $colors != [] && $colors != null){
             foreach ($colors as $color) {
                 $assignColorToProduct = $this->db->prepare($this->createProductColorQuery);
                 $assignColorToProduct->bindParam(':product_id', $id);
                 $assignColorToProduct->bindParam(':color_id', $color);
                 $assignColorToProduct->execute();
     
+            }
+        }
+
+        //Uploads every new relation for each media that was selected
+        if( isset($medias) && $medias != null ){
+            foreach($medias as $media){
+                $assignMediaToProduct = $this->db->prepare($this->assignMediaToProductQuery);
+                $assignMediaToProduct->bindParam(':product_id', $id);
+                $assignMediaToProduct->bindParam(':media_id', $media);
+                $assignMediaToProduct->execute();
             }
         }
 

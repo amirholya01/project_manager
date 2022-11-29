@@ -42,9 +42,14 @@ class Products{
     //Advanced queries
     public $createProductColorQuery = "INSERT INTO assign_colors_to_products (product_id, color_id) VALUES (:product_id, :color_id);";
     public $getAllTypesQuery = "SELECT id, type FROM product_types;";
+    
     public $getColorAssigmentsQuery = "SELECT actp.product_id, pc.color
                             FROM assign_colors_to_products actp, product_colors pc
                             WHERE actp.color_id = pc.id;";
+    public $getColorAssigmentsByProductIdQuery = "SELECT color_id FROM assign_colors_to_products WHERE product_id = :id";
+    public $getMediaAssigmentsByProductIdQuery = "SELECT media_id FROM assign_media_to_products WHERE product_id = :id";
+    
+    
     public $getAllColorsQuery = "SELECT * FROM product_colors;";
     public $deleteProductColorByProductIdQuery = "DELETE FROM assign_colors_to_products WHERE product_id = :id;";
     public $deleteProductMediaByProductIdQuery = "DELETE FROM assign_media_to_products WHERE product_id = :id;";

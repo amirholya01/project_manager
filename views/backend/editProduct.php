@@ -38,12 +38,55 @@
                 foreach($allColors as $color){
             ?>
                 <!-- ✒️ Needs to select already selected colors -->
-                <option value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?></option>
+                <option 
+                    <?php
+                        $assigned = false;
+                        foreach($colorsAssignedToProduct as $assignedColor){
+                            if($assignedColor["color_id"] == $color['id']){
+                                $assigned = true;
+                            }
+                        }
+
+                        echo $assigned == true ? "selected" : "";
+                    ?>
+                
+                    value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?>
+                </option>
             <?php
                 }
             ?>
         </select>
         <input type="submit">
+
+        <?php
+            for($i = 0; $i < count($mediaData); $i++){
+                $indData = $mediaData[$i];
+        ?>
+                <label for="<?php echo $indData['media_id']; ?>">
+                    <div>
+                        <p><?php echo $indData['name'] ?></p>
+                        <p><?php echo $indData['type'] ?></p>
+                        <figure>
+                            <!-- ✒️ should be styled with seperate css file - should get thumb image -->
+                            <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>">
+                        </figure>
+                    </div>
+                </label>
+                <input
+                <?php 
+                    $assigned = false;
+                    foreach($mediaAssignedToProduct as $assignedMedia){
+                        if($assignedMedia["media_id"] == $indData['media_id']){
+                            $assigned = true;
+                        }
+                    }
+
+                    echo $assigned == true ? "checked" : "";
+                ?>
+                type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+        <?php
+            }
+        ?>
     </form>
 
 </div>

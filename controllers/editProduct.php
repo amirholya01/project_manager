@@ -8,8 +8,14 @@ if(isset($_POST['editProduct'])){
     $price = $_POST['editPrice'];
     $type = $_POST['editType'];
     $colors = null;
+    $medias = null;
+
     if(isset($_POST['editColors'])){
         $colors = $_POST['editColors'];
+    }
+
+    if( isset($_POST['media']) ){
+        $medias = $_POST['media'];
     }
 
     $validStrings = $stringSanitation->getValidationStatus();
@@ -17,7 +23,7 @@ if(isset($_POST['editProduct'])){
     /* Checks if all the strings pass validation */
     if($validStrings == true){
         try {
-            $ProductsHandler->editProduct($id, $name, $description, $price, $type, $colors);
+            $ProductsHandler->editProduct($id, $name, $description, $price, $type, $colors, $medias);
         } catch (Throwable $error) {
             $pdo->rollBack();
             throw $error;
