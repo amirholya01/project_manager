@@ -42,7 +42,6 @@
                 }
             ?>
         </select>
-        <input type="file" name="createImage"> <!-- ✒️ Should be in media-->
         <input type="submit">
 
         <!-- Img select system -->

@@ -52,5 +52,8 @@
 
     $router->get('/adminEditProduct', 'views/backend/editProduct');
     $router->get('/adminCreateProduct', 'views/backend/createProduct');
+
+    $router->get('/adminCreateMedia', 'views/backend/createMedia');
+
     
 

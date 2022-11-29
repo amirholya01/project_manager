@@ -11,7 +11,7 @@
 /* ✒️ Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
 class imageUpload extends ProductsHandler{
 
-    function createImage ($img) {
+    function createImage ($img, $name = "pineapple") {
         $rootPath = "";
         while(!file_exists($rootPath . "index.php")){
             $rootPath = "../$rootPath";
@@ -65,7 +65,6 @@ class imageUpload extends ProductsHandler{
             }else{
                 move_uploaded_file($img['tmp_name'], $rootPath . "uploads/" . $imgName);
         
-                $name = "Test"; /* ✒️ Should be uploaded with the image */
                 $id = $imgName;
                 $this->uploadImage($id, $name);
             }

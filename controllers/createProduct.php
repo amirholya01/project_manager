@@ -28,11 +28,6 @@ if($validated == true){
                 $medias = $_POST['media'];
             }
             $ProductsHandler->createProduct($name, $type, $description, $price, $colors, $medias);
-
-            /* Upload Image - ✒️ Should be removed*/
-            if(isset($_FILES['createImage'])){
-                $imageUpload->createImage($_FILES['createImage']);
-            }
         }
     }
 }

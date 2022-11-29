@@ -45,16 +45,16 @@
     }
 ?>
 <div class="wrapper">
+    <!-- ✒️ Search -->
+    <a href="/adminMedia">Reset</a>
+    <a href="/adminCreateMedia">Create new media</a>
+
     <?php
         $pageNr = $page;
         $productsPrPage = 10;
         $pageMinIndex = $pageNr * $productsPrPage;
         $pageMaxIndex = $pageMinIndex + $productsPrPage;
-    ?>
-
-    <!-- ✒️ Search -->
-    <!-- ✒️ Reset search -->
-    <!-- ✒️ Create Media -->
+    ?>    
 
     <?php
         /* Previous button */
