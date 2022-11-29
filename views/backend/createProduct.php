@@ -3,16 +3,15 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require_once $rootPath . "public/dbconn.php";
     
-    require $rootPath . "views/backend/partials/header.php";
-    require $rootPath . "models/users.php";
-    require $rootPath . "security/adminCheck.php";
-    require $rootPath . "models/products.php";
-
-    require $rootPath . "controllers/adminCreateProduct.php";
+    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "security/adminCheck.php";
+    require_once $rootPath . "models/handlers/productsHandler.php";
     
-    /* 🔥 Needs to check if the user is allowed to be here */
+    require_once $rootPath . "controllers/adminCreateProduct.php";
+    
+    require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
     <form method="POST" action="adminProducts" enctype="multipart/form-data">
@@ -43,8 +42,30 @@
                 }
             ?>
         </select>
-        <input type="file" name="createImage">
+        <!-- <input type="file" name="createImage"> ✒️ Should be in media-->
         <input type="submit">
+
+        <!-- Img select system -->
+        
+        <?php
+            for($i = 0; $i < count($mediaData); $i++){
+                $indData = $mediaData[$i];
+        ?>
+                <label for="<?php echo $indData['media_id']; ?>">
+                    <div>
+                        <p><?php echo $indData['name'] ?></p>
+                        <p><?php echo $indData['type'] ?></p>
+                        <figure>
+                            <!-- ✒️ should be styled with seperate css file -->
+                            <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                        </figure>
+                    </div>
+                </label>
+                <input type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+        <?php
+            }
+        ?>
+
     </form>
 
 </div>

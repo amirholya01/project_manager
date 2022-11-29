@@ -3,8 +3,8 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "views/partials/header.php";
-    require $rootPath . "models/users.php";
+    
+    require_once $rootPath . "models/handlers/Usershandler.php";
 
     /* gets the name of the user you are currently logged in as */
     $currentName = $_SESSION['name'];
@@ -14,11 +14,7 @@
     $password = $_POST['password'];
     
     /* checks if a user with inserted name already exists */
-    $userCheck = $pdo->prepare($Users->checkIfUserExists);
-    $userCheck->bindParam(':name', $name);
-    $userCheck->execute();
-
-    $data = $userCheck->fetch();
+    $data = $UsersHandler->checkIfUserExists($name);
 
     /* 
         validName keeps track if the name is already taken or not 
@@ -37,20 +33,7 @@
     /* Checks if the requirements are fulfilled */
     if($name != "" && $validName){
         /* Checks if the user changed their password or not */
-        if($password != ""){
-            /* Updated the user with a new password */
-            $editProfile = $pdo->prepare($Users->updateUserByName);
-            $editProfile->bindParam(':name', $name);
-            $editProfile->bindParam(':password', $password);
-            $editProfile->bindParam(':currentName', $currentName);
-            $editProfile->execute();
-        }else{
-            /* Update the user without changing the password */
-            $editProfile = $pdo->prepare($Users->updateUserByNameWithoutPassword);
-            $editProfile->bindParam(':name', $name);
-            $editProfile->bindParam(':currentName', $currentName);
-            $editProfile->execute();
-        }
+        $UsersHandler->editUserByName($currentName, $name, $password);
 
         /* Updates the session so the username get updated live */
         $_SESSION['name'] = $name;
@@ -59,5 +42,5 @@
         header("Location: /");
     }else{
         /* Throws an error message */
-        header("Location: /profile?err=nameempty");
+        header("Location: /profile?err=nameerror");
     }

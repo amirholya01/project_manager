@@ -4,7 +4,7 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require $rootPath . "dbconn.php";
+    require $rootPath . "public/dbconn.php";
     require $rootPath . "models/users.php";
     
     $name = $_POST['name'];

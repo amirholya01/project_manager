@@ -1,6 +1,10 @@
 <?php
 
-require_once 'config.php';
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+
+require_once $rootPath . 'public/config.php';
 
 class dbconn extends config {
         

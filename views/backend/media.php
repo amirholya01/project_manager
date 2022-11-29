@@ -15,16 +15,19 @@
 
     require_once $rootPath . "controllers/imageUpload.php";
 
-    require_once $rootPath . "controllers/createProduct.php";
+    /* require_once $rootPath . "controllers/createProduct.php";
     require_once $rootPath . "controllers/editProduct.php";
-    require_once $rootPath . "controllers/deleteProduct.php";
+    require_once $rootPath . "controllers/deleteProduct.php"; */
 
-    require_once $rootPath . "controllers/adminProducts.php";
-    require_once $rootPath . "controllers/getProductsWithFilters.php";
+    /* require_once $rootPath . "controllers/adminProducts.php";
+    require_once $rootPath . "controllers/getProductsWithFilters.php"; */
+    require_once $rootPath . "controllers/getMediaWithFilters.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
 
+    
     /* This is to make so search data dosent disapear after search */
+
     $id = null;
     if(isset($_POST['id'])){
         $id = $_POST['id'];
@@ -43,31 +46,6 @@
     }
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminProducts">
-        <input type="text" name="id" placeholder="ID" value="<?php echo ($id != null) ? $id : ""; ?>">
-        <input type="text" name="search" placeholder="Search Something!" value="<?php echo ($search != null) ? $search : ""; ?>">
-        <select name="type" id="type">
-            <option value="">Nothing</option>
-            <!-- Adds types to the search select field -->
-            <?php
-                foreach($allTypes as $type){
-                    if($type['type'] == $searchType){
-            ?>
-                <option selected value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
-            <?php
-                    } else {
-            ?>
-                <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
-            <?php
-                    }
-                }
-            ?>
-        </select>
-        <input type="submit">
-    </form>
-    <a href="/adminProducts">Reset</a>
-    <a href="/adminCreateProduct">Create new product</a>
-
     <?php
         $pageNr = $page;
         $productsPrPage = 10;
@@ -75,7 +53,10 @@
         $pageMaxIndex = $pageMinIndex + $productsPrPage;
     ?>
 
-    <!-- ✒️ Should keep you on the same page when deleting or editing a product -->
+    <!-- ✒️ Search -->
+    <!-- ✒️ Reset search -->
+    <!-- ✒️ Create Media -->
+
     <?php
         /* Previous button */
         if($page > 0){
@@ -113,21 +94,12 @@
             <div>
                 <p><?php echo $indData['name'] ?></p>
                 <p><?php echo $indData['type'] ?></p>
-                <!-- Adds colors -->
-                <?php 
-                    foreach($colorAssignments as $color){
-                        if($color['product_id'] == $indData['products_id']){
-                ?>
-                    <p><?php echo $color['color'] ?></p>
-                <?php
-                        }
-                    }
-                ?>
-                <p><?php echo $indData['description'] ?></p>
-                <p><?php echo $indData['price'] ?> DKK</p>
+                <figure>
+                    <img src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                </figure>
                 
-                <form method="POST" action="adminEditProduct">
-                    <input type="hidden" name="id" value="<?php echo $indData['products_id'] ?>">
+                <!-- <form method="POST" action="adminEditProduct">
+                    <input type="hidden" name="id" value="<?php /*echo $indData['products_id'] ?>">
                     <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
                     <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
                     <input type="hidden" name="price" value="<?php echo $indData['price'] ?>">
@@ -135,9 +107,9 @@
                 </form>
 
                 <form method="POST" action="adminProducts">
-                    <input type="hidden" name="delete" value="<?php echo $indData['products_id'] ?>">
+                    <input type="hidden" name="delete" value="<?php echo $indData['products_id']*/ ?>">
                     <input type="submit" value="Delete">
-                </form>
+                </form> -->
             </div>
     <?php
         }

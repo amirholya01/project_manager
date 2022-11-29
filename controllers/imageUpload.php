@@ -1,13 +1,22 @@
 <?php
 
+/* 
+    ✒️
+    * Needs multiple image upload
+    * Needs to be able to add/remove images in edit product
+    * Needs to be able to assign already existing images
+    * Needs a media interface
+*/
+
 /* ✒️ Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
-class imageUpload {
-    function uploadImage ($img) {
+class imageUpload extends ProductsHandler{
+
+    function validateImage ($img) {
         $rootPath = "";
         while(!file_exists($rootPath . "index.php")){
             $rootPath = "../$rootPath";
         }    
-        require $rootPath . "dbconn.php";
+        require_once $rootPath . "public/dbconn.php";
 
 
         $imageValidated = true;
@@ -42,27 +51,24 @@ class imageUpload {
                 /* Add unique name id */
                 $KABOOMedString = explode(".", $img['name']);
                 $fileType = end( $KABOOMedString );
-                $img['name'] = uniqid() . "." . $fileType;
+                $imgName = uniqid() . "." . $fileType;
             }
         }
-        
+
         /* Checks for file name overlap and uploads file and sends file data to db */
         if($imageValidated == true){
-            if (file_exists($rootPath . "uploads/" . $img['name'])){
+            if (file_exists($rootPath . "uploads/" . $imgName)){
                 $imageValidated = false;
                 echo "FIRE!: Names are overlapping";
             }else{
-                move_uploaded_file($img['tmp_name'], $rootPath . "uploads/" . $img['name']);
+                move_uploaded_file($img['tmp_name'], $rootPath . "uploads/" . $imgName);
         
-                $testName = "pineapple"; /* ✒️ Should take file name */
-                $createImageRefOnDb = $pdo->prepare("INSERT INTO media (media_id, name) VALUES (:id, :name)"); /* ✒️ Should be in models */
-                $createImageRefOnDb->execute(array(
-                    ":id" => $img['name'],
-                    ":name" => $testName
-                ));
+                $name = "Test"; /* ✒️ Should be uploaded with the image */
+                $id = $imgName;
+                $this->uploadImage($id, $name);
             }
         }
     }
 }
 
-$imageUpload = new imageUpload();
+$imageUpload = new imageUpload($db);

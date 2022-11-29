@@ -2,9 +2,20 @@
     session_start();
     /* session_destroy(); */
 
-    include "host.php";
+    include "public/host.php";
+    /*
+        Make a file called host.php in public
+        and past this in there and change the url
+        to whatever url you use
 
-    include "Router.php";
+        define("BASE_URL", "//URL//");
+
+        Example:
+        <?php
+        define("BASE_URL", "http://bowtie.test");
+    */
+
+    include "public/Router.php";
 
     if(!isset($_SESSION['breadcrumbs'])){
         $_SESSION['breadcrumbs']= array();
@@ -19,7 +30,8 @@
     $router->get('/', 'views/frontend/home');
     //$router->get('/login', 'views/login/login');
     //$router->get('/signup', 'views/login/signup');
-    //$router->get('/profile', 'views/login/profile');
+    $router->get('/profile', 'views/login/profile');
+    $router->get('/editProfileFunction', 'controllers/editProfile');
     $router->get('/loginFunction', 'controllers/login');
     $router->get('/signupFunction', 'controllers/signup');
     $router->get('/logoutFunction', 'controllers/logout');
@@ -33,11 +45,12 @@
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');
     $router->get('/adminUsers', 'views/backend/users');
+    $router->get('/adminMedia', 'views/backend/media');
 
-    //$router->get('/adminEditUser', 'views/backend/editUser');
-    //$router->get('/adminCreateUser', 'views/backend/createUser');
+    $router->get('/adminEditUser', 'views/backend/editUser');
+    $router->get('/adminCreateUser', 'views/backend/createUser');
 
     $router->get('/adminEditProduct', 'views/backend/editProduct');
-    //$router->get('/adminCreateProduct', 'views/backend/createProduct');
+    $router->get('/adminCreateProduct', 'views/backend/createProduct');
     
 

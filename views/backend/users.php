@@ -3,21 +3,21 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
-    require_once $rootPath . "dbconn.php";
+    require_once $rootPath . "public/dbconn.php";
     
     
-    require_once $rootPath . "models/handlers/usersHandler.php";
+    require_once $rootPath . "models/handlers/Usershandler.php";
     require_once $rootPath . "security/adminCheck.php";
     
 
-    //require_once $rootPath . "security/formSpam.php";
-    //require_once $rootPath . "security/stringSanitation.php";
+    require_once $rootPath . "security/formSpam.php";
+    require_once $rootPath . "security/stringSanitation.php";
 
 
 
-    //require_once $rootPath . "controllers/createUser.php";
-    //require_once $rootPath . "controllers/editUser.php";
-    //require_once $rootPath . "controllers/deleteUser.php";
+    require_once $rootPath . "controllers/createUser.php";
+    require_once $rootPath . "controllers/editUser.php";
+    require_once $rootPath . "controllers/deleteUser.php";
 
 
     require_once $rootPath . "controllers/getUsersWithFilters.php";
@@ -60,7 +60,7 @@
 
     <?php
         $pageNr = $page;
-        $usersPrPage = 4;
+        $usersPrPage = 10;
         $pageMinIndex = $pageNr * $usersPrPage;
         $pageMaxIndex = $pageMinIndex + $usersPrPage;
     ?>
