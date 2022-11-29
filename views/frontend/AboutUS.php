@@ -5,6 +5,10 @@
     }
     
     require_once $rootPath . "views/frontend/partials/header.php";
+
+    $pageName = "About Us";
+    $pageLink = "/AboutUS";
+    require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -12,8 +16,12 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 <div class="breadcrumbs SiteMap">
-    <a href="/">home</a>
-    <a href="AboutUS">About US</a>
+    <?php 
+    for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
+        $link = $_SESSION['breadcrumbsLinks'][$i];
+        echo "<a class='breadcrumb-flex' href='$link'> ".$_SESSION['breadcrumbs'][$i]."</a>";
+    }
+    ?>
 </div>
 
 

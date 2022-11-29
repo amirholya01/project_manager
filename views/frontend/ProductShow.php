@@ -5,6 +5,10 @@
     }
     
     require $rootPath . "views/frontend/partials/header.php";
+
+    $pageName = "Product-Show";
+    $pageLink = "/ProductShow";
+    require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -16,9 +20,12 @@
     <div class="col-sm-6 col-xs-b30 col-sm-b0">
 
         <div class="breadcrumbs">
-            <a href="/">home</a>
-            <a href="Product">Products</a>
-            <a href="ProductShow">Product-Show</a>
+            <?php 
+            for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
+                $link = $_SESSION['breadcrumbsLinks'][$i];
+                echo "<a class='breadcrumb-flex' href='$link'> ".$_SESSION['breadcrumbs'][$i]."</a>";
+            }
+            ?>
         </div>
 
         <div class="main-product-slider-wrapper swipers-couple-wrapper">
@@ -63,53 +70,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="empty-space col-xs-b30 col-sm-b60"></div>
-
-            <div class="swiper-container swiper-control-bottom" data-breakpoints="1" data-xs-slides="3"
-                data-sm-slides="3" data-md-slides="4" data-lt-slides="5" data-slides-per-view="5" data-center="1"
-                data-click="1">
-                <div class="swiper-button-prev hidden"></div>
-                <div class="swiper-button-next hidden"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-4_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-5_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-6_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-7_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-8_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-9_.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-small-preview-entry">
-                            <img src="assets/img/product-preview-10_.jpg" alt="" />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
 
     </div>
@@ -140,8 +100,10 @@
             </div>
         </div>
         <div class="simple-article size-3 col-xs-b30">Vivamus in tempor eros. Phasellus rhoncus in nunc sit amet mattis.
+            Integer in ipsum vestibulum, molestie arcu ac, efficitur tellus. Phasellus id vulputate erat.
+            Phasellus rhoncus in nunc sit amet mattis.
             Integer in ipsum vestibulum, molestie arcu ac, efficitur tellus. Phasellus id vulputate erat.</div>
-        <div class="row col-xs-b40">
+        <div class="row col-xs-b40 margin-top">
             <div class="col-sm-3">
                 <div class="h6 detail-data-title size-1">size:</div>
             </div>
@@ -153,23 +115,6 @@
                     <option value="mercedes">Mercedes</option>
                     <option value="audi">Audi</option>
                 </select>
-            </div>
-        </div>
-        <div class="row col-xs-b40">
-            <div class="col-sm-3">
-                <div class="h6 detail-data-title">color:</div>
-            </div>
-            <div class="col-sm-9">
-                <div class="color-selection size-1">
-                    <div class="entry active" style="color: #a7f050;"></div>
-                    <div class="entry" style="color: #50e3f0;"></div>
-                    <div class="entry" style="color: #eee;"></div>
-                    <div class="entry" style="color: #4d900c;"></div>
-                    <div class="entry" style="color: #edb82c;"></div>
-                    <div class="entry" style="color: #7d3f99;"></div>
-                    <div class="entry" style="color: #3481c7;"></div>
-                    <div class="entry" style="color: #bf584b;"></div>
-                </div>
             </div>
         </div>
         <div class="row col-xs-b40">
@@ -214,6 +159,7 @@
         data-md-slides="4" data-lt-slides="4" data-slides-per-view="5">
         <div class="h4 swiper-title">Related products</div>
         <div class="empty-space col-xs-b20"></div>
+
         <div class="swiper-button-prev style-1"></div>
         <div class="swiper-button-next style-1"></div>
         <div class="swiper-wrapper">

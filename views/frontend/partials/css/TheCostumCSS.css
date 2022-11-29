@@ -58,6 +58,7 @@ button {
 }
 .SiteMap{
     margin-left: 3.5%;
+    display: flex;
 }
 .Cart-image{
     width: 80px !important;
@@ -75,5 +76,23 @@ button {
     justify-content: center;
     align-items: center;
 }
+.nopadding, .nopadding > [class*="col"] {
+    padding: 0 10px !important;
+}
+.col-sm-4 {
+    width: 19.333% !important;
+}
+.product-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.side-padding{
+    padding: 0 65px;
+}
+.margin-top{
+    margin-top: 60px;
+}
+
 
   

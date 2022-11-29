@@ -5,6 +5,10 @@
     }
     
     require_once $rootPath . "views/frontend/partials/header.php";
+
+    $pageName = "Contact Us";
+    $pageLink = "/Contact";
+    require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -13,9 +17,13 @@
 
 
 <div class="breadcrumbs SiteMap">
-        <a href="/">home</a>
-        <a href="Contact">Contact</a>
-    </div>
+    <?php 
+    for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
+        $link = $_SESSION['breadcrumbsLinks'][$i];
+        echo "<a class='breadcrumb-flex' href='$link'> ".$_SESSION['breadcrumbs'][$i]."</a>";
+    }
+    ?>
+</div>
 
 <div class="container">
     <div class="text-center">
@@ -41,7 +49,7 @@
                 <img class="icon" src="assets/img/icon-23.png" alt="">
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    <a href="tel:+4553525239">+45  53 52 52 39</a>
+                    <a href="tel:+4553525239">+45 53 52 52 39</a>
                 </div>
             </div>
         </div>
@@ -49,7 +57,8 @@
             <div class="icon-description-shortcode style-1">
                 <img class="icon" src="assets/img/icon-28.png" alt="">
                 <div class="title h6">email</div>
-                <div class="description simple-article size-2"><a href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
+                <div class="description simple-article size-2"><a
+                        href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
             </div>
         </div>
         <div class="col-sm-3">

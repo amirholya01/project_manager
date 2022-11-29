@@ -1,9 +1,16 @@
 <?php
     session_start();
+    /* session_destroy(); */
 
     include "host.php";
 
     include "Router.php";
+
+    if(!isset($_SESSION['breadcrumbs'])){
+        $_SESSION['breadcrumbs']= array();
+        $_SESSION['breadcrumbsLinks']= array();
+        $_SESSION['prevpage']= "";
+    }
 
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
@@ -20,6 +27,8 @@
     $router->get('/AboutUS', 'views/frontend/AboutUS');
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');
+    $router->get('/ProductShow', 'views/frontend/ProductShow');
+    $router->get('/Breadcrumb', 'views/frontend/Breadcrumb');
 
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');

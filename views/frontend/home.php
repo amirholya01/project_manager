@@ -5,7 +5,13 @@
     }
     
     require_once $rootPath . "views/frontend/partials/header.php";
+
+    $pageName = "Home";
+    $pageLink = "/";
+    require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
+
+
 
 <!--  Make a empty space  -->
 <div class="header-empty-space"></div>
