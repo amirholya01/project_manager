@@ -67,8 +67,13 @@
                         <p><?php echo $indData['name'] ?></p>
                         <p><?php echo $indData['type'] ?></p>
                         <figure>
-                            <!-- ✒️ should be styled with seperate css file - should get thumb image -->
-                            <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>">
+                            <!-- ✒️ should be styled with seperate css file -->
+                            <?php 
+                                /* get the thumb version of the image 
+                                (its the fullsize version that saved on the db so i have to do string manipulation) */
+                                $image = explode(".", $indData['media_id']);
+                            ?>
+                            <img width="300px" src="<?php echo $rootPath."/uploads/thumbs/".$image[0]."_thumb.".$image[1] ?>">
                         </figure>
                     </div>
                 </label>
