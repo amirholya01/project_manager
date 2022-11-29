@@ -47,6 +47,7 @@ class Products{
                             WHERE actp.color_id = pc.id;";
     public $getAllColorsQuery = "SELECT * FROM product_colors;";
     public $deleteProductColorByProductIdQuery = "DELETE FROM assign_colors_to_products WHERE product_id = :id;";
+    public $deleteProductMediaByProductIdQuery = "DELETE FROM assign_media_to_products WHERE product_id = :id;";
 
     public $assignMediaToProductQuery = "INSERT INTO assign_media_to_products (product_id, media_id) VALUES (:product_id, :media_id);";
     

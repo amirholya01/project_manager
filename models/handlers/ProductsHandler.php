@@ -191,6 +191,10 @@ class ProductsHandler extends Products{
             $deleteColorJunction = $this->db->prepare($this->deleteProductColorByProductIdQuery);
             $deleteColorJunction->bindParam(":id", $product_id);
             $deleteColorJunction->execute();
+
+            $deleteMediaJunction = $this->db->prepare($this->deleteProductMediaByProductIdQuery);
+            $deleteMediaJunction->bindParam(":id", $product_id);
+            $deleteMediaJunction->execute();
             $this->db->commit();
         } catch (Throwable $error) {
             $this->db->rollBack();
