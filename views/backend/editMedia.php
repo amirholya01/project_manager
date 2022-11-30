@@ -9,20 +9,20 @@
     require_once $rootPath . "security/adminCheck.php";
     require_once $rootPath . "models/handlers/productsHandler.php";
     
+    require_once $rootPath . "controllers/adminEditMedia.php"; /* ✒️ Maybe not needed */
+    
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminMedia" enctype="multipart/form-data">
+    <form method="POST" action="adminMedia">
         <!-- 
-            i send createMedia to tell the controller that it should run create user
+            i send editUser to tell the controller that it should run edit user
         -->
-        <input type="hidden" name="validated" value="true">
-        <input type="hidden" name="createMedia" value="true">
+        <input type="hidden" name="editMedia" value="true">
 
-        <input type="text" name="createName" placeholder="Name">
-        <input type="file" name="createImage">
+        <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+        <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
         <input type="submit">
-
     </form>
 
 </div>

@@ -31,11 +31,11 @@ class Products{
                                                         AND (p.name LIKE :search
                                                         OR p.description LIKE :search);";
     
-    public $getMediaDynamicSearchQuery = "SELECT * FROM media WHERE name LIKE :name AND type = :type;";
-    
-    public $getMediaDynamicSearchWithoutTypeQuery = "SELECT * FROM media WHERE name LIKE :name;";
+    public $getMediaDynamicSearchQuery = "SELECT * FROM media WHERE name LIKE :name;";
 
     public $updateProductByIdQuery = "UPDATE products SET name = :name, description = :description, price = :price, type = :type WHERE products_id = :id;";
+
+    public $updateMediaQuery = "UPDATE media SET name = :name WHERE media_id = :media_id;";
 
     public $deleteProductByIdQuery = "DELETE FROM products WHERE `products_id` = :id;";
 

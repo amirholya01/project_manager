@@ -16,7 +16,7 @@
 <div class="wrapper">
     <form method="POST" action="adminProducts">
         <!-- 
-            i send editUser to tell the controller that it should run edit user
+            i send editProducts to tell the controller that it should run edit user
         -->
         <input type="hidden" name="editProduct" value="true">
 

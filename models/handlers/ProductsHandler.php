@@ -138,21 +138,7 @@ class ProductsHandler extends Products{
     }
 
     public function getMedia($name = '%', $type = '') {
-        /* 
-            We need to check if we are searching for types because we have to use different
-            queries depending on if we search for it or not
-        */
-
-        if( isset( $type ) && $type != '' ){
-            /* 
-                We can't use a wildcard on an int(id) so we have to structure the query
-                differently depending on weather we have an id or not
-            */
-            $getMedia = $this->db->prepare($this->getMediaDynamicSearchQuery);
-            $getMedia->bindParam(':type', $type);
-        } else {
-            $getMedia = $this->db->prepare($this->getMediaDynamicSearchWithoutTypeQuery);
-        }
+        $getMedia = $this->db->prepare($this->getMediaDynamicSearchQuery);
 
         if ( isset( $name ) ){
             $name = "%" . $name . "%";
@@ -212,6 +198,13 @@ class ProductsHandler extends Products{
         $editUser->execute();
 
         $this->db->commit();
+    }
+
+    public function editMedia($id, $name, $type = null){
+        $assignMediaToProduct = $this->db->prepare($this->updateMediaQuery);
+        $assignMediaToProduct->bindParam(':media_id', $id);
+        $assignMediaToProduct->bindParam(':name', $name);
+        $assignMediaToProduct->execute();
     }
 
     public function deleteProductById($product_id) {

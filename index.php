@@ -47,13 +47,14 @@
     $router->get('/adminUsers', 'views/backend/users');
     $router->get('/adminMedia', 'views/backend/media');
 
-    $router->get('/adminEditUser', 'views/backend/editUser');
     $router->get('/adminCreateUser', 'views/backend/createUser');
+    $router->get('/adminEditUser', 'views/backend/editUser');
 
-    $router->get('/adminEditProduct', 'views/backend/editProduct');
     $router->get('/adminCreateProduct', 'views/backend/createProduct');
-
+    $router->get('/adminEditProduct', 'views/backend/editProduct');
+    
     $router->get('/adminCreateMedia', 'views/backend/createMedia');
+    $router->get('/adminEditMedia', 'views/backend/editMedia');
 
     
 

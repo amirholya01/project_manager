@@ -15,8 +15,8 @@
     require_once $rootPath . "controllers/imageUpload.php";
 
     require_once $rootPath . "controllers/createMedia.php";
-    /*require_once $rootPath . "controllers/editProduct.php";
-    require_once $rootPath . "controllers/deleteProduct.php"; */
+    require_once $rootPath . "controllers/editMedia.php";
+    /*require_once $rootPath . "controllers/deleteProduct.php"; */
 
     /* require_once $rootPath . "controllers/adminProducts.php";
     require_once $rootPath . "controllers/getProductsWithFilters.php"; */
@@ -51,16 +51,16 @@
 
     <?php
         $pageNr = $page;
-        $productsPrPage = 10;
-        $pageMinIndex = $pageNr * $productsPrPage;
-        $pageMaxIndex = $pageMinIndex + $productsPrPage;
+        $MediaPrPage = 10;
+        $pageMinIndex = $pageNr * $MediaPrPage;
+        $pageMaxIndex = $pageMinIndex + $MediaPrPage;
     ?>    
 
     <?php
         /* Previous button */
         if($page > 0){
     ?>
-        <form method="POST" action="adminProducts">
+        <form method="POST" action="adminMedia">
             <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
             <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
             <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
@@ -73,9 +73,9 @@
 
     <?php
         /* Next button */
-        if($page < (count($data) / $productsPrPage) - 1){
+        if($page < (count($data) / $MediaPrPage) - 1){
     ?>
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminMedia">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
         <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
@@ -92,21 +92,18 @@
     ?>
             <div>
                 <p><?php echo $indData['name'] ?></p>
-                <p><?php echo $indData['type'] ?></p>
                 <figure>
                     <img src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
                 </figure>
                 
-                <!-- <form method="POST" action="adminEditProduct">
-                    <input type="hidden" name="id" value="<?php /*echo $indData['products_id'] ?>">
+                <form method="POST" action="adminEditMedia">
+                    <input type="hidden" name="id" value="<?php echo $indData['media_id'] ?>">
                     <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
-                    <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
-                    <input type="hidden" name="price" value="<?php echo $indData['price'] ?>">
                     <input type="submit" value="Edit">
                 </form>
 
-                <form method="POST" action="adminProducts">
-                    <input type="hidden" name="delete" value="<?php echo $indData['products_id']*/ ?>">
+                <!--<form method="POST" action="adminProducts">
+                    <input type="hidden" name="delete" value="<?php //echo $indData['products_id']*/ ?>">
                     <input type="submit" value="Delete">
                 </form> -->
             </div>
@@ -119,7 +116,7 @@
         /* Previous button */
         if($page > 0){
     ?>
-        <form method="POST" action="adminProducts">
+        <form method="POST" action="adminMedia">
             <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
             <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
             <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
@@ -132,9 +129,9 @@
 
     <?php
         /* Next button */
-        if($page < (count($data) / $productsPrPage) - 1){
+        if($page < (count($data) / $MediaPrPage) - 1){
     ?>
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminMedia">
         <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
         <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
         <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
