@@ -47,6 +47,9 @@
                 <li>
                     <a href="/adminMedia">Media</a>
                 </li>
+                <li>
+                    <a href="/adminNews">News</a>
+                </li>
             </ul>
         </nav>
     </aside>
