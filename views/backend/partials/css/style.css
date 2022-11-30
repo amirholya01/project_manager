@@ -1,15 +1,190 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Questrial', sans-serif;
+  background: #ECEFF4;
 }
 
-body {
+.Admin-main-section{
   display: flex;
+}
+
+.Top-nav{
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 2px 5px 0px rgba(0,0,0,.2);
+  z-index: 10;
+  position: relative;
+  padding: 0 3%;
 }
 
 aside {
   width: 150px;
-  background: #B2A6CE;
+  background: #ffffff;
   min-height: 100vh;
-}/*# sourceMappingURL=style.css.map */
+  padding: 0 3%;
+  box-shadow: 0 2px 5px 0px rgba(0,0,0,.2);
+}
+
+.Login-info-div{
+  padding: 20px 5px;
+  width: 100vw;
+}
+
+.Login-info-div p{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul{
+  height: auto !important;
+  margin-top: 53px;
+  padding-left: 5px;
+}
+
+li {
+height: 40px;
+list-style-type: none;
+display: flex;
+align-items: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.wrapper{
+  margin: 37px 0 0 40px;
+  width: 100%;
+}
+
+.wrapper-main-area{
+  position: relative;
+}
+
+.Reset_create_div{
+  margin: 25px 0;
+}
+
+.Admin-page-title{
+  margin-top: 70px;
+}
+
+.Admin-page-title h1{
+  margin-bottom: 0 !important;
+}
+
+.Admin-product-handlers{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2.5%;
+}
+
+.Admin-product-handlers .input{
+	margin: 0 auto;
+  padding: .8rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  margin-right: 15px;
+}
+
+.Admin-search-product{
+  display: flex;
+  align-items: center;
+}
+
+.Admin-search-product input, select{
+  margin: 0 20px 0 0;
+}
+
+.button {
+  background: #B2A6CE;
+  border-radius: 999px;
+  box-shadow: #B2A6CE 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-pagination {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #111827;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+
+.submit{
+  margin-left: 30px;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 80px 0;
+}
+
+.product{
+  width: 20%;
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 20px 20px 0;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Prev-button, .Next-button{
+  position: absolute;
+  top: -30px;
+}
+
+.Prev-button-lowest, .Next-button-lowest{
+  position: absolute;
+  bottom: 65px;
+}
+
+.Edit-Delete-div{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}

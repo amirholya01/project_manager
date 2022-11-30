@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="<?php echo $rootPath ?>views/backend/partials/css/style.css">
 </head>
 <body>
-    <aside>
+
+<div class="Top-nav">
+    <div class="Login-info-div">
         <?php
             if(isset($_SESSION['name'])){
         ?>
@@ -27,6 +29,13 @@
         <?php
             }
         ?>
+    </div>
+</div>
+
+
+<div class="Admin-main-section">
+    <aside>
+
         <nav>
             <ul>
                 <li>
