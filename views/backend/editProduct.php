@@ -65,7 +65,6 @@
                 <label for="<?php echo $indData['media_id']; ?>">
                     <div>
                         <p><?php echo $indData['name'] ?></p>
-                        <p><?php echo $indData['type'] ?></p>
                         <figure>
                             <!-- ✒️ should be styled with seperate css file -->
                             <?php 
