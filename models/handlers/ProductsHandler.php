@@ -227,6 +227,18 @@ class ProductsHandler extends Products{
         }
     }
 
+    public function deleteMediaById($media_id) {
+        $deleteProduct = $this->db->prepare($this->deleteMediaByIdQuery);
+        $deleteProduct->bindParam(":id", $media_id);
+        $deleteProduct->execute();
+    }
+
+    public function deleteProductMediaJunctionByMediaId($id){
+        $deleteMediaJunction = $this->db->prepare($this->deleteProductMediaByMediaIdQuery);
+        $deleteMediaJunction->bindParam(":id", $id);
+        $deleteMediaJunction->execute();
+    }
+
     public function uploadImage($id, $name = "pineapple"){
         $createImageRefOnDb = $this->db->prepare("INSERT INTO media (media_id, name) VALUES (:id, :name)"); /* ✒️ Should be in models */
         $createImageRefOnDb->execute(array(

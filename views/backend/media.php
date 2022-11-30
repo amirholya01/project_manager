@@ -16,10 +16,8 @@
 
     require_once $rootPath . "controllers/createMedia.php";
     require_once $rootPath . "controllers/editMedia.php";
-    /*require_once $rootPath . "controllers/deleteProduct.php"; */
+    require_once $rootPath . "controllers/deleteMedia.php";
 
-    /* require_once $rootPath . "controllers/adminProducts.php";
-    require_once $rootPath . "controllers/getProductsWithFilters.php"; */
     require_once $rootPath . "controllers/getMediaWithFilters.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
@@ -102,10 +100,10 @@
                     <input type="submit" value="Edit">
                 </form>
 
-                <!--<form method="POST" action="adminProducts">
-                    <input type="hidden" name="delete" value="<?php //echo $indData['products_id']*/ ?>">
+                <form method="POST" action="adminMedia">
+                    <input type="hidden" name="delete" value="<?php echo $indData['media_id'] ?>">
                     <input type="submit" value="Delete">
-                </form> -->
+                </form>
             </div>
     <?php
         }

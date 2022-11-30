@@ -9,8 +9,6 @@
     require_once $rootPath . "security/adminCheck.php";
     require_once $rootPath . "models/handlers/productsHandler.php";
     
-    require_once $rootPath . "controllers/adminEditMedia.php"; /* ✒️ Maybe not needed */
-    
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">

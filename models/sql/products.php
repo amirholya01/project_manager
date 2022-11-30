@@ -33,11 +33,15 @@ class Products{
     
     public $getMediaDynamicSearchQuery = "SELECT * FROM media WHERE name LIKE :name;";
 
+
     public $updateProductByIdQuery = "UPDATE products SET name = :name, description = :description, price = :price, type = :type WHERE products_id = :id;";
 
     public $updateMediaQuery = "UPDATE media SET name = :name WHERE media_id = :media_id;";
 
+
     public $deleteProductByIdQuery = "DELETE FROM products WHERE `products_id` = :id;";
+
+    public $deleteMediaByIdQuery = "DELETE FROM media WHERE `media_id` = :id;";
 
     //Advanced queries
     public $createProductColorQuery = "INSERT INTO assign_colors_to_products (product_id, color_id) VALUES (:product_id, :color_id);";
@@ -53,6 +57,7 @@ class Products{
     public $getAllColorsQuery = "SELECT * FROM product_colors;";
     public $deleteProductColorByProductIdQuery = "DELETE FROM assign_colors_to_products WHERE product_id = :id;";
     public $deleteProductMediaByProductIdQuery = "DELETE FROM assign_media_to_products WHERE product_id = :id;";
+    public $deleteProductMediaByMediaIdQuery = "DELETE FROM assign_media_to_products WHERE media_id = :id;";
 
     public $assignMediaToProductQuery = "INSERT INTO assign_media_to_products (product_id, media_id) VALUES (:product_id, :media_id);";
     
