@@ -43,7 +43,11 @@
     }
 ?>
 <div class="wrapper">
-    <!-- ✒️ Search -->
+    <form method="POST" action="/adminMedia">
+        <!-- ✒️ Make it not case sensitive -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit" value="Search">
+    </form>
     <a href="/adminMedia">Reset</a>
     <a href="/adminCreateMedia">Create new media</a>
 

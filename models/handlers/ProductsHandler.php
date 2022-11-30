@@ -137,7 +137,7 @@ class ProductsHandler extends Products{
         return $products;
     }
 
-    public function getMedia($name = '%', $type = '') {
+    public function getMedia($name = '%') {
         $getMedia = $this->db->prepare($this->getMediaDynamicSearchQuery);
 
         if ( isset( $name ) ){

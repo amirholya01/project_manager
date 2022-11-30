@@ -1,4 +1,5 @@
 <?php
+    /* 🔥 Should be saniticed */
     $data = $ProductsHandler->getProducts(
         isset($_POST['search']) ? $_POST['search'] : "",
         isset($_POST['id']) ? $_POST['id'] : "",
