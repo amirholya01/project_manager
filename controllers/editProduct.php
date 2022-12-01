@@ -2,20 +2,22 @@
 
 // Checks if there is an edit field send with the form
 if(isset($_POST['editProduct'])){
-    $id = $stringSanitation->sanitice($_POST['editId']);
+    $id = $stringSanitation->numberSanitice($_POST['editId']);
     $name = $stringSanitation->sanitice($_POST['editName']);
     $description = $stringSanitation->sanitice($_POST['editDescription']);
-    $price = $stringSanitation->sanitice($_POST['editPrice']);
-    $type = $stringSanitation->sanitice($_POST['editType']);
+    $price = $stringSanitation->numberSanitice($_POST['editPrice']);
+    $type = $stringSanitation->numberSanitice($_POST['editType']);
     $colors = null;
     $medias = null;
 
     if(isset($_POST['editColors'])){
-        $colors = $stringSanitation->sanitice($_POST['editColors']);
+        /* ✒️ Needs array sanitasion */
+        $colors = $_POST['editColors'];
     }
 
     if( isset($_POST['media']) ){
-        $medias = $stringSanitation->sanitice($_POST['media']);
+        /* ✒️ Needs array sanitasion */
+        $medias = $_POST['media'];
     }
 
     $validStrings = $stringSanitation->getValidationStatus();
