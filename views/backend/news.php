@@ -105,6 +105,7 @@
                             <input type="hidden" name="id" value="<?php echo $indData['news_id'] ?>">
                             <input type="hidden" name="title" value="<?php echo $indData['title'] ?>">
                             <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
+                            <input type="hidden" name="media" value="<?php echo $indData['media'] ?>">
                             <input class="button-pagination" type="submit" value="Edit">
                         </form>
                             

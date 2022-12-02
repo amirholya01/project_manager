@@ -35,11 +35,12 @@ class NewsHandler extends News{
         return $news;
     }
 
-    public function editNews($id, $title, $description){
+    public function editNews($id, $title, $description, $media){
         $editNews = $this->db->prepare($this->updateNewsQuery);
         $editNews->bindParam(':id', $id);
         $editNews->bindParam(':title', $title);
         $editNews->bindParam(':description', $description);
+        $editNews->bindParam(':media', $media);
         $editNews->execute();
     }
 

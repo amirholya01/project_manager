@@ -6,7 +6,7 @@ class News{
 
     public $getNewsQuery = "SELECT * FROM news";
     
-    public $updateNewsQuery = "UPDATE `news` SET `title`= :title,`description`= :description WHERE `news_id`= :id;";
+    public $updateNewsQuery = "UPDATE `news` SET `title`= :title,`description`= :description, `media`= :media WHERE `news_id`= :id;";
 
     public $deleteNewsQuery = "DELETE FROM `news` WHERE news_id = :id";
 }
