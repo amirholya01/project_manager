@@ -13,20 +13,23 @@
     /* 🔥 Needs to check if the user is allowed to be here */
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminUsers">
+    <form class="Admin-handlers" method="POST" action="adminUsers">
         <!-- 
             i send createUser to tell the controller that it should run create user
         -->
-        <input type="hidden" name="validated" value="true">
-        <input type="hidden" name="createUser" value="true">
 
-        <input type="text" name="createName" placeholder="Username">
-        <input type="text" name="createPassword" placeholder="Password">
-        <select name="createRole">
-            <option value="0">Customer</option>
-            <option value="1">Admin</option>
-        </select>
-        <input type="submit">
+        <div class="Admin-search-product">
+            <input class="input" type="hidden" name="validated" value="true">
+            <input class="input" type="hidden" name="createUser" value="true">
+
+            <input class="input" type="text" name="createName" placeholder="Username">
+            <input class="input" type="text" name="createPassword" placeholder="Password">
+            <select name="createRole">
+                <option value="0">Customer</option>
+                <option value="1">Admin</option>
+            </select>
+            <input class="height-button button submit" type="submit">
+        </div>
     </form>
 
 </div>
