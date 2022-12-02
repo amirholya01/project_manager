@@ -46,6 +46,7 @@
     $router->get('/adminProducts', 'views/backend/products');
     $router->get('/adminUsers', 'views/backend/users');
     $router->get('/adminMedia', 'views/backend/media');
+    $router->get('/adminNews', 'views/backend/news');
 
     $router->get('/adminCreateUser', 'views/backend/createUser');
     $router->get('/adminEditUser', 'views/backend/editUser');

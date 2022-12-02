@@ -12,7 +12,8 @@ class stringSanitation {
 
         if($originalString != $string){
             $this->validated = false;
-            header("Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            echo "String != Original string";
+            //header("Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         }
 
         /* SQL Sanitation */
@@ -26,11 +27,20 @@ class stringSanitation {
         for($i = 0; $i < count($sqlCommands); $i++){
             if(strpos($originalString, $sqlCommands[$i]) !== false){
                 $this->validated = false;
-                header("Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                echo "Malicious stuff";
+                //header("Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
             }
         }
 
         return $string;
+    }
+
+    function numberSanitice ($number){
+        if(!intval($number)){
+            $this->validated = false;
+        }
+
+        return $number;
     }
 
     function getValidationStatus (){
