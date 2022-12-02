@@ -12,16 +12,23 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminMedia">
+    <form class="Admin-handlers" method="POST" action="adminMedia">
         <!-- 
             i send editUser to tell the controller that it should run edit user
         -->
-        <input type="hidden" name="editMedia" value="true">
+        <div class="Admin-search-product">
+            <input class="input" type="hidden" name="editMedia" value="true">
 
-        <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-        <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-        <input type="submit">
+            <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+            <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
+            <input class="height-button button submit" type="submit">
+        </div>
+
     </form>
+
+    <div class="Admin-page-title margin-bottom">
+              <h1>Edit Media</h1>
+    </div>
 
 </div>
 

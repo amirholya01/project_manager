@@ -113,6 +113,15 @@ a:link {
 .margin-right{
   margin-right: 15px;
   border: none;
+  padding-left: 15px;
+}
+
+.margin-bottom{
+  margin-bottom: 50px;
+}
+
+.Admin-handlers .edit-product-width{
+  width: 150px !important;
 }
 
 .height-button{
