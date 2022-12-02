@@ -27,6 +27,9 @@
 
     </form>
 
+    <div class="Admin-page-title margin-bottom">
+              <h1>Create Media</h1>
+    </div>
 </div>
 
 <?php 

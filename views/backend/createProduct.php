@@ -46,6 +46,10 @@
             <input class="height-button button submit" type="submit">
         </div>
 
+        <div class="Admin-page-title margin-bottom">
+              <h1>Create Products</h1>
+        </div>
+
         <!-- Img select system -->
         
         <?php

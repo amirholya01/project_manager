@@ -484,11 +484,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4"><span>$630.00</span></div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4"><span>150 DKK</span></div>
                     </div>
                 </div>
             </div>
@@ -518,11 +514,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -552,11 +544,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -586,12 +574,9 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
-                    </div>
+
                 </div>
             </div>
             <div class="col-sm-4">
@@ -620,11 +605,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -654,11 +635,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -688,11 +665,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -722,11 +695,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -756,11 +725,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>
@@ -790,11 +755,7 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                    <div>
-                        <div class="simple-article text size-2">Mollis nec consequat at In feugiat mole stie tortor a
-                            malesuada</div>
+                        <div class="simple-article size-4 dark">150 DKK</div>
                     </div>
                 </div>
             </div>

@@ -18,45 +18,53 @@
         <!-- 
             i send editProducts to tell the controller that it should run edit user
         -->
-        <input type="hidden" name="editProduct" value="true">
+        <div class="Admin-handlers">
+        <div class="Admin-search-product">
+            <input type="hidden" name="editProduct" value="true">
 
-        <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-        <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-        <input type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
-        <input type="text" name="editPrice" value="<?php echo $_POST['price'] ?>">
-        <select name="editType">
-            <?php 
-                foreach($allTypes as $type){
-            ?>
-                <option value="<?php echo $type['id'] ?>"><?php echo $type['type'] ?></option>
-            <?php
-                }
-            ?>
-        </select>
-        <select name="editColors[]" multiple>
-            <?php 
-                foreach($allColors as $color){
-            ?>
-                <!-- ✒️ Needs to select already selected colors -->
-                <option 
-                    <?php
-                        $assigned = false;
-                        foreach($colorsAssignedToProduct as $assignedColor){
-                            if($assignedColor["color_id"] == $color['id']){
-                                $assigned = true;
+            <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+            <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
+            <input class="input" type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
+            <input class="input" type="text" name="editPrice" value="<?php echo $_POST['price'] ?>">
+            <select name="editType">
+                <?php 
+                    foreach($allTypes as $type){
+                ?>
+                    <option value="<?php echo $type['id'] ?>"><?php echo $type['type'] ?></option>
+                <?php
+                    }
+                ?>
+            </select></div>
+            
+            <select class="edit-product-width" name="editColors[]" multiple>
+                <?php 
+                    foreach($allColors as $color){
+                ?>
+                    <!-- ✒️ Needs to select already selected colors -->
+                    <option 
+                        <?php
+                            $assigned = false;
+                            foreach($colorsAssignedToProduct as $assignedColor){
+                                if($assignedColor["color_id"] == $color['id']){
+                                    $assigned = true;
+                                }
                             }
-                        }
 
-                        echo $assigned == true ? "selected" : "";
-                    ?>
-                
-                    value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?>
-                </option>
-            <?php
-                }
-            ?>
-        </select>
-        <input type="submit">
+                            echo $assigned == true ? "selected" : "";
+                        ?>
+                    
+                        value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?>
+                    </option>
+                <?php
+                    }
+                ?>
+            </select>
+            <input class="height-button button submit" type="submit">
+        </div>
+
+        <div class="Admin-page-title margin-bottom">
+              <h1>Edit Product</h1>
+        </div>
 
         <?php
             for($i = 0; $i < count($mediaData); $i++){

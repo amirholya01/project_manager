@@ -72,7 +72,7 @@
 
 
     <div class="Admin-page-title">
-        <h1>Products Added to Database</h1>
+        <h1>Media Added to Database</h1>
     </div>
 
 <div class="wrapper-main-area">
@@ -108,30 +108,41 @@
         }
     ?>
 
-    <?php
-        for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
-            $indData = $data[$i];
-    ?>
-            <div>
-                <p><?php echo $indData['name'] ?></p>
-                <figure>
-                    <img src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
-                </figure>
-                
-                <form method="POST" action="adminEditMedia">
-                    <input type="hidden" name="id" value="<?php echo $indData['media_id'] ?>">
-                    <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
-                    <input type="submit" value="Edit">
-                </form>
+    <div class="products">
 
-                <form method="POST" action="adminMedia">
-                    <input type="hidden" name="delete" value="<?php echo $indData['media_id'] ?>">
-                    <input type="submit" value="Delete">
-                </form>
-            </div>
-    <?php
-        }
-    ?>
+            <?php
+                for($i = $pageMinIndex; $i < $pageMaxIndex && $i < count($data); $i++){
+                    $indData = $data[$i];
+            ?>
+
+                <div class="product">
+
+                    <div class="product-info">
+                        <p><?php echo $indData['name'] ?></p>
+                        <figure>
+                            <img src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                        </figure>
+
+                        <div class="Edit-Delete-div">
+                            <form method="POST" action="adminEditMedia">
+                                <input type="hidden" name="id" value="<?php echo $indData['media_id'] ?>">
+                                <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
+                                <input class="button-pagination" type="submit" value="Edit">
+                            </form>
+
+                            <form method="POST" action="adminMedia">
+                                <input type="hidden" name="delete" value="<?php echo $indData['media_id'] ?>">
+                                <input class="button-pagination" type="submit" value="Delete">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            <?php
+                }
+            ?>
+    </div>
+
 
     <?php
         echo "<br>";

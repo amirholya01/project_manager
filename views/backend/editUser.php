@@ -10,21 +10,30 @@
     require_once $rootPath . "security/adminCheck.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminUsers">
+    <form class="Admin-handlers" method="POST" action="adminUsers">
+
         <!-- 
             i send editUser to tell the controller that it should run edit user
         -->
-        <input type="hidden" name="editUser" value="true">
 
-        <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-        <input type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-        <input type="text" name="password">
-        <select name="editRole">
-            <option <?php echo ($_POST['role'] == 0 ? "selected" : "") ?> value="0">Customer</option>
-            <option <?php echo ($_POST['role'] == 1 ? "selected" : "") ?> value="1">Admin</option>
-        </select>
-        <input type="submit">
+        <div class="Admin-search-product">
+            <input class="input" type="hidden" name="editUser" value="true">
+
+            <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+            <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
+            <input class="input" type="text" name="password">
+            <select name="editRole">
+                <option <?php echo ($_POST['role'] == 0 ? "selected" : "") ?> value="0">Customer</option>
+                <option <?php echo ($_POST['role'] == 1 ? "selected" : "") ?> value="1">Admin</option>
+            </select>
+            <input  class="height-button button submit" type="submit">
+        </div>
+
     </form>
+
+    <div class="Admin-page-title margin-bottom">
+              <h1>Edit User</h1>
+    </div>
 
 </div>
 

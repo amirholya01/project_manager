@@ -32,6 +32,10 @@
         </div>
     </form>
 
+    <div class="Admin-page-title margin-bottom">
+              <h1>Create Users</h1>
+    </div>
+
 </div>
 
 <?php 
