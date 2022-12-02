@@ -25,7 +25,6 @@
     <div class="Admin-handlers">
         <div class="Admin-search-product">
             <input class="input" type="text" name="title" placeholder="Title">
-            <input class="input" type="number" name="sale" placeholder="Sale percentage">
             From <input class="input" type="date" name="start" placeholder="Starts">
             To <input class="input" type="date" name="end" placeholder="Ends">
             <input class="button submit" type="submit">
@@ -64,7 +63,15 @@
                         </div>
 
                         <div class="Edit-Delete-div">
-                            <input type="checkbox" name="products[]" value="<?php echo $indData['products_id'] ?>" id="<?php echo $indData['products_id'] ?>">
+                            <!-- 
+                                The idea of how this is going to work (Psuedo code)
+                                 * we send all product_ids and sales in even if empty
+                                 * we get the array indexes of all filled out sales and put them in a new array
+                                 * we loop through the array[new array[i]]
+                                 * sales[new array[i]] and product_ids[new array[i]] are matching
+                             -->
+                            <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
+                            <input class="input" type="number" name="sales[]" placeholder="Sale percentage" id="<?php echo $indData['products_id'] ?>">%
                         </div>
                     </label>
             <?php
