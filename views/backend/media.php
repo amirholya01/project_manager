@@ -50,7 +50,7 @@
         <div class="Admin-search-product">
             <!-- ✒️ Make it not case sensitive -->
             <input class="input" type="text" name="name" placeholder="Name">
-            <input class="button submit" type="submit" value="Search">
+            <input class="height-button button submit" type="submit" value="Search">
         </div>
 
         <div class="Reset_create_div">

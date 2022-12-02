@@ -78,7 +78,7 @@ a:link {
 }
 
 .Reset_create_div{
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .Admin-page-title{
@@ -94,6 +94,7 @@ a:link {
   justify-content: space-between;
   margin-right: 2.5%;
   margin-top: 10px;
+  height: 60px;
 }
 
 .Admin-handlers .input, select{
@@ -107,6 +108,17 @@ a:link {
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
   margin-right: 15px;
+}
+
+.margin-right{
+  margin-right: 15px;
+  border: none;
+}
+
+.height-button{
+  height: 45px;
+  padding: 8px 38px !important;
+  margin-top: 7px;
 }
 
 .Admin-search-product{
@@ -147,6 +159,7 @@ a:link {
 .button {
   background: #B2A6CE;
   border-radius: 999px;
+  height: 45px;
   box-shadow: #B2A6CE 0 10px 20px -10px;
   box-sizing: border-box;
   color: #ffffff;

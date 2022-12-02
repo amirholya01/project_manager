@@ -12,16 +12,18 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminMedia" enctype="multipart/form-data">
+    <form class="Admin-handlers" method="POST" action="adminMedia" enctype="multipart/form-data">
         <!-- 
             i send createMedia to tell the controller that it should run create user
         -->
-        <input type="hidden" name="validated" value="true">
-        <input type="hidden" name="createMedia" value="true">
+        <div class="Admin-search-product">
+            <input class="input" type="hidden" name="validated" value="true">
+            <input class="input" type="hidden" name="createMedia" value="true">
 
-        <input type="text" name="createName" placeholder="Name">
-        <input type="file" name="createImage">
-        <input type="submit">
+            <input class="input" type="text" name="createName" placeholder="Name">
+            <input  type="file" name="createImage">
+            <input class="height-button button submit" type="submit">
+        </div>
 
     </form>
 
