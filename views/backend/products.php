@@ -9,7 +9,6 @@
     require_once $rootPath . "models/handlers/Usershandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
-    
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
