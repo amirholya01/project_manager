@@ -5,9 +5,11 @@
     }
     require_once $rootPath . "public/dbconn.php";
     
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/usersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
-    //require_once $rootPath . "models/handlers/newsHandler.php";
+    require_once $rootPath . "models/handlers/productsHandler.php";
+
+    require_once $rootPath . "controllers/adminCreateNews.php";
     
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
@@ -25,6 +27,25 @@
             <input class="height-button button submit" type="submit">
         </div>
 
+        <!-- Img select system -->
+        
+        <?php
+            for($i = 0; $i < count($mediaData); $i++){
+                $indData = $mediaData[$i];
+        ?>
+                <label for="<?php echo $indData['media_id']; ?>">
+                    <div>
+                        <p><?php echo $indData['name'] ?></p>
+                        <figure>
+                            <!-- ✒️ should be styled with seperate css file -->
+                            <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                        </figure>
+                    </div>
+                </label>
+                <input type="radio" id="<?php echo $indData['media_id']; ?>" name="createMedia" value="<?php echo $indData['media_id']; ?>">
+        <?php
+            }
+        ?>
     </form>
 
 </div>

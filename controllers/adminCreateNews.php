@@ -1,0 +1,3 @@
+<?php
+
+$mediaData = $ProductsHandler->getMedia();

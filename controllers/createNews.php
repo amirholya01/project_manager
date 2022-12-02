@@ -8,6 +8,7 @@ if($validated == true){
         /* Gets all the values from the post request */
         $title = $stringSanitation->sanitice($_POST['createTitle']);
         $description = $stringSanitation->sanitice($_POST['createDescription']);
+        $media = $stringSanitation->sanitice($_POST['createMedia']);
 
         
         /* Checks if all the strings pass validation */
@@ -17,7 +18,7 @@ if($validated == true){
         //$validStrings = false;
         
         if($validStrings == true){
-            $NewsHandler->createNews($name, $description);
+            $NewsHandler->createNews($title, $description, $media);
         }
     }
 }

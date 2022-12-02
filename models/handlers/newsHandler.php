@@ -18,10 +18,13 @@ class NewsHandler extends News{
 
     /* Media and Date???? */
 
-    public function createNews($title, $description){
+    public function createNews($title, $description, $media = null){
+        echo $media;
         $createNews = $this->db->prepare($this->createNewsQuery);
         $createNews->bindParam(':title', $title);
         $createNews->bindParam(':description', $description);
+        $createNews->bindParam(':media', $media);
+        $createNews->execute();
     }
 
     public function getNews(){
