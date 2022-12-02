@@ -53,6 +53,7 @@
 
     $router->get('/adminCreateProduct', 'views/backend/createProduct');
     $router->get('/adminEditProduct', 'views/backend/editProduct');
+    $router->get('/adminCreateSale', 'views/backend/createSale');
     
     $router->get('/adminCreateMedia', 'views/backend/createMedia');
     $router->get('/adminEditMedia', 'views/backend/editMedia');
