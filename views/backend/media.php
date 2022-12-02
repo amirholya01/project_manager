@@ -43,13 +43,25 @@
     }
 ?>
 <div class="wrapper">
-    <form method="POST" action="/adminMedia">
-        <!-- ✒️ Make it not case sensitive -->
-        <input type="text" name="name" placeholder="Name">
-        <input type="submit" value="Search">
+
+
+    <form class="Admin-handlers" method="POST" action="/adminMedia">
+
+        <div class="Admin-search-product">
+            <!-- ✒️ Make it not case sensitive -->
+            <input class="input" type="text" name="name" placeholder="Name">
+            <input class="button submit" type="submit" value="Search">
+        </div>
+
+        <div class="Reset_create_div">
+            <a class="button" href="/adminMedia">Reset</a>
+            <a class="button" href="/adminCreateMedia">Create new media</a>
+        </div>
     </form>
-    <a href="/adminMedia">Reset</a>
-    <a href="/adminCreateMedia">Create new media</a>
+
+  
+
+
 
     <?php
         $pageNr = $page;
@@ -57,6 +69,13 @@
         $pageMinIndex = $pageNr * $MediaPrPage;
         $pageMaxIndex = $pageMinIndex + $MediaPrPage;
     ?>    
+
+
+    <div class="Admin-page-title">
+        <h1>Products Added to Database</h1>
+    </div>
+
+<div class="wrapper-main-area">
 
     <?php
         /* Previous button */
@@ -67,7 +86,7 @@
             <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
             <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
             <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
-            <input type="submit" value="Prev">
+            <input class="Prev-button button-pagination" type="submit" value="Prev">
         </form>
     <?php
         }
@@ -82,8 +101,9 @@
         <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
         <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
         <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
-        <input type="submit" value="Next">
+        <input class="Next-button button-pagination" type="submit" value="Next">
     </form>
+
     <?php
         }
     ?>
@@ -123,7 +143,7 @@
             <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
             <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
             <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
-            <input type="submit" value="Prev">
+            <input class="Prev-button-lowest button-pagination" type="submit" value="Prev">
         </form>
     <?php
         }
@@ -138,11 +158,13 @@
         <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
         <input type="hidden" name="type" value="<?php echo ($searchType != null) ? $searchType : ""; ?>">
         <input type="hidden" name="page" value="<?php echo ($page + 1) ?>">
-        <input type="submit" value="Next">
+        <input class="Next-button-lowest button-pagination" type="submit" value="Next">
     </form>
     <?php
         }
     ?>
+
+</div>
 
 </div>
 

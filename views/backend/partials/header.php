@@ -18,14 +18,22 @@
 
 <div class="Top-nav">
     <div class="Login-info-div">
-        <?php
-            if(isset($_SESSION['name'])){
-        ?>
-            <p>
-                <?php echo $_SESSION['name']; ?>
-                &nbsp;
-                <a href="/logoutFunction">Log out</a>
-            </p>
+        <div class="Nav-admin-name">
+            <div class="Nav-icon">
+                <img src="assets/img/user.png" alt="">
+            </div>
+            <?php
+                if(isset($_SESSION['name'])){
+            ?>
+                <p>
+                    <?php echo $_SESSION['name']; ?>
+                    &nbsp;
+                </p>
+        </div>
+            
+
+            <a class="Logout" href="/logoutFunction">Log out</a>
+
         <?php
             }
         ?>
@@ -35,19 +43,30 @@
 
 <div class="Admin-main-section">
     <aside>
-
         <nav>
             <ul>
                 <li>
+                    <div class="Nav-icon link-icon">
+                        <img src="assets/img/box.png" alt="">
+                    </div>
                     <a href="/adminProducts">Products</a>
                 </li>
                 <li>
+                    <div class="Nav-icon link-icon">
+                        <img src="assets/img/group.png" alt="">
+                    </div>
                     <a href="/adminUsers">Users</a>
                 </li>
                 <li>
+                    <div class="Nav-icon link-icon">
+                        <img src="assets/img/insert-picture-icon.png" alt="">
+                    </div>
                     <a href="/adminMedia">Media</a>
                 </li>
                 <li>
+                    <div class="Nav-icon link-icon">
+                        <img src="assets/img/news.png" alt="">
+                    </div>
                     <a href="/adminNews">News</a>
                 </li>
             </ul>
