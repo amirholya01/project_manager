@@ -15,6 +15,15 @@ class NewsHandler extends News{
         $this->db = $db;
     }
 
+
+    /* Media and Date???? */
+
+    public function createNews($title, $description){
+        $createNews = $this->db->prepare($this->createNewsQuery);
+        $createNews->bindParam(':title', $title);
+        $createNews->bindParam(':description', $description);
+    }
+
     public function getNews(){
         $getNews = $this->db->prepare($this->getNewsQuery);
         $getNews->execute();
@@ -24,11 +33,17 @@ class NewsHandler extends News{
     }
 
     public function editNews($id, $title, $description){
-        $deletePeviouslyAssignedColors = $this->db->prepare($this->updateNewsQuery);
-        $deletePeviouslyAssignedColors->bindParam(':id', $id);
-        $deletePeviouslyAssignedColors->bindParam(':title', $title);
-        $deletePeviouslyAssignedColors->bindParam(':description', $description);
-        $deletePeviouslyAssignedColors->execute();
+        $editNews = $this->db->prepare($this->updateNewsQuery);
+        $editNews->bindParam(':id', $id);
+        $editNews->bindParam(':title', $title);
+        $editNews->bindParam(':description', $description);
+        $editNews->execute();
+    }
+
+    public function deleteNewsById($id){
+        $deleteNews = $this->db->prepare($this->deleteNewsQuery);
+        $deleteNews->bindParam('id', $id);
+        $deleteNews->execute();
     }
 }
 

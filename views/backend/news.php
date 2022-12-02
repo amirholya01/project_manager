@@ -13,11 +13,10 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
-    //require_once $rootPath . "controllers/createProduct.php";
+    require_once $rootPath . "controllers/createNews.php";
     require_once $rootPath . "controllers/editNews.php";
-    //require_once $rootPath . "controllers/deleteProduct.php";
+    require_once $rootPath . "controllers/deleteNews.php";
 
-    //require_once $rootPath . "controllers/adminProducts.php";
     require_once $rootPath . "controllers/getNewsWithFilters.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
@@ -110,7 +109,7 @@
                         </form>
                             
 
-                        <form method="POST" action="adminProducts">
+                        <form method="POST" action="adminNews">
                             <input type="hidden" name="delete" value="<?php echo $indData['news_id'] ?>">
                             <input class="button-pagination" type="submit" value="Delete">
                         </form>
