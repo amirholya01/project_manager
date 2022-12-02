@@ -40,28 +40,30 @@
     }
 ?>
 <div class="wrapper">
-    <form class="Admin-product-handlers" method="POST" action="adminProducts">
+
+
+    <form class="Admin-handlers" method="POST" action="adminProducts">
 
         <div class="Admin-search-product">
             <input class="input" type="text" name="id" placeholder="ID" value="<?php echo ($id != null) ? $id : ""; ?>">
             <input class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
-            <select name="type" id="type">
-                <option value="">Nothing</option>
-                <!-- Adds types to the search select field -->
-                <?php
-                    foreach($allTypes as $type){
-                        if($type['type'] == $searchType){
-                ?>
-                    <option selected value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
-                <?php
-                        } else {
-                ?>
-                    <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
-                <?php
+                <select name="type" id="type">
+                    <option value="">Nothing</option>
+                    <!-- Adds types to the search select field -->
+                    <?php
+                        foreach($allTypes as $type){
+                            if($type['type'] == $searchType){
+                    ?>
+                        <option selected value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+                    <?php
+                            } else {
+                    ?>
+                        <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+                    <?php
+                            }
                         }
-                    }
-                ?>
-            </select>
+                    ?>
+                </select>
             <input class="button submit" type="submit">
         </div>
 
@@ -71,9 +73,10 @@
         </div>
     </form>
 
-    
+  
 
-    
+
+
         <?php
             $pageNr = $page;
             $productsPrPage = 10;
@@ -83,8 +86,10 @@
 
         <!-- ✒️ Should keep you on the same page when deleting or editing a product -->
 
+
+
         <div class="Admin-page-title">
-              <h1>Products Added to Database</h1>
+              <h1>Products added to database</h1>
         </div>
 
 <div class="wrapper-main-area">

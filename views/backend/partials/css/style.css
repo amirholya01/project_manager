@@ -19,12 +19,23 @@ body {
   padding: 0 3%;
 }
 
+.Logout{
+  display: flex;
+  align-items: center;
+}
+
 aside {
-  width: 150px;
+  width: 280px;
   background: #ffffff;
   min-height: 100vh;
-  padding: 0 3%;
   box-shadow: 0 2px 5px 0px rgba(0,0,0,.2);
+}
+
+aside nav{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Login-info-div{
@@ -32,22 +43,25 @@ aside {
   width: 100vw;
 }
 
-.Login-info-div p{
+.Login-info-div{
   display: flex;
   justify-content: space-between;
 }
 
 ul{
   height: auto !important;
-  margin-top: 53px;
-  padding-left: 5px;
+  margin-top: 48px;
+  padding-left: 0 !important;
+  margin-right: 9px;
 }
 
 li {
 height: 40px;
+margin-bottom: 20px;
 list-style-type: none;
 display: flex;
 align-items: center;
+padding: 5px;
 }
 
 a:link {
@@ -68,20 +82,21 @@ a:link {
 }
 
 .Admin-page-title{
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .Admin-page-title h1{
   margin-bottom: 0 !important;
 }
 
-.Admin-product-handlers{
+.Admin-handlers{
   display: flex;
   justify-content: space-between;
   margin-right: 2.5%;
+  margin-top: 10px;
 }
 
-.Admin-product-handlers .input{
+.Admin-handlers .input, select{
 	margin: 0 auto;
   padding: .8rem 2rem;
   border-radius: 0.2rem;
@@ -101,6 +116,32 @@ a:link {
 
 .Admin-search-product input, select{
   margin: 0 20px 0 0;
+}
+
+.Nav-admin-name{
+  display: flex;
+}
+
+.Nav-icon{
+  width: 30px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.Nav-icon img{
+  width: 100%;
+  height: auto;
+}
+
+.link-icon{
+  width: 27px;
+  margin-right: 20px;
+}
+
+.Admin-main-section li:hover, li:visited{
+  background: #D1D5DB;
 }
 
 .button {
@@ -175,7 +216,7 @@ a:link {
 
 .Prev-button, .Next-button{
   position: absolute;
-  top: -30px;
+  top: -45px;
 }
 
 .Prev-button-lowest, .Next-button-lowest{
@@ -187,4 +228,5 @@ a:link {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  align-items: center;
 }
