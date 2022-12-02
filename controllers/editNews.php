@@ -1,14 +1,15 @@
 <?php
 
 // Checks if there is an edit field send with the form
-if(isset($_POST['editMedia'])){
+if(isset($_POST['editNews'])){
     $id = $stringSanitation->sanitice($_POST['editId']);
-    $name = $stringSanitation->sanitice($_POST['editName']);
+    $name = $stringSanitation->sanitice($_POST['editTitle']);
+    $description = $stringSanitation->sanitice($_POST['editDescription']);
 
     $validStrings = $stringSanitation->getValidationStatus();
     
     /* Checks if all the strings pass validation */
     if($validStrings == true){
-        $ProductsHandler->editMedia($id, $name);
+        $NewsHandler->editNews($id, $name, $description);
     }
 }

@@ -14,7 +14,7 @@
     require_once $rootPath . "security/stringSanitation.php";
 
     //require_once $rootPath . "controllers/createProduct.php";
-    //require_once $rootPath . "controllers/editProduct.php";
+    require_once $rootPath . "controllers/editNews.php";
     //require_once $rootPath . "controllers/deleteProduct.php";
 
     //require_once $rootPath . "controllers/adminProducts.php";
@@ -101,21 +101,20 @@
                         <p><?php echo $indData['title'] ?></p>
                     </div>
 
-                    <!-- <div class="Edit-Delete-div">
-                        <form method="POST" action="adminEditProduct">
-                            <input type="hidden" name="id" value="<?php /*echo $indData['products_id'] ?>">
-                            <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
+                    <div class="Edit-Delete-div">
+                        <form method="POST" action="adminEditNews">
+                            <input type="hidden" name="id" value="<?php echo $indData['news_id'] ?>">
+                            <input type="hidden" name="title" value="<?php echo $indData['title'] ?>">
                             <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
-                            <input type="hidden" name="price" value="<?php echo $indData['price'] ?>">
                             <input class="button-pagination" type="submit" value="Edit">
                         </form>
                             
 
                         <form method="POST" action="adminProducts">
-                            <input type="hidden" name="delete" value="<?php echo $indData['products_id']*/ ?>">
+                            <input type="hidden" name="delete" value="<?php echo $indData['news_id'] ?>">
                             <input class="button-pagination" type="submit" value="Delete">
                         </form>
-                    </div> -->
+                    </div>
                 </div>
             <?php
                 }

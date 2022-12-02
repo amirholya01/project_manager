@@ -22,6 +22,14 @@ class NewsHandler extends News{
         $news = $getNews->fetchAll();
         return $news;
     }
+
+    public function editNews($id, $title, $description){
+        $deletePeviouslyAssignedColors = $this->db->prepare($this->updateNewsQuery);
+        $deletePeviouslyAssignedColors->bindParam(':id', $id);
+        $deletePeviouslyAssignedColors->bindParam(':title', $title);
+        $deletePeviouslyAssignedColors->bindParam(':description', $description);
+        $deletePeviouslyAssignedColors->execute();
+    }
 }
 
 $NewsHandler = new NewsHandler($db);
