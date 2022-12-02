@@ -56,6 +56,8 @@
     
     $router->get('/adminCreateMedia', 'views/backend/createMedia');
     $router->get('/adminEditMedia', 'views/backend/editMedia');
-
+    
+    $router->get('/adminCreateNews', 'views/backend/createNews');
+    $router->get('/adminEditNews', 'views/backend/editNews');
     
 

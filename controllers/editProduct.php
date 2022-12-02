@@ -24,11 +24,6 @@ if(isset($_POST['editProduct'])){
     
     /* Checks if all the strings pass validation */
     if($validStrings == true){
-        try {
-            $ProductsHandler->editProduct($id, $name, $description, $price, $type, $colors, $medias);
-        } catch (Throwable $error) {
-            $pdo->rollBack();
-            throw $error;
-        }
+        $ProductsHandler->editProduct($id, $name, $description, $price, $type, $colors, $medias);
     }
 }
