@@ -69,9 +69,15 @@
                                  * we get the array indexes of all filled out sales and put them in a new array
                                  * we loop through the array[new array[i]]
                                  * sales[new array[i]] and product_ids[new array[i]] are matching
+                                 * saleType[new array[i]] will give the type of sail
                              -->
                             <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
-                            <input class="input" type="number" name="sales[]" placeholder="Sale percentage" id="<?php echo $indData['products_id'] ?>">%
+                            <input class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
+                            <input class="input" type="radio" name="saleType[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                            <label for="%<?php echo $indData['products_id'] ?>">%</label>
+
+                            <input class="input" type="radio" name="saleType[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                            <label for="$<?php echo $indData['products_id'] ?>">$</label>
                         </div>
                     </label>
             <?php
