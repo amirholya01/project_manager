@@ -5,9 +5,10 @@
     }
     require_once $rootPath . "public/dbconn.php";
 
-    //require_once $rootPath . "models/handlers/productsHandler.php";
     require_once $rootPath . "models/handlers/Usershandler.php";
     require_once $rootPath . "security/adminCheck.php";
+
+    require_once $rootPath . "models/handlers/newsHandler.php";
     
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
@@ -47,8 +48,8 @@
         </div>
 
         <div class="Reset_create_div">
-            <a class="button" href="/adminProducts">Reset</a>
-            <a class="button" href="/adminCreateProduct">Create news</a>
+            <a class="button" href="/adminNews">Reset</a>
+            <a class="button" href="/adminCreateNews">Create news</a>
         </div>
     </form>
     
