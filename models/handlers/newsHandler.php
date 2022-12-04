@@ -27,7 +27,7 @@ class NewsHandler extends News{
         $createNews->execute();
     }
 
-    public function getNews(){
+    public function getNews($title = null){
         $getNews = $this->db->prepare($this->getNewsQuery);
         $getNews->execute();
 

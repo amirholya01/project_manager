@@ -66,6 +66,10 @@
                     </div>
                 </label>
                 <input type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+                <br>
+                <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
+                <input name="primaryImage" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
+                <?php echo $indData['media_id']?>
         <?php
             }
         ?>

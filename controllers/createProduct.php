@@ -12,6 +12,7 @@ if($validated == true){
         $price = $_POST['createPrice'];
         $colors = null;
         $medias = null;
+        $primaryImage = null;
 
         
         /* Checks if all the strings pass validation */
@@ -27,7 +28,10 @@ if($validated == true){
             if( isset($_POST['media']) ){
                 $medias = $_POST['media'];
             }
-            $ProductsHandler->createProduct($name, $type, $description, $price, $colors, $medias);
+            if( isset($_POST['primaryImage']) ){
+                $primaryImage = $_POST['primaryImage'];
+            }
+            $ProductsHandler->createProduct($name, $type, $description, $price, $colors, $medias, $primaryImage);
         }
     }
 }

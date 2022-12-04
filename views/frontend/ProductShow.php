@@ -9,6 +9,7 @@
     $pageName = "Product-Show";
     $pageLink = "/ProductShow";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
+    require_once $rootPath . "models/handlers/ProductsHandler.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -36,86 +37,39 @@
                     <div class="swiper-slide">
                         <div class="swiper-lazy-preloader"></div>
                         <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-4.png"></div>
+                            data-background="uploads/<?php echo $_POST['primary_image'] ?>"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-5.png"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-6.jpg"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-7.jpg"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-8.png"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-9.jpg"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="assets/img/product-preview-10.jpg"></div>
-                    </div>
+                    <?php
+                        /* Get medias */
+
+                        $medias = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
+
+                        /* foreach... */
+                        foreach($medias as $media){
+                    ?>
+                            <div class="swiper-slide">
+                                <div class="swiper-lazy-preloader"></div>
+                                <div class="product-big-preview-entry swiper-lazy"
+                                    data-background="uploads/<?php echo $media[0] ?>"></div>
+                            </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>
 
     </div>
     <div class="col-sm-6">
-        <div class="simple-article size-3 grey col-xs-b5">SMART WATCHES</div>
-        <div class="h3 col-xs-b25">watch 42mm smartwatch</div>
+        <div class="simple-article size-3 grey col-xs-b5"><?php echo $_POST['type'] ?></div>
+        <div class="h3 col-xs-b25"><?php echo $_POST['name'] ?></div>
         <div class="row col-xs-b25">
             <div class="col-sm-6">
-                <div class="simple-article size-5 grey">PRICE: <span class="color">$225.00</span></div>
-            </div>
-            <div class="col-sm-6 col-sm-text-right">
-                <div class="rate-wrapper align-inline">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <div class="simple-article size-2 align-inline">128 Reviews</div>
+                <div class="simple-article size-5 grey">PRICE: <span class="color"><?php echo $_POST['price'] ?>DKK</span></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="simple-article size-3 col-xs-b5">ITEM NO.: <span class="grey">127-#5238</span></div>
-            </div>
-            <div class="col-sm-6 col-sm-text-right">
-                <div class="simple-article size-3 col-xs-b20">AVAILABLE.: <span class="grey">YES</span></div>
-            </div>
-        </div>
-        <div class="simple-article size-3 col-xs-b30">Vivamus in tempor eros. Phasellus rhoncus in nunc sit amet mattis.
-            Integer in ipsum vestibulum, molestie arcu ac, efficitur tellus. Phasellus id vulputate erat.
-            Phasellus rhoncus in nunc sit amet mattis.
-            Integer in ipsum vestibulum, molestie arcu ac, efficitur tellus. Phasellus id vulputate erat.</div>
-        <div class="row col-xs-b40 margin-top">
-            <div class="col-sm-3">
-                <div class="h6 detail-data-title size-1">size:</div>
-            </div>
-            <div class="col-sm-9">
-                <select class="SlectBox">
-                    <option disabled="disabled" selected="selected">Choose size</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </div>
+        <div class="simple-article size-3 col-xs-b30">
+            <?php echo $_POST['description'] ?>
         </div>
         <div class="row col-xs-b40">
             <div class="col-sm-3">
@@ -135,14 +89,6 @@
                     <span class="button-wrapper">
                         <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
                         <span class="text">add to cart</span>
-                    </span>
-                </a>
-            </div>
-            <div class="col-sm-6">
-                <a class="button size-2 style-1 block noshadow" href="#">
-                    <span class="button-wrapper">
-                        <span class="icon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
-                        <span class="text">add to favourites</span>
                     </span>
                 </a>
             </div>

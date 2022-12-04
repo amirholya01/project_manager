@@ -2,7 +2,7 @@
 
 class Products{
     //Basic Crud
-    public $createProductQuery = "INSERT INTO products (name, type, description, price) VALUES (:name, :type, :description, :price);";
+    public $createProductQuery = "INSERT INTO products (name, type, description, price, primary_image) VALUES (:name, :type, :description, :price, :primary_image);";
 
     public $getProductsDynamicSearchQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type
                                         FROM products p, product_types pt
@@ -25,7 +25,7 @@ class Products{
                                                     OR p.description LIKE :search)
                                                     AND p.type = pt.id;";
 
-    public $getProductsDynamicSearchWithoutIdAndTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+    public $getProductsDynamicSearchWithoutIdAndTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                         FROM products p, product_types pt
                                                         WHERE p.type = pt.id
                                                         AND (p.name LIKE :search
