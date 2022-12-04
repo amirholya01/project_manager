@@ -155,7 +155,7 @@ class ProductsHandler extends Products{
         return $media;
     }
     
-    public function editProduct($id, $name, $description, $price, $type, $colors = null, $medias = null) {
+    public function editProduct($id, $name, $description, $price, $type, $colors = null, $medias = null, $primaryImage) {
         /* 🔥 It prints 2 errors but it still goes through */
         $this->db->beginTransaction();
 
@@ -183,10 +183,12 @@ class ProductsHandler extends Products{
         //Uploads every new relation for each media that was selected
         if( isset($medias) && $medias != null ){
             foreach($medias as $media){
-                $assignMediaToProduct = $this->db->prepare($this->assignMediaToProductQuery);
-                $assignMediaToProduct->bindParam(':product_id', $id);
-                $assignMediaToProduct->bindParam(':media_id', $media);
-                $assignMediaToProduct->execute();
+                if($media != $primaryImage){
+                    $assignMediaToProduct = $this->db->prepare($this->assignMediaToProductQuery);
+                    $assignMediaToProduct->bindParam(':product_id', $id);
+                    $assignMediaToProduct->bindParam(':media_id', $media);
+                    $assignMediaToProduct->execute();
+                }
             }
         }
 
@@ -198,6 +200,7 @@ class ProductsHandler extends Products{
         $editUser->bindParam(':description', $description);
         $editUser->bindParam(':price', $price);
         $editUser->bindParam(':type', $type);
+        $editUser->bindParam(':primary_image', $primaryImage);
         $editUser->execute();
 
         $this->db->commit();

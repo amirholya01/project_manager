@@ -4,21 +4,21 @@ class Products{
     //Basic Crud
     public $createProductQuery = "INSERT INTO products (name, type, description, price, primary_image) VALUES (:name, :type, :description, :price, :primary_image);";
 
-    public $getProductsDynamicSearchQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+    public $getProductsDynamicSearchQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                         FROM products p, product_types pt
                                         WHERE p.products_id = :id
                                         AND (p.name LIKE :search
                                         OR p.description LIKE :search)
                                         AND p.type = pt.id;";
 
-    public $getProductsDynamicSearchWithoutIdQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+    public $getProductsDynamicSearchWithoutIdQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                  FROM products p, product_types pt
                                                  WHERE p.type = pt.id
                                                  AND (p.name LIKE :search
                                                  OR p.description LIKE :search)
                                                  AND pt.type = :type;";
                    
-    public $getProductsDynamicSearchWithoutTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type
+    public $getProductsDynamicSearchWithoutTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                     FROM products p, product_types pt
                                                     WHERE p.products_id = :id
                                                     AND (p.name LIKE :search
@@ -34,7 +34,7 @@ class Products{
     public $getMediaDynamicSearchQuery = "SELECT * FROM media WHERE name LIKE :name;";
 
 
-    public $updateProductByIdQuery = "UPDATE products SET name = :name, description = :description, price = :price, type = :type WHERE products_id = :id;";
+    public $updateProductByIdQuery = "UPDATE products SET name = :name, description = :description, price = :price, type = :type, primary_image = :primary_image WHERE products_id = :id;";
 
     public $updateMediaQuery = "UPDATE media SET name = :name WHERE media_id = :media_id;";
 

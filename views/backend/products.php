@@ -162,6 +162,7 @@
                                     <input type="hidden" name="name" value="<?php echo $indData['name'] ?>">
                                     <input type="hidden" name="description" value="<?php echo $indData['description'] ?>">
                                     <input type="hidden" name="price" value="<?php echo $indData['price'] ?>">
+                                    <input type="hidden" name="primaryImage" value="<?php echo $indData['primary_image'] ?>">
                                     <input class="button-pagination" type="submit" value="Edit">
                                 </form>
                                     

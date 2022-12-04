@@ -96,6 +96,10 @@
                     echo $assigned == true ? "checked" : "";
                 ?>
                 type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+                <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
+                <input 
+                <?php echo $_POST['primaryImage'] == $indData['media_id'] ? "checked" : ""; ?>
+                name="editPrimaryImage" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
         <?php
             }
         ?>
