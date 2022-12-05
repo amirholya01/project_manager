@@ -8,6 +8,7 @@
 
     $pageName = "Product-Show";
     $pageLink = "/ProductShow";
+    $pageLevel = 3;
     require_once $rootPath . "views/frontend/Breadcrumb.php";
     require_once $rootPath . "models/handlers/ProductsHandler.php";
 ?>

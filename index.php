@@ -18,10 +18,13 @@
     include "public/Router.php";
 
     if(!isset($_SESSION['breadcrumbs'])){
-        $_SESSION['breadcrumbs']= array();
-        $_SESSION['breadcrumbsLinks']= array();
+        $_SESSION['breadcrumbs'] = array();
+        $_SESSION['breadcrumbsLinks'] = array();
+        $_SESSION['breadcrumbsLevels'] = array();
         $_SESSION['prevpage']= "";
     }
+
+    echo $_SESSION['breadcrumbsLevels'];
 
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);

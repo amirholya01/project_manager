@@ -8,6 +8,7 @@
 
     $pageName = "Home";
     $pageLink = "/";
+    $pageLevel = 1;
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 

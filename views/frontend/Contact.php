@@ -8,6 +8,7 @@
 
     $pageName = "Contact Us";
     $pageLink = "/Contact";
+    $pageLevel = 2;
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 

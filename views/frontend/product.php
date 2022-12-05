@@ -9,6 +9,7 @@
     // including breadcrumb to be able to see the sitemap in frontend
     $pageName = "Product";
     $pageLink = "/Product";
+    $pageLevel = 2;
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/ProductsHandler.php";
