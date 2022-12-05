@@ -4,11 +4,11 @@
         $rootPath = "../$rootPath";
     }
     
-    require_once $rootPath . "views/frontend/partials/header.php";
-
     $pageName = "About Us";
     $pageLink = "/AboutUS";
     $pageLevel = 2;
+
+    require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 ?>
 

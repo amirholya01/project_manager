@@ -173,16 +173,16 @@
                                 <div class="nav-close-layer"></div>
                                 <nav>
                                     <ul>
-                                        <li class="active">
+                                        <li <?php echo $pageName == "Home" ? 'class="active"' : "" ?>>
                                             <a href="/">Home</a>
                                         </li>
-                                        <li class="megamenu-wrapper">
+                                        <li <?php echo $pageName == "Product" ? 'class="active"' : "" ?>>
                                             <a href="Product">products</a>
                                         </li>
-                                        <li>
+                                        <li <?php echo $pageName == "About Us" ? 'class="active"' : "" ?>>
                                             <a href="AboutUS">about us</a>
                                         </li>
-                                        <li>
+                                        <li <?php echo $pageName == "Contact Us" ? 'class="active"' : "" ?>>
                                             <a href="Contact">contact</a>
                                         </li>
                                     </ul>
