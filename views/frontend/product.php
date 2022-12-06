@@ -97,7 +97,7 @@
                                 ?>
                                 <img src="uploads/thumbs/<?php echo $image[0] ?>_thumb.<?php echo $image[1] ?>" alt="">
                                 <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
+                                    <div class="valign-middle-content ">
                                         <form class="button size-2 style-2" action="ProductShow" method="POST">
                                             <input type="hidden" name="id" value="<?php echo $product['products_id'] ?>">
                                             <input type="hidden" name="name" value="<?php echo $product['name'] ?>">

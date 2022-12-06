@@ -203,6 +203,20 @@ a:link {
   user-select: none;
 }
 
+figure{
+  width: 100%;
+  margin: 0;
+}
+
+.figure{
+  width: 300px !important;
+}
+
+figure img{
+  width: 100%;
+  height: auto;
+}
+
 .button-38:hover {
   background-color: rgb(249,250,251);
 }

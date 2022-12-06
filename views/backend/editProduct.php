@@ -73,7 +73,7 @@
                 <label for="<?php echo $indData['media_id']; ?>">
                     <div>
                         <p><?php echo $indData['name'] ?></p>
-                        <figure>
+                        <figure class="figure">
                             <!-- ✒️ should be styled with seperate css file -->
                             <?php 
                                 /* get the thumb version of the image 
