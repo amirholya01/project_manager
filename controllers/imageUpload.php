@@ -24,7 +24,8 @@ class imageUpload extends ProductsHandler{
         /* Checks for file type */
         if($imageValidated == true){
             if($img['type']=="image/jpeg" ||
-                $img['type']=="image/gif" || /* ✒️ Png heelo? */
+                $img['type']=="image/gif" ||
+                $img['type']=="image/png" ||
                 $img['type']=="image/jpg"){
             } else {
                 $imageValidated = false;
@@ -82,9 +83,9 @@ class imageUpload extends ProductsHandler{
             if($fileType == "jpeg" || $fileType == "jpg"){
                 $thumbImage = imagecreatefromjpeg($thumbImagePath);
             }
-            /* if($fileType == "png"){     can't upload png's yet anyway
+            if($fileType == "png"){
                 $thumbImage = imagecreatefrompng($thumbImage);
-            } */
+            }
             if($fileType == "gif"){
                 $thumbImage = imagecreatefromgif($thumbImagePath);
             }
@@ -112,9 +113,9 @@ class imageUpload extends ProductsHandler{
             if($fileType == "jpeg" || $fileType == "jpg"){
                 imagejpeg($thumbImage, $thumbImagePath);
             }
-            /* if($fileType == "png"){     can't upload png's yet anyway
+            if($fileType == "png"){
                 imagepng($thumbImage, $thumbImagePath);
-            } */
+            }
             if($fileType == "gif"){
                 imagegif($thumbImage, $thumbImagePath);
             }
