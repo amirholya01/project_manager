@@ -72,7 +72,7 @@
         <div class="Reset_create_div">
             <a class="button" href="/adminProducts">Reset</a>
             <a class="button" href="/adminCreateProduct">Create new product</a>
-            <a class="button" href="/adminSale">Create Sale</a>
+            <a class="button" href="/adminSale">Discounts</a>
         </div>
     </form>
 
