@@ -84,7 +84,7 @@ class imageUpload extends ProductsHandler{
                 $thumbImage = imagecreatefromjpeg($thumbImagePath);
             }
             if($fileType == "png"){
-                $thumbImage = imagecreatefrompng($thumbImage);
+                $thumbImage = imagecreatefrompng($thumbImagePath);
             }
             if($fileType == "gif"){
                 $thumbImage = imagecreatefromgif($thumbImagePath);
