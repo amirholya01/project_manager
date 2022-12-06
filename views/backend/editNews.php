@@ -32,7 +32,7 @@
                 <label for="<?php echo $indData['media_id']; ?>">
                     <div>
                         <p><?php echo $indData['name'] ?></p>
-                        <figure>
+                        <figure class="figure">
                             <!-- ✒️ should be styled with seperate css file -->
                             <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
                         </figure>

@@ -110,5 +110,16 @@ button {
 .Product-show-info{
     padding-left: 120px !important;
 }
+.news-image-div{
+    max-width: 390px;
+    min-width: 390px;
+    height: auto;
+}
+
+.news-image-div img{
+    width: 100%;
+    height: auto;
+}
+
 
   

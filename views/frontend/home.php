@@ -10,6 +10,10 @@
 
     require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
+
+    require_once $rootPath . "models/handlers/newsHandler.php";
+    require_once $rootPath . "controllers/frontendNews.php"; 
+    
 ?>
 
 
@@ -168,69 +172,47 @@
     <!--  News products section for the homepage  -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-5.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">RELIABILITY</div>
-                            <h3 class="h3 light">perfect soundfor everyone</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
+            <?php 
+                    /* Loop through the News */
+                    foreach($news as $new){
+            ?>
+                <div class="col-md-4 col-xs-b15 col-md-b0">
+                    <div class="banner-shortcode style-4 rounded-image text-center"
+                        style="background-image: url(assets/img/background-5.jpg);">
+                        <div class="valign-middle-cell">
+                            <div class="valign-middle-content">
+                                
+                                <!--  News title loaded from database  -->
+                                <h3 class="h3 light"><?php echo $new['title'] ?></h3>
+                                <div class="title-underline light center"><span></span></div>
+
+                                <!--  News image loaded from database  -->
+                                <div class="news-image-div">
+                                    <?php 
+                                        $image = explode(".", $new['media']);
+                                    ?>
+                                    <img src="uploads/<?php echo $image[0] ?>.<?php echo $image[1] ?>" alt="">
+                                </div>
+
+                                <!--  News description loaded from database  -->
+                                <div class="simple-article size-4 light transparent col-xs-b30"><?php echo $new['description'] ?></div>
+                                
+                                <a class="button size-2 style-2" href="#">
+                                    <span class="button-wrapper">
+                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="text">learn more</span>
+                                    </span>
+                                </a>
+
+                            </div>
                         </div>
+
+                        <div class="angle-left hidden-xs"></div>
                     </div>
-                    <div class="angle-left hidden-xs"></div>
                 </div>
-            </div>
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-6.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">high quality</div>
-                            <h3 class="h3 light">choise of professionals</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="angle-left hidden-xs"></div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-b15 col-md-b0">
-                <div class="banner-shortcode style-4 rounded-image text-center"
-                    style="background-image: url(assets/img/background-7.jpg);">
-                    <div class="valign-middle-cell">
-                        <div class="valign-middle-content">
-                            <div class="simple-article size-3 light transparent uppercase col-xs-b5">convenience</div>
-                            <h3 class="h3 light">satisfaction guarantted</h3>
-                            <div class="title-underline light center"><span></span></div>
-                            <div class="simple-article size-4 light transparent col-xs-b30">Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Praesent pulvinar ante et nisl scelerisque.</div>
-                            <a class="button size-2 style-2" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
-                                    <span class="text">learn more</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="angle-left hidden-xs"></div>
-                </div>
-            </div>
+            <?php 
+                }
+            ?>
         </div>
     </div>
 
