@@ -16,7 +16,7 @@ class NewsHandler extends News{
     }
 
 
-    /* Media and Date???? */
+    /* 🔥 News needs a Media assossiated with it */
 
     public function createNews($title, $description, $media = null){
         $createNews = $this->db->prepare($this->createNewsQuery);

@@ -60,5 +60,9 @@ class Products{
     public $deleteProductMediaByMediaIdQuery = "DELETE FROM assign_media_to_products WHERE media_id = :id;";
 
     public $assignMediaToProductQuery = "INSERT INTO assign_media_to_products (product_id, media_id) VALUES (:product_id, :media_id);";
+
+    //Sale Queries
+    public $createSaleQuery = "INSERT INTO sales (title, start, end) VALUES (:title, :start, :end);";
+    public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, product_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
     
 }

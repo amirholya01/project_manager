@@ -12,6 +12,8 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
+    require_once $rootPath . "controllers/createSale.php";
+
     require_once $rootPath . "controllers/createProduct.php";
     require_once $rootPath . "controllers/editProduct.php";
     require_once $rootPath . "controllers/deleteProduct.php";
@@ -70,7 +72,7 @@
         <div class="Reset_create_div">
             <a class="button" href="/adminProducts">Reset</a>
             <a class="button" href="/adminCreateProduct">Create new product</a>
-            <a class="button" href="/adminCreateSale">Create Sale</a>
+            <a class="button" href="/adminSale">Create Sale</a>
         </div>
     </form>
 

@@ -95,7 +95,30 @@ class ProductsHandler extends Products{
                 }
             }
         }
+    }
 
+    public function createSale($title, $start, $end, $ids, $sales, $saleTypes){
+        $this->db->beginTransaction();
+        $createSale = $this->db->prepare($this->createSaleQuery);
+        $createSale->bindParam(':title', $title);
+        $createSale->bindParam(':start', $start);
+        $createSale->bindParam(':end', $end);
+        $createSale->execute();
+
+        $saleId = $this->db->lastInsertId();
+
+        for($i = 0; $i < count($ids); $i++){
+            if($sales[$i] != 0){
+                $assignProductToSale = $this->db->prepare($this->assignProductToSaleQuery);
+                $assignProductToSale->bindParam(':product_id', $ids[$i]);
+                $assignProductToSale->bindParam(':sale_id', $saleId);
+                $assignProductToSale->bindParam(':sale', $sales[$i]);
+                $assignProductToSale->bindParam(':saleType', $saleTypes[$i]);
+                $assignProductToSale->execute();
+            }
+        }
+
+        $this->db->commit();
     }
 
     public function getProducts($search = '', $id = '', $type = '') {

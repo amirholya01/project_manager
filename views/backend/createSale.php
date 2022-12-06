@@ -21,9 +21,10 @@
 
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
-<form class="wrapper">
+<form class="wrapper" method="POST" action="adminProducts">
     <div class="Admin-handlers">
         <div class="Admin-search-product">
+            <input type="hidden" name="createSale" value="true">
             <input class="input" type="text" name="title" placeholder="Title">
             From <input class="input" type="date" name="start" placeholder="Starts">
             To <input class="input" type="date" name="end" placeholder="Ends">
@@ -72,11 +73,11 @@
                                  * saleType[new array[i]] will give the type of sail
                              -->
                             <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
-                            <input class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
-                            <input class="input" type="radio" name="saleType[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                            <input required value="0" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
+                            <input checked class="input" type="radio" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
                             <label for="%<?php echo $indData['products_id'] ?>">%</label>
 
-                            <input class="input" type="radio" name="saleType[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                            <input class="input" type="radio" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
                             <label for="$<?php echo $indData['products_id'] ?>">$</label>
                         </div>
                     </label>
