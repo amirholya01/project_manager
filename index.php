@@ -24,8 +24,6 @@
         $_SESSION['prevpage']= "";
     }
 
-    echo $_SESSION['breadcrumbsLevels'];
-
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
 
