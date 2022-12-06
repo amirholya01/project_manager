@@ -176,13 +176,13 @@
                                         <li <?php echo $pageName == "Home" ? 'class="active"' : "" ?>>
                                             <a href="/">Home</a>
                                         </li>
-                                        <li <?php echo $pageName == "Product" ? 'class="active"' : "" ?>>
+                                        <li style="margin-left: 2px;" <?php echo $pageName == "Product" ? 'class="active"' : "" ?>>
                                             <a href="Product">products</a>
                                         </li>
-                                        <li <?php echo $pageName == "About Us" ? 'class="active"' : "" ?>>
+                                        <li style="margin-left: 2px;" <?php echo $pageName == "About Us" ? 'class="active"' : "" ?>>
                                             <a href="AboutUS">about us</a>
                                         </li>
-                                        <li <?php echo $pageName == "Contact Us" ? 'class="active"' : "" ?>>
+                                        <li style="margin-left: 2px;" <?php echo $pageName == "Contact Us" ? 'class="active"' : "" ?>>
                                             <a href="Contact">contact</a>
                                         </li>
                                     </ul>
