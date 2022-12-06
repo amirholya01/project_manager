@@ -15,7 +15,6 @@ if($validated == true){
         //$validStrings = false;
         
         if($validStrings == true){
-            /* Upload Image - ✒️ Should be removed*/
             if(isset($_FILES['createImage'])){
                 $imageUpload->createImage($_FILES['createImage'], $name /* Type should be here too */);
             }

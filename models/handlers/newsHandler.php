@@ -15,9 +15,6 @@ class NewsHandler extends News{
         $this->db = $db;
     }
 
-
-    /* 🔥 News needs a Media assossiated with it */
-
     public function createNews($title, $description, $media = null){
         $createNews = $this->db->prepare($this->createNewsQuery);
         $createNews->bindParam(':title', $title);
