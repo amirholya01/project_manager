@@ -105,8 +105,8 @@
                                             <input type="hidden" name="price" value="<?php echo $product['price'] ?>">
                                             <input type="hidden" name="type" value="<?php echo $product['type'] ?>">
                                             <input type="hidden" name="primary_image" value="<?php echo $product['primary_image'] ?>">
-                                            <button type="submit">
-                                                <span class="button-wrapper">
+                                            <button class="product-button" type="submit">
+                                                <span class="button-wrapper ">
                                                     <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
                                                     <span class="text">See Product</span>
                                                 </span>
