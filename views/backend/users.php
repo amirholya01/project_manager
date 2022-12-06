@@ -73,7 +73,7 @@
     ?>
 
 <div class="Admin-page-title">
-    <h1>Users added to database</h1>
+    <h1>Users</h1>
 </div>
 
 <div class="wrapper-main-area">

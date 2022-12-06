@@ -98,6 +98,17 @@ button {
     border-radius: 900px !important;
     margin-left: 130px !important;
 }
+.product-button{
+    background: none !important;
+}
+.ProductShow-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.Product-show-info{
+    padding-left: 120px !important;
+}
 
   

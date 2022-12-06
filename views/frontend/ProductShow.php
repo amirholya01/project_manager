@@ -61,7 +61,7 @@
         </div>
 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 Product-show-info">
         <div class="simple-article size-3 grey col-xs-b5"><?php echo $_POST['type'] ?></div>
         <div class="h3 col-xs-b25"><?php echo $_POST['name'] ?></div>
         <div class="row col-xs-b25">

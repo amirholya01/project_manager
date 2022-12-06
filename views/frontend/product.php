@@ -97,7 +97,7 @@
                                 ?>
                                 <img src="uploads/thumbs/<?php echo $image[0] ?>_thumb.<?php echo $image[1] ?>" alt="">
                                 <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
+                                    <div class="valign-middle-content ">
                                         <form class="button size-2 style-2" action="ProductShow" method="POST">
                                             <input type="hidden" name="id" value="<?php echo $product['products_id'] ?>">
                                             <input type="hidden" name="name" value="<?php echo $product['name'] ?>">
@@ -105,8 +105,8 @@
                                             <input type="hidden" name="price" value="<?php echo $product['price'] ?>">
                                             <input type="hidden" name="type" value="<?php echo $product['type'] ?>">
                                             <input type="hidden" name="primary_image" value="<?php echo $product['primary_image'] ?>">
-                                            <button type="submit">
-                                                <span class="button-wrapper">
+                                            <button class="product-button" type="submit">
+                                                <span class="button-wrapper ">
                                                     <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
                                                     <span class="text">See Product</span>
                                                 </span>

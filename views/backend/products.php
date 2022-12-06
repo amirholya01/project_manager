@@ -92,7 +92,7 @@
 
 
         <div class="Admin-page-title">
-              <h1>Products added to database</h1>
+              <h1>Products</h1>
         </div>
 
 <div class="wrapper-main-area">
