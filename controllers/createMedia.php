@@ -7,7 +7,6 @@ if($validated == true){
     if( isset( $_POST['createMedia'] ) ){
         /* Gets all the values from the post request */
         $name = $stringSanitation->sanitice($_POST['createName']);
-        $type = $_POST['createType'];
         
         /* Checks if all the strings pass validation */
         $validStrings = $stringSanitation->getValidationStatus();

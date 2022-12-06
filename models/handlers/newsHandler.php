@@ -26,8 +26,16 @@ class NewsHandler extends News{
         $createNews->execute();
     }
 
-    public function getNews($title = null){
+    public function getNews($search){
+        if($search == ""){
+            $search = "%";
+        }else{
+            $search = "%" . $search . "%";
+        }
+
         $getNews = $this->db->prepare($this->getNewsQuery);
+        $getNews->bindParam(":title", $search);
+        $getNews->bindParam(":description", $search);
         $getNews->execute();
 
         $news = $getNews->fetchAll();
