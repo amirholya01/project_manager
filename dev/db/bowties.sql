@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1:3306
--- Genereringstid: 06. 12 2022 kl. 09:25:40
+-- Genereringstid: 07. 12 2022 kl. 12:52:42
 -- Serverversion: 5.7.36
 -- PHP-version: 7.4.26
 
@@ -66,6 +66,28 @@ INSERT INTO `assign_media_to_products` (`product_id`, `media_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur-dump for tabellen `assign_products_to_sales`
+--
+
+DROP TABLE IF EXISTS `assign_products_to_sales`;
+CREATE TABLE IF NOT EXISTS `assign_products_to_sales` (
+  `sale_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `sale` int(11) NOT NULL,
+  `saleType` varchar(1) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`sale_id`,`product_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `assign_products_to_sales`
+--
+
+INSERT INTO `assign_products_to_sales` (`sale_id`, `product_id`, `sale`, `saleType`) VALUES
+(1, 2, 100, '$');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur-dump for tabellen `media`
 --
 
@@ -106,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`news_id`, `title`, `description`, `time`, `media`) VALUES
 (1, 'Meeeeeeeeeep!', 'Meep meepi di moop moop meep!', '2022-12-02 11:19:07', NULL),
-(7, 'does dis wook', 'ireioieroiero erroiero eroneo dgoon nsoer', '2022-12-05 11:27:13', '6380d60fecb10.jpg'),
+(7, 'does dis work', 'oer', '2022-12-05 11:27:13', '7380d60fecb10.jpg'),
 (6, 'Test', 'i sure hope this works now', '2022-12-02 11:44:58', '6380d60fecb10.jpg');
 
 -- --------------------------------------------------------
@@ -178,6 +200,28 @@ INSERT INTO `product_types` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur-dump for tabellen `sales`
+--
+
+DROP TABLE IF EXISTS `sales`;
+CREATE TABLE IF NOT EXISTS `sales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_bin NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `sales`
+--
+
+INSERT INTO `sales` (`id`, `title`, `start`, `end`) VALUES
+(1, 'black friday 2022', '2022-11-25', '2022-11-25');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur-dump for tabellen `spam_prevention`
 --
 
@@ -194,7 +238,7 @@ CREATE TABLE IF NOT EXISTS `spam_prevention` (
 --
 
 INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
-(1, 'Niclas', '2022-12-05 09:27:13');
+(1, 'Niclas', '2022-12-06 11:54:15');
 
 -- --------------------------------------------------------
 
