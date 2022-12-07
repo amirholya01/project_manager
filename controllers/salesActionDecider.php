@@ -28,7 +28,7 @@
 ?>
         <form id="submit" action="adminSale" method="POST">
             <input type="hidden" name="deleteSale" value="true">
-            <input type="hidden" name="id" value="<?php echo $_POST['sale'] ?>">
+            <input type="hidden" name="sale_id" value="<?php echo $_POST['sale'] ?>">
         </form>
         <script type="text/javascript">
             //Auto submits the form
