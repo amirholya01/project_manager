@@ -19,22 +19,23 @@
             i send editProducts to tell the controller that it should run edit user
         -->
         <div class="Admin-handlers">
-        <div class="Admin-search-product">
-            <input type="hidden" name="editProduct" value="true">
+            <div class="Admin-search-product">
+                <input type="hidden" name="editProduct" value="true">
 
-            <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-            <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-            <input class="input" type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
-            <input class="input" type="text" name="editPrice" value="<?php echo $_POST['price'] ?>">
-            <select name="editType">
-                <?php 
-                    foreach($allTypes as $type){
-                ?>
-                    <option value="<?php echo $type['id'] ?>"><?php echo $type['type'] ?></option>
-                <?php
-                    }
-                ?>
-            </select></div>
+                <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+                <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
+                <input class="input" type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
+                <input class="input" type="text" name="editPrice" value="<?php echo $_POST['price'] ?>">
+                <select name="editType">
+                    <?php 
+                        foreach($allTypes as $type){
+                    ?>
+                        <option value="<?php echo $type['id'] ?>"><?php echo $type['type'] ?></option>
+                    <?php
+                        }
+                    ?>
+                </select>
+            </div>
             
             <select class="edit-product-width" name="editColors[]" multiple>
                 <?php 
@@ -69,7 +70,7 @@
         <?php
             for($i = 0; $i < count($mediaData); $i++){
                 $indData = $mediaData[$i];
-        ?>
+        ?>  
                 <label for="<?php echo $indData['media_id']; ?>">
                     <div>
                         <p><?php echo $indData['name'] ?></p>

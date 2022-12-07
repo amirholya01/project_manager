@@ -25,10 +25,10 @@
     <!--  Main slider for homepage  -->
     <div class="slider-wrapper">
         <div class="swiper-button-prev Slider-wrapper-next">
-            <span class="icon"><img src="assets/img/icon-102.png" alt=""></span>
+            <span class="icon"><img src="assets/icons/icon-102.png" alt=""></span>
         </div>
         <div class="swiper-button-next Slider-wrapper-next">
-            <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+            <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
         </div>
         <div class="swiper-container" data-parallax="1" data-auto-height="1">
             <div class="swiper-wrapper">
@@ -67,7 +67,7 @@
                                             </div>
                                             <a class="height-button button size-2 style-2" href="#">
                                                 <span class=" button-wrapper">
-                                                    <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                                                    <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -115,7 +115,7 @@
                                             </div>
                                             <a class="height-button button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
-                                                    <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                                                    <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                                                     <span class="text">Add To Cart</span>
                                                 </span>
                                             </a>
@@ -180,7 +180,7 @@
                     <div class="banner-shortcode style-4 rounded-image text-center"
                         style="background-image: url(assets/img/background-5.jpg);">
                         <div class="valign-middle-cell">
-                            <div class="valign-middle-content">
+                            <div class="valign-middle-content flex-center">
                                 
                                 <!--  News title loaded from database  -->
                                 <h3 class="h3 light"><?php echo $new['title'] ?></h3>
@@ -199,7 +199,7 @@
                                 
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">learn more</span>
                                     </span>
                                 </a>
@@ -257,13 +257,13 @@
                                 <div class="buttons-wrapper">
                                     <a class="button size-2 style-3" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-4.png" alt=""></span>
+                                            <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
                                             <span class="text">Learn More</span>
                                         </span>
                                     </a>
                                     <a class="button size-2 style-2" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                                             <span class="text">Add To Cart</span>
                                         </span>
                                     </a>
@@ -293,13 +293,13 @@
                                 <div class="buttons-wrapper">
                                     <a class="button size-2 style-3" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-4.png" alt=""></span>
+                                            <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
                                             <span class="text">Learn More</span>
                                         </span>
                                     </a>
                                     <a class="button size-2 style-2" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                                             <span class="text">Add To Cart</span>
                                         </span>
                                     </a>
@@ -329,13 +329,13 @@
                                 <div class="buttons-wrapper">
                                     <a class="button size-2 style-3" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-4.png" alt=""></span>
+                                            <span class="icon"><img src="assets/img/icons-4.png" alt=""></span>
                                             <span class="text">Learn More</span>
                                         </span>
                                     </a>
                                     <a class="button size-2 style-2" href="#">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                                            <span class="icon"><img src="assets/img/icons-2.png" alt=""></span>
                                             <span class="text">Add To Cart</span>
                                         </span>
                                     </a>

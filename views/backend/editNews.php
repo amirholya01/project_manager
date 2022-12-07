@@ -18,12 +18,21 @@
         <!-- 
             i send editNews to tell the controller that it should run edit user
         -->
-        <input type="hidden" name="editNews" value="true">
+        <div class="Admin-handlers">
+            <div class="Admin-search-product">
+                <input class="input" type="hidden" name="editNews" value="true">
 
-        <input type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
-        <input type="text" name="editTitle" value="<?php echo $_POST['title'] ?>">
-        <input type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
-        <input type="submit">
+                <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
+                <input class="input" type="text" name="editTitle" value="<?php echo $_POST['title'] ?>">
+                <input class="input" type="text" name="editDescription" value="<?php echo $_POST['description'] ?>">
+            </div>
+            <input class="height-button button submit" type="submit">
+        </div>
+
+
+        <div class="Admin-page-title margin-bottom">
+              <h1>Edit News</h1>
+        </div>
 
         <?php
             for($i = 0; $i < count($mediaData); $i++){

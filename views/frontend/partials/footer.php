@@ -97,7 +97,7 @@
                             <span>or</span>
                         </div>
                         <div class="row m5">
-                            <div class="col-sm-4 col-xs-b10 col-sm-b0">
+                            <div class="col-sm-4 col-xs-b10 col-sm-b0 width-important">
                                 <a class="button facebook-button size-2 style-4 block" href="#">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/img/icon-4.png" alt="" /></span>
@@ -105,7 +105,7 @@
                                     </span>
                                 </a>
                             </div>
-                            <div class="col-sm-4 col-xs-b10 col-sm-b0">
+                            <div class="col-sm-4 col-xs-b10 col-sm-b0 width-important">
                                 <a class="button twitter-button size-2 style-4 block" href="#">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/img/icon-4.png" alt="" /></span>
@@ -113,7 +113,7 @@
                                     </span>
                                 </a>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 width-important">
                                 <a class="button google-button size-2 style-4 block" href="#">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/img/icon-4.png" alt="" /></span>

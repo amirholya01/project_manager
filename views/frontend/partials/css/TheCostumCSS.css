@@ -82,6 +82,9 @@ button {
 .col-sm-4 {
     width: 19.333% !important;
 }
+.width-important{
+    width: 33.33333333% !important;
+}
 .product-flex{
     display: flex;
     flex-wrap: wrap;
@@ -111,14 +114,20 @@ button {
     padding-left: 120px !important;
 }
 .news-image-div{
-    max-width: 390px;
-    min-width: 390px;
+    max-width: 350px;
+    min-width: 350px;
     height: auto;
 }
 
 .news-image-div img{
     width: 100%;
     height: auto;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 

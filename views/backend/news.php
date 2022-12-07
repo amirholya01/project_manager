@@ -40,7 +40,9 @@
     }
 ?>
 <div class="wrapper">
+
     <form class="Admin-product-handlers" method="POST" action="adminNews">
+        
         <div class="Admin-search-product">
             <input class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
             <input class="button submit" type="submit">

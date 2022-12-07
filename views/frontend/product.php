@@ -48,7 +48,7 @@
     <a class="button size-2 style-2 button-size" href="#">
         <span class="button-wrapper">
             <span class="icon">
-                <img src="assets/img/icon-1.png" alt="">
+                <img src="assets/icons/icon-1.png" alt="">
             </span>
             <span class="text">Normal</span>
         </span>
@@ -57,7 +57,7 @@
     <a class="button size-2 style-2 button-size" href="#">
         <span class="button-wrapper">
             <span class="icon">
-                <img src="assets/img/icon-1.png" alt="">
+                <img src="assets/icons/icon-1.png" alt="">
             </span>
             <span class="text">Special Theme</span>
         </span>
@@ -67,7 +67,7 @@
     <a class="button size-2 style-2 button-size" href="#">
         <span class="button-wrapper">
             <span class="icon">
-                <img src="assets/img/icon-1.png" alt="">
+                <img src="assets/icons/icon-1.png" alt="">
             </span>
             <span class="text">Costumized</span>
         </span>
@@ -107,14 +107,14 @@
                                             <input type="hidden" name="primary_image" value="<?php echo $product['primary_image'] ?>">
                                             <button class="product-button" type="submit">
                                                 <span class="button-wrapper ">
-                                                    <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                                    <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                                     <span class="text">See Product</span>
                                                 </span>
                                             </button>
                                         </form>
                                         <a class="button size-2 style-3" href="#">
                                             <span class="button-wrapper">
-                                                <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                                <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                                 <span class="text">Add To Cart</span>
                                             </span>
                                         </a>

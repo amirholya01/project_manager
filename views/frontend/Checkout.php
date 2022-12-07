@@ -247,7 +247,7 @@
                     <div class="empty-space col-xs-b30"></div>
                     <div class="button block size-2 style-3">
                         <span class="button-wrapper">
-                            <span class="icon"><img src="assets/img/icon-4.png" alt=""></span>
+                            <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
                             <span class="text">place order</span>
                         </span>
                         <input type="submit"/>
