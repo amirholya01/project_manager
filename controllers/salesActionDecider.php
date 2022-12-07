@@ -26,7 +26,14 @@
     /* redirect to delete */
     } elseif ($_POST['action'] == 'delete') {
 ?>
-        Meep :3
+        <form id="submit" action="adminSale" method="POST">
+            <input type="hidden" name="deleteSale" value="true">
+            <input type="hidden" name="id" value="<?php echo $_POST['sale'] ?>">
+        </form>
+        <script type="text/javascript">
+            //Auto submits the form
+            document.querySelector('#submit').submit();
+        </script>
 <?php 
     }
 ?>
