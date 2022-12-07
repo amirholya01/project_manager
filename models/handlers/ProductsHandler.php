@@ -121,6 +121,36 @@ class ProductsHandler extends Products{
         $this->db->commit();
     }
 
+    public function updateSale($sale_id, $title, $start, $end, $product_ids, $sales, $saleTypes){
+        /* Update sale, delete/replace products */
+
+        $this->db->beginTransaction();
+        $editSale = $this->db->prepare($this->editSaleQuery);
+        $editSale->bindParam(':id', $sale_id);
+        $editSale->bindParam(':title', $title);
+        $editSale->bindParam(':start', $start);
+        $editSale->bindParam(':end', $end);
+        $editSale->execute();
+
+        /* Delete sales by sale_id here! */
+        $deleteSale = $this->db->prepare($this->deleteAssignedProductsToSaleQuery);
+        $deleteSale->bindParam('id', $sale_id);
+        $deleteSale->execute();
+
+        for($i = 0; $i < count($product_ids); $i++){
+            if($sales[$i] != 0){
+                $assignProductToSale = $this->db->prepare($this->assignProductToSaleQuery);
+                $assignProductToSale->bindParam(':product_id', $product_ids[$i]);
+                $assignProductToSale->bindParam(':sale_id', $sale_id);
+                $assignProductToSale->bindParam(':sale', $sales[$i]);
+                $assignProductToSale->bindParam(':saleType', $saleTypes[$i]);
+                $assignProductToSale->execute();
+            }
+        }
+
+        $this->db->commit();
+    }
+
     public function getProducts($search = '', $id = '', $type = '') {
         /* 
             We need to check if we are searching for types because we have to use different
@@ -176,6 +206,22 @@ class ProductsHandler extends Products{
 
         $media = $getMedia->fetchAll();
         return $media;
+    }
+
+    public function getSaleById($id) {
+        $getSale = $this->db->prepare($this->getSaleByIdQuery);
+        $getSale->bindParam(':id', $id);
+        $getSale->execute();
+
+        return $getSale->fetch();
+    }
+
+    public function getProductSalesBySaleId($id) {
+        $getSale = $this->db->prepare($this->getProductSalesBySaleIdQuery);
+        $getSale->bindParam(':id', $id);
+        $getSale->execute();
+
+        return $getSale->fetchAll();
     }
     
     public function editProduct($id, $name, $description, $price, $type, $colors = null, $medias = null, $primaryImage) {
