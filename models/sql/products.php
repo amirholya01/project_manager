@@ -66,6 +66,7 @@ class Products{
     public $getSalesQuery = "SELECT * FROM sales ORDER BY end DESC";
     public $editSaleQuery = "UPDATE sales SET title = :title, start = :start, end = :end WHERE id = :id;";
     public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, product_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
+    public $deleteSaleById = "DELETE FROM sales WHERE id = :id";
     public $deleteAssignedProductsToSaleQuery = "DELETE FROM assign_products_to_sales WHERE sale_id = :id";
     public $getSaleByIdQuery = "SELECT * FROM `sales` WHERE `id` = :id";
     public $getProductSalesBySaleIdQuery = "SELECT * FROM `assign_products_to_sales` WHERE `sale_id` = :id";

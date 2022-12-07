@@ -18,6 +18,7 @@
     require_once $rootPath . "controllers/getProductsWithFilters.php";
     
     require_once $rootPath . "controllers/editSale.php";
+    require_once $rootPath . "controllers/deleteSale.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
 ?>

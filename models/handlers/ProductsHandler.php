@@ -134,7 +134,7 @@ class ProductsHandler extends Products{
 
         /* Delete sales by sale_id here! */
         $deleteSale = $this->db->prepare($this->deleteAssignedProductsToSaleQuery);
-        $deleteSale->bindParam('id', $sale_id);
+        $deleteSale->bindParam(':id', $sale_id);
         $deleteSale->execute();
 
         for($i = 0; $i < count($product_ids); $i++){
@@ -319,6 +319,19 @@ class ProductsHandler extends Products{
         $deleteMediaJunction = $this->db->prepare($this->deleteProductMediaByMediaIdQuery);
         $deleteMediaJunction->bindParam(":id", $id);
         $deleteMediaJunction->execute();
+    }
+
+    public function deleteSaleById($id){
+        $this->db->beginTransaction();
+        $deleteSale = $this->db->prepare($this->deleteSaleById);
+        $deleteSale->bindParam(':id', $id);
+        $deleteSale->execute();
+        
+        /* Delete sales by sale_id here! */
+        $deleteSaleProducts = $this->db->prepare($this->deleteAssignedProductsToSaleQuery);
+        $deleteSaleProducts->bindParam(':id', $id);
+        $deleteSaleProducts->execute();
+        $this->db->commit();
     }
 
     public function uploadImage($id, $name = "pineapple"){
