@@ -1,3 +1,3 @@
 <?php
 
-$news = $NewsHandler->getNews('%');
+$news = $NewsHandler->getNews('');
