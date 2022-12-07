@@ -20,7 +20,7 @@
     <div class="Login-info-div">
         <div class="Nav-admin-name">
             <div class="Nav-icon">
-                <img src="assets/img/user.png" alt="">
+                <img src="assets/icons/user.png" alt="">
             </div>
             <?php
                 if(isset($_SESSION['name'])){
@@ -47,25 +47,31 @@
             <ul>
                 <li>
                     <div class="Nav-icon link-icon">
-                        <img src="assets/img/box.png" alt="">
+                        <img src="assets/icons/home.png" alt="">
+                    </div>
+                    <a href="/adminfrontpage">Frontpage</a>
+                </li>
+                <li>
+                    <div class="Nav-icon link-icon">
+                        <img src="assets/icons/box.png" alt="">
                     </div>
                     <a href="/adminProducts">Products</a>
                 </li>
                 <li>
                     <div class="Nav-icon link-icon">
-                        <img src="assets/img/group.png" alt="">
+                        <img src="assets/icons/group.png" alt="">
                     </div>
                     <a href="/adminUsers">Users</a>
                 </li>
                 <li>
                     <div class="Nav-icon link-icon">
-                        <img src="assets/img/insert-picture-icon.png" alt="">
+                        <img src="assets/icons/insert-picture-icon.png" alt="">
                     </div>
                     <a href="/adminMedia">Media</a>
                 </li>
                 <li>
                     <div class="Nav-icon link-icon">
-                        <img src="assets/img/news.png" alt="">
+                        <img src="assets/icons/news.png" alt="">
                     </div>
                     <a href="/adminNews">News</a>
                 </li>

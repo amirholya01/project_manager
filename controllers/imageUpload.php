@@ -30,16 +30,17 @@ class imageUpload extends ProductsHandler{
             } else {
                 $imageValidated = false;
                 echo "Unsupported file type!";
+                /* var_dump($img['type']); */
             }
         }  
         
         /* Checks for file size */
         if($imageValidated == true){
-            if($img['size'] < 3000000){ /* 3mb */
+            if($img['size'] < 3000000000){ /* 3mb */
                 
             } else {
                 $imageValidated = false;
-                echo "File is tooooo big!";
+                echo "File is too big!";
             }
         }
         
@@ -94,17 +95,17 @@ class imageUpload extends ProductsHandler{
             $imageWidth = $imageSize[0];
             $imageHeight = $imageSize[1];
 
-            $thumbMaxSize = 200;
+            $thumbMaxSize = 500;
 
             /* Calculates the new image sizes */
             if($imageHeight > $imageWidth){
                 $ratio = $imageWidth / $imageHeight;
-                $imageHeight = 200;
-                $imageWidth = 200 * $ratio;
+                $imageHeight = 500;
+                $imageWidth = 500 * $ratio;
             } else {
                 $ratio = $imageHeight / $imageWidth;
-                $imageWidth = 200;
-                $imageHeight = 200 * $ratio;
+                $imageWidth = 500;
+                $imageHeight = 500 * $ratio;
             }
 
 

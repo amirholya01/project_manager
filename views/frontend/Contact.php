@@ -40,14 +40,14 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="icon-description-shortcode style-1">
-                <img class="icon" src="assets/img/icon-25.png" alt="">
+                <img class="icon" src="assets/icons/icon-25.png" alt="">
                 <div class="title h6">address</div>
                 <div class="description simple-article size-2">1st, new york, usa</div>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="icon-description-shortcode style-1">
-                <img class="icon" src="assets/img/icon-23.png" alt="">
+                <img class="icon" src="assets/icons/icon-23.png" alt="">
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
                     <a href="tel:+4553525239">+45 53 52 52 39</a>
@@ -56,7 +56,7 @@
         </div>
         <div class="col-sm-3">
             <div class="icon-description-shortcode style-1">
-                <img class="icon" src="assets/img/icon-28.png" alt="">
+                <img class="icon" src="assets/icons/icon-28.png" alt="">
                 <div class="title h6">email</div>
                 <div class="description simple-article size-2"><a
                         href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
@@ -64,7 +64,7 @@
         </div>
         <div class="col-sm-3">
             <div class="icon-description-shortcode style-1">
-                <img class="icon" src="assets/img/icon-26.png" alt="">
+                <img class="icon" src="assets/icons/icon-26.png" alt="">
                 <div class="title h6">Follow us</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
                     To see the last news about our bowties

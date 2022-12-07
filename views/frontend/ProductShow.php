@@ -88,7 +88,7 @@
             <div class="col-sm-6 col-xs-b10 col-sm-b0">
                 <a class="button size-2 style-2 block" href="#">
                     <span class="button-wrapper">
-                        <span class="icon"><img src="assets/img/icon-2.png" alt=""></span>
+                        <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                         <span class="text">add to cart</span>
                     </span>
                 </a>
@@ -122,13 +122,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
@@ -152,13 +152,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
@@ -182,13 +182,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
@@ -212,13 +212,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
@@ -242,7 +242,7 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
@@ -272,13 +272,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
@@ -302,13 +302,13 @@
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-1.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
                                 </a>
                                 <a class="button size-2 style-3" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/img/icon-3.png" alt=""></span>
+                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
                                 </a>
