@@ -59,6 +59,7 @@
 
     $router->get('/adminSale', 'views/backend/createSale');
     $router->get('/salesActionDecider', 'controllers/salesActionDecider');
+    $router->get('/adminEditSale', 'views/backend/editSale');
     
     $router->get('/adminCreateMedia', 'views/backend/createMedia');
     $router->get('/adminEditMedia', 'views/backend/editMedia');

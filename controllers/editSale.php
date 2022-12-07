@@ -1,8 +1,10 @@
 <?php
 
 /* Check if there is sent a post */
-if( isset( $_POST['createSale'] ) ){
+if( isset( $_POST['editSale'] ) ){
     /* Gets all the values from the post request */
+
+    $id = $_POST['sale_id']; /* 🔥 needs sanitation */
     $title = $stringSanitation->sanitice($_POST['title']);
     $start = $_POST['start']; /* 🔥 needs sanitation */
     $end = $_POST['end']; /* 🔥 needs sanitation */
@@ -22,7 +24,7 @@ if( isset( $_POST['createSale'] ) ){
 
         } */
         if((count($product_ids) + count($sales)) / 2 == count($saleTypes)){
-            $ProductsHandler->createSale($title, $start, $end, $product_ids, $sales, $saleTypes);
+            $ProductsHandler->updateSale($id, $title, $start, $end, $product_ids, $sales, $saleTypes);
         } else {
             echo "Ehhh somethings burning!";
         }
