@@ -19,8 +19,6 @@
 
     /* Fetches the data from the db */
     $data = $db->query($sql)->fetchAll();
-    
-    /* 🔥 Sessions don't work here */
 
     /* Checks if the user exists */
     if($data[0]['name']){
