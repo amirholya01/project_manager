@@ -232,7 +232,6 @@ class ProductsHandler extends Products{
     }
     
     public function editProduct($id, $name, $description, $price, $type, $colors = null, $medias = null, $primaryImage) {
-        /* 🔥 It prints 2 errors but it still goes through */
         $this->db->beginTransaction();
 
         //Deletes the colors and media that was previously assigned to the product

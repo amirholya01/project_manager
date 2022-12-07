@@ -3,7 +3,8 @@
 /* 
     🔥 SECURITY RISK
     This is based on the users session which they can manually change
-    so if the the name of an admin they can just breach security
+    so if they change the name to that of an admin they can just breach 
+    security
     
     We need to set it up with tokens instead
 */

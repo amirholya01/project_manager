@@ -9,8 +9,6 @@
     require_once $rootPath . "security/adminCheck.php";
     
     require_once $rootPath . "views/backend/partials/header.php";
-
-    /* 🔥 Needs to check if the user is allowed to be here */
 ?>
 <div class="wrapper">
     <form class="Admin-handlers" method="POST" action="adminUsers">
