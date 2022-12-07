@@ -41,6 +41,7 @@
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');
     $router->get('/ProductShow', 'views/frontend/ProductShow');
+    $router->get('/NewsShow', 'views/frontend/NewsShow');
     $router->get('/Breadcrumb', 'views/frontend/Breadcrumb');
 
     /* Admin */

@@ -16,7 +16,7 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
-
+<!-- impelementing the sitemap with a for loop (breadcrumb) -->
 <div class="breadcrumbs SiteMap">
     <?php 
     for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){

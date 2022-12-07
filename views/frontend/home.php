@@ -13,7 +13,6 @@
 
     require_once $rootPath . "models/handlers/newsHandler.php";
     require_once $rootPath . "controllers/frontendNews.php"; 
-    
 ?>
 
 
@@ -48,7 +47,7 @@
                                     </div>
                                     <div data-swiper-parallax-x="-400">
                                         <div class="simple-article size-4 light transparent">
-                                            <p>We strive to offer our customers the lowest possible prices, the best
+                                            <p> We strive to offer our customers the lowest possible prices, the best
                                                 available selection while giving them a chance to bring their own ideas,
                                                 and the utmost convenience.
 
@@ -197,7 +196,7 @@
                                 <!--  News description loaded from database  -->
                                 <div class="simple-article size-4 light transparent col-xs-b30"><?php echo $new['description'] ?></div>
                                 
-                                <a class="button size-2 style-2" href="#">
+                                <a class="button size-2 style-2" href="/NewsShow">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">learn more</span>

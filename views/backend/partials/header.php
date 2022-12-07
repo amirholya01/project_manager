@@ -49,7 +49,7 @@
                     <div class="Nav-icon link-icon">
                         <img src="assets/icons/home.png" alt="">
                     </div>
-                    <a href="/adminfrontpage">Frontpage</a>
+                    <a href="/adminfrontpage">Homepage</a>
                 </li>
                 <li>
                     <div class="Nav-icon link-icon">

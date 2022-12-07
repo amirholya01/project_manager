@@ -3,7 +3,12 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+
+    $pageName = "Checkout";
+    $pageLink = "/Checkout";
+    $pageLevel = 3;
     
+    require_once $rootPath . "views/frontend/Breadcrumb.php";
     require_once $rootPath . "views/frontend/partials/header.php";
 ?>
 
@@ -11,10 +16,24 @@
 <div class="empty-space col-xs-b15 col-sm-b30"></div>
 <div class="empty-space col-xs-b15 col-sm-b30"></div>
 <div class="empty-space col-xs-b15 col-sm-b30"></div>
+<div class="empty-space col-xs-b15 col-sm-b30"></div>
+<div class="empty-space col-xs-b15 col-sm-b30"></div>
+<div class="empty-space col-xs-b15 col-sm-b30"></div>
+<div class="empty-space col-xs-b15 col-sm-b30"></div>
+
+
+
+        <!-- impelementing the sitemap with a for loop (breadcrumb) -->
+        <div class="breadcrumbs margin-15-left">
+            <?php 
+            for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
+                $link = $_SESSION['breadcrumbsLinks'][$i];
+                echo "<a class='breadcrumb-flex' href='$link'> ".$_SESSION['breadcrumbs'][$i]."</a>";
+            }
+            ?>
+        </div>
 
         <div class="container">
-            <div class="empty-space col-xs-b15 col-sm-b30"></div>
-            <div class="empty-space col-xs-b15 col-sm-b50 col-md-b100"></div>
             <div class="text-center">
                 <div class="simple-article size-3 grey uppercase col-xs-b5">checkout</div>
                 <div class="h2">check your info</div>
@@ -255,6 +274,8 @@
                 </div>
             </div>
         </div>
+
+
 
         <div class="empty-space col-xs-b35 col-md-b70"></div>
 

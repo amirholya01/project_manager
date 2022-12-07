@@ -21,6 +21,8 @@
 <div class="row ProductShow-container">
     <div class="col-sm-6 col-xs-b30 col-sm-b0">
 
+
+        <!-- impelementing the sitemap with a for loop (breadcrumb) -->
         <div class="breadcrumbs">
             <?php 
             for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
@@ -30,77 +32,83 @@
             ?>
         </div>
 
+        <!-- Gets the right image from the chosen product and implement it in the frontEnd with a foreach loop -->
         <div class="main-product-slider-wrapper swipers-couple-wrapper">
             <div class="swiper-container swiper-control-top">
                 <div class="swiper-button-prev hidden"></div>
                 <div class="swiper-button-next hidden"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-lazy-preloader"></div>
-                        <div class="product-big-preview-entry swiper-lazy"
-                            data-background="uploads/<?php echo $_POST['primary_image'] ?>"></div>
-                    </div>
-                    <?php
-                        /* Get medias */
-
-                        $medias = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
-
-                        /* foreach... */
-                        foreach($medias as $media){
-                    ?>
-                            <div class="swiper-slide">
-                                <div class="swiper-lazy-preloader"></div>
-                                <div class="product-big-preview-entry swiper-lazy"
-                                    data-background="uploads/<?php echo $media[0] ?>"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-lazy-preloader"></div>
+                            <div class="product-big-preview-entry swiper-lazy"
+                                data-background="uploads/<?php echo $_POST['primary_image'] ?>">
                             </div>
-                    <?php
-                        }
-                    ?>
+                        </div>
+                        <?php
+                            /* Get medias */
+
+                            $medias = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
+
+                            /* foreach... */
+                            foreach($medias as $media){
+                        ?>
+                                <div class="swiper-slide">
+                                    <div class="swiper-lazy-preloader"></div>
+                                    <div class="product-big-preview-entry swiper-lazy"
+                                        data-background="uploads/<?php echo $media[0] ?>"></div>
+                                </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Gets and implements informations about the right product  -->
+        <div class="col-sm-6 Product-show-info">
+            <div class="simple-article size-3 grey col-xs-b5"><?php echo $_POST['type'] ?></div>
+            <div class="h3 col-xs-b25"><?php echo $_POST['name'] ?></div>
+            <div class="row col-xs-b25">
+                <div class="col-sm-6">
+                    <div class="simple-article size-5 grey">PRICE: <span class="color"><?php echo $_POST['price'] ?>DKK</span></div>
+                </div>
+            </div>
+            <div class="simple-article size-3 col-xs-b30">
+                <?php echo $_POST['description'] ?>
+            </div>
+            <div class="row col-xs-b40">
+                <div class="col-sm-3">
+                    <div class="h6 detail-data-title size-1">quantity:</div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="quantity-select">
+                        <span class="minus"></span>
+                        <span class="number">1</span>
+                        <span class="plus"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row m5 col-xs-b40">
+                <div class="col-sm-6 col-xs-b10 col-sm-b0">
+                    <a class="button size-2 style-2 block" href="#">
+                        <span class="button-wrapper">
+                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
+                            <span class="text">add to cart</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
 
-    </div>
-    <div class="col-sm-6 Product-show-info">
-        <div class="simple-article size-3 grey col-xs-b5"><?php echo $_POST['type'] ?></div>
-        <div class="h3 col-xs-b25"><?php echo $_POST['name'] ?></div>
-        <div class="row col-xs-b25">
-            <div class="col-sm-6">
-                <div class="simple-article size-5 grey">PRICE: <span class="color"><?php echo $_POST['price'] ?>DKK</span></div>
-            </div>
-        </div>
-        <div class="simple-article size-3 col-xs-b30">
-            <?php echo $_POST['description'] ?>
-        </div>
-        <div class="row col-xs-b40">
-            <div class="col-sm-3">
-                <div class="h6 detail-data-title size-1">quantity:</div>
-            </div>
-            <div class="col-sm-9">
-                <div class="quantity-select">
-                    <span class="minus"></span>
-                    <span class="number">1</span>
-                    <span class="plus"></span>
-                </div>
-            </div>
-        </div>
-        <div class="row m5 col-xs-b40">
-            <div class="col-sm-6 col-xs-b10 col-sm-b0">
-                <a class="button size-2 style-2 block" href="#">
-                    <span class="button-wrapper">
-                        <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                        <span class="text">add to cart</span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
 </div>
 
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
+<!-- Realted products area should be cleaned more up -->
 <div class="row Related-ProductShow-container">
     <div class="swiper-container arrows-align-top" data-breakpoints="1" data-xs-slides="1" data-sm-slides="3"
         data-md-slides="4" data-lt-slides="4" data-slides-per-view="5">
