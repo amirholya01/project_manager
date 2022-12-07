@@ -34,7 +34,7 @@
                 <input class="button submit" type="submit">
             </div>
             <div class="Reset_create_div"> <!-- ✒️ should be in the top right corner and not the middle of the page -->
-                <a class="button" href="/adminProducts">Back to products</a>
+                <a class="button" href="/adminSale">Back to discounts</a>
             </div>
         </div>
     

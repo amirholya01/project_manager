@@ -1,0 +1,3 @@
+<?php
+
+$sales = $ProductsHandler->getSales();

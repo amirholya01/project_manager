@@ -151,6 +151,13 @@ class ProductsHandler extends Products{
         $this->db->commit();
     }
 
+    public function getSales(){
+        $getSales = $this->db->prepare($this->getSalesQuery);
+        $getSales->execute();
+
+        return $getSales->fetchAll();
+    }
+
     public function getProducts($search = '', $id = '', $type = '') {
         /* 
             We need to check if we are searching for types because we have to use different

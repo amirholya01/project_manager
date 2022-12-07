@@ -63,6 +63,7 @@ class Products{
 
     //Sale Queries
     public $createSaleQuery = "INSERT INTO sales (title, start, end) VALUES (:title, :start, :end);";
+    public $getSalesQuery = "SELECT * FROM sales ORDER BY end DESC";
     public $editSaleQuery = "UPDATE sales SET title = :title, start = :start, end = :end WHERE id = :id;";
     public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, product_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
     public $deleteAssignedProductsToSaleQuery = "DELETE FROM assign_products_to_sales WHERE sale_id = :id";

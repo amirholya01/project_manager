@@ -14,16 +14,23 @@
 
     
     require_once $rootPath . "controllers/adminProducts.php";
+    require_once $rootPath . "controllers/adminCreateSale.php";
     require_once $rootPath . "controllers/getProductsWithFilters.php";
     
     require_once $rootPath . "controllers/editSale.php";
-    
+
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
     <form method="POST" action="salesActionDecider">    
         <select name="sale" id="sale">
-            <option value="1">Black friday 2022</option>
+            <?php
+                foreach($sales as $sale){
+            ?>
+                    <option value="<?php echo $sale['id']; ?>"><?php echo $sale['title']; ?></option>
+            <?php
+                }
+            ?>
         </select>
         <button name="action" value="edit" type="submit">Edit</button>
         <button name="action" value="delete" type="submit">Delete</button>
