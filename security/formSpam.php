@@ -11,7 +11,7 @@ if(isset($_POST['validate'])){
         $name = $_SESSION['name'];
         
         $securityData = $UsersHandler->getSecurityData();
-
+        
         if($name == $securityData['name']){
             $startTime = new DateTime($securityData['time']);
             $endTime = new DateTime();
@@ -27,6 +27,8 @@ if(isset($_POST['validate'])){
             }else{
                 $validated = true;
             }
+        }else{
+            $validated = true;
         }
     }
 }

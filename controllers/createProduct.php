@@ -2,7 +2,6 @@
 
 /* Checks if it passes validation */
 if($validated == true){
-    
     /* Check if there is sent a post */
     if( isset( $_POST['createProduct'] ) ){
         /* Gets all the values from the post request */
