@@ -224,9 +224,8 @@
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
+
 <!--  Special offers section for the homepage  -->
-
-
 <div class="container">
     <div class="text-center">
         <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
@@ -266,17 +265,11 @@
                                     </div>
                                     <div class="col-sm-6 col-md-4 col-md-offset-2">
                                         <h3 class="h3 col-xs-b15"><?php echo $Sale['title'] ?></h3>
-                                        <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color">$195.00</span></div>
+                                        <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
                                         <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
                                         <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
                                         <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
                                         <div class="buttons-wrapper">
-                                            <a class="button size-2 style-3" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
-                                                    <span class="text">Learn More</span>
-                                                </span>
-                                            </a>
                                             <a class="button size-2 style-2" href="#">
                                                 <span class="button-wrapper">
                                                     <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
