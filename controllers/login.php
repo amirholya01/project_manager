@@ -27,7 +27,7 @@
         $_SESSION["loggedin"] = "true";
 
         if($data[0]['role'] == 1){
-            header("Location: /adminProducts");
+            header("Location: /adminFrontpage");
         }else{
             header("Location: /");
         }
