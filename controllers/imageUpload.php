@@ -71,8 +71,12 @@ class imageUpload extends ProductsHandler{
                 $this->uploadImage($id, $name);
             }
         }
+
+        
         
         /* Create thumbnail */
+        $new_image;
+
         if($imageValidated == true){
             $thumbImagePath = $rootPath . "uploads/thumbs/" . $thumbName;
             copy(
@@ -86,6 +90,7 @@ class imageUpload extends ProductsHandler{
             }
             if($fileType == "png"){
                 $thumbImage = imagecreatefrompng($thumbImagePath);
+
             }
             if($fileType == "gif"){
                 $thumbImage = imagecreatefromgif($thumbImagePath);
@@ -109,13 +114,34 @@ class imageUpload extends ProductsHandler{
             }
 
 
+
             $thumbImage = imagescale($thumbImage , $imageWidth, $imageHeight);
             
             if($fileType == "jpeg" || $fileType == "jpg"){
                 imagejpeg($thumbImage, $thumbImagePath);
             }
             if($fileType == "png"){
-                imagepng($thumbImage, $thumbImagePath);
+                $new_image=imagecreatetruecolor($imageWidth, $imageHeight);
+
+                $width=imagesx($thumbImage);
+                $height=imagesy($thumbImage);
+
+                imagealphablending($thumbImage, true);
+
+                $transparent = imagecolortransparent($new_image, imagecolorallocatealpha($new_image, 255, 255, 255, 127));
+                imagefill($new_image, 0, 0, $transparent);
+
+
+                
+                imagealphablending($new_image, FALSE);
+                imagesavealpha($new_image, TRUE);
+                $transparent = imagecolorallocatealpha($new_image, 255, 255, 255, 127);
+
+                imagefilledrectangle($new_image, 0, 0, $imageWidth, $imageHeight, $transparent);
+
+                imagecopyresampled($new_image,$thumbImage,0,0,0,0,$imageWidth,$imageHeight,$width,$height);
+
+                imagepng($new_image, $thumbImagePath);
             }
             if($fileType == "gif"){
                 imagegif($thumbImage, $thumbImagePath);

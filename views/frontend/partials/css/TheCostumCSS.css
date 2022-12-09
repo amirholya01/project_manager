@@ -132,6 +132,10 @@ button {
 .margin-15-left{
     margin-left: 3.5%;
 }
-
-
-  
+.discount-image{
+    width: 100%;
+    height: auto;
+}
+.Discount-wrapper{
+    margin-top: -50px !important;
+}

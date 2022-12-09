@@ -13,6 +13,11 @@
 
     require_once $rootPath . "models/handlers/newsHandler.php";
     require_once $rootPath . "controllers/frontendNews.php"; 
+
+    require_once $rootPath . "models/handlers/ProductsHandler.php";
+    require_once $rootPath . "controllers/frontendDiscount.php"; 
+
+    
 ?>
 
 
@@ -135,7 +140,7 @@
         </div>
     </div>
 
-
+    <!--  Make empty spaces  -->
     <div class="empty-space col-xs-b35 col-md-b70"></div>
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
@@ -218,138 +223,83 @@
     <div class="empty-space col-xs-b35 col-md-b70"></div>
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
-    <!--  Special offers section for the homepage  -->
-    <div class="container">
-        <div class="text-center">
-            <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
-            <div class="h2">choose the best</div>
-            <div class="title-underline center"><span></span></div>
-        </div>
+
+
+<!--  Special offers section for the homepage  -->
+<div class="container">
+    <div class="text-center">
+        <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
+        <div class="h2">choose the best</div>
+        <div class="title-underline center"><span></span></div>
     </div>
+</div>
 
+<div class="slider-wrapper">
+                <div class="swiper-button-prev hidden"></div>
+                <div class="swiper-button-next hidden"></div>
+                <div class="swiper-container" data-parallax="1">
+                   <div class="swiper-wrapper Discount-wrapper">
 
+                   <?php 
+                        /* Loop through the Discounts */
+                        foreach($Sales as $Sale){
+                    ?>
+                       <div class="swiper-slide">
+                            <div class="container">
+                                <div class="row vertical-aligned-columns">
+                                    <div class="col-sm-6 col-xs-b30 col-sm-b0">
+                                        
 
+                                    <?php 
+                                        /* Loop through the Discounts */
+                                        foreach($products as $product){
+                                    ?>
+                                    <?php 
+                                        $image = explode(".", $product['primary_image']);
+                                    ?>
+                                    <img class="discount-image" src="uploads/<?php echo $product['primary_image'] ?>" alt="">
+                                    <?php 
+                                        }
+                                    ?>
 
-    <div class="slider-wrapper">
-        <div class="swiper-button-prev hidden"></div>
-        <div class="swiper-button-next hidden"></div>
-        <div class="swiper-container" data-parallax="1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row vertical-aligned-columns">
-                            <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-24.png" class="block-image rounded-image" alt="" />
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-md-offset-2">
-                                <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
-                                        class="color">+</span> free delivery</h3>
-                                <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span
-                                        class="color">$195.00</span></div>
-                                <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="buttons-wrapper">
-                                    <a class="button size-2 style-3" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
-                                            <span class="text">Learn More</span>
-                                        </span>
-                                    </a>
-                                    <a class="button size-2 style-2" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                            <span class="text">Add To Cart</span>
-                                        </span>
-                                    </a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-md-offset-2">
+                                        <h3 class="h3 col-xs-b15"><?php echo $Sale['title'] ?></h3>
+                                        <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
+                                        <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
+                                        <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
+                                        <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
+                                        <div class="buttons-wrapper">
+                                            <a class="button size-2 style-2" href="#">
+                                                <span class="button-wrapper">
+                                                    <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
+                                                    <span class="text">Add To Cart</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row vertical-aligned-columns">
-                            <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-25.png" class="block-image rounded-image" alt="" />
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-md-offset-2">
-                                <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
-                                        class="color">+</span> free delivery</h3>
-                                <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span
-                                        class="color">$195.00</span></div>
-                                <!--<div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="buttons-wrapper">
-                                    <a class="button size-2 style-3" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
-                                            <span class="text">Learn More</span>
-                                        </span>
-                                    </a>
-                                    <a class="button size-2 style-2" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                            <span class="text">Add To Cart</span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row vertical-aligned-columns">
-                            <div class="col-sm-6 col-xs-b30 col-sm-b0">
-                                <img src="assets/img/thumbnail-26.png" class="block-image rounded-image" alt="" />
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-md-offset-2">
-                                <h3 class="h3 col-xs-b15">headphones klm <span class="color">+</span> leather case <span
-                                        class="color">+</span> free delivery</h3>
-                                <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span
-                                        class="color">$195.00</span></div>
-                                <!--<div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id
-                                    auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu
-                                    mattis est lacinia sit amet.</div>
-                                <div class="buttons-wrapper">
-                                    <a class="button size-2 style-3" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icons-4.png" alt=""></span>
-                                            <span class="text">Learn More</span>
-                                        </span>
-                                    </a>
-                                    <a class="button size-2 style-2" href="#">
-                                        <span class="button-wrapper">
-                                            <span class="icon"><img src="assets/img/icons-2.png" alt=""></span>
-                                            <span class="text">Add To Cart</span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                       </div>
+
+                       <?php 
+                            }
+                       ?>
+
+                   </div>
+                   <div class="col-xs-b25 col-sm-b50"></div>
+                   <div class="swiper-pagination relative-pagination"></div>
                 </div>
             </div>
-            <div class="col-xs-b25 col-sm-b50"></div>
-            <div class="swiper-pagination relative-pagination"></div>
-        </div>
-    </div>
 
-    <div class="empty-space col-xs-b35 col-md-b70"></div>
+
+
+
+
+
+
+
+
     <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 

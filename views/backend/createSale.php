@@ -33,8 +33,10 @@
                 }
             ?>
         </select>
-        <button name="action" value="edit" type="submit">Edit</button>
-        <button name="action" value="delete" type="submit">Delete</button>
+        <div class="Reset_create_div">
+            <button class="button" name="action" value="edit" type="submit">Edit</button>
+            <button class="button" name="action" value="delete" type="submit">Delete</button>
+        </div>
     </form>
     <form method="POST" action="adminProducts">
         
