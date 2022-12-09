@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1:3306
--- Genereringstid: 07. 12 2022 kl. 12:52:42
+-- Genereringstid: 09. 12 2022 kl. 13:28:32
 -- Serverversion: 5.7.36
 -- PHP-version: 7.4.26
 
@@ -40,7 +40,9 @@ CREATE TABLE IF NOT EXISTS `assign_colors_to_products` (
 
 INSERT INTO `assign_colors_to_products` (`product_id`, `color_id`) VALUES
 (2, 1),
-(2, 2);
+(2, 2),
+(3, 1),
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -60,8 +62,7 @@ CREATE TABLE IF NOT EXISTS `assign_media_to_products` (
 --
 
 INSERT INTO `assign_media_to_products` (`product_id`, `media_id`) VALUES
-(2, '6380d60fecb10.jpg'),
-(2, '6385ed6ccb78c.jpg');
+(2, '6380d60fecb10.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,43 @@ CREATE TABLE IF NOT EXISTS `assign_products_to_sales` (
 --
 
 INSERT INTO `assign_products_to_sales` (`sale_id`, `product_id`, `sale`, `saleType`) VALUES
-(1, 2, 100, '$');
+(5, 3, 680, '$'),
+(5, 2, 40, '%'),
+(1, 2, 120, '$');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `frontpage`
+--
+
+DROP TABLE IF EXISTS `frontpage`;
+CREATE TABLE IF NOT EXISTS `frontpage` (
+  `id` varchar(50) COLLATE utf8_bin NOT NULL,
+  `text` text COLLATE utf8_bin,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `frontpage`
+--
+
+INSERT INTO `frontpage` (`id`, `text`) VALUES
+('aboutUs', 'Aenean facilisis, purus ut tristique pulvinar, odio neque commodo ligula, non vestibulum lacus justo vel diam. Aenean ac aliquet tortor, nec gravida urna. Ut nec urna elit. Etiam id scelerisque ante. Cras velit nunc, luctus a volutpat nec, blandit id dolor. Quisque commodo elit nulla, eu semper quam feugiat et. Integer quam velit, suscipit eget consectetur ac, molestie eu diam.'),
+('phone', '+45 12 34 56 78'),
+('nav1', 'HOME'),
+('nav2', 'PRODUCTS'),
+('nav3', 'ABOUT US'),
+('nav4', 'CONTACT'),
+('productsSubtitle', 'PRODUCTS'),
+('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
+('aboutusSubtitle', 'ABOUT US'),
+('aboutusTitle', 'THE COUSTUME BOWTIE'),
+('contactSubtitle', 'CONTACT US'),
+('contactTitle', 'YOU CAN ASK US ABOUT EVERYTHING'),
+('address', '1st, new york, usa'),
+('follow', 'To see the last news about our bowties'),
+('email', 'Meep@moop.mp');
 
 -- --------------------------------------------------------
 
@@ -146,14 +183,15 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` decimal(10,0) NOT NULL,
   `primary_image` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`products_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Data dump for tabellen `products`
 --
 
 INSERT INTO `products` (`products_id`, `name`, `type`, `description`, `price`, `primary_image`) VALUES
-(2, 'Solid Faded Pink MORE Unicorns', 1, 'A solid faded pink bowtie', '150', '7380d60fecb10.jpg');
+(2, 'Solid Faded Pink MORE Unicorns', 1, 'A solid faded pink bowtie', '150', '7380d60fecb10.jpg'),
+(3, 'AAAAAAAA', 5, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAa', '400000', '6380d60fecb10.jpg');
 
 -- --------------------------------------------------------
 
@@ -210,14 +248,15 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `start` date NOT NULL,
   `end` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `sales`
 --
 
 INSERT INTO `sales` (`id`, `title`, `start`, `end`) VALUES
-(1, 'black friday 2022', '2022-11-25', '2022-11-25');
+(1, 'black friday 2022', '2022-11-25', '2022-11-25'),
+(5, 'Pineapple', '2022-12-10', '2022-12-11');
 
 -- --------------------------------------------------------
 
@@ -238,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `spam_prevention` (
 --
 
 INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
-(1, 'Niclas', '2022-12-06 11:54:15');
+(1, 'Niclas', '2022-12-09 10:43:37');
 
 -- --------------------------------------------------------
 
