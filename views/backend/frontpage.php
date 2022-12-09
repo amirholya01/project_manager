@@ -149,9 +149,6 @@
         <input type="text" name="follow" placeholder="Follow us" value="<?php echo $follow ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
-    <br>
-    <br>
-    <br>
 
 
     <!-- FOOTER -->

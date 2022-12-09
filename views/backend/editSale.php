@@ -78,25 +78,29 @@
                                      * sales[new array[i]] and product_ids[new array[i]] are matching
                                      * saleType[new array[i]] will give the type of sail
                                  -->
+                                 
+                                <!-- saleTypes should be radio
+                                    🔥 way to big room for user error    
+                                -->
                                 <?php
                                     if($onSale == false){
                                 ?>
                                         <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
                                         <input required value="0" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
-                                        <input checked class="input" type="radio" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                                        <input checked class="input" type="checkbox" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
                                         <label for="%<?php echo $indData['products_id'] ?>">%</label>
             
-                                        <input class="input" type="radio" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                                        <input class="input" type="checkbox" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
                                         <label for="$<?php echo $indData['products_id'] ?>">$</label>
                                 <?php 
                                     } else {
                                 ?>
                                         <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
                                         <input required value="<?php echo $product['sale'] ?>" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
-                                        <input <?php echo $product['saleType'] == '%' ? "checked" : "" ?> class="input" type="radio" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                                        <input <?php echo $product['saleType'] == '%' ? "checked" : "" ?> class="input" type="checkbox" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
                                         <label for="%<?php echo $indData['products_id'] ?>">%</label>
 
-                                        <input <?php echo $product['saleType'] == '$' ? "checked" : "" ?> class="input" type="radio" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                                        <input <?php echo $product['saleType'] == '$' ? "checked" : "" ?> class="input" type="checkbox" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
                                         <label for="$<?php echo $indData['products_id'] ?>">$</label>
                                 <?php 
                                     }
