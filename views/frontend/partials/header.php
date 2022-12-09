@@ -1,6 +1,8 @@
 <?php
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
-    require_once $rootPath . "controllers/frontpage.php"; 
+    require_once $rootPath . "controllers/frontpage.php";
+    require_once $rootPath . "models/handlers/ProductsHandler.php"; 
+    require_once $rootPath . "controllers/cartManager.php";
 ?>
 
 <!DOCTYPE html>
@@ -84,49 +86,31 @@
                                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                                         <span class="cart-label">5</span>
                                     </span>
-                                    <span class="cart-title hidden-xs">$1195.00</span>
+                                    <span class="cart-title hidden-xs"><?php echo $total ?> DKK</span>
                                 </a>
 
                                 <div class="cart-toggle hidden-xs hidden-sm">
                                     <div class="cart-overflow">
+
+                                        <?php
+                                            foreach($cart as $item){
+                                        ?>
                                         <div class="cart-entry clearfix">
+                                            <?php $image = explode(".", $item['product'][0]['primary_image']) ?>
                                             <a class="cart-entry-thumbnail Cart-image" href="#">
-                                                <img src="assets/img/product-1.png" alt="" />
+                                                <img src="uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>" alt="" />
                                             </a>
 
                                             <div class="cart-entry-description">
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                                            <div class="simple-article size-1">QUANTITY: 2</div>
+                                                            <div class="h6"><a href="#"><?php echo $item['product'][0]['name'] ?></a></div>
+                                                            <div class="simple-article size-1">QUANTITY: <?php echo $item['quantity'] ?></div>
                                                         </td>
                                                         <td>
-                                                            <div class="simple-article size-3 grey">$155.00</div>
-                                                            <div class="simple-article size-1">TOTAL: $310.00</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="button-close"></div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="cart-entry clearfix">
-                                            <a class="cart-entry-thumbnail Cart-image" href="#"><img
-                                                    src="assets/img/product-2.png" alt="" /></a>
-                                            <div class="cart-entry-description">
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                                            <div class="simple-article size-1">QUANTITY: 2</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="simple-article size-3 grey">$155.00</div>
-                                                            <div class="simple-article size-1">TOTAL: $310.00</div>
+                                                            <div class="simple-article size-3 grey"><?php echo $item['product'][0]['price'] ?> DKK</div>
+                                                            <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?></div>
                                                         </td>
                                                         <td>
                                                             <div class="button-close"></div>
@@ -135,34 +119,16 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="cart-entry clearfix">
-                                            <a class="cart-entry-thumbnail Cart-image" href="#"><img
-                                                    src="assets/img/product-3.png" alt="" /></a>
-                                            <div class="cart-entry-description">
-                                                <table>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                                            <div class="simple-article size-1">QUANTITY: 2</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="simple-article size-3 grey">$155.00</div>
-                                                            <div class="simple-article size-1">TOTAL: $310.00</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="button-close"></div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
+                                        <?php
+                                            }
+                                        ?>
                                     </div>
                                     <div class="empty-space col-xs-b40"></div>
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <div class="cell-view empty-space col-xs-b50">
                                                 <div class="simple-article size-5 grey"> TOTAL
-                                                    <span class="color">$1195.00</span>
+                                                    <span class="color"><?php echo $total ?> DKK</span>
                                                 </div>
                                             </div>
                                         </div>
