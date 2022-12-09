@@ -37,8 +37,8 @@
 
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $frontpage[6]["text"] ?></div>
-        <div class="h2"><?php echo $frontpage[7]["text"] ?></div>
+        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $productsSubtitle ?></div>
+        <div class="h2"><?php echo $productsTitle ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>

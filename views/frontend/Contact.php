@@ -31,8 +31,8 @@
 
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $frontpage[10]["text"] ?></div>
-        <div class="h2"><?php echo $frontpage[11]["text"] ?></div>
+        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $contactSubtitle ?></div>
+        <div class="h2"><?php echo $contactTitle ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>
@@ -45,7 +45,7 @@
             <div class="icon-description-shortcode style-1">
                 <img class="icon" src="assets/icons/icon-25.png" alt="">
                 <div class="title h6">address</div>
-                <div class="description simple-article size-2"><?php echo $frontpage[12]["text"] ?></div>
+                <div class="description simple-article size-2"><?php echo $address ?></div>
             </div>
         </div>
         <div class="col-sm-3">
@@ -53,7 +53,7 @@
                 <img class="icon" src="assets/icons/icon-23.png" alt="">
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    <a href="tel:+4553525239"><?php echo $frontpage[1]["text"] ?></a>
+                    <a href="tel:+4553525239"><?php echo $phone ?></a>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                 <img class="icon" src="assets/icons/icon-28.png" alt="">
                 <div class="title h6">email</div>
                 <div class="description simple-article size-2"><a
-                        href="mailto:thecostumebowtie@gmail.com"><?php echo $frontpage[14]["text"] ?></a></div>
+                        href="mailto:thecostumebowtie@gmail.com"><?php echo $email ?></a></div>
             </div>
         </div>
         <div class="col-sm-3">
@@ -70,7 +70,7 @@
                 <img class="icon" src="assets/icons/icon-26.png" alt="">
                 <div class="title h6">Follow us</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    To see the last news about our bowties
+                      <?php echo $follow ?>
                 </div>
             </div>
         </div>

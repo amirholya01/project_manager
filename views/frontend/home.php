@@ -150,18 +150,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-5">
-                <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $frontpage[8]["text"] ?></div>
-                <div class="h2"><?php echo $frontpage[9]["text"] ?></div>
+                <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $aboutusSubtitle ?></div>
+                <div class="h2"><?php echo $aboutusTitle ?></div>
                 <div class="title-underline left"><span></span></div>
-                <div class="simple-article size-4 grey">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem</div>
+                <div class="simple-article size-4 grey"><?php echo $aboutusSlogan ?></div>
             </div>
             <div class="col-sm-7">
                 <div class="simple-article size-3">
-                    <p><?php echo $frontpage[0]["text"] ?></p>
-                    <p>Fusce semper rhoncus dignissim. Curabitur dapibus convallis varius. Suspendisse sem urna,
-                        ullamcorper eget porttitor ut, sagittis in justo. Vestibulum egestas nulla nec purus porttitor
-                        fermentum. Integer mauris mi, viverra eget nibh at, efficitur consectetur erat. Curabitur et
-                        imperdiet enim.</p>
+                    <p><?php echo $aboutUs1 ?></p>
+                    <p><?php echo $aboutUs2 ?></p>
                 </div>
             </div>
         </div>
@@ -260,7 +257,7 @@
                                         <h3 class="h3 col-xs-b15"><?php echo $Sale['title'] ?></h3>
                                         <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
                                         <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
-                                        <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
+                                        <div class="simple-article size-3 col-xs-b30"><?php echo $Sale['description'] ?></div>
                                         <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">
