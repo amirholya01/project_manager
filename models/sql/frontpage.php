@@ -2,5 +2,7 @@
 
 class Frontpage{
     //Basic Crud
-    public $editAboutUsQuery = "UPDATE `frontpage` SET `text` = :text WHERE `id` = 'aboutUs'";
+    public $UniversalEditQuery = "UPDATE `frontpage` SET `text` = :text WHERE `id` = :id";
+
+    public $getAllFrontpageQuery = "SELECT * FROM `frontpage`";
 }

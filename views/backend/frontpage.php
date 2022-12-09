@@ -13,6 +13,7 @@
     
     require_once $rootPath . "models/handlers/frontpageHandler.php";
 
+    require_once $rootPath . "controllers/adminFrontpage.php";
     require_once $rootPath . "controllers/editFrontpage.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
@@ -27,7 +28,7 @@
             Phone Number
         </h3>
         <p>The same as in contact</p>
-        <input type="text" name="phone">
+        <input type="text" name="phone" value="<?php echo $phone ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Email  -->
@@ -35,17 +36,17 @@
             Email
         </h3>
         <p>The same as in contact</p>
-        <input type="text" name="email">
+        <input type="text" name="email" value="<?php echo $email ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Navigation  -->
         <h3>
             Navigation
         </h3>
-        <input type="text" name="navHome">
-        <input type="text" name="navProducts">
-        <input type="text" name="navAboutUs">
-        <input type="text" name="navContact">
+        <input type="text" name="navHome" value="<?php echo $nav1 ?>">
+        <input type="text" name="navProducts" value="<?php echo $nav2 ?>">
+        <input type="text" name="navAboutUs" value="<?php echo $nav3 ?>">
+        <input type="text" name="navContact" value="<?php echo $nav4 ?>">
         <button type="submit">Edit</button>
     </form>
     
@@ -60,7 +61,7 @@
             About us
         </h3>
         <p>This is the same one as on the about us page</p>
-        <textarea name="aboutUs" id="" cols="60" rows="10"></textarea>
+        <textarea name="aboutUs" id="" cols="60" rows="10"><?php echo $aboutUs ?></textarea>
         <button type="submit">Edit</button>
     </form>
 
@@ -72,14 +73,14 @@
         <h3>
             Sub title
         </h3>
-        <input type="text" name="productsSubtitle">
+        <input type="text" name="productsSubtitle" value="<?php echo $productsSubtitle ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
         <h3>
             Title
         </h3>
-        <input type="text" name="productsTitle">
+        <input type="text" name="productsTitle" value="<?php echo $productsTitle ?>">
         <button type="submit">Edit</button>
     </form>
     <!-- Categories  - Product types! -->
@@ -92,14 +93,14 @@
         <h3>
             Sub title
         </h3>
-        <input type="text" name="aboutusSubtitle">
+        <input type="text" name="aboutusSubtitle" value="<?php echo $aboutusSubtitle ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
         <h3>
             Title
         </h3>
-        <input type="text" name="aboutusTitle">
+        <input type="text" name="aboutusTitle" value="<?php echo $aboutusTitle ?>">
         <button type="submit">Edit</button>
     </form>
     <!-- Descriptions -->
@@ -109,7 +110,7 @@
             About us
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutUs" id="" cols="60" rows="10"></textarea>
+        <textarea name="aboutUs" id="" cols="60" rows="10"><?php echo $aboutUs ?></textarea>
         <button type="submit">Edit</button>
     </form>
 
@@ -121,24 +122,24 @@
         <h3>
             Sub title
         </h3>
-        <input type="text" name="contactSubtitle">
+        <input type="text" name="contactSubtitle" value="<?php echo $contactSubtitle ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
         <h3>
             Title
         </h3>
-        <input type="text" name="contactTitle">
+        <input type="text" name="contactTitle" value="<?php echo $contactTitle ?>">
         <button type="submit">Edit</button>
     </form>
     <form method="POST" action="/adminFrontpage"> <!--  <- Contact forms  -->
         <h3>
             Contact forms
         </h3>
-        <input type="text" name="conAddress" placeholder="Address">
-        <input type="text" name="conPhone" placeholder="Phone">
-        <input type="text" name="conEmail" placeholder="Email">
-        <input type="text" name="conFollow" placeholder="Follow us">
+        <input type="text" name="address" placeholder="Address" value="<?php echo $address ?>">
+        <input type="text" name="phone" placeholder="Phone" value="<?php echo $phone ?>">
+        <input type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
+        <input type="text" name="follow" placeholder="Follow us" value="<?php echo $follow ?>">
         <button type="submit">Edit</button>
     </form>
     <br>
