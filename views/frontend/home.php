@@ -157,7 +157,7 @@
             </div>
             <div class="col-sm-7">
                 <div class="simple-article size-3">
-                    <p><?php echo $frontpage[0]["text"] ?> <?php print_r($frontpage)?></p>
+                    <p><?php echo $frontpage[0]["text"] ?></p>
                     <p>Fusce semper rhoncus dignissim. Curabitur dapibus convallis varius. Suspendisse sem urna,
                         ullamcorper eget porttitor ut, sagittis in justo. Vestibulum egestas nulla nec purus porttitor
                         fermentum. Integer mauris mi, viverra eget nibh at, efficitur consectetur erat. Curabitur et
