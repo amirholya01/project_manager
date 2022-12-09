@@ -10,6 +10,9 @@
 
     require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
+
+    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "controllers/frontpage.php"; 
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -28,8 +31,8 @@
 
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5">Contact us</div>
-        <div class="h2">You can ask us about everything</div>
+        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $frontpage[10]["text"] ?></div>
+        <div class="h2"><?php echo $frontpage[11]["text"] ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>
@@ -42,7 +45,7 @@
             <div class="icon-description-shortcode style-1">
                 <img class="icon" src="assets/icons/icon-25.png" alt="">
                 <div class="title h6">address</div>
-                <div class="description simple-article size-2">1st, new york, usa</div>
+                <div class="description simple-article size-2"><?php echo $frontpage[12]["text"] ?></div>
             </div>
         </div>
         <div class="col-sm-3">
@@ -50,7 +53,7 @@
                 <img class="icon" src="assets/icons/icon-23.png" alt="">
                 <div class="title h6">phone</div>
                 <div class="description simple-article size-2" style="line-height: 26px;">
-                    <a href="tel:+4553525239">+45 53 52 52 39</a>
+                    <a href="tel:+4553525239"><?php echo $frontpage[1]["text"] ?></a>
                 </div>
             </div>
         </div>
@@ -59,7 +62,7 @@
                 <img class="icon" src="assets/icons/icon-28.png" alt="">
                 <div class="title h6">email</div>
                 <div class="description simple-article size-2"><a
-                        href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a></div>
+                        href="mailto:thecostumebowtie@gmail.com"><?php echo $frontpage[14]["text"] ?></a></div>
             </div>
         </div>
         <div class="col-sm-3">

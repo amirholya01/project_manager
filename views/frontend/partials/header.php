@@ -1,3 +1,8 @@
+<?php
+    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "controllers/frontpage.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,11 +40,11 @@
                         <div class="col-md-5 hidden-xs hidden-sm">
                             <div class="entry">
                                 <b>contact us:</b>
-                                <a href="tel:+4553525239">+45  53 52 52 39</a>
+                                <a href="tel:+4553525239"><?php echo $frontpage[1]["text"] ?></a>
                             </div>
                             <div class="entry">
                                 <b>email:</b> 
-                                <a href="mailto:thecostumebowtie@gmail.com">thecostumebowtie@gmail.com</a>
+                                <a href="mailto:thecostumebowtie@gmail.com"><?php echo $frontpage[14]["text"] ?></a>
                             </div>
                         </div>
 
@@ -174,16 +179,16 @@
                                 <nav>
                                     <ul>
                                         <li <?php echo $pageName == "Home" ? 'class="active"' : "" ?>>
-                                            <a href="/">Home</a>
+                                            <a href="/"><?php echo $frontpage[2]["text"] ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "Product" ? 'class="active"' : "" ?>>
-                                            <a href="Product">products</a>
+                                            <a href="Product"><?php echo $frontpage[3]["text"] ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "About Us" ? 'class="active"' : "" ?>>
-                                            <a href="AboutUS">about us</a>
+                                            <a href="AboutUS"><?php echo $frontpage[4]["text"] ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "Contact Us" ? 'class="active"' : "" ?>>
-                                            <a href="Contact">contact</a>
+                                            <a href="Contact"><?php echo $frontpage[5]["text"] ?></a>
                                         </li>
                                     </ul>
                                     <div class="navigation-title">

@@ -26,6 +26,9 @@
         Upon submission all other fields will be resat <br>
         Work in progress of a better solution
     </h3>
+
+    <hr class="solid">
+
     <h2>
         Header
     </h2>

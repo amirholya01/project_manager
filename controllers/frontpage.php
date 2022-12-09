@@ -1,0 +1,3 @@
+<?php
+
+$frontpage = $FrontpageHandler->getFrontpage();

@@ -124,6 +124,11 @@ button {
     height: auto;
 }
 
+.footer-links-2{
+    padding-left: 0 !important;
+    margin-left: -10px !important;
+}
+
 .flex-center{
     display: flex;
     flex-direction: column;

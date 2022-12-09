@@ -568,7 +568,7 @@ footer a, .tag{transition: all .15s; -webkit-transition: all .15s;}
 .footer-post-preview .image{float: left; width: 70px; border-radius: 5px; -webkit-border-radius: 5px; overflow: hidden; background: #B2A6CE;}
 .footer-post-preview .image img{display: block; max-width: 100%; height: auto; border-radius: 5px; -webkit-border-radius: 5px; transition: all .15s; -webkit-transition: all .15s;}
 .footer-post-preview .image:hover img{opacity: .5;}
-.footer-post-preview .description{margin-left: 80px; padding-top: 5px;}
+.footer-post-preview .description{ padding-top: 5px;}
 .footer-post-preview .date{font-size: 10px; line-height: 16px; color: rgba(255,255,255,.5); text-transform: uppercase;}
 .footer-post-preview .title{font-family: 'Raleway', sans-serif; font-size: 11px; line-height: 14px; color: rgba(255,255,255,.8); font-weight: 700; text-transform: uppercase;}
 .footer-post-preview .title:hover{color: #B2A6CE;}

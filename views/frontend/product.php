@@ -14,6 +14,9 @@
 
     require_once $rootPath . "models/handlers/ProductsHandler.php";
     require_once $rootPath . "controllers/frontendProducts.php";
+
+    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "controllers/frontpage.php"; 
 ?>
 
 
@@ -34,8 +37,8 @@
 
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5">Products</div>
-        <div class="h2">choose your favorite bowtie</div>
+        <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $frontpage[6]["text"] ?></div>
+        <div class="h2"><?php echo $frontpage[7]["text"] ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>

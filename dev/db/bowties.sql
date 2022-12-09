@@ -106,8 +106,8 @@ CREATE TABLE IF NOT EXISTS `frontpage` (
 --
 
 INSERT INTO `frontpage` (`id`, `text`) VALUES
-('aboutUs', 'Aenean facilisis, purus ut tristique pulvinar, odio neque commodo ligula, non vestibulum lacus justo vel diam. Aenean ac aliquet tortor, nec gravida urna. Ut nec urna elit. Etiam id scelerisque ante. Cras velit nunc, luctus a volutpat nec, blandit id dolor. Quisque commodo elit nulla, eu semper quam feugiat et. Integer quam velit, suscipit eget consectetur ac, molestie eu diam.'),
-('phone', '+45 12 34 56 78'),
+('aboutUs', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! '),
+('phone', '+45 53 52 52 39'),
 ('nav1', 'HOME'),
 ('nav2', 'PRODUCTS'),
 ('nav3', 'ABOUT US'),
@@ -118,9 +118,10 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('aboutusTitle', 'THE COUSTUME BOWTIE'),
 ('contactSubtitle', 'CONTACT US'),
 ('contactTitle', 'YOU CAN ASK US ABOUT EVERYTHING'),
-('address', '1st, new york, usa'),
+('address', 'Esbjerg 6700, Denmark'),
 ('follow', 'To see the last news about our bowties'),
-('email', 'Meep@moop.mp');
+('email', 'thecostumebowtie@gmail.com');
+COMMIT;
 
 -- --------------------------------------------------------
 
@@ -140,8 +141,10 @@ CREATE TABLE IF NOT EXISTS `media` (
 --
 
 INSERT INTO `media` (`media_id`, `name`) VALUES
-('6380d60fecb10.jpg', 'Test'),
-('7380d60fecb10.jpg', 'new image :3');
+('63936389e652a.png', 'Danish theme Bowtie'),
+('63936392809a3.png', 'Ukraine theme bowtie'),
+('6393639d687ca.png', 'White Black');
+COMMIT;
 
 -- --------------------------------------------------------
 
