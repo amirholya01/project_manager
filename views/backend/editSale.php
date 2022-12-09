@@ -95,12 +95,13 @@
                                 <?php 
                                     } else {
                                 ?>
+                                        
                                         <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
-                                        <input required value="<?php echo $product['sale'] ?>" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
-                                        <input <?php echo $product['saleType'] == '%' ? "checked" : "" ?> class="input" type="checkbox" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                                        <input required value="<?php echo $onSale['sale'] ?>" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
+                                        <input <?php echo $onSale['saleType'] == '%' ? "checked" : "" ?> class="input" type="radio" name="saleTypes[<?php echo $i; ?>]" value="%" id="%<?php echo $indData['products_id'] ?>">
                                         <label for="%<?php echo $indData['products_id'] ?>">%</label>
 
-                                        <input <?php echo $product['saleType'] == '$' ? "checked" : "" ?> class="input" type="checkbox" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                                        <input <?php echo $onSale['saleType'] == '$' ? "checked" : "" ?> class="input" type="radio" name="saleTypes[<?php echo $i; ?>]" value="$" id="$<?php echo $indData['products_id'] ?>">
                                         <label for="$<?php echo $indData['products_id'] ?>">$</label>
                                 <?php 
                                     }

@@ -95,10 +95,10 @@
                                 -->
                                 <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
                                 <input required value="0" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
-                                <input checked class="input" type="checkbox" name="saleTypes[]" value="%" id="%<?php echo $indData['products_id'] ?>">
+                                <input checked class="input" type="radio" name="saleTypes[<?php echo $i; ?>]" value="%" id="%<?php echo $indData['products_id'] ?>">
                                 <label for="%<?php echo $indData['products_id'] ?>">%</label>
     
-                                <input class="input" type="checkbox" name="saleTypes[]" value="$" id="$<?php echo $indData['products_id'] ?>">
+                                <input class="input" type="radio" name="saleTypes[<?php echo $i; ?>]" value="$" id="$<?php echo $indData['products_id'] ?>">
                                 <label for="$<?php echo $indData['products_id'] ?>">$</label>
                             </div>
                         </label>
