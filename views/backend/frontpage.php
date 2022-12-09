@@ -73,7 +73,7 @@
             About us
         </h3>
         <p>This is the same one as on the about us page</p>
-        <textarea name="aboutUs" id="" cols="60" rows="10"><?php echo $aboutUs ?></textarea>
+        <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
@@ -98,11 +98,17 @@
     </form>
     <!-- Categories  - Product types! -->
 
+
+
     <hr class="solid">
+
+
 
     <h2>
         About us
     </h2>
+
+
     <form method="POST" action="/adminFrontpage"> <!--  <- Sub title  -->
         <h3>
             Sub title
@@ -110,6 +116,7 @@
         <input class="input" type="text" name="aboutusSubtitle" value="<?php echo $aboutusSubtitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
+
     <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
         <h3>
             Title
@@ -117,18 +124,40 @@
         <input class="input" type="text" name="aboutusTitle" value="<?php echo $aboutusTitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Slogan  -->
+        <h3>
+           Slogan
+        </h3>
+        <input class="input" type="text" name="aboutusSlogan" value="<?php echo $aboutusSlogan ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
     <!-- Descriptions -->
     <!-- ^ should have create and delete -->
+
     <form method="POST" action="/adminFrontpage"> <!--  <- About us  -->
         <h3>
-            About us
+            About us / part-1
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutUs" id="" cols="60" rows="10"><?php echo $aboutUs ?></textarea>
+        <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
+    <form method="POST" action="/adminFrontpage"> <!--  <- About us  -->
+        <h3>
+            About us / part-2
+        </h3>
+        <p>This is the same one as on the frontpage</p>
+        <textarea name="aboutUs2" id="" cols="60" rows="10"><?php echo $aboutUs2 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+
+
     <hr class="solid">
+
+
 
     <h2>
         Contact

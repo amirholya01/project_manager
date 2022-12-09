@@ -18,7 +18,7 @@ $productsTitle = '';
 $aboutusSubtitle = '';
 $aboutusTitle = '';
 
-$aboutUs = '';
+$aboutUs1 = '';
 
 $contactSubtitle = '';
 $contactTitle = '';
@@ -57,11 +57,17 @@ foreach($dataset as $data){
     if($data['id'] == 'aboutusSubtitle'){
         $aboutusSubtitle = $data['text'];
     }
+    if($data['id'] == 'aboutusSlogan'){
+        $aboutusSlogan = $data['text'];
+    }
     if($data['id'] == 'aboutusTitle'){
         $aboutusTitle = $data['text'];
     }
-    if($data['id'] == 'aboutUs'){
-        $aboutUs = $data['text'];
+    if($data['id'] == 'aboutUs1'){
+        $aboutUs1 = $data['text'];
+    }
+    if($data['id'] == 'aboutUs2'){
+        $aboutUs2 = $data['text'];
     }
     if($data['id'] == 'contactSubtitle'){
         $contactSubtitle = $data['text'];

@@ -106,7 +106,8 @@ CREATE TABLE IF NOT EXISTS `frontpage` (
 --
 
 INSERT INTO `frontpage` (`id`, `text`) VALUES
-('aboutUs', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! '),
+('aboutUs1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! '),
+('aboutUs2', 'The custom ties  products are made to order, making us more sustainable and friendly to our beloved nature. This not only impacts our footprint by minimizing the waste we leave behind making your product, but as well will make it so you have one of a kind product.  Our production approach allows us to make sure you get your bow ties without depending on other distributors as the whole production is done by us. '),
 ('phone', '+45 53 52 52 39'),
 ('nav1', 'HOME'),
 ('nav2', 'PRODUCTS'),
@@ -115,7 +116,8 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
 ('aboutusSubtitle', 'ABOUT US'),
-('aboutusTitle', 'THE COUSTUME BOWTIE'),
+('aboutusTitle', 'THE COUSTUME TIE'),
+('aboutusSlogan', 'Unique ties that are made with love'),
 ('contactSubtitle', 'CONTACT US'),
 ('contactTitle', 'YOU CAN ASK US ABOUT EVERYTHING'),
 ('address', 'Esbjerg 6700, Denmark'),

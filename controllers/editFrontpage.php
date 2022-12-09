@@ -1,12 +1,22 @@
 <?php
 
-if(isset($_POST['aboutUs'])){
-    $text = $stringSanitation->sanitice($_POST['aboutUs']);
+if(isset($_POST['aboutUs1'])){
+    $text = $stringSanitation->sanitice($_POST['aboutUs1']);
 
     $validStrings = $stringSanitation->getValidationStatus();
 
     if($validStrings == true){
-        $FrontpageHandler->editAboutUs($text);
+        $FrontpageHandler->editAboutUs1($text);
+    }
+}
+
+if(isset($_POST['aboutUs2'])){
+    $text = $stringSanitation->sanitice($_POST['aboutUs2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutUs2($text);
     }
 }
 
@@ -106,7 +116,7 @@ if(isset($_POST['aboutusTitle'])){
     $validStrings = $stringSanitation->getValidationStatus();
 
     if($validStrings == true){
-        $FrontpageHandler->editAboutUsTitle($text);
+        $FrontpageHandler->editAboutusTitle($text);
     }
 }
 

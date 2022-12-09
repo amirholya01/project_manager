@@ -86,12 +86,20 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
 
-    public function editAboutUs($aboutUs){
+    public function editAboutUs1($aboutUs1){
         $update = $this->db->prepare($this->UniversalEditQuery);
-        $id = 'aboutUs';
-        $update->bindParam(":text", $aboutUs);
+        $id = 'aboutUs1';
+        $update->bindParam(":text", $aboutUs1);
         $update->bindParam(":id", $id);
         $update->execute();
+    }
+
+    public function editAboutUs2($aboutUs2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutUs2';
+        $update->bindParam(":text", $aboutUs2);
+        $update->bindParam(":id", $id);
+        $update->execute(); 
     }
 
     public function editProductsSubTitle($title){
@@ -118,10 +126,18 @@ class FrontpageHandler extends Frontpage{
         $update->bindParam(":id", $id);
         $update->execute();
     }
-    
-    public function editAboutUsTitle($title){
+
+    public function editAboutusTitle($title){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutusTitle';
+        $update->bindParam(":text", $title);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+    
+    public function editAboutUsSlogan($title){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutusSlogan';
         $update->bindParam(":text", $title);
         $update->bindParam(":id", $id);
         $update->execute();

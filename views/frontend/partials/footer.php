@@ -9,9 +9,9 @@
                 <div class="footer-top">
                     <div class="row">
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
-                            <h6 class="h6 light">About us</h6>
+                            <h6 class="h6 light"><?php echo $aboutusSubtitle ?></h6>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2 light fulltransparent">Integer posuere orci sit amet feugiat pellent que. Suspendisse vel tempor justo, sit amet</div>
+                            <div class="simple-article size-2 light fulltransparent"><?php echo $aboutusSlogan ?></div>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
@@ -47,9 +47,9 @@
                         <div class="col-sm-6 col-md-3">
                             <h6 class="h6 light">Contact us</h6>
                             <div class="empty-space col-xs-b20"></div>
-                                <div class="footer-contact"><i class="fa fa-mobile" aria-hidden="true"></i> contact us: <a href="tel:+4553525239"><?php echo $frontpage[1]["text"] ?></a></div>
-                                <div class="footer-contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> email: <a href="mailto:thecostumebowtie@gmail.com"><?php echo $frontpage[14]["text"] ?></a></div>
-                                <div class="footer-contact"><i class="fa fa-map-marker" aria-hidden="true"></i> address: <a href="#"><?php echo $frontpage[12]["text"] ?></a></div>
+                                <div class="footer-contact"><i class="fa fa-mobile" aria-hidden="true"></i> contact us: <a href="tel:+4553525239"><?php echo $phone ?></a></div>
+                                <div class="footer-contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> email: <a href="mailto:thecostumebowtie@gmail.com"><?php echo $email ?></a></div>
+                                <div class="footer-contact"><i class="fa fa-map-marker" aria-hidden="true"></i> address: <a href="#"><?php echo $address ?></a></div>
                         </div>
                     </div>
                     <div class="footer-contact-div">

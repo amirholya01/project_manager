@@ -40,11 +40,11 @@
                         <div class="col-md-5 hidden-xs hidden-sm">
                             <div class="entry">
                                 <b>contact us:</b>
-                                <a href="tel:+4553525239"><?php echo $frontpage[1]["text"] ?></a>
+                                <a href="tel:+4553525239"><?php echo $phone ?></a>
                             </div>
                             <div class="entry">
                                 <b>email:</b> 
-                                <a href="mailto:thecostumebowtie@gmail.com"><?php echo $frontpage[14]["text"] ?></a>
+                                <a href="mailto:thecostumebowtie@gmail.com"><?php echo $email ?></a>
                             </div>
                         </div>
 
@@ -179,16 +179,16 @@
                                 <nav>
                                     <ul>
                                         <li <?php echo $pageName == "Home" ? 'class="active"' : "" ?>>
-                                            <a href="/"><?php echo $frontpage[2]["text"] ?></a>
+                                            <a href="/"><?php echo $nav1 ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "Product" ? 'class="active"' : "" ?>>
-                                            <a href="Product"><?php echo $frontpage[3]["text"] ?></a>
+                                            <a href="Product"><?php echo $nav2 ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "About Us" ? 'class="active"' : "" ?>>
-                                            <a href="AboutUS"><?php echo $frontpage[4]["text"] ?></a>
+                                            <a href="AboutUS"><?php echo $nav3 ?></a>
                                         </li>
                                         <li style="margin-left: 2px;" <?php echo $pageName == "Contact Us" ? 'class="active"' : "" ?>>
-                                            <a href="Contact"><?php echo $frontpage[5]["text"] ?></a>
+                                            <a href="Contact"><?php echo $nav4 ?></a>
                                         </li>
                                     </ul>
                                     <div class="navigation-title">
