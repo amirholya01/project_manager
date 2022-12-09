@@ -77,11 +77,15 @@
 <div class="empty-space col-xs-b25 col-sm-b50"></div>
 <div class="empty-space col-xs-b25 col-sm-b50"></div>
 
+<?php
+if (isset($_SESSION['name'])) {
+?>
 <div class="container">
     <h4 class="h4 text-center col-xs-b25">have a questions?</h4>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <form class="contact-form" method="POST" action="contactSubmit">
+                <input type="hidden" value="true" name="validated" />
                 <div class="row m5">
                     <div class="col-sm-6">
                         <input class="simple-input col-xs-b20" type="text" value="" placeholder="Name" name="name" />
@@ -115,6 +119,16 @@
         </div>
     </div>
 </div>
+<?php
+    } else {
+?>
+<div class="container">
+    <h4 class="h4 text-center col-xs-b25">have a questions?</h4>
+    <p class="text-center">Login and send us a message</p>
+</div>
+<?php
+    }
+?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
