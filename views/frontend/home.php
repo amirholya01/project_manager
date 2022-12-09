@@ -257,7 +257,7 @@
                                         <h3 class="h3 col-xs-b15"><?php echo $Sale['title'] ?></h3>
                                         <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
                                         <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
-                                        <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
+                                        <div class="simple-article size-3 col-xs-b30"><?php echo $Sale['description'] ?></div>
                                         <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
                                         <div class="buttons-wrapper">
                                             <a class="button size-2 style-2" href="#">

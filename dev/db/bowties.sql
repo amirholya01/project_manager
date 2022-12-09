@@ -252,6 +252,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `title` varchar(100) COLLATE utf8_bin NOT NULL,
   `start` date NOT NULL,
   `end` date NOT NULL,
+  `description` text COLLATE utf8_bin,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
