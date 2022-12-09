@@ -21,7 +21,7 @@
         $UsersHandler->createUser($name, $password, 0);
         
         $_SESSION['name'] = $name;
-        $_SESSION['loggedin'] = "true";
+        $_SESSION['loggedin'] = true;
         
         header("Location: /");
     }else{

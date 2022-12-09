@@ -19,7 +19,7 @@
             i send createNews to tell the controller that it should run create user
         -->
         <div class="Admin-search-product">
-            <input class="input" type="hidden" name="validated" value="true">
+            <input class="input" type="hidden" name="validate" value="true">
             <input class="input" type="hidden" name="createNews" value="true">
 
             <input class="input" type="text" name="createTitle" placeholder="Title">

@@ -6,9 +6,9 @@
     require $rootPath . "public/dbconn.php";
     
     /* If logged in then log out and redirect to front page */
-    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == "true"){
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
         $_SESSION["name"] = null;
-        $_SESSION["loggedin"] = "false";
+        $_SESSION["loggedin"] = false;
         header("Location:/");
     }
 

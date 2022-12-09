@@ -85,7 +85,7 @@ if (isset($_SESSION['name'])) {
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <form class="contact-form" method="POST" action="contactSubmit">
-                <input type="hidden" value="true" name="validated" />
+                <input type="hidden" value="true" name="validate" />
                 <div class="row m5">
                     <div class="col-sm-6">
                         <input class="simple-input col-xs-b20" type="text" value="" placeholder="Name" name="name" />

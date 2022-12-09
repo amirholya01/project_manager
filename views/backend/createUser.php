@@ -17,7 +17,7 @@
         -->
 
         <div class="Admin-search-product">
-            <input class="input" type="hidden" name="validated" value="true">
+            <input class="input" type="hidden" name="validate" value="true">
             <input class="input" type="hidden" name="createUser" value="true">
 
             <input class="input" type="text" name="createName" placeholder="Username">

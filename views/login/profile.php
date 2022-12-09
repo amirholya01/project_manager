@@ -9,7 +9,7 @@
 
 <?php 
     //if logged in redirect to /
-    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == "false"){
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] == false){
         header("Location:/");
     }
 ?>

@@ -24,7 +24,7 @@
     if($data[0]['name']){
         //login
         $_SESSION["name"] = $data[0]['name'];
-        $_SESSION["loggedin"] = "true";
+        $_SESSION["loggedin"] = true;
 
         if($data[0]['role'] == 1){
             header("Location: /adminFrontpage");

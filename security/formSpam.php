@@ -2,12 +2,11 @@
 
 $validated = false;
 
-//bad naming on validated
 /* 
     it means that when we send in an form it should have a hidden input
     called "validated", if this input is send in it will trigger this file
 */
-if(isset($_POST['validated'])){
+if(isset($_POST['validate'])){
     if( isset($_SESSION['name']) ){
         $name = $_SESSION['name'];
         
