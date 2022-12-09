@@ -14,7 +14,7 @@ class FrontpageHandler extends Frontpage{
     public function __construct($db) {
         $this->db = $db;
     }
-
+/* 
     public function editPhoneNumber($phone){
         $update = $this->db->prepare($this->);
         $update->bindParam(":", $phone);
@@ -105,7 +105,7 @@ class FrontpageHandler extends Frontpage{
         $update = $this->db->prepare($this->);
         $update->bindParam(":", $title);
         $update->execute();
-    }
+    } */
     
 }
 
