@@ -249,18 +249,14 @@
                                 <div class="row vertical-aligned-columns">
                                     <div class="col-sm-6 col-xs-b30 col-sm-b0">
                                         
-
-                                    <?php 
-                                        /* Loop through the Discounts */
-                                        foreach($products as $product){
+                                    <?php
+                                    /* Exception this can´t be in controllers */
+                                    $productsOnSale = $ProductsHandler->getProductSalesBySaleId($Sale['id']);
+                                    $productOnSale = $ProductsHandler->getProducts('', $productsOnSale[0]['product_id']);
+                                    
+                                    echo $productOnSale[0]['primary_image'];
                                     ?>
-                                    <?php 
-                                        $image = explode(".", $product['primary_image']);
-                                    ?>
-                                    <img class="discount-image" src="uploads/<?php echo $product['primary_image'] ?>" alt="">
-                                    <?php 
-                                        }
-                                    ?>
+                                    <img class="discount-image" src="uploads/<?php echo $productOnSale[0]['primary_image']; ?>" alt="">
 
                                     </div>
                                     <div class="col-sm-6 col-md-4 col-md-offset-2">
