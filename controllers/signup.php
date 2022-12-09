@@ -5,10 +5,15 @@
         $rootPath = "../$rootPath";
     }
     require $rootPath . "public/dbconn.php";
-    require $rootPath . "models/users.php";
+    require $rootPath . "models/handlers/UsersHandler.php";
     
     $name = $_POST['name'];
-    $password = $_POST['password'];
+    //$password = $_POST['password'];
+    
+    /*🔥 Validate password! */
+    /* The salt is pretty low, should be higher in none testing environment */
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT, ["cost" => 5]);
+    echo ($password);
 
     $data = $UsersHandler->checkIfUserExists($name);
 

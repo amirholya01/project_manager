@@ -20,7 +20,12 @@
 ?>
 
 <div class="wrapper frontpage">
-
+    <h3>
+        WARNING! <br>
+        You can only fill out one formular at a time <br>
+        Upon submission all other fields will be resat <br>
+        Work in progress of a better solution
+    </h3>
     <h2>
         Header
     </h2>

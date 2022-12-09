@@ -4,7 +4,7 @@ $validated = false;
 
 /* 
     it means that when we send in an form it should have a hidden input
-    called "validated", if this input is send in it will trigger this file
+    called "validate", if this input is send in it will trigger this file
 */
 if(isset($_POST['validate'])){
     if( isset($_SESSION['name']) ){
