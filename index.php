@@ -24,6 +24,14 @@
         $_SESSION['prevpage']= "";
     }
 
+    if(!isset($_SESSION['cart'])){
+        $_SESSION['cart'] = array();
+    }
+
+    if(!isset($_SESSION["adminLayout"])){
+        $_SESSION["adminLayout"] = false;
+    }
+
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
 
@@ -67,5 +75,7 @@
     
     $router->get('/adminCreateNews', 'views/backend/createNews');
     $router->get('/adminEditNews', 'views/backend/editNews');
+
+    $router->get('/addToCart', 'controllers/addToCart');
     
 

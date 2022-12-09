@@ -115,12 +115,15 @@
                                                 </span>
                                             </button>
                                         </form>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
+                                        <form class="button size-2 style-3" action="addToCart" method="POST">
+                                            <input type="hidden" name="product" value="<?php echo $product['products_id'] ?>">
+                                            <button class="product-button" type="submit">
+                                                <span class="button-wrapper">
+                                                    <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
+                                                    <span class="text">Add To Cart</span>
+                                                </span>
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
