@@ -146,7 +146,7 @@
         <input class="input" type="text" name="address" placeholder="Address" value="<?php echo $address ?>">
         <input class="input" type="text" name="phone" placeholder="Phone" value="<?php echo $phone ?>">
         <input class="input" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
-        <input type="text" name="follow" placeholder="Follow us" value="<?php echo $follow ?>">
+        <input class="input" type="text" name="follow" placeholder="Follow us" value="<?php echo $follow ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
