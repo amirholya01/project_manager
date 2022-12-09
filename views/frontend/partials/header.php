@@ -50,11 +50,31 @@
 
                         <!-- HEADER Login/Register - Shooping Bag -->
                         <div class="col-md-7 col-md-text-right">
-                            <div class="entry">
-                                <a class="open-popup" data-rel="1"><b>login</b></a>
-                                &nbsp; or &nbsp;
-                                <a class="open-popup" data-rel="2"><b>register</b></a>
-                            </div>
+                            <?php
+                                if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true) {
+                            ?>
+                                    <div class="entry">
+                                        <a class="open-popup" data-rel="1"><b>login</b></a>
+                                        &nbsp; or &nbsp;
+                                        <a class="open-popup" data-rel="2"><b>register</b></a>
+                                    </div>
+                            <?php
+                                } else {
+                            ?>
+                                    <div class="entry">
+                                        <?php
+                                            if ($_SESSION["adminLayout"] == true){
+                                        ?>
+                                        <a href="/adminFrontpage"><b>Admin Page</b></a>
+                                        &nbsp; or &nbsp;
+                                        <?php
+                                            }
+                                        ?>
+                                        <a href="/logoutFunction"><b>Log out</b></a>
+                                    </div>
+                            <?php
+                                }
+                            ?>
 
                             <div class="entry hidden-xs hidden-sm cart">
 

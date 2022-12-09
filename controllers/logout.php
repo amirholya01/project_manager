@@ -9,6 +9,7 @@
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
         $_SESSION["name"] = null;
         $_SESSION["loggedin"] = false;
+        $_SESSION["adminLayout"] = false;
         header("Location:/");
     }
 
