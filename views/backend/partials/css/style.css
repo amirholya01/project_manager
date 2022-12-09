@@ -111,9 +111,9 @@ a:link {
 }
 
 hr.solid {
-  border-top: 3px solid #bbb;
+  border: 2px solid #B2A6CE;
   width: 90%;
-  margin: 40px 0 50px 0;
+  margin: 50px 0 50px 0;
 }
 
 .frontpage h2{
