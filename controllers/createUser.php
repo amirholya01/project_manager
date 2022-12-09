@@ -6,7 +6,6 @@
 if( isset( $_POST['createUser'] ) ){
     /* Gets the data from the post request */
     $name = $_POST['createName'];
-    $password = $_POST['createPassword'];
     $role = $_POST['createRole'];
 
     $data = $UsersHandler->checkIfUserExists($name);
@@ -22,6 +21,11 @@ if( isset( $_POST['createUser'] ) ){
 
     if($validName && $name != "" && $name != null){
         /* Creates the user in the db */
+
+        /*🔥 Validate password and name and role! */
+        /* The salt is pretty low, should be higher in none testing environment */
+        $password = password_hash($_POST['createPassword'], PASSWORD_BCRYPT, ["cost" => 5]);
+
         $UsersHandler->createUser($name, $password, $role);
     }
 }

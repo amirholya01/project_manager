@@ -13,7 +13,6 @@
     /*🔥 Validate password! */
     /* The salt is pretty low, should be higher in none testing environment */
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT, ["cost" => 5]);
-    echo ($password);
 
     $data = $UsersHandler->checkIfUserExists($name);
 
