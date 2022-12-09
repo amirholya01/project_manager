@@ -12,6 +12,8 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
+    require_once $rootPath . "controllers/createSale.php";
+
     require_once $rootPath . "controllers/editSale.php";
     require_once $rootPath . "controllers/deleteSale.php";
     
@@ -38,7 +40,7 @@
             <button class="button" name="action" value="delete" type="submit">Delete</button>
         </div>
     </form>
-    <form method="POST" action="adminProducts">
+    <form method="POST" action="adminSale">
         
         <div class="Admin-page-title">
             <h1>Create Sale</h1>
@@ -49,6 +51,7 @@
                 <input class="input" type="text" name="title" placeholder="Title">
                 From <input class="input" type="date" name="start" placeholder="Starts">
                 To <input class="input" type="date" name="end" placeholder="Ends">
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
                 <input class="button submit" type="submit">
             </div>
             <div class="Reset_create_div"> <!-- ✒️ should be in the top right corner and not the middle of the page -->

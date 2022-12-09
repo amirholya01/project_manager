@@ -4,6 +4,7 @@
 if( isset( $_POST['createSale'] ) ){
     /* Gets all the values from the post request */
     $title = $stringSanitation->sanitice($_POST['title']);
+    $description = $stringSanitation->sanitice($_POST['description']);
     $start = $_POST['start']; /* 🔥 needs sanitation */
     $end = $_POST['end']; /* 🔥 needs sanitation */
 
@@ -22,7 +23,7 @@ if( isset( $_POST['createSale'] ) ){
 
         } */
         if((count($product_ids) + count($sales)) / 2 == count($saleTypes)){
-            $ProductsHandler->createSale($title, $start, $end, $product_ids, $sales, $saleTypes);
+            $ProductsHandler->createSale($title, $description, $start, $end, $product_ids, $sales, $saleTypes);
         } else {
             echo "Ehhh somethings burning!";
         }

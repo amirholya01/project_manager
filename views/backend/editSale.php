@@ -31,6 +31,7 @@
                 <input class="input" type="text" name="title" value="<?php echo $saleData['title']; ?>" placeholder="Title">
                 From <input class="input" type="date" name="start" value="<?php echo $saleData['start']; ?>" placeholder="Starts">
                 To <input class="input" type="date" name="end" value="<?php echo $saleData['end']; ?>" placeholder="Ends">
+                <textarea name="description" id="" cols="30" rows="10"><?php echo $saleData['description']; ?></textarea>
                 <input class="button submit" type="submit">
             </div>
             <div class="Reset_create_div"> <!-- ✒️ should be in the top right corner and not the middle of the page -->
