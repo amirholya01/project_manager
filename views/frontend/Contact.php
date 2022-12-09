@@ -81,7 +81,7 @@
     <h4 class="h4 text-center col-xs-b25">have a questions?</h4>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <form class="contact-form">
+            <form class="contact-form" method="POST" action="contactSubmit">
                 <div class="row m5">
                     <div class="col-sm-6">
                         <input class="simple-input col-xs-b20" type="text" value="" placeholder="Name" name="name" />
