@@ -38,7 +38,7 @@ class Products{
 
     public $updateMediaQuery = "UPDATE media SET name = :name WHERE media_id = :media_id;";
 
-
+    /* ✒️ This should disable the product instead of deleting it for the purchase history to still be able to refrence it */
     public $deleteProductByIdQuery = "DELETE FROM products WHERE `products_id` = :id;";
 
     public $deleteMediaByIdQuery = "DELETE FROM media WHERE `media_id` = :id;";

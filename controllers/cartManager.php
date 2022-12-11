@@ -38,8 +38,12 @@ foreach($roughProductSales as $sale){
     /* Refine the prices. cut % of price to get the new price */
     if($sale['saleType'] == '%') {
         $prod = $ProductsHandler->getProducts('', $sale['product_id']);
-        $originalPrice = $prod[0]['price'];
-        $newPrice = $originalPrice - (($originalPrice / 100) * $sale['sale']);
+        if(isset($prod[0])){
+            $originalPrice = $prod[0]['price'];
+            $newPrice = $originalPrice - (($originalPrice / 100) * $sale['sale']);
+        } else {
+            $newPrice = 0;
+        }
     } else {
         $newPrice = $sale['sale'];
     }
@@ -79,23 +83,26 @@ foreach($_SESSION['cart'] as $item){
     /* Takes the product ids $_SESSION['cart'] and turn them into the intire product */
     $product = $ProductsHandler->getProducts('', $item['product']);
 
-    /* Checks if the product has a discount */
-    foreach($productSales as $sale){
-        if($sale['product_id'] == $item['product']){
-            $product[0]['price'] = $sale['sale'];
+    /* Checks if the product have been removed from the database */
+    if(isset($product[0])){
+        /* Checks if the product has a discount */
+        foreach($productSales as $sale){
+            if($sale['product_id'] == $item['product']){
+                $product[0]['price'] = $sale['sale'];
+            }
         }
+    
+        /* Makes a new array that contains the intire product, quantity and total cost */
+        $newItem = array(
+            'product' => $product,
+            'quantity' => $item['quantity'],
+            'total' => $product[0]['price'] * $item['quantity']
+        );
+    
+        /* Push the product array to the cart */
+        array_push($cart, $newItem);
+    
+        /* Update total price */
+        $total += $product[0]['price'] * $item['quantity'];
     }
-
-    /* Makes a new array that contains the intire product, quantity and total cost */
-    $newItem = array(
-        'product' => $product,
-        'quantity' => $item['quantity'],
-        'total' => $product[0]['price'] * $item['quantity']
-    );
-
-    /* Push the product array to the cart */
-    array_push($cart, $newItem);
-
-    /* Update total price */
-    $total += $product[0]['price'] * $item['quantity'];
 }

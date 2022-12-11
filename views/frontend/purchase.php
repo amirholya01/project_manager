@@ -1,6 +1,12 @@
 <?php
-    /* Check if info was correctly filled out */
     $passValidation = true;
+
+    /* Check if cart is empty */
+    if($_SESSION['cart'] == array()){
+        $passValidation = false;
+    }
+
+    /* Check if info was correctly filled out */
     if(isset($_POST['country']) && $_POST['country'] == ''){
         $passValidation = false;
     }
