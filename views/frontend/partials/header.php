@@ -117,6 +117,11 @@
                                                                 <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
                                                                 <button type="submit">X</button>
                                                             </form>
+                                                            <form action="/editQuantityInCart" method="POST">
+                                                                <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
+                                                                <input type="number" name="quantity" value="<?php echo $item['quantity'] ?>">
+                                                                <button type="submit">edit</button>
+                                                            </form>
                                                         </td>
                                                     </tr>
                                                 </table>
