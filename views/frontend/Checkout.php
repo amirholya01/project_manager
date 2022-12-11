@@ -24,6 +24,7 @@
 
 
         <!-- impelementing the sitemap with a for loop (breadcrumb) -->
+        <form id="purchase" action="/purchase" method="POST"></form>
         <div class="breadcrumbs margin-15-left">
             <?php 
             for($i = 0; $i < count($_SESSION['breadcrumbs']); $i++){
@@ -47,55 +48,55 @@
             <div class="row">
                 <div class="col-md-6 col-xs-b50 col-md-b0">
                     <h4 class="h4 col-xs-b25">billing details</h4>
-                    <select class="SlectBox">
+                    <select class="SlectBox" form="purchase" name="country">
                         <option disabled="disabled" selected="selected">Choose country</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                        <option value="denmark">Denmark</option>
+                        <option value="atlantis">Atlantis</option>
+                        <option value="USA">USA</option>
+                        <option value="No where">No where</option>
                     </select>
                     <div class="empty-space col-xs-b20"></div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="First name" />
+                            <input class="simple-input" type="text" value="" placeholder="First name" name="firstname" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Last name" />
+                            <input class="simple-input" type="text" value="" placeholder="Last name" name="lastname" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
-                    <input class="simple-input" type="text" value="" placeholder="Company name" />
+                    <input class="simple-input" type="text" value="" placeholder="Company name" name="company" form="purchase"/>
                     <div class="empty-space col-xs-b20"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Street address" />
+                    <input class="simple-input" type="text" value="" placeholder="Street address" name="address" form="purchase"/>
                     <div class="empty-space col-xs-b20"></div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Appartment" />
+                            <input class="simple-input" type="text" value="" placeholder="Appartment" name="appartment" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Town/City" />
-                            <div class="empty-space col-xs-b20"></div>
-                        </div>
-                    </div>
-                    <div class="row m10">
-                        <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="State/Country" />
-                            <div class="empty-space col-xs-b20"></div>
-                        </div>
-                        <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" />
+                            <input class="simple-input" type="text" value="" placeholder="Town/City" name="city" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Email" />
+                            <input class="simple-input" type="text" value="" placeholder="State/Country" name="state" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Phone" />
+                            <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" name="postcode" form="purchase"/>
+                            <div class="empty-space col-xs-b20"></div>
+                        </div>
+                    </div>
+                    <div class="row m10">
+                        <div class="col-sm-6">
+                            <input class="simple-input" type="text" value="" placeholder="Email" name="email" form="purchase"/>
+                            <div class="empty-space col-xs-b20"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="simple-input" type="text" value="" placeholder="Phone" name="phone" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
@@ -104,172 +105,113 @@
                     </label>
                     <div class="empty-space col-xs-b50"></div>
                     <label class="checkbox-entry checkbox-toggle-title">
-                        <input type="checkbox"><span>ship to different address?</span>
+                        <input type="checkbox" value="true" name="altAddress"><span>ship to different address?</span>
                     </label>
                     <div class="checkbox-toggle-wrapper">
                         <div class="empty-space col-xs-b25"></div>
-                        <select class="SlectBox">
+                        <select class="SlectBox" form="purchase" name="altCountry">
                             <option disabled="disabled" selected="selected">Choose country</option>
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
+                            <option value="denmark">Denmark</option>
+                            <option value="atlantis">Atlantis</option>
+                            <option value="USA">USA</option>
+                            <option value="No where">No where</option>
                         </select>
                         <div class="empty-space col-xs-b20"></div>
                         <div class="row m10">
                             <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="First name" />
+                                <input class="simple-input" type="text" value="" placeholder="First name" name="altFirstname" form="purchase"/>
                                 <div class="empty-space col-xs-b20"></div>
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="Last name" />
-                                <div class="empty-space col-xs-b20"></div>
-                            </div>
-                        </div>
-                        <input class="simple-input" type="text" value="" placeholder="Company name" />
-                        <div class="empty-space col-xs-b20"></div>
-                        <input class="simple-input" type="text" value="" placeholder="Street address" />
-                        <div class="empty-space col-xs-b20"></div>
-                        <div class="row m10">
-                            <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="Appartment" />
-                                <div class="empty-space col-xs-b20"></div>
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="Town/City" />
+                                <input class="simple-input" type="text" value="" placeholder="Last name" name="altLastname" form="purchase"/>
                                 <div class="empty-space col-xs-b20"></div>
                             </div>
                         </div>
+                        <input class="simple-input" type="text" value="" placeholder="Company name" name="altCompany" form="purchase"/>
+                        <div class="empty-space col-xs-b20"></div>
+                        <input class="simple-input" type="text" value="" placeholder="Street address" name="altAddress" form="purchase"/>
+                        <div class="empty-space col-xs-b20"></div>
                         <div class="row m10">
                             <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="State/Country" />
+                                <input class="simple-input" type="text" value="" placeholder="Appartment" name="altAppartment" form="purchase"/>
                                 <div class="empty-space col-xs-b20"></div>
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" />
+                                <input class="simple-input" type="text" value="" placeholder="Town/City" name="altCity" form="purchase"/>
+                                <div class="empty-space col-xs-b20"></div>
+                            </div>
+                        </div>
+                        <div class="row m10">
+                            <div class="col-sm-6">
+                                <input class="simple-input" type="text" value="" placeholder="State/Country" name="altState" form="purchase"/>
+                                <div class="empty-space col-xs-b20"></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" name="altPostcode" form="purchase"/>
                                 <div class="empty-space col-xs-b20"></div>
                             </div>
                         </div>
                     </div>
                     <div class="empty-space col-xs-b30 col-sm-b60"></div>
-                    <textarea class="simple-input" placeholder="Note about your order"></textarea>
+                    <textarea class="simple-input" form="purchase" name="note" placeholder="Note about your order"></textarea>
                 </div>
                 <div class="col-md-6">
                     <h4 class="h4 col-xs-b25">your order</h4>
+                    <?php 
+                        foreach($cart as $item){
+                    ?>
                     <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-1.png" alt=""></a>
+                        <?php $image = explode(".", $item['product'][0]['primary_image']) ?>
+                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>" alt=""></a>
                         <div class="cart-entry-description">
                             <table>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                            <div class="simple-article size-1">QUANTITY: 2</div>
+                                            <div class="h6"><a href="#"><?php echo $item['product'][0]['name'] ?></a></div>
+                                            <div class="simple-article size-1">QUANTITY: <?php echo $item['quantity'] ?></div>
                                         </td>
                                         <td>
-                                            <div class="simple-article size-3 grey">$155.00</div>
-                                            <div class="simple-article size-1">TOTAL: $310.00</div>
+                                            <div class="simple-article size-3 grey"><?php echo $item['product'][0]['price'] ?> DKK</div>
+                                            <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?> DKK</div>
                                         </td>
                                         <td>
-                                            <div class="cart-color" style="background: #eee;"></div>
+                                            <form action="/removeFromCart" method="POST">
+                                                <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
+                                                <button type="submit">X</button>
+                                            </form>
+                                            <form action="/editQuantityInCart" method="POST">
+                                                <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
+                                                <input type="number" name="quantity" value="<?php echo $item['quantity'] ?>">
+                                                <button type="submit">edit</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-2.png" alt=""></a>
-                        <div class="cart-entry-description">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                            <div class="simple-article size-1">QUANTITY: 2</div>
-                                        </td>
-                                        <td>
-                                            <div class="simple-article size-3 grey">$155.00</div>
-                                            <div class="simple-article size-1">TOTAL: $310.00</div>
-                                        </td>
-                                        <td>
-                                            <div class="cart-color" style="background: #bf584b;"></div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="cart-entry clearfix">
-                        <a class="cart-entry-thumbnail Cart-image" href="#"><img src="assets/img/product-3.png" alt=""></a>
-                        <div class="cart-entry-description">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="h6"><a href="#">modern beat ht</a></div>
-                                            <div class="simple-article size-1">QUANTITY: 2</div>
-                                        </td>
-                                        <td>
-                                            <div class="simple-article size-3 grey">$155.00</div>
-                                            <div class="simple-article size-1">TOTAL: $310.00</div>
-                                        </td>
-                                        <td>
-                                            <div class="cart-color" style="background: #facc22;"></div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="order-details-entry simple-article size-3 grey uppercase">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                cart subtotal
-                            </div>
-                            <div class="col-xs-6 col-xs-text-right">
-                                <div class="color">$1195.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-details-entry simple-article size-3 grey uppercase">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                shipping and handling
-                            </div>
-                            <div class="col-xs-6 col-xs-text-right">
-                                <div class="color">free shipping</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-details-entry simple-article size-3 grey uppercase">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                order total
-                            </div>
-                            <div class="col-xs-6 col-xs-text-right">
-                                <div class="color">$1195.00</div>
-                            </div>
-                        </div>
+                    <?php 
+                        }
+                    ?>
+                    <br>
+                    <div class="simple-article size-5 grey"> TOTAL
+                        <span class="color"><?php echo $total ?> DKK</span>
                     </div>
                     <div class="empty-space col-xs-b50"></div>
                     <h4 class="h4 col-xs-b25">payment method</h4>
                     <select class="SlectBox">
-                        <option selected="selected">PayPal</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                        <option selected="selected">Bank transfer</option>
                     </select>
                     <div class="empty-space col-xs-b10"></div>
-                    <div class="simple-article size-2">* Etiam mollis tristique mi ac ultrices. Morbi vel neque eget lacus sollicitudin facilisis. Lorem ipsum dolor sit amet semper ante vehicula ociis natoq.</div>
+                    <div class="simple-article size-2">* The transfer details will be send to you through email once you have placed the order. we will start packing the package once we have gotten the money.</div>
                     <div class="empty-space col-xs-b30"></div>
                     <div class="button block size-2 style-3">
                         <span class="button-wrapper">
                             <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
                             <span class="text">place order</span>
                         </span>
-                        <input type="submit"/>
+                        <input type="submit" form="purchase"/>
                     </div>
                 </div>
             </div>

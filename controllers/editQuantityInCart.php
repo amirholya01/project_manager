@@ -8,7 +8,7 @@ $newCart = array();
 foreach($_SESSION['cart'] as $cart){
     if($cart['product'] != $_POST['id']){
         array_push($newCart, $cart);
-    }else{
+    }elseif($_POST['quantity'] > 0){
         $cart['quantity'] = $_POST['quantity'];
         array_push($newCart, $cart);
     }

@@ -82,9 +82,15 @@
 
                                 <a href="Checkout">
                                     <b class="hidden-xs">Your bag</b>
+                                    <?php
+                                        $amountOfItems = 0;
+                                        foreach($cart as $item){
+                                            $amountOfItems += $item['quantity'];
+                                        }
+                                    ?>
                                     <span class="cart-icon">
                                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                        <span class="cart-label">5</span>
+                                        <span class="cart-label"><?php echo $amountOfItems ?></span>
                                     </span>
                                     <span class="cart-title hidden-xs"><?php echo $total ?> DKK</span>
                                 </a>
@@ -110,7 +116,7 @@
                                                         </td>
                                                         <td>
                                                             <div class="simple-article size-3 grey"><?php echo $item['product'][0]['price'] ?> DKK</div>
-                                                            <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?></div>
+                                                            <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?> DKK</div>
                                                         </td>
                                                         <td>
                                                             <form action="/removeFromCart" method="POST">
