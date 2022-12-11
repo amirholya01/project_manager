@@ -34,10 +34,14 @@
               <h1>Edit News</h1>
         </div>
 
+<div class="choose-image">
+
         <?php
             for($i = 0; $i < count($mediaData); $i++){
                 $indData = $mediaData[$i];
         ?>
+
+            <div class="image">
                 <label for="<?php echo $indData['media_id']; ?>">
                     <div>
                         <p><?php echo $indData['name'] ?></p>
@@ -48,9 +52,13 @@
                     </div>
                 </label>
                 <input type="radio" <?php echo $indData['media_id'] == $_POST['media'] ? "checked" : "" ?> id="<?php echo $indData['media_id']; ?>" name="editMedia" value="<?php echo $indData['media_id']; ?>">
+            </div>
         <?php
             }
         ?>
+
+</div>
+
     </form>
 
 </div>

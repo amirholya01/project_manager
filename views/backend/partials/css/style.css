@@ -150,7 +150,9 @@ hr.solid {
   width: 150px !important;
 }
 
-
+.input-checkbox-hidden{
+  display: none;
+}
 
 .height-button{
   height: 45px;
@@ -235,7 +237,13 @@ figure{
 }
 
 .figure{
-  width: 300px !important;
+  width: 100% !important;
+}
+
+.alignment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 figure img{
@@ -260,13 +268,13 @@ figure img{
   margin-left: 30px;
 }
 
-.products{
+.products, .choose-image{
   display: flex;
   flex-wrap: wrap;
   margin: 80px 0;
 }
 
-.product{
+.product, .image{
   width: 20%;
   background: #ffffff;
   padding: 20px;
