@@ -52,6 +52,8 @@
     $router->get('/NewsShow', 'views/frontend/NewsShow');
     $router->get('/contactSubmit', 'controllers/contactForm');
     $router->get('/Breadcrumb', 'views/frontend/Breadcrumb');
+    $router->get('/removeFromCart', 'controllers/removeFromCart');
+    $router->get('/editQuantityInCart', 'controllers/editQuantityInCart');
 
     /* Admin */
     $router->get('/adminProducts', 'views/backend/products');

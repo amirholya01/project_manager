@@ -113,7 +113,15 @@
                                                             <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?></div>
                                                         </td>
                                                         <td>
-                                                            <div class="button-close"></div>
+                                                            <form action="/removeFromCart" method="POST">
+                                                                <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
+                                                                <button type="submit">X</button>
+                                                            </form>
+                                                            <form action="/editQuantityInCart" method="POST">
+                                                                <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
+                                                                <input type="number" name="quantity" value="<?php echo $item['quantity'] ?>">
+                                                                <button type="submit">edit</button>
+                                                            </form>
                                                         </td>
                                                     </tr>
                                                 </table>
