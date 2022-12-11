@@ -1,37 +1,34 @@
 <?php
     /* Check if info was correctly filled out */
     $passValidation = true;
-    if($_POST['country'] == ''){
+    if(isset($_POST['country']) && $_POST['country'] == ''){
         $passValidation = false;
     }
-    if($_POST['country'] == ''){
+    if($_POST['firstname'] == '' && isset($_POST['firstname'])){
         $passValidation = false;
     }
-    if($_POST['firstname'] == ''){
+    if($_POST['lastname'] == '' && isset($_POST['lastname'])){
         $passValidation = false;
     }
-    if($_POST['lastname'] == ''){
+    if($_POST['address'] == '' && isset($_POST['address'])){
         $passValidation = false;
     }
-    if($_POST['address'] == ''){
+    if($_POST['appartment'] == '' && isset($_POST['appartment'])){
         $passValidation = false;
     }
-    if($_POST['appartment'] == ''){
+    if($_POST['city'] == '' && isset($_POST['city'])){
         $passValidation = false;
     }
-    if($_POST['city'] == ''){
+    if($_POST['state'] == '' && isset($_POST['state'])){
         $passValidation = false;
     }
-    if($_POST['state'] == ''){
+    if($_POST['postcode'] == '' && isset($_POST['postcode'])){
         $passValidation = false;
     }
-    if($_POST['postcode'] == ''){
+    if($_POST['email'] == '' && isset($_POST['email'])){
         $passValidation = false;
     }
-    if($_POST['email'] == ''){
-        $passValidation = false;
-    }
-    if($_POST['phone'] == ''){
+    if($_POST['phone'] == '' && isset($_POST['phone'])){
         $passValidation = false;
     }
 
@@ -59,8 +56,10 @@
     require_once $rootPath . "controllers/frontpage.php"; 
 
     /* Purchase controller and send to db and email the customer */
+    require_once $rootPath . "controllers/purchase.php"; 
 
     /* reset cart */
+    //$cart = $_SESSION['cart']; if you need the cart in here at some point
     $_SESSION['cart'] = array();
 ?>
 
@@ -124,6 +123,12 @@
             echo "<br>";
             echo "Phone: ";
             echo $_POST['phone'];
+            echo "<br>";
+            if($_POST['note'] != ''){
+                echo "Note: ";
+                echo $_POST['note'];
+                echo "<br>";
+            }
         ?>
     </div>
 </div>
