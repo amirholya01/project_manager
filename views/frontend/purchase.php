@@ -1,5 +1,6 @@
 <?php
     $passValidation = true;
+    $error = false;
 
     /* Check if cart is empty */
     if($_SESSION['cart'] == array()){
@@ -7,34 +8,66 @@
     }
 
     /* Check if info was correctly filled out */
-    if(isset($_POST['country']) && $_POST['country'] == ''){
+    /* Could probably just be done with a loop 3: */
+    if(isset($_POST['policy'])){
+        if($_POST['policy'] != 'true'){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['firstname'] == '' && isset($_POST['firstname'])){
+    }if(isset($_POST['country'])){
+        if($_POST['country'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['lastname'] == '' && isset($_POST['lastname'])){
+    }if(isset($_POST['firstname'])){
+        if($_POST['firstname'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['address'] == '' && isset($_POST['address'])){
+    }if(isset($_POST['lastname'])){
+        if($_POST['lastname'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['appartment'] == '' && isset($_POST['appartment'])){
+    }if(isset($_POST['address'])){
+        if($_POST['address'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['city'] == '' && isset($_POST['city'])){
+    }if(isset($_POST['city'])){
+        if($_POST['city'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['state'] == '' && isset($_POST['state'])){
+    }if(isset($_POST['state'])){
+        if($_POST['state'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['postcode'] == '' && isset($_POST['postcode'])){
+    }if(isset($_POST['postcode'])){
+        if($_POST['postcode'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['email'] == '' && isset($_POST['email'])){
+    }if(isset($_POST['email'])){
+        if($_POST['email'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
-    }
-    if($_POST['phone'] == '' && isset($_POST['phone'])){
+    }if(isset($_POST['phone'])){
+        if($_POST['phone'] == ''){
+            $passValidation = false;
+        }
+    }else{
         $passValidation = false;
     }
 
@@ -85,8 +118,19 @@
 
 <div class="container">
     <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5">Thank you for</div>
-        <div class="h2">your order</div>
+        <?php
+            if($error == false){
+        ?>
+                <div class="simple-article size-3 grey uppercase col-xs-b5">Thank you for</div>
+                <div class="h2">your order</div>
+        <?php
+            }else{
+        ?>
+                <div class="simple-article size-3 grey uppercase col-xs-b5">Error</div>
+                <div class="h2">Something went wrong...</div>
+        <?php
+            }
+        ?>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>

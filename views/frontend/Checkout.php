@@ -58,50 +58,50 @@
                     <div class="empty-space col-xs-b20"></div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="First name" name="firstname" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="First name" name="firstname" form="purchase" required/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Last name" name="lastname" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="Last name" name="lastname" form="purchase" required/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
-                    <input class="simple-input" type="text" value="" placeholder="Company name" name="company" form="purchase"/>
+                    <input class="simple-input" type="text" value="" placeholder="Company name (Optional)" name="company" form="purchase"/>
                     <div class="empty-space col-xs-b20"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Street address" name="address" form="purchase"/>
+                    <input class="simple-input" type="text" value="" placeholder="Street address" name="address" form="purchase" required/>
                     <div class="empty-space col-xs-b20"></div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Appartment" name="appartment" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="Appartment (Optional)" name="appartment" form="purchase"/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Town/City" name="city" form="purchase"/>
-                            <div class="empty-space col-xs-b20"></div>
-                        </div>
-                    </div>
-                    <div class="row m10">
-                        <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="State/Country" name="state" form="purchase"/>
-                            <div class="empty-space col-xs-b20"></div>
-                        </div>
-                        <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" name="postcode" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="Town/City" name="city" form="purchase" required/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
                     <div class="row m10">
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Email" name="email" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="State/Country" name="state" form="purchase" required/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6">
-                            <input class="simple-input" type="text" value="" placeholder="Phone" name="phone" form="purchase"/>
+                            <input class="simple-input" type="text" value="" placeholder="Postcode/ZIP" name="postcode" form="purchase" required/>
+                            <div class="empty-space col-xs-b20"></div>
+                        </div>
+                    </div>
+                    <div class="row m10">
+                        <div class="col-sm-6">
+                            <input class="simple-input" type="text" value="" placeholder="Email" name="email" form="purchase" required/>
+                            <div class="empty-space col-xs-b20"></div>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="simple-input" type="text" value="" placeholder="Phone" name="phone" form="purchase" required/>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                     </div>
                     <label class="checkbox-entry">
-                        <input type="checkbox" checked><span>Privacy policy agreement</span>
+                        <input type="checkbox" value="true" name="policy" form="purchase" required><span>Privacy policy agreement</span>
                     </label>
                     <div class="empty-space col-xs-b50"></div>
                     <label class="checkbox-entry checkbox-toggle-title">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="empty-space col-xs-b30 col-sm-b60"></div>
-                    <textarea class="simple-input" form="purchase" name="note" placeholder="Note about your order"></textarea>
+                    <textarea class="simple-input" form="purchase" name="note" placeholder="Note about your order (Optional)"></textarea>
                 </div>
                 <div class="col-md-6">
                     <h4 class="h4 col-xs-b25">your order</h4>
@@ -206,12 +206,40 @@
                     <div class="empty-space col-xs-b10"></div>
                     <div class="simple-article size-2">* The transfer details will be send to you through email once you have placed the order. we will start packing the package once we have gotten the money.</div>
                     <div class="empty-space col-xs-b30"></div>
-                    <div class="button block size-2 style-3">
+                    <?php 
+                        $emptyCart = false;
+                        if($_SESSION['cart'] == array()){
+                            $emptyCart = true;
+                        }
+                    ?>
+                    <div class="button block size-2 style-3"
+                    <?php
+                        if($emptyCart == true){
+                            echo "style='background: gray !important;'";
+                        }
+                    ?>
+                    >
                         <span class="button-wrapper">
                             <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
-                            <span class="text">place order</span>
+                            <?php
+                                if($emptyCart == false){
+                            ?>
+                                <span class="text">place order</span>
+                            <?php
+                                } else {
+                            ?>
+                                <span class="text">Your cart is empty</span>
+                            <?php
+                                }
+                            ?>
                         </span>
-                        <input type="submit" form="purchase"/>
+                        <?php
+                            if($emptyCart == false){
+                        ?>
+                            <input type="submit" form="purchase"/>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
