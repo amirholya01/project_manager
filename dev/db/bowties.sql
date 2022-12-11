@@ -143,9 +143,29 @@ CREATE TABLE IF NOT EXISTS `media` (
 --
 
 INSERT INTO `media` (`media_id`, `name`) VALUES
-('63936389e652a.png', 'Danish theme Bowtie'),
-('63936392809a3.png', 'Ukraine theme bowtie'),
-('6393639d687ca.png', 'White Black');
+('6395d07c24500.png', 'Danish theme Bowtie'),
+('6395d0849b67e.png', 'Ukraine theme bowtie'),
+('6395d097c6943.png', 'colorfull bowtie'),
+('6395d0a62e813.png', '4 colors bowtie'),
+('6395d0b7d6c49.png', '3 color bowtie'),
+('6395d0c039466.png', 'Bear bowtie'),
+('6395d0ce8fc84.png', 'forrest1 bowtie'),
+('6395d0e8794f2.png', 'cartoon bowtie'),
+('6395d102ecfc9.png', 'forrest2 bowtie'),
+('6395d110561b8.png', 'forrest3 bowtie'),
+('6395d11b9a0d6.png', 'White black bowtie'),
+('6395d131e2d08.png', 'smarties bowtie'),
+('6395d143ec140.png', 'Blue edition bowtie'),
+('6395d162c3654.png', 'Blue white red edition bowtie'),
+('6395d181babdf.png', 'Red and white edition bowtie'),
+('6395d190c5741.png', 'Blue and white edition bowtie'),
+('6395d19eb3b13.png', 'white 3d bowtie'),
+('6395d1adde5ff.png', 'Blue 3d bowtie'),
+('6395d1c1d5507.png', 'Purple bowtie'),
+('6395d223c4c60.png', 'Cartoon2 bowtie'),
+('6395d2599109c.png', 'White and black pattern bowtie'),
+('6395d2ada2be0.png', 'Black rythm bowtie'),
+('6395d2d637da5.png', 'Black lemon edition bowtie');
 COMMIT;
 
 -- --------------------------------------------------------
