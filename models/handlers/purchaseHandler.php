@@ -69,6 +69,38 @@ class PurchaseHandler extends Purchase{
         }
     }
 
+    public function getOrders($new = false){
+        if($new == false){
+            $getOrders = $this->db->prepare("SELECT * FROM purchases ORDER BY time DESC");
+        }else{
+            $getOrders = $this->db->prepare("SELECT * FROM purchases WHERE payed = 1 AND send = 0 ORDER BY time DESC");
+        }
+        $getOrders->execute();
+
+        return $getOrders->fetchAll();
+    }
+
+    public function addPayedToOrder($id){
+        $order = $this->db->prepare($this->addPayedToOrderQuery);
+        $order->bindParam(':id', $id);
+        $order->execute();
+    }
+    public function removePayedToOrder($id){
+        $order = $this->db->prepare($this->removePayedToOrderQuery);
+        $order->bindParam(':id', $id);
+        $order->execute();
+    }
+    public function addSendToOrder($id){
+        $order = $this->db->prepare($this->addSendToOrderQuery);
+        $order->bindParam(':id', $id);
+        $order->execute();
+    }
+    public function removeSendToOrder($id){
+        $order = $this->db->prepare($this->removeSendToOrderQuery);
+        $order->bindParam(':id', $id);
+        $order->execute();
+    }
+
 }
 
 $PurchaseHandler = new PurchaseHandler($db);
