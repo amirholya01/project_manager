@@ -62,6 +62,8 @@
     $router->get('/adminMedia', 'views/backend/media');
     $router->get('/adminNews', 'views/backend/news');
     $router->get('/adminFrontpage', 'views/backend/frontpage');
+    $router->get('/adminOrders', 'views/backend/orders');
+    $router->get('/adminNewOrders', 'views/backend/newOrders');
 
     $router->get('/adminCreateUser', 'views/backend/createUser');
     $router->get('/adminEditUser', 'views/backend/editUser');
@@ -81,4 +83,7 @@
 
     $router->get('/addToCart', 'controllers/addToCart');
     
+    $router->get('/addPayedToOrder', 'controllers/addPayedToOrder');
+    $router->get('/addSendToOrder', 'controllers/addSendToOrder');
+
 
