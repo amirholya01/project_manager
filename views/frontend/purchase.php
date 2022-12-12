@@ -92,6 +92,8 @@
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "models/handlers/usersHandler.php";
+    require_once $rootPath . "models/handlers/purchaseHandler.php";
     require_once $rootPath . "controllers/frontpage.php"; 
 
     /* Purchase controller and send to db and email the customer */
