@@ -2,6 +2,18 @@
 
 $dataset = $FrontpageHandler->getFrontpage();
 
+$bannerSubtitle1 = '';
+$bannerTitle1 = '';
+$banner1Slogan1 = '';
+$banner1Slogan2 = '';
+$banner1Slogan3 = '';
+$bannerText1 = '';
+
+$bannerSubtitle2 = '';
+$bannerTitle2 = '';
+$bannerSlogan2 = '';
+$banner2Text1 = '';
+
 $phone = '';
 $follow = '';
 $email = '';
@@ -17,6 +29,9 @@ $productsTitle = '';
 
 $aboutusSubtitle = '';
 $aboutusTitle = '';
+$aboutusSlogan = '';
+$aboutUs2 = '';
+
 
 $aboutUs1 = '';
 
@@ -24,6 +39,41 @@ $contactSubtitle = '';
 $contactTitle = '';
 
 foreach($dataset as $data){
+
+    /* Banner1 section Handlers */
+    if($data['id'] == 'bannerSubtitle1'){
+        $bannerSubtitle1 = $data['text'];
+    }
+    if($data['id'] == 'bannerTitle1'){
+        $bannerTitle1 = $data['text'];
+    }
+    if($data['id'] == 'banner1Slogan1'){
+        $banner1Slogan1 = $data['text'];
+    }
+    if($data['id'] == 'banner1Slogan2'){
+        $banner1Slogan2 = $data['text'];
+    }
+    if($data['id'] == 'banner1Slogan2'){
+        $banner1Slogan3 = $data['text'];
+    }
+    if($data['id'] == 'bannerText1'){
+        $bannerText1 = $data['text'];
+    }
+
+    /* Banner2 section Handlers */
+    if($data['id'] == 'bannerSubtitle2'){
+        $bannerSubtitle2 = $data['text'];
+    }
+    if($data['id'] == 'bannerTitle2'){
+        $bannerTitle2 = $data['text'];
+    }
+    if($data['id'] == 'bannerSlogan2'){
+        $bannerSlogan2 = $data['text'];
+    }
+    if($data['id'] == 'banner2Text1'){
+        $banner2Text1 = $data['text'];
+    }
+
     if($data['id'] == 'phone'){
         $phone = $data['text'];
     }

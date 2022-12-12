@@ -114,6 +114,7 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('nav3', 'ABOUT US'),
 ('nav4', 'CONTACT'),
 ('productsSubtitle', 'PRODUCTS'),
+
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
 ('aboutusSubtitle', 'ABOUT US'),
 ('aboutusTitle', 'THE COUSTUME TIE'),
@@ -122,7 +123,19 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('contactTitle', 'YOU CAN ASK US ABOUT EVERYTHING'),
 ('address', 'Esbjerg 6700, Denmark'),
 ('follow', 'To see the last news about our bowties'),
-('email', 'thecostumebowtie@gmail.com');
+('email', 'thecostumebowtie@gmail.com'),
+
+('bannerSubtitle1', 'Professional edition'),
+('bannerTitle1', 'Your bowties'),
+('banner1Slogan1', 'Costumize your own design and order'),
+('banner1Slogan2', 'Huge range to choose from'),
+('banner1Slogan3', 'Easy communication with our live chat'),
+('bannerText1', 'We strive to offer our customers the lowest possible prices, the best available selection while giving them a chance to bring their own ideas, and the utmost convenience. All this while keeping to on demand production making us as sustainable as we can. '),
+
+('bannerSubtitle2', 'Professional edition'),
+('bannerTitle2', 'Your bowties'),
+('bannerSlogan2', 'Costumize your own design and order'),
+('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! ');
 COMMIT;
 
 -- --------------------------------------------------------

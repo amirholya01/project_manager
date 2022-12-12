@@ -128,7 +128,7 @@ body.mobile .fixed-background{background-attachment: scroll;}
 .simple-article.size-1{font-size: 11px; line-height: 18px;}
 .simple-article.size-2{font-size: 13px; line-height: 20px;}
 .simple-article.size-3{font-size: 14px; line-height: 22px;}
-.simple-article.size-4{font-size: 16px; line-height: 24px;}
+.simple-article.size-4{font-size: 18px; line-height: 24px;}
 .simple-article.size-5{font-size: 18px; line-height: 24px;}
 
 .simple-article p, .simple-article ul, .simple-article ol, .simple-article img, .simple-article *[class*="col"], .simple-article h1, .simple-article h2, .simple-article h3, .simple-article h4, .simple-article h5, .simple-article h6, .simple-article .embed-responsive, .simple-article .swiper-container{margin-bottom: 22px;}
@@ -217,7 +217,7 @@ body.mobile .fixed-background{background-attachment: scroll;}
 .buttons-wrapper .button{margin: 0 5px 10px 5px;}
 .buttons-wrapper .button:last-child{margin-right: 0;}
 .buttons-wrapper:after{display: block; content: ""; margin-top: -10px;}
-.buttons-wrapper .simple-article{line-height: 24px; margin: 13px 30px 10px 0; display: inline-block; vertical-align: top;}
+.buttons-wrapper .simple-article{line-height: 24px; margin: 13px 0 10px 0; display: inline-block; vertical-align: top;}
 .play-button{width: 50px; height: 50px; background: #B2A6CE; border-radius: 50px; -webkit-border-radius: 50px; position: relative; position: absolute; left: 50%; top: 50%; margin: -25px 0 0 -25px;}
 .play-button:before{position: absolute; left: -5px; top: -5px; right: -5px; bottom: -5px; background: rgba(184,205,6,.3); content: ""; border-radius: inherit; -webkit-border-radius: inherit; transition: all .3s; -webkit-transition: all .3s;}
 .play-button:hover:before{transform: scale(.9); -webkit-transform: scale(.9);}

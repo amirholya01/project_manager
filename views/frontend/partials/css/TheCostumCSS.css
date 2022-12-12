@@ -129,6 +129,10 @@ button {
     margin-left: -10px !important;
 }
 
+.uppercase{
+    text-transform:uppercase;
+}
+
 .flex-center{
     display: flex;
     flex-direction: column;

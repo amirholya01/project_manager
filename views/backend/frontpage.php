@@ -60,7 +60,105 @@
         <input class="input" type="text" name="navContact" value="<?php echo $nav4 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
+
+
+    <hr class="solid">
+
+
+    <h2>
+        Banner 1
+    </h2>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Sub title  -->
+        <h3>
+            Sub title
+        </h3>
+        <input class="input" type="text" name="bannerSubtitle" value="<?php echo $bannerSubtitle1 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Title  -->
+        <h3>
+            Title
+        </h3>
+        <input class="input" type="text" name="bannerTitle" value="<?php echo $bannerTitle1 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan1  -->
+        <h3>
+            Banner Slogan - 1
+        </h3>
+        <input class="input" type="text" name="banner1Slogan1" value="<?php echo $banner1Slogan1 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan2  -->
+        <h3>
+            Banner Slogan - 2
+        </h3>
+        <input class="input" type="text" name="banner1Slogan2" value="<?php echo $banner1Slogan2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan3  -->
+        <h3>
+            Banner Slogan - 3
+        </h3>
+        <input class="input" type="text" name="banner1Slogan3" value="<?php echo $banner1Slogan3 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
+        <h3>
+            Banner / part-1
+        </h3>
+        <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
     
+    <hr class="solid">
+
+
+    <h2>
+        Banner 2
+    </h2>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Sub title  -->
+        <h3>
+            Sub title
+        </h3>
+        <input class="input" type="text" name="bannerSubtitle2" value="<?php echo $bannerSubtitle2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Title  -->
+        <h3>
+            Title
+        </h3>
+        <input class="input" type="text" name="bannerTitle2" value="<?php echo $bannerTitle2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan  -->
+        <h3>
+            Banner Slogan
+        </h3>
+        <input class="input" type="text" name="bannerSlogan2" value="<?php echo $bannerSlogan2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
+        <h3>
+            Banner / part-1
+        </h3>
+        <textarea name="banner2Text1" id="" cols="60" rows="10"><?php echo $banner2Text1 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+
+
     <hr class="solid">
 
     <h2>

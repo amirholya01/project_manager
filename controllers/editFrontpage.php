@@ -1,5 +1,112 @@
 <?php
 
+/* Banner1 section Handlers */
+if(isset($_POST['bannerSubtitle1'])){
+    $text = $stringSanitation->sanitice($_POST['bannerSubtitle1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerSubtitle1($text);
+    }
+}
+
+if(isset($_POST['bannerTitle1'])){
+    $text = $stringSanitation->sanitice($_POST['bannerTitle1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerTitle1($text);
+    }
+}
+
+if(isset($_POST['banner1Slogan1'])){
+    $text = $stringSanitation->sanitice($_POST['banner1Slogan1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner1Slogan1($text);
+    }
+}
+
+if(isset($_POST['banner1Slogan2'])){
+    $text = $stringSanitation->sanitice($_POST['banner1Slogan2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner1Slogan2($text);
+    }
+}
+
+if(isset($_POST['banner1Slogan3'])){
+    $text = $stringSanitation->sanitice($_POST['banner1Slogan3']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner1Slogan3($text);
+    }
+}
+
+if(isset($_POST['bannerText1'])){
+    $text = $stringSanitation->sanitice($_POST['bannerText1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerText1($text);
+    }
+}
+/* Banner1 section Handlers */
+
+
+/* Banner2 section Handlers */
+if(isset($_POST['bannerSubtitle2'])){
+    $text = $stringSanitation->sanitice($_POST['bannerSubtitle2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerSubtitle2($text);
+    }
+}
+
+if(isset($_POST['bannerTitle2'])){
+    $text = $stringSanitation->sanitice($_POST['bannerTitle2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerTitle2($text);
+    }
+}
+
+if(isset($_POST['bannerSlogan2'])){
+    $text = $stringSanitation->sanitice($_POST['bannerSlogan2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerSlogan2($text);
+    }
+}
+
+if(isset($_POST['banner2Text1'])){
+    $text = $stringSanitation->sanitice($_POST['banner2Text1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner2Text1($text);
+    }
+}
+
+/* Banner2 section Handlers */
+
+
 if(isset($_POST['aboutUs1'])){
     $text = $stringSanitation->sanitice($_POST['aboutUs1']);
 

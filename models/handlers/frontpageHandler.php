@@ -22,6 +22,93 @@ class FrontpageHandler extends Frontpage{
         return $getFrontpage->fetchAll();
     }
 
+
+    /* Banner1 section Handlers */
+    public function editBannerSubtitle1($bannerSubtitle1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerSubtitle1';
+        $update->bindParam(":text", $bannerSubtitle1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBannerTitle1($bannerTitle1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerTitle1';
+        $update->bindParam(":text", $bannerTitle1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner1Slogan1($banner1Slogan1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner1Slogan1';
+        $update->bindParam(":text", $banner1Slogan1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner1Slogan2($banner1Slogan2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner1Slogan2';
+        $update->bindParam(":text", $banner1Slogan2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner1Slogan3($banner1Slogan3){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner1Slogan3';
+        $update->bindParam(":text", $banner1Slogan3);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBannerText1($bannerText1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerText1';
+        $update->bindParam(":text", $bannerText1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+    /* Banner1 section Handlers */
+
+
+    /* Banner2 section Handlers */
+    public function editBannerSubtitle2($bannerSubtitle2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerSubtitle2';
+        $update->bindParam(":text", $bannerSubtitle2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBannerTitle2($bannerTitle2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerTitle2';
+        $update->bindParam(":text", $bannerTitle2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBannerSlogan2($bannerSlogan2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerSlogan2';
+        $update->bindParam(":text", $bannerSlogan2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner2Text1($banner2Text1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner2Text1';
+        $update->bindParam(":text", $banner2Text1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    /* Banner2 section Handlers */
+
     public function editPhoneNumber($phone){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'phone';
@@ -86,18 +173,18 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
 
-    public function editAboutUs1($aboutUs1){
+    public function editAboutUs1($title){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutUs1';
-        $update->bindParam(":text", $aboutUs1);
+        $update->bindParam(":text", $title);
         $update->bindParam(":id", $id);
         $update->execute();
     }
 
-    public function editAboutUs2($aboutUs2){
+    public function editAboutUs2($title){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutUs2';
-        $update->bindParam(":text", $aboutUs2);
+        $update->bindParam(":text", $title);
         $update->bindParam(":id", $id);
         $update->execute(); 
     }

@@ -45,22 +45,18 @@
                                 <div class="cell-view page-height">
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                     <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3">PROFESSIONAL EDITION</div>
+                                        <div class="simple-article light transparent size-3 uppercase"><?php echo $bannerSubtitle1 ?></div>
                                         <div class="col-xs-b5"></div>
                                     </div>
                                     <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1 light">Your Bowties</h1>
+                                        <h1 class="h1 light"><?php echo $bannerTitle1 ?></h1>
                                         <div class="title-underline light left"><span></span></div>
                                     </div>
                                     <div data-swiper-parallax-x="-400">
                                         <div class="simple-article size-4 light transparent">
-                                            <p> We strive to offer our customers the lowest possible prices, the best
-                                                available selection while giving them a chance to bring their own ideas,
-                                                and the utmost convenience.
-
-                                            </p>
+                                            <p><?php echo $bannerText1 ?></p>
                                             <ul>
-                                                <li>Customize your own design and order</li>
+                                                <li><?php echo $banner1Slogan1 ?></li>
                                                 <li>Huge range to choose from</li>
                                                 <li>Easy communication with our live chat</li>
                                             </ul>
@@ -71,12 +67,6 @@
                                         <div class="buttons-wrapper">
                                             <div class="simple-article size-5 light transparent">BEST PRICE: 150 DKK
                                             </div>
-                                            <a class="height-button button size-2 style-2" href="#">
-                                                <span class=" button-wrapper">
-                                                    <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                                    <span class="text">Add To Cart</span>
-                                                </span>
-                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-xs-b40 col-sm-b80"></div>
@@ -119,12 +109,6 @@
                                         <div class="buttons-wrapper">
                                             <div class="simple-article size-5 light transparent">BEST PRICE: 150 DKK
                                             </div>
-                                            <a class="height-button button size-2 style-2" href="#">
-                                                <span class="button-wrapper">
-                                                    <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                                    <span class="text">Add To Cart</span>
-                                                </span>
-                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-xs-b40 col-sm-b80"></div>
