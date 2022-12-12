@@ -1,3 +1,8 @@
 🔥 = Error / Security Issue
 📒 = Needs explenation comments
 ✒️ = Needs editing
+
+
+ToDo
+ * add disabled to products instead of hard deleting them
+ * posts should be handled in an isolated controller and on a page
