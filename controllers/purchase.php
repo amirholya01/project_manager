@@ -24,21 +24,7 @@ $PurchaseHandler->createOrder(
     $cart
 );
 
-/* Checks if the data was inserted in the db */
-/* 
-    This will give an error the first time you insert a purchase
-    into a new db 
-*/
+/* ✒️ Send email */
 
-$x = 1; /* just there to make the condition true */
-if(/* Needs to check for error */ $x == 1){
-    /* ✒️ Send email */
-}else{
-    if(isset($error)){
-        $error = true;
-    }else{
-        echo "something went wrong";
-    }
-}
 
 

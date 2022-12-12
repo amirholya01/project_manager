@@ -1,9 +1,10 @@
 <?php
+    require_once $rootPath . "views/frontend/partials/header.php";
+
     $passValidation = true;
-    $error = false;
 
     /* Check if cart is empty */
-    if($_SESSION['cart'] == array()){
+    if($_SESSION['cart'] == array() && $amountOfItems <= 50){
         $passValidation = false;
     }
 
@@ -88,7 +89,6 @@
     $pageLink = "/Purchase";
     $pageLevel = 4;
 
-    require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 

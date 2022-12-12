@@ -214,7 +214,7 @@
                     ?>
                     <div class="button block size-2 style-3"
                     <?php
-                        if($emptyCart == true){
+                        if($emptyCart == true || $amountOfItems > 50){
                             echo "style='background: gray !important;'";
                         }
                     ?>
@@ -222,19 +222,23 @@
                         <span class="button-wrapper">
                             <span class="icon"><img src="assets/icons/icon-4.png" alt=""></span>
                             <?php
-                                if($emptyCart == false){
+                                if($emptyCart == false && $amountOfItems <= 50){
                             ?>
                                 <span class="text">place order</span>
                             <?php
-                                } else {
+                                } elseif($emptyCart == true) {
                             ?>
                                 <span class="text">Your cart is empty</span>
+                            <?php
+                                } else {
+                            ?>
+                                <span class="text">Max 50 items pr order</span>
                             <?php
                                 }
                             ?>
                         </span>
                         <?php
-                            if($emptyCart == false){
+                            if($emptyCart == false && $amountOfItems <= 50){
                         ?>
                             <input type="submit" form="purchase"/>
                         <?php
