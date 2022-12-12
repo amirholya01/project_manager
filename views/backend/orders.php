@@ -125,20 +125,36 @@
                 ?>
                         <div class="product">
                             <div class="product-info">
+                                <p>
+                                    Status
+                                </p>
                                 <p><?php echo $indData['payed'] == 0 ? "NOT payed" : "Has payed" ?></p>
                                 <p><?php echo $indData['send'] == 0 ? "NOT send" : "Is send" ?></p>
+                                <br>
                                 <p><?php echo $indData['time'] ?></p>
-                                <p><?php echo $indData['id'] ?></p>
-                                <p><?php echo $indData['fname'] ?></p>
-                                <p><?php echo $indData['lname'] ?></p>
+                                <p>Order id: <?php echo $indData['id'] ?></p>
+                                <br>
+                                <p>
+                                    Contact
+                                </p>
+                                <p><?php echo $indData['fname']; echo " " . $indData['lname'] ?></p>
                                 <p><?php echo $indData['email'] ?></p>
                                 <p><?php echo $indData['phone'] ?></p>
+                                <br>
+                                <p>
+                                    Address
+                                </p>
                                 <p><?php echo $indData['country'] ?></p>
                                 <p><?php echo $indData['address'] ?></p>
                                 <p><?php echo $indData['appartment'] ?></p>
                                 <p><?php echo $indData['city'] ?></p>
                                 <p><?php echo $indData['state'] ?></p>
                                 <p><?php echo $indData['postcode'] ?></p>
+                                <br>
+                                <p>
+                                    Note
+                                </p>
+                                <br>
                                 <p><?php echo $indData['note'] ?></p>
                                 <form action="/addPayedToOrder" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">

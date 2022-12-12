@@ -10,7 +10,8 @@
 
     require $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
-    require_once $rootPath . "models/handlers/ProductsHandler.php";
+    require_once $rootPath . "models/handlers/productsHandler.php";
+    require_once $rootPath . "controllers/productShow.php";
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -118,14 +119,18 @@
         <div class="swiper-button-prev style-1"></div>
         <div class="swiper-button-next style-1"></div>
         <div class="swiper-wrapper">
+            <?php
+                foreach($relatedProducts as $relatedProduct){
+                    if($relatedProduct['products_id'] != $_POST['id']){
+            ?>
             <div class="swiper-slide">
                 <div class="product-shortcode style-1 small">
                     <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
+                        <div class="h6 animate-to-green"><a href="#"><?php echo $relatedProduct['name'] ?></a></div>
                     </div>
                     <div class="preview">
-                        <img src="assets/img/product-49.jpg" alt="">
+                        <?php $image = explode(".", $relatedProduct['primary_image']) ?>
+                        <img src="uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>" alt="">
                         <div class="preview-buttons valign-middle">
                             <div class="valign-middle-content">
                                 <a class="button size-2 style-2" href="#">
@@ -144,190 +149,16 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
+                        <div class="simple-article size-4 dark"><?php echo $relatedProduct['price'] ?> DKK</div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-50.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-51.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-52.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-53.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="vimg/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-54.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="product-shortcode style-1 small">
-                    <div class="title">
-                        <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                        <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                    </div>
-                    <div class="preview">
-                        <img src="assets/img/product-55.jpg" alt="">
-                        <div class="preview-buttons valign-middle">
-                            <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">Learn More</span>
-                                    </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
-                                        <span class="text">Add To Cart</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price">
-                        <div class="simple-article size-4 dark">$630.00</div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                    }else{
+                        echo "No related product...";
+                    }
+                }
+            ?>
         </div>
         <div class="swiper-pagination relative-pagination visible-xs"></div>
     </div>
