@@ -12,11 +12,11 @@ class Products{
                                         AND p.type = pt.id;";
 
     public $getProductsDynamicSearchWithoutIdQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
-                                                 FROM products p, product_types pt
-                                                 WHERE p.type = pt.id
-                                                 AND (p.name LIKE :search
-                                                 OR p.description LIKE :search)
-                                                 AND pt.type = :type;";
+                                                    FROM products p, product_types pt
+                                                    WHERE p.type = pt.id
+                                                    AND (p.name LIKE :search
+                                                    OR p.description LIKE :search)
+                                                    AND pt.id = :type;";
                    
     public $getProductsDynamicSearchWithoutTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                     FROM products p, product_types pt

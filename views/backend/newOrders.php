@@ -12,7 +12,6 @@
     require_once $rootPath . "models/handlers/Usershandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
-    require_once $rootPath . "controllers/adminOrders.php";
     require_once $rootPath . "controllers/getOrdersWithFilters.php";
 
     require_once $rootPath . "views/backend/partials/header.php";

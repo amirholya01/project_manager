@@ -13,7 +13,7 @@
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/ProductsHandler.php";
-    require_once $rootPath . "controllers/frontendProducts.php";
+    require_once $rootPath . "controllers/productType.php";
 
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
     require_once $rootPath . "controllers/frontpage.php"; 
@@ -38,7 +38,7 @@
 <div class="container">
     <div class="text-center">
         <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $productsSubtitle ?></div>
-        <div class="h2"><?php echo $productsTitle ?></div>
+        <div class="h2"><?php echo $_POST['title'] ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>
@@ -46,35 +46,6 @@
 
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
-<!-- Normal, Special Theme, Costumized -->
-<?php
-    foreach($types as $type){
-?>
-        <form id="type<?php echo $type['id'] ?>" action="/ProductType" method="POST">
-            <input type="hidden" name="title" value="<?php echo $type['type'] ?>">
-            <input type="hidden" name="type" value="<?php echo $type['id'] ?>">
-        </form>
-<?php
-    }
-?>
-<div class="container flex ">
-    <?php
-        foreach($types as $type){
-    ?>
-            <button type="submit" form="type<?php echo $type['id'] ?>" class="button size-2 style-2 button-size">
-                <span class="button-wrapper">
-                    <span class="icon">
-                        <img src="assets/icons/icon-1.png" alt="">
-                    </span>
-                    <span class="text"><?php echo $type['type'] ?></span>
-                </span>
-            </button>
-    <?php
-        }
-    ?>
-</div>
-
-
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
