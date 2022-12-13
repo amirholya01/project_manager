@@ -258,7 +258,7 @@
                                             <button type="submit" form="ProductSale" class="button size-2 style-2">
                                                 <span class="button-wrapper">
                                                     <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                                    <span class="text">Add To Cart</span>
+                                                    <span class="text">View Products</span>
                                                 </span>
                                             </button>
                                         </div>
