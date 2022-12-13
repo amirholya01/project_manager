@@ -89,20 +89,36 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="quantity-select">
-                        <span class="minus"></span>
-                        <span class="number">1</span>
-                        <span class="plus"></span>
+                        <span class="minus" id="minus"></span>
+                        <input class="number" name="amountToAdd" form="addToCart" value="1" id="number">
+                        <span class="plus" id="plus"></span>
+                        <script>
+                            const minus = document.querySelector('#minus');
+                            const number = document.querySelector('#number');
+                            const plus = document.querySelector('#plus');
+
+                            minus.addEventListener("click", () => {
+                                number.value--
+                            })
+                            plus.addEventListener("click", () => {
+                                number.value++
+                            })
+                        </script>
                     </div>
                 </div>
             </div>
             <div class="row m5 col-xs-b40">
                 <div class="col-sm-6 col-xs-b10 col-sm-b0">
-                    <a class="button size-2 style-2 block" href="#">
-                        <span class="button-wrapper">
-                            <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                            <span class="text">add to cart</span>
-                        </span>
-                    </a>
+                    <form class="button size-2 style-3" id="addToCart" action="addToCart" method="POST">
+                        <input type="hidden" name="product" value="<?php echo $_POST['id'] ?>">
+                        <input type="hidden" name="minusHistorie" value="-2">
+                        <button class="product-button" type="submit">
+                            <span class="button-wrapper">
+                                <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
+                                <span class="text">Add To Cart</span>
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -124,7 +140,11 @@
         <div class="swiper-button-next style-1"></div>
         <div class="swiper-wrapper">
             <?php
-                foreach($relatedProducts as $relatedProduct){
+                $i = 0;
+                for($i; $i < count($relatedProducts); $i++){
+                    $relatedProduct = $relatedProducts[$i];
+                /* }
+                foreach($relatedProducts as $relatedProduct){ */
                     if($relatedProduct['products_id'] != $_POST['id']){
             ?>
             <div class="swiper-slide">
@@ -158,9 +178,10 @@
                 </div>
             </div>
             <?php
-                    }else{
-                        echo "No related product...";
                     }
+                }
+                if($i == 0){
+                    echo "No related product...";
                 }
             ?>
         </div>

@@ -1,5 +1,4 @@
 <?php
-    require_once $rootPath . "views/frontend/partials/header.php";
 
     $passValidation = true;
 
@@ -89,6 +88,8 @@
     $pageLink = "/Purchase";
     $pageLevel = 4;
 
+    require_once $rootPath . "views/frontend/partials/header.php";
+
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
@@ -120,19 +121,8 @@
 
 <div class="container">
     <div class="text-center">
-        <?php
-            if($error == false){
-        ?>
-                <div class="simple-article size-3 grey uppercase col-xs-b5">Thank you for</div>
-                <div class="h2">your order</div>
-        <?php
-            }else{
-        ?>
-                <div class="simple-article size-3 grey uppercase col-xs-b5">Error</div>
-                <div class="h2">Something went wrong...</div>
-        <?php
-            }
-        ?>
+        <div class="simple-article size-3 grey uppercase col-xs-b5">Thank you for</div>
+        <div class="h2">your order</div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>
