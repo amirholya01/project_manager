@@ -14,7 +14,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="adminProducts" enctype="multipart/form-data">
+    <form method="POST" action="/adminCreateProductFunction" enctype="multipart/form-data">
         <!-- 
             i send createProduct to tell the controller that it should run create user
         -->

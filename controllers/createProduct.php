@@ -1,5 +1,18 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+require_once $rootPath . "public/dbconn.php";
+
+require_once $rootPath . "models/handlers/productsHandler.php";
+require_once $rootPath . "models/handlers/Usershandler.php";
+require_once $rootPath . "security/adminCheck.php";
+
+require_once $rootPath . "security/formSpam.php";
+require_once $rootPath . "security/stringSanitation.php";
+
 /* Checks if it passes validation */
 if($validated == true){
     /* Check if there is sent a post */
@@ -34,3 +47,5 @@ if($validated == true){
         }
     }
 }
+
+header("location: /adminProducts");

@@ -19,7 +19,7 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
-    require_once $rootPath . "controllers/createProduct.php";
+    //require_once $rootPath . "controllers/createProduct.php";
     require_once $rootPath . "controllers/editProduct.php";
     require_once $rootPath . "controllers/deleteProduct.php";
 

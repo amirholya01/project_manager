@@ -117,3 +117,5 @@
     $router->get('/addSendToOrder', 'controllers/addSendToOrder');
 
 
+    $router->get('/adminCreateProductFunction', 'controllers/createProduct');
+    $router->get('/adminCreateSaleFunction', 'controllers/createSale');

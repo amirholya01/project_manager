@@ -1,5 +1,19 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+require_once $rootPath . "public/dbconn.php";
+
+require_once $rootPath . "models/handlers/productsHandler.php";
+require_once $rootPath . "models/handlers/Usershandler.php";
+require_once $rootPath . "security/adminCheck.php";
+
+require_once $rootPath . "security/formSpam.php";
+require_once $rootPath . "security/stringSanitation.php";
+
+
 /* Check if there is sent a post */
 if( isset( $_POST['createSale'] ) ){
     /* Gets all the values from the post request */
@@ -29,3 +43,5 @@ if( isset( $_POST['createSale'] ) ){
         }
     }
 }
+
+header("location: /adminSale");

@@ -12,7 +12,7 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
-    require_once $rootPath . "controllers/createSale.php";
+    //require_once $rootPath . "controllers/createSale.php";
 
     require_once $rootPath . "controllers/editSale.php";
     require_once $rootPath . "controllers/deleteSale.php";
@@ -40,7 +40,7 @@
             <button class="button" name="action" value="delete" type="submit">Delete</button>
         </div>
     </form>
-    <form method="POST" action="adminSale">
+    <form method="POST" action="/adminCreateSaleFunction">
         
         <div class="Admin-page-title">
             <h1>Create Sale</h1>
