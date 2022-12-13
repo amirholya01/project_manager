@@ -168,3 +168,10 @@ button {
 .black{
     color: #000 !important;
 }
+.number-shopin-cart{
+    font-size: 14px;
+    color: black;
+}
+.margin-bottom{
+    margin-bottom: 10px;
+}

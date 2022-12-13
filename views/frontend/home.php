@@ -185,7 +185,7 @@
                                     <!--  News description loaded from database  -->
                                     <div class="simple-article size-4 light transparent col-xs-b30 font-size-news"><?php echo $new['description'] ?></div>
                                     
-                                    <button class="button size-2 style-2" form="<?php echo $new['title'] ?>" type="submit">
+                                    <button class="button size-2 style-2 margin-bottom" form="<?php echo $new['title'] ?>" type="submit">
                                         <span class="button-wrapper">
                                             <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                             <span class="text">learn more</span>

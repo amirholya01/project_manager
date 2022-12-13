@@ -269,7 +269,7 @@
 
     <div>
         <h3>
-                About uS / Image 1
+                About us / Image 1
         </h3>
         <div class="ImageUploadHandlersStyle">
             <div class="BannerImage">
