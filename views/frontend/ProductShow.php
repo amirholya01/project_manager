@@ -3,15 +3,22 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['productShow'];
+    }else{
+        $_SESSION["savedPost"]['productShow'] = $_POST;
+    }
     
     $pageName = "Product-Show";
     $pageLink = "/ProductShow";
-    $pageLevel = 3;
+    $pageLevel = 4;
 
     require $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
     require_once $rootPath . "models/handlers/productsHandler.php";
     require_once $rootPath . "controllers/productShow.php";
+    
 ?>
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
@@ -143,8 +150,6 @@
                 $i = 0;
                 for($i; $i < count($relatedProducts); $i++){
                     $relatedProduct = $relatedProducts[$i];
-                /* }
-                foreach($relatedProducts as $relatedProduct){ */
                     if($relatedProduct['products_id'] != $_POST['id']){
             ?>
             <div class="swiper-slide">
@@ -157,18 +162,29 @@
                         <img src="uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>" alt="">
                         <div class="preview-buttons valign-middle">
                             <div class="valign-middle-content">
-                                <a class="button size-2 style-2" href="#">
+                                <form id="learnMore<?php echo $relatedProduct['products_id'] ?>" action="ProductShow" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $relatedProduct['products_id'] ?>">
+                                    <input type="hidden" name="name" value="<?php echo $relatedProduct['name'] ?>">
+                                    <input type="hidden" name="description" value="<?php echo $relatedProduct['description'] ?>">
+                                    <input type="hidden" name="price" value="<?php echo $relatedProduct['price'] ?>">
+                                    <input type="hidden" name="type" value="<?php echo $relatedProduct['type'] ?>">
+                                    <input type="hidden" name="primary_image" value="<?php echo $relatedProduct['primary_image'] ?>">
+                                </form>
+                                <form id="addToCart<?php echo $relatedProduct['products_id'] ?>" action="addToCart" method="POST">
+                                    <input type="hidden" name="product" value="<?php echo $relatedProduct['products_id'] ?>">
+                                </form>
+                                <button form="learnMore<?php echo $relatedProduct['products_id'] ?>" class="button size-2 style-2" type="submit">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
                                         <span class="text">Learn More</span>
                                     </span>
-                                </a>
-                                <a class="button size-2 style-3" href="#">
+                                </button>
+                                <button form="addToCart<?php echo $relatedProduct['products_id'] ?>" class="button size-2 style-3" type="submit">
                                     <span class="button-wrapper">
                                         <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                         <span class="text">Add To Cart</span>
                                     </span>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>

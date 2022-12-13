@@ -32,6 +32,10 @@
         $_SESSION["adminLayout"] = false;
     }
 
+    if(!isset($_SESSION["savedPage"])){
+        $_SESSION["savedPost"] = array();
+    }
+
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
 
