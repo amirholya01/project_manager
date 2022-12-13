@@ -9,3 +9,5 @@ if(!isset($_POST['type'])){
 }
 
 $products = $ProductsHandler->getProducts('', '', $_POST['type']);
+
+$types = $ProductsHandler->getTypes();

@@ -46,6 +46,32 @@
 
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
+<?php
+    foreach($types as $type){
+?>
+        <form id="type<?php echo $type['id'] ?>" action="/ProductType" method="POST">
+            <input type="hidden" name="title" value="<?php echo $type['type'] ?>">
+            <input type="hidden" name="type" value="<?php echo $type['id'] ?>">
+        </form>
+<?php
+    }
+?>
+<div class="container flex ">
+    <?php
+        foreach($types as $type){
+    ?>
+            <button type="submit" form="type<?php echo $type['id'] ?>" class="button size-2 style-2 button-size">
+                <span class="button-wrapper">
+                    <span class="icon">
+                        <img src="assets/icons/icon-1.png" alt="">
+                    </span>
+                    <span class="text"><?php echo $type['type'] ?></span>
+                </span>
+            </button>
+    <?php
+        }
+    ?>
+</div>
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
