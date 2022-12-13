@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `assign_colors_to_products` (
   `product_id` int(11) NOT NULL,
   `color_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`color_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `assign_colors_to_products`
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `assign_media_to_products` (
   `product_id` int(11) NOT NULL,
   `media_id` varchar(250) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`product_id`,`media_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `assign_media_to_products`
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `assign_products_to_sales` (
   `sale` int(11) NOT NULL,
   `saleType` varchar(1) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`sale_id`,`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `assign_products_to_sales`
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `frontpage` (
   `id` varchar(50) COLLATE utf8_bin NOT NULL,
   `text` text COLLATE utf8_bin,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `frontpage`
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `media_id` varchar(250) COLLATE utf8_bin NOT NULL,
   `name` varchar(50) COLLATE utf8_bin DEFAULT '',
   PRIMARY KEY (`media_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `media`
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `media` varchar(250) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`news_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `news`
@@ -273,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `product_colors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `color` varchar(100) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `product_colors`
@@ -294,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `product_types` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(100) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `product_types`
@@ -319,7 +319,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `end` date NOT NULL,
   `description` text COLLATE utf8_bin,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `sales`
@@ -341,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `spam_prevention` (
   `name` varchar(45) COLLATE utf8_bin NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Data dump for tabellen `spam_prevention`
@@ -384,3 +384,71 @@ INSERT INTO `users` (`user_id`, `name`, `password`, `role`) VALUES
 (24, 'Behdin', '$2y$05$aD0uCVDRFJIfjN.8TIeRb.K9FlNEs1UeIl9QTlyvqh86PkWRKD4w2', 1);
 COMMIT;
 
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `products_assigned_to_purchases`
+--
+
+DROP TABLE IF EXISTS `products_assigned_to_purchases`;
+CREATE TABLE IF NOT EXISTS `products_assigned_to_purchases` (
+  `purchase_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `user` varchar(100) COLLATE utf8_bin NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`purchase_id`,`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `products_assigned_to_purchases`
+--
+
+INSERT INTO `products_assigned_to_purchases` (`purchase_id`, `product_id`, `user`, `quantity`, `price`) VALUES
+(32, 5, '1', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `purchases`
+--
+
+DROP TABLE IF EXISTS `purchases`;
+CREATE TABLE IF NOT EXISTS `purchases` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `country` varchar(100) COLLATE utf8_bin NOT NULL,
+  `fname` varchar(100) COLLATE utf8_bin NOT NULL,
+  `lname` varchar(100) COLLATE utf8_bin NOT NULL,
+  `address` varchar(150) COLLATE utf8_bin NOT NULL,
+  `appartment` varchar(50) COLLATE utf8_bin DEFAULT '',
+  `city` varchar(100) COLLATE utf8_bin NOT NULL,
+  `state` varchar(100) COLLATE utf8_bin NOT NULL,
+  `postcode` varchar(50) COLLATE utf8_bin NOT NULL,
+  `email` varchar(100) COLLATE utf8_bin NOT NULL,
+  `phone` varchar(20) COLLATE utf8_bin NOT NULL,
+  `company` varchar(100) COLLATE utf8_bin DEFAULT '',
+  `payed` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) DEFAULT NULL,
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `send` int(11) NOT NULL DEFAULT '0',
+  `note` text COLLATE utf8_bin,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Data dump for tabellen `purchases`
+--
+
+INSERT INTO `purchases` (`id`, `country`, `fname`, `lname`, `address`, `appartment`, `city`, `state`, `postcode`, `email`, `phone`, `company`, `payed`, `user_id`, `time`, `send`, `note`) VALUES
+(23, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 0, 1, '2022-12-12 16:29:18', 0, ''),
+(24, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 1, 1, '2022-12-12 16:29:59', 1, ''),
+(19, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 0, 1, '2022-12-12 16:27:32', 0, ''),
+(25, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 0, 1, '2022-12-12 14:40:31', 0, ''),
+(26, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 0, 1, '2022-12-12 14:40:49', 0, ''),
+(27, 'denmark', 'plz', 'plzzz', 'plzzz', 'plzzz', 'plzzzzz', 'plzzzzz', '1234', 'plzzz@plzzzzz.please', '13241432', 'plzzzzzzzzzzzzzz', 1, 1, '2022-12-12 15:38:37', 0, ''),
+(32, 'atlantis', '11', '1', '21', '2', '2', '1', '1', '1', '1', '1', 1, 1, '2022-12-12 16:26:05', 0, '');
+
+-- --------------------------------------------------------
