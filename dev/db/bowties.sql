@@ -238,28 +238,28 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`products_id`, `name`, `type`, `description`, `price`, `primary_image`) VALUES
-(2, 'Denmark bowtie', 1, 'Denmark bow tie for adult, custom hand made ', '150', '6395d07c24500.png'),
-(3, 'Ukraine bowtie', 1, 'Ukraine bow tie for adult, custom hand made', '150', '6395d0849b67e.png'),
-(4, 'Lemon bowtie', 1, 'Lemon pattern bow tie for men, custom hand made ', '150', '6395d2d637da5.png'),
-(5, 'Transgender bowtie', 1, 'Transgender pride flag bowtie, lgbtq+, custom hand made', '150', '6395d0b7d6c49.png'),
-(6, 'Pansexual bowtie', 1, 'Pansexual pride flag bow tie, lgbtq+, custom hand made', '150', '6395d0a62e813.png'),
+(2, 'Denmark bowtie', 3, 'Denmark bow tie for adult, custom hand made ', '150', '6395d07c24500.png'),
+(3, 'Ukraine bowtie', 3, 'Ukraine bow tie for adult, custom hand made', '150', '6395d0849b67e.png'),
+(4, 'Lemon bowtie', 5, 'Lemon pattern bow tie for men, custom hand made ', '150', '6395d2d637da5.png'),
+(5, 'Transgender bowtie', 3, 'Transgender pride flag bowtie, lgbtq+, custom hand made', '150', '6395d0b7d6c49.png'),
+(6, 'Pansexual bowtie', 3, 'Pansexual pride flag bow tie, lgbtq+, custom hand made', '150', '6395d0a62e813.png'),
 (7, 'Feather bowtie', 1, 'Feather pattern bow tie for adult, custom hand made ', '150', '6395d0ce8fc84.png'),
 (8, 'Odd shapes bowtie', 1, 'Odd shapes pattern bow tie for adult, custom hand made ', '150', '6395d2599109c.png'),
 (9, 'Leaf pattern bowtie', 1, 'Leaf pattern bow tie for adult, custom hand made', '150', '6395d102ecfc9.png'),
-(10, 'Colorful dots bowtie', 1, 'Colorful dots pattern bow tie for adult, custom hand made ', '150', '6395d131e2d08.png'),
+(10, 'Colorful dots bowtie', 5, 'Colorful dots pattern bow tie for adult, custom hand made ', '150', '6395d131e2d08.png'),
 (11, 'Green leaf ', 1, 'Green leaf pattern bow tie for adult, custom hand made ', '150', '6395d110561b8.png'),
-(12, 'Guitar pattern', 1, 'Guitar pattern bow tie for adult, custom hand made', '150', '6395d11b9a0d6.png'),
-(13, 'Cute bear bowtie', 1, 'Cute bear pattern bow tie for adult, custom hand made ', '150', '6395d0c039466.png'),
+(12, 'Guitar pattern', 5, 'Guitar pattern bow tie for adult, custom hand made', '150', '6395d11b9a0d6.png'),
+(13, 'Cute bear bowtie', 5, 'Cute bear pattern bow tie for adult, custom hand made ', '150', '6395d0c039466.png'),
 (14, 'Colorful bowtie', 1, 'Colorful bowtie, custom hand made', '150', '6395d097c6943.png'),
-(15, 'Cartoon patern bowtie', 1, 'Cartoon patern bowtie, custom hand made ', '150', '6395d0e8794f2.png'),
+(15, 'Cartoon patern bowtie', 5, 'Cartoon patern bowtie, custom hand made ', '150', '6395d0e8794f2.png'),
 (16, 'Blue 3d patern bowtie', 1, 'Blue 3d patern bowtie, custom hand made ', '150', '6395d143ec140.png'),
 (17, 'Red blue and white bowtie', 1, 'Red blue and white bowtie, custom hand made ', '150', '6395d162c3654.png'),
 (18, 'Red and white pattern bowtie', 1, 'Red and white pattern bowtie, custom hand made ', '150', '6395d181babdf.png'),
 (19, 'blue and white pattern bowtie', 1, 'blue and white pattern bowtie, custom hand made ', '150', '6395d190c5741.png'),
 (20, 'white 3d bowtie', 1, 'White 3d bowtie, custom hand made ', '150', '6395d19eb3b13.png'),
 (21, 'Blue 3d bowtie', 1, 'Blue 3d bowtie, custom hand made ', '150', '6395d1adde5ff.png'),
-(22, 'Black cartoon patern bowtie', 1, 'Black cartoon patern, custom hand made ', '150', '6395d223c4c60.png'),
-(23, 'Black and white bowtie', 1, 'Black and white bowtie, custom hand made ', '150', '6395d2ada2be0.png');
+(22, 'Black cartoon patern bowtie', 5, 'Black cartoon patern, custom hand made ', '150', '6395d223c4c60.png'),
+(23, 'Black and white bowtie', 5, 'Black and white bowtie, custom hand made ', '150', '6395d2ada2be0.png');
 COMMIT;
 
 -- --------------------------------------------------------
