@@ -153,3 +153,18 @@ button {
 .Discount-wrapper{
     margin-top: -50px !important;
 }
+.width-left{
+    width: 41% !important;
+}
+.margin-minus{
+    margin-left: -25px;
+}
+.button-shoping-cart{
+    background: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 12px;
+}
+.black{
+    color: #000 !important;
+}

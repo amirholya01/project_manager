@@ -20,8 +20,9 @@
 <div class="wrapper">
 
 <div class="Admin-page-title margin-bottom">
-    <h1>Choose image for banner 1</h1>
+    <h1>Choose image for banner 2</h1>
 </div>
+    
 
         <form method="POST" action="/adminFrontpage">
             <input class="height-button button" type="submit">
@@ -42,7 +43,7 @@
                         </label>
                         <div class="alignment">
                             <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
-                            <input name="bannerImageOne" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
+                            <input name="bannerImageTwo" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
                         </div>
                 </div>
             <?php

@@ -16,6 +16,7 @@ $banner2Slogan1 = '';
 $banner2Slogan2 = '';
 $banner2Slogan3 = '';
 $banner2Text1 = '';
+$bannerImageTwo = '';
 
 $phone = '';
 $follow = '';
@@ -92,6 +93,9 @@ foreach($dataset as $data){
     }
     if($data['id'] == 'banner2Text1'){
         $banner2Text1 = $data['text'];
+    }
+    if($data['id'] == 'bannerImageTwo'){
+        $bannerImageTwo = $data['text'];
     }
     /* Banner2 section Handlers */
 
