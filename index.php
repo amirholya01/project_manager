@@ -45,6 +45,7 @@
     $router->get('/signupFunction', 'controllers/signup');
     $router->get('/logoutFunction', 'controllers/logout');
     $router->get('/Product', 'views/frontend/Product');
+    $router->get('/ProductType', 'views/frontend/productType');
     $router->get('/AboutUS', 'views/frontend/AboutUS');
     $router->get('/Contact', 'views/frontend/Contact');
     $router->get('/Checkout', 'views/frontend/Checkout');

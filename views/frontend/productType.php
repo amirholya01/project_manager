@@ -13,7 +13,7 @@
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
     require_once $rootPath . "models/handlers/ProductsHandler.php";
-    require_once $rootPath . "controllers/frontendProducts.php";
+    require_once $rootPath . "controllers/productType.php";
 
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
     require_once $rootPath . "controllers/frontpage.php"; 
@@ -38,7 +38,7 @@
 <div class="container">
     <div class="text-center">
         <div class="simple-article size-3 grey uppercase col-xs-b5"><?php echo $productsSubtitle ?></div>
-        <div class="h2"><?php echo $productsTitle ?></div>
+        <div class="h2"><?php echo $_POST['title'] ?></div>
         <div class="title-underline center"><span></span></div>
     </div>
 </div>
@@ -46,7 +46,6 @@
 
 
 <div class="empty-space col-xs-b35 col-md-b70"></div>
-<!-- Normal, Special Theme, Costumized -->
 <?php
     foreach($types as $type){
 ?>
@@ -73,8 +72,6 @@
         }
     ?>
 </div>
-
-
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 

@@ -342,6 +342,20 @@ class ProductsHandler extends Products{
             ":name" => $name
         ));
     }
+
+    public function getRelatedProducts($type){
+        $getTypeId = $this->db->prepare($this->convertTypeToTypeIdQuery);
+        $getTypeId->bindParam(':type', $type);
+        $getTypeId->execute();
+
+        $typeId = $getTypeId->fetch();
+
+        $getRelatedProducts = $this->db->prepare($this->getRelatedProductsQuery);
+        $getRelatedProducts->bindParam(':type', $typeId['id']);
+        $getRelatedProducts->execute();
+
+        return $getRelatedProducts->fetchAll();
+    }
 }
 
 $ProductsHandler = new ProductsHandler($db);
