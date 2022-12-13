@@ -47,7 +47,11 @@
                         </div>
                         <?php
                             /* Get medias */
-
+                            /* 
+                                hmm i didnt make a comment when i made this
+                                but im probably messing up the order here for a reason.
+                                atleast i hope so
+                            */
                             $medias = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
 
                             /* foreach... */

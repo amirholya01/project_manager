@@ -1,6 +1,7 @@
 <?php
 
-$cart = array();
+/* needs $products to function *///$products = array();
+$newProducts = array();
 $total = 0;
 
 
@@ -76,33 +77,19 @@ foreach($roughProductSales as $sale){
 }
 
 
-/* Creates a cart from the cart session */
-foreach($_SESSION['cart'] as $item){
-    /* Takes the product ids from $_SESSION['cart'] and turn them into the intire product */
-    $product = $ProductsHandler->getProducts('', $item['product']);
-
-    /* Checks if the product have been removed from the database */
-    if(isset($product[0])){
-        /* Checks if the product has a discount */
-        foreach($productSales as $sale){
-            /* $productSales = all the active sales we filtered above */
-            /* $item['product'] = id of product in cart */
-            if($sale['product_id'] == $item['product']){
-                $product[0]['price'] = $sale['sale'];
-            }
+/* Updates products to include sales */
+foreach($products as $product){
+    /* Checks if the product has a discount */
+    foreach($productSales as $sale){
+        /* $productSales = all the active sales we filtered above */
+        /* if the ids match, apply the discount */
+        if($sale['product_id'] == $product['products_id']){
+            $product['price'] = $sale['sale'];
         }
-    
-        /* Makes a new array that contains the intire product, quantity and total cost */
-        $newItem = array(
-            'product' => $product,
-            'quantity' => $item['quantity'],
-            'total' => $product[0]['price'] * $item['quantity']
-        );
-    
-        /* Push the product array to the cart */
-        array_push($cart, $newItem);
-    
-        /* Update total price */
-        $total += $product[0]['price'] * $item['quantity'];
     }
+
+    /* Push the product to the products array */
+    array_push($newProducts, $product);
 }
+
+$products = $newProducts;
