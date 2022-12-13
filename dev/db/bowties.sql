@@ -116,6 +116,12 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
+('aboutPageTitle1', 'Nicklas, Developer'),
+('aboutPageText1', 'The creative mind behind the system that we use for our website. Bringing the technical solutions to the table to ensure a smooth shopping experience.'),
+('aboutPageTitle2', 'Behdin, Developer'),
+('aboutPageText2', 'The creative mind behind user experience on the site. Not only are they responsible for bringing the spirit of the brand to the site, but also the team workflow here in The Custom Ties.'),
+('aboutPageTitle3', 'Renata , Developer'),
+('aboutPageText3', 'Creative mind behind creative writing. Working with testing the features and making sure users have the best and fastest experience.'),
 ('aboutusSubtitle', 'ABOUT US'),
 ('aboutusTitle', 'THE COUSTUME TIE'),
 ('aboutusSlogan', 'Unique ties that are made with love'),
@@ -131,10 +137,13 @@ INSERT INTO `frontpage` (`id`, `text`) VALUES
 ('banner1Slogan2', 'Huge range to choose from'),
 ('banner1Slogan3', 'Easy communication with our live chat'),
 ('bannerText1', 'We strive to offer our customers the lowest possible prices, the best available selection while giving them a chance to bring their own ideas, and the utmost convenience. All this while keeping to on demand production making us as sustainable as we can. '),
+('bannerImageOne', ''),
 
 ('bannerSubtitle2', 'Professional edition'),
 ('bannerTitle2', 'Your bowties'),
-('bannerSlogan2', 'Costumize your own design and order'),
+('banner2Slogan1', 'Sustainable mindset '),
+('banner2Slogan2', 'Quality oriented approach'),
+('banner2Slogan3', 'Made to be unique '),
 ('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! ');
 COMMIT;
 
@@ -202,9 +211,10 @@ CREATE TABLE IF NOT EXISTS `news` (
 --
 
 INSERT INTO `news` (`news_id`, `title`, `description`, `time`, `media`) VALUES
-(1, 'Meeeeeeeeeep!', 'Meep meepi di moop moop meep!', '2022-12-02 11:19:07', NULL),
-(7, 'does dis work', 'oer', '2022-12-05 11:27:13', '7380d60fecb10.jpg'),
-(6, 'Test', 'i sure hope this works now', '2022-12-02 11:44:58', '6380d60fecb10.jpg');
+(1, 'About 2023 ', 'It is that time of the year when we reflect on things we have done and look forwards. In March of 2023 we will celebrate our one year anniversary, stay tuned for some surprises from us to you!  We promise to grow even more this upcoming year ', '2022-12-02 11:19:07', '6395d2ada2be0.png'),
+(7, 'New Fabric! ', 'We have some great news! From this day and onwards we are partnered with a new supplier for our fabrics used for the bow ties. This supplier is not only nature friendly, but also provides jobs to some of our community members that might find it hard otherwise. ', '2022-12-05 11:27:13', '6395d190c5741.png'),
+(6, 'New Collection', 'Winter is already here, and may the new year have not dropped yet, but we want to introduce our new collection for the 2023 valentines day. It is a great time to look for a perfect bow tie for the occasion now and be ready for the special day ahead of  time. ', '2022-12-02 11:44:58', '6395d097c6943.png');
+COMMIT;
 
 -- --------------------------------------------------------
 
@@ -228,8 +238,29 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`products_id`, `name`, `type`, `description`, `price`, `primary_image`) VALUES
-(2, 'Solid Faded Pink MORE Unicorns', 1, 'A solid faded pink bowtie', '150', '7380d60fecb10.jpg'),
-(3, 'AAAAAAAA', 5, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAa', '400000', '6380d60fecb10.jpg');
+(2, 'Denmark bowtie', 1, 'Denmark bow tie for adult, custom hand made ', '150', '6395d07c24500.png'),
+(3, 'Ukraine bowtie', 1, 'Ukraine bow tie for adult, custom hand made', '150', '6395d0849b67e.png'),
+(4, 'Lemon bowtie', 1, 'Lemon pattern bow tie for men, custom hand made ', '150', '6395d2d637da5.png'),
+(5, 'Transgender bowtie', 1, 'Transgender pride flag bowtie, lgbtq+, custom hand made', '150', '6395d0b7d6c49.png'),
+(6, 'Pansexual bowtie', 1, 'Pansexual pride flag bow tie, lgbtq+, custom hand made', '150', '6395d0a62e813.png'),
+(7, 'Feather bowtie', 1, 'Feather pattern bow tie for adult, custom hand made ', '150', '6395d0ce8fc84.png'),
+(8, 'Odd shapes bowtie', 1, 'Odd shapes pattern bow tie for adult, custom hand made ', '150', '6395d2599109c.png'),
+(9, 'Leaf pattern bowtie', 1, 'Leaf pattern bow tie for adult, custom hand made', '150', '6395d102ecfc9.png'),
+(10, 'Colorful dots bowtie', 1, 'Colorful dots pattern bow tie for adult, custom hand made ', '150', '6395d131e2d08.png'),
+(11, 'Green leaf ', 1, 'Green leaf pattern bow tie for adult, custom hand made ', '150', '6395d110561b8.png'),
+(12, 'Guitar pattern', 1, 'Guitar pattern bow tie for adult, custom hand made', '150', '6395d11b9a0d6.png'),
+(13, 'Cute bear bowtie', 1, 'Cute bear pattern bow tie for adult, custom hand made ', '150', '6395d0c039466.png'),
+(14, 'Colorful bowtie', 1, 'Colorful bowtie, custom hand made', '150', '6395d097c6943.png'),
+(15, 'Cartoon patern bowtie', 1, 'Cartoon patern bowtie, custom hand made ', '150', '6395d0e8794f2.png'),
+(16, 'Blue 3d patern bowtie', 1, 'Blue 3d patern bowtie, custom hand made ', '150', '6395d143ec140.png'),
+(17, 'Red blue and white bowtie', 1, 'Red blue and white bowtie, custom hand made ', '150', '6395d162c3654.png'),
+(18, 'Red and white pattern bowtie', 1, 'Red and white pattern bowtie, custom hand made ', '150', '6395d181babdf.png'),
+(19, 'blue and white pattern bowtie', 1, 'blue and white pattern bowtie, custom hand made ', '150', '6395d190c5741.png'),
+(20, 'white 3d bowtie', 1, 'White 3d bowtie, custom hand made ', '150', '6395d19eb3b13.png'),
+(21, 'Blue 3d bowtie', 1, 'Blue 3d bowtie, custom hand made ', '150', '6395d1adde5ff.png'),
+(22, 'Black cartoon patern bowtie', 1, 'Black cartoon patern, custom hand made ', '150', '6395d223c4c60.png'),
+(23, 'Black and white bowtie', 1, 'Black and white bowtie, custom hand made ', '150', '6395d2ada2be0.png');
+COMMIT;
 
 -- --------------------------------------------------------
 

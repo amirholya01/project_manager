@@ -50,13 +50,11 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="icon-description-shortcode style-2">
-                        <img class="image-icon image-thumbnail rounded-image" src="assets/img/thumbnail-35.jpg"
+                        <img class="image-icon image-thumbnail rounded-image" src="uploads/<?php echo $bannerImageOne?>"
                             alt="" />
                         <div class="content">
-                            <h6 class="title h6">Phasellus rhoncus in nunc sit</h6>
-                            <div class="description simple-article size-2">Etiam mollis tristique mi ac ultrices. Morbi
-                                vel neque eget lacus sollicitudin facilisis. Lorem ipsum dolor sit amet semper ante
-                                vehicula</div>
+                            <h6 class="title h6"><?php echo $aboutPageTitle1?></h6>
+                            <div class="description simple-article size-2"><?php echo $aboutPageText1?></div>
                         </div>
                     </div>
                 </div>
@@ -65,10 +63,8 @@
                         <img class="image-icon image-thumbnail rounded-image" src="assets/img/thumbnail-36.jpg"
                             alt="" />
                         <div class="content">
-                            <h6 class="title h6">amet mattis molestie nec tortor quis</h6>
-                            <div class="description simple-article size-2">Etiam mollis tristique mi ac ultrices. Morbi
-                                vel neque eget lacus sollicitudin facilisis. Lorem ipsum dolor sit amet semper ante
-                                vehicula</div>
+                            <h6 class="title h6"><?php echo $aboutPageTitle2?></h6>
+                            <div class="description simple-article size-2"><?php echo $aboutPageText2?></div>
                         </div>
                     </div>
                 </div>
@@ -77,10 +73,8 @@
                         <img class="image-icon image-thumbnail rounded-image" src="assets/img/thumbnail-37.jpg"
                             alt="" />
                         <div class="content">
-                            <h6 class="title h6">molestie nec tortor quis</h6>
-                            <div class="description simple-article size-2">Etiam mollis tristique mi ac ultrices. Morbi
-                                vel neque eget lacus sollicitudin facilisis. Lorem ipsum dolor sit amet semper ante
-                                vehicula</div>
+                            <h6 class="title h6"><?php echo $aboutPageTitle3?></h6>
+                            <div class="description simple-article size-2"><?php echo $aboutPageText3?></div>
                         </div>
                     </div>
                 </div>

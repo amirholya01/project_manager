@@ -117,11 +117,16 @@ button {
     max-width: 350px;
     min-width: 350px;
     height: auto;
+    margin: -30px 0;
 }
 
 .news-image-div img{
     width: 100%;
     height: auto;
+}
+
+.font-size-news{
+    font-size: 16px !important;
 }
 
 .footer-links-2{

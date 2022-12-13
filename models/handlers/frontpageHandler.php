@@ -71,6 +71,14 @@ class FrontpageHandler extends Frontpage{
         $update->bindParam(":id", $id);
         $update->execute();
     }
+    
+    public function editBannerImageOne($image){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerImageOne';
+        $update->bindParam(":text", $image);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
     /* Banner1 section Handlers */
 
 
@@ -91,10 +99,26 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
 
-    public function editBannerSlogan2($bannerSlogan2){
+    public function editBanner2Slogan1($banner2Slogan1){
         $update = $this->db->prepare($this->UniversalEditQuery);
-        $id = 'bannerSlogan2';
-        $update->bindParam(":text", $bannerSlogan2);
+        $id = 'banner2Slogan1';
+        $update->bindParam(":text", $banner2Slogan1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner2Slogan2($banner2Slogan2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner2Slogan2';
+        $update->bindParam(":text", $banner2Slogan2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editBanner2Slogan3($banner2Slogan3){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'banner2Slogan3';
+        $update->bindParam(":text", $banner2Slogan3);
         $update->bindParam(":id", $id);
         $update->execute();
     }
@@ -173,6 +197,58 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
 
+
+    /* AboutUS Page section Handlers */
+    public function editAboutPageTitle1($aboutPageTitle1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageTitle1';
+        $update->bindParam(":text", $aboutPageTitle1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutPageText1($aboutPageText1){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageText1';
+        $update->bindParam(":text", $aboutPageText1);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutPageTitle2($aboutPageTitle2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageTitle2';
+        $update->bindParam(":text", $aboutPageTitle2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutPageText2($aboutPageText2){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageText2';
+        $update->bindParam(":text", $aboutPageText2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutPageTitle3($aboutPageTitle3){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageTitle3';
+        $update->bindParam(":text", $aboutPageTitle3);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutPageText3($aboutPageText3){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutPageText3';
+        $update->bindParam(":text", $aboutPageText3);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    /* AboutUS Page section Handlers */
+
     public function editAboutUs1($title){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutUs1';
@@ -246,6 +322,7 @@ class FrontpageHandler extends Frontpage{
         $update->bindParam(":id", $id);
         $update->execute();
     }
+    
     
 }
 
