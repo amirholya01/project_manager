@@ -4,10 +4,18 @@
         $rootPath = "../$rootPath";
     }
     
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['productType'];
+    }else{
+        $_SESSION["savedPost"]['productType'] = $_POST;
+    }
+
     // including breadcrumb to be able to see the sitemap in frontend
-    $pageName = "Product";
-    $pageLink = "/Product";
-    $pageLevel = 2;
+    $pageName = "Product " . $_POST['title'];
+    $pageLink = "/ProductType";
+    $pageLevel = 3;
+
+    /* history stuff in here */
 
     require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";

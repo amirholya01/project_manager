@@ -3,6 +3,12 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+    
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['adminNewOrders'];
+    }else{
+        $_SESSION["savedPost"]['adminNewOrders'] = $_POST;
+    }
 
     $filter = true;
     require_once $rootPath . "public/dbconn.php";

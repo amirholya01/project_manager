@@ -4,6 +4,12 @@
         $rootPath = "../$rootPath";
     }
 
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['adminOrders'];
+    }else{
+        $_SESSION["savedPost"]['adminOrders'] = $_POST;
+    }
+
     $filter = false;
     require_once $rootPath . "public/dbconn.php";
 

@@ -3,6 +3,12 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['newsShow'];
+    }else{
+        $_SESSION["savedPost"]['newsShow'] = $_POST;
+    }
     
     $pageName = "News";
     $pageLink = "/NewsShow";

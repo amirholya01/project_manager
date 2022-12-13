@@ -3,11 +3,17 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+
+    if($_POST == array()){
+        $_POST = $_SESSION["savedPost"]['productSale'];
+    }else{
+        $_SESSION["savedPost"]['productSale'] = $_POST;
+    }
     
     // including breadcrumb to be able to see the sitemap in frontend
-    $pageName = "Product";
-    $pageLink = "/Product";
-    $pageLevel = 2;
+    $pageName = $_POST['title'];
+    $pageLink = "/ProductSale";
+    $pageLevel = 3;
 
     require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
