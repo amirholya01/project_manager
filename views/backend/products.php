@@ -154,6 +154,10 @@
                             ?>
                             <p><?php echo $indData['description'] ?></p>
                             <p><?php echo $indData['price'] ?> DKK</p>
+                            <div class="BannerImage">
+                                <?php $image = explode(".", $indData['primary_image']) ?>
+                                <img  src="/uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>">
+                            </div>
                         </div>
 
                             <div class="Edit-Delete-div">

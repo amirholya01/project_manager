@@ -60,6 +60,16 @@ if(isset($_POST['bannerText1'])){
         $FrontpageHandler->editBannerText1($text);
     }
 }
+
+if(isset($_POST['bannerImageOne'])){
+    $text = $stringSanitation->sanitice($_POST['bannerImageOne']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerImageOne($text);
+    }
+}
 /* Banner1 section Handlers */
 
 
@@ -84,13 +94,33 @@ if(isset($_POST['bannerTitle2'])){
     }
 }
 
-if(isset($_POST['bannerSlogan2'])){
-    $text = $stringSanitation->sanitice($_POST['bannerSlogan2']);
+if(isset($_POST['banner2Slogan1'])){
+    $text = $stringSanitation->sanitice($_POST['banner2Slogan1']);
 
     $validStrings = $stringSanitation->getValidationStatus();
 
     if($validStrings == true){
-        $FrontpageHandler->editBannerSlogan2($text);
+        $FrontpageHandler->editBanner2Slogan1($text);
+    }
+}
+
+if(isset($_POST['banner2Slogan2'])){
+    $text = $stringSanitation->sanitice($_POST['banner2Slogan2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner2Slogan2($text);
+    }
+}
+
+if(isset($_POST['banner2Slogan3'])){
+    $text = $stringSanitation->sanitice($_POST['banner2Slogan3']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBanner2Slogan3($text);
     }
 }
 
@@ -103,8 +133,72 @@ if(isset($_POST['banner2Text1'])){
         $FrontpageHandler->editBanner2Text1($text);
     }
 }
-
 /* Banner2 section Handlers */
+
+
+/* AboutUS Page section Handlers */
+if(isset($_POST['aboutPageTitle1'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageTitle1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageTitle1($text);
+    }
+}
+
+if(isset($_POST['aboutPageText1'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageText1']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageText1($text);
+    }
+}
+
+if(isset($_POST['aboutPageTitle2'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageTitle2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageTitle2($text);
+    }
+}
+
+if(isset($_POST['aboutPageText2'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageText2']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageText2($text);
+    }
+}
+
+if(isset($_POST['aboutPageTitle3'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageTitle3']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageTitle3($text);
+    }
+}
+
+if(isset($_POST['aboutPageText3'])){
+    $text = $stringSanitation->sanitice($_POST['aboutPageText3']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutPageText3($text);
+    }
+}
+
+
+/* AboutUS Page section Handlers */
 
 
 if(isset($_POST['aboutUs1'])){
@@ -266,3 +360,5 @@ if(isset($_POST['follow'])){
         $FrontpageHandler->editFollowUs($text);
     }
 }
+
+

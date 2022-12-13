@@ -70,6 +70,7 @@
 
     $router->get('/adminCreateProduct', 'views/backend/createProduct');
     $router->get('/adminEditProduct', 'views/backend/editProduct');
+    $router->get('/bannerOneImagePicker', 'views/backend/bannerOneImagePicker');
 
     $router->get('/adminSale', 'views/backend/createSale');
     $router->get('/salesActionDecider', 'controllers/salesActionDecider');

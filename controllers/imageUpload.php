@@ -100,17 +100,17 @@ class imageUpload extends ProductsHandler{
             $imageWidth = $imageSize[0];
             $imageHeight = $imageSize[1];
 
-            $thumbMaxSize = 500;
+            $thumbMaxSize = 600;
 
             /* Calculates the new image sizes */
             if($imageHeight > $imageWidth){
                 $ratio = $imageWidth / $imageHeight;
-                $imageHeight = 500;
-                $imageWidth = 500 * $ratio;
+                $imageHeight = 600;
+                $imageWidth = 600 * $ratio;
             } else {
                 $ratio = $imageHeight / $imageWidth;
-                $imageWidth = 500;
-                $imageHeight = 500 * $ratio;
+                $imageWidth = 600;
+                $imageHeight = 600 * $ratio;
             }
 
 

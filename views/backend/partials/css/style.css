@@ -48,6 +48,16 @@ aside nav{
   justify-content: space-between;
 }
 
+.ImageUploadHandlersStyle{
+  display: flex;
+  align-items: center;
+}
+
+.ChooseImageButton{
+  display: flex;
+  align-items: center;
+}
+
 ul{
   height: auto !important;
   margin-top: 48px;
@@ -130,7 +140,7 @@ hr.solid {
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 13.5%;
+  width: 14.5%;
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
   margin-right: 15px;
@@ -247,6 +257,17 @@ figure{
 }
 
 figure img{
+  width: 100%;
+  height: auto;
+}
+
+.BannerImage{
+  max-width: 300px;
+  height: auto;
+  margin: -40px 0;
+}
+
+.BannerImage img{
   width: 100%;
   height: auto;
 }

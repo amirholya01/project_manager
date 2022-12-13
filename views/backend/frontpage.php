@@ -12,6 +12,7 @@
     require_once $rootPath . "security/stringSanitation.php";
     
     require_once $rootPath . "models/handlers/frontpageHandler.php";
+    require_once $rootPath . "models/handlers/productsHandler.php";
 
     require_once $rootPath . "controllers/adminFrontpage.php";
     require_once $rootPath . "controllers/editFrontpage.php";
@@ -64,7 +65,7 @@
 
     <hr class="solid">
 
-
+<!-- Banner1 section  -->
     <h2>
         Banner 1
     </h2>
@@ -111,16 +112,30 @@
 
     <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
         <h3>
-            Banner / part-1
+            Banner Tekst
         </h3>
-        <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
+        <textarea name="bannerText" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
+
+    <div>
+        <h3>
+                Banner / Image 1
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $bannerImageOne?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/bannerOneImagePicker">Choose Image</a>
+        </div>
+    </div>
+<!-- Banner1 section  -->
 
     
     <hr class="solid">
 
 
+<!-- Banner2 section  -->
     <h2>
         Banner 2
     </h2>
@@ -141,22 +156,50 @@
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan  -->
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan1  -->
         <h3>
-            Banner Slogan
+            Banner Slogan 1
         </h3>
-        <input class="input" type="text" name="bannerSlogan2" value="<?php echo $bannerSlogan2 ?>">
+        <input class="input" type="text" name="banner2Slogan1" value="<?php echo $banner2Slogan1 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan2  -->
+        <h3>
+            Banner Slogan - 2
+        </h3>
+        <input class="input" type="text" name="banner2Slogan2" value="<?php echo $banner2Slogan2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan3  -->
+        <h3>
+            Banner Slogan - 3
+        </h3>
+        <input class="input" type="text" name="banner2Slogan3" value="<?php echo $banner2Slogan3 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
     <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
         <h3>
-            Banner / part-1
+            Banner Tekst
         </h3>
         <textarea name="banner2Text1" id="" cols="60" rows="10"><?php echo $banner2Text1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
 
+    <div>
+        <h3>
+                Banner / Image 2
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $bannerImageOne?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/bannerOneImagePicker">Choose Image</a>
+        </div>
+    </div>
+<!-- Banner2 section  -->
 
 
     <hr class="solid">
@@ -206,8 +249,61 @@
         About us
     </h2>
 
+<!-- AboutUSpage section  -->
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - title 1 
+        </h3>
+        <input class="input" type="text" name="aboutPageTitle1" value="<?php echo $aboutPageTitle1 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Sub title  -->
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - text 1 
+        </h3>
+        <p>This is the same one as on the frontpage</p>
+        <textarea name="aboutPageText1" id="" cols="60" rows="10"><?php echo $aboutPageText1 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - title 2 
+        </h3>
+        <input class="input" type="text" name="aboutPageTitle2" value="<?php echo $aboutPageTitle2 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - text 2 
+        </h3>
+        <p>This is the same one as on the frontpage</p>
+        <textarea name="aboutPageText2" id="" cols="60" rows="10"><?php echo $aboutPageText2 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - title 3 
+        </h3>
+        <input class="input" type="text" name="aboutPageTitle3" value="<?php echo $aboutPageTitle3 ?>">
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+    <form method="POST" action="/adminFrontpage"> 
+        <h3>
+            About us Page - text 3 
+        </h3>
+        <p>This is the same one as on the frontpage</p>
+        <textarea name="aboutPageText3" id="" cols="60" rows="10"><?php echo $aboutPageText3 ?></textarea>
+        <button class="height-button button submit" type="submit">Submit/Edit</button>
+    </form>
+
+<!-- AboutUSpage section  -->
+
+    <form method="POST" action="/adminFrontpage"> 
         <h3>
             Sub title
         </h3>

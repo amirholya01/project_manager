@@ -1,6 +1,7 @@
 <?php
 
 $dataset = $FrontpageHandler->getFrontpage();
+$mediaData = $ProductsHandler->getMedia();
 
 $bannerSubtitle1 = '';
 $bannerTitle1 = '';
@@ -8,10 +9,13 @@ $banner1Slogan1 = '';
 $banner1Slogan2 = '';
 $banner1Slogan3 = '';
 $bannerText1 = '';
+$bannerImageOne = '';
 
 $bannerSubtitle2 = '';
 $bannerTitle2 = '';
-$bannerSlogan2 = '';
+$banner2Slogan1 = '';
+$banner2Slogan2 = '';
+$banner2Slogan3 = '';
 $banner2Text1 = '';
 
 $phone = '';
@@ -27,6 +31,12 @@ $nav4 = '';
 $productsSubtitle = '';
 $productsTitle = '';
 
+$aboutPageTitle1 = '';
+$aboutPageText1 = '';
+$aboutPageTitle2 = '';
+$aboutPageText2 = '';
+$aboutPageTitle3 = '';
+$aboutPageText3 = '';
 $aboutusSubtitle = '';
 $aboutusTitle = '';
 $aboutusSlogan = '';
@@ -59,6 +69,11 @@ foreach($dataset as $data){
     if($data['id'] == 'bannerText1'){
         $bannerText1 = $data['text'];
     }
+    if($data['id'] == 'bannerImageOne'){
+        $bannerImageOne = $data['text'];
+    }
+    /* Banner1 section Handlers */
+
 
     /* Banner2 section Handlers */
     if($data['id'] == 'bannerSubtitle2'){
@@ -67,12 +82,20 @@ foreach($dataset as $data){
     if($data['id'] == 'bannerTitle2'){
         $bannerTitle2 = $data['text'];
     }
-    if($data['id'] == 'bannerSlogan2'){
-        $bannerSlogan2 = $data['text'];
+    if($data['id'] == 'banner2Slogan1'){
+        $banner2Slogan1 = $data['text'];
+    }
+    if($data['id'] == 'banner2Slogan2'){
+        $banner2Slogan2 = $data['text'];
+    }
+    if($data['id'] == 'banner2Slogan3'){
+        $banner2Slogan3 = $data['text'];
     }
     if($data['id'] == 'banner2Text1'){
         $banner2Text1 = $data['text'];
     }
+    /* Banner2 section Handlers */
+
 
     if($data['id'] == 'phone'){
         $phone = $data['text'];
@@ -104,6 +127,31 @@ foreach($dataset as $data){
     if($data['id'] == 'productsTitle'){
         $productsTitle = $data['text'];
     }
+
+
+
+    /* AboutUS Page section Handlers */
+    if($data['id'] == 'aboutPageTitle1'){
+        $aboutPageTitle1 = $data['text'];
+    }
+    if($data['id'] == 'aboutPageText1'){
+        $aboutPageText1 = $data['text'];
+    }
+    if($data['id'] == 'aboutPageTitle2'){
+        $aboutPageTitle2 = $data['text'];
+    }
+    if($data['id'] == 'aboutPageText2'){
+        $aboutPageText2 = $data['text'];
+    }
+    if($data['id'] == 'aboutPageTitle3'){
+        $aboutPageTitle3 = $data['text'];
+    }
+    if($data['id'] == 'aboutPageText3'){
+        $aboutPageText3 = $data['text'];
+    }
+    /* AboutUS Page section Handlers */
+
+
     if($data['id'] == 'aboutusSubtitle'){
         $aboutusSubtitle = $data['text'];
     }

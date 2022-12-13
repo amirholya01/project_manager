@@ -56,9 +56,9 @@
                                         <div class="simple-article size-4 light transparent">
                                             <p><?php echo $bannerText1 ?></p>
                                             <ul>
-                                                <li><?php echo $banner1Slogan1 ?></li>
-                                                <li>Huge range to choose from</li>
-                                                <li>Easy communication with our live chat</li>
+                                                <li><?php echo $banner1Slogan1?></li>
+                                                <li><?php echo $banner1Slogan2?></li>
+                                                <li><?php echo $banner1Slogan3?></li>
                                             </ul>
                                         </div>
                                         <div class="col-xs-b30"></div>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="slider-product-preview FirstBannerImage" data-swiper-parallax-x="-600">
-                            <img src="assets/img/product-preview-12.png" alt="" />
+                            <img src="uploads/<?php echo $bannerImageOne?>" alt="" />
                         </div>
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
                     </div>
@@ -86,21 +86,20 @@
                                 <div class="cell-view page-height">
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                     <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3">PROFESSIONAL EDITION</div>
+                                        <div class="simple-article light transparent size-3"><?php echo $bannerSubtitle1 ?></div>
                                         <div class="col-xs-b5"></div>
                                     </div>
                                     <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1 light">real beat trx</h1>
+                                        <h1 class="h1 light"><?php echo $bannerTitle1 ?></h1>
                                         <div class="title-underline light left"><span></span></div>
                                     </div>
                                     <div data-swiper-parallax-x="-400">
                                         <div class="simple-article size-4 light transparent">
-                                            <p>In feugiat molestie tortor a malesuada. Etiam a venenatis ipsum. Proin
-                                                pharetra elit at feugiat commodo vel placerat tincidunt sapien nec</p>
+                                            <p><?php echo $banner2Text1 ?></p>
                                             <ul>
-                                                <li>20.000h of high quality music</li>
-                                                <li>Perfect insulation</li>
-                                                <li>5 years guaranteed work</li>
+                                                <li><?php echo $banner2Slogan1 ?></li>
+                                                <li><?php echo $banner2Slogan2 ?></li>
+                                                <li><?php echo $banner2Slogan3 ?></li>
                                             </ul>
                                         </div>
                                         <div class="col-xs-b30"></div>
@@ -177,7 +176,7 @@
                                 </div>
 
                                 <!--  News description loaded from database  -->
-                                <div class="simple-article size-4 light transparent col-xs-b30"><?php echo $new['description'] ?></div>
+                                <div class="simple-article size-4 light transparent col-xs-b30 font-size-news"><?php echo $new['description'] ?></div>
                                 
                                 <a class="button size-2 style-2" href="/NewsShow">
                                     <span class="button-wrapper">
