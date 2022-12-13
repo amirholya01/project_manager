@@ -154,43 +154,50 @@
     <div class="container-fluid">
         <div class="row">
             <?php 
-                    /* Loop through the News */
-                    foreach($news as $new){
+                /* Loop through the News */
+                foreach($news as $new){
             ?>
-                <div class="col-md-4 col-xs-b15 col-md-b0">
-                    <div class="banner-shortcode style-4 rounded-image text-center"
-                        style="background-image: url(assets/img/background-5.jpg);">
-                        <div class="valign-middle-cell">
-                            <div class="valign-middle-content flex-center">
-                                
-                                <!--  News title loaded from database  -->
-                                <h3 class="h3 light"><?php echo $new['title'] ?></h3>
-                                <div class="title-underline light center"><span></span></div>
+                    <form id="<?php echo $new['title'] ?>" action="/NewsShow" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $new['news_id'] ?>">
+                        <input type="hidden" name="title" value="<?php echo $new['title'] ?>">
+                        <input type="hidden" name="description" value="<?php echo $new['description'] ?>">
+                        <input type="hidden" name="time" value="<?php echo $new['time'] ?>">
+                        <input type="hidden" name="media" value="<?php echo $new['media'] ?>">
+                    </form>
+                    <div class="col-md-4 col-xs-b15 col-md-b0">
+                        <div class="banner-shortcode style-4 rounded-image text-center"
+                            style="background-image: url(assets/img/background-5.jpg);">
+                            <div class="valign-middle-cell">
+                                <div class="valign-middle-content flex-center">
+                                    
+                                    <!--  News title loaded from database  -->
+                                    <h3 class="h3 light"><?php echo $new['title'] ?></h3>
+                                    <div class="title-underline light center"><span></span></div>
 
-                                <!--  News image loaded from database  -->
-                                <div class="news-image-div">
-                                    <?php 
-                                        $image = explode(".", $new['media']);
-                                    ?>
-                                    <img src="uploads/<?php echo $image[0] ?>.<?php echo $image[1] ?>" alt="">
+                                    <!--  News image loaded from database  -->
+                                    <div class="news-image-div">
+                                        <?php 
+                                            $image = explode(".", $new['media']);
+                                        ?>
+                                        <img src="uploads/<?php echo $image[0] ?>.<?php echo $image[1] ?>" alt="">
+                                    </div>
+
+                                    <!--  News description loaded from database  -->
+                                    <div class="simple-article size-4 light transparent col-xs-b30 font-size-news"><?php echo $new['description'] ?></div>
+                                    
+                                    <button class="button size-2 style-2" form="<?php echo $new['title'] ?>" type="submit">
+                                        <span class="button-wrapper">
+                                            <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
+                                            <span class="text">learn more</span>
+                                        </span>
+                                    </button>
+
                                 </div>
-
-                                <!--  News description loaded from database  -->
-                                <div class="simple-article size-4 light transparent col-xs-b30 font-size-news"><?php echo $new['description'] ?></div>
-                                
-                                <a class="button size-2 style-2" href="/NewsShow">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="assets/icons/icon-1.png" alt=""></span>
-                                        <span class="text">learn more</span>
-                                    </span>
-                                </a>
-
                             </div>
-                        </div>
 
-                        <div class="angle-left hidden-xs"></div>
+                            <div class="angle-left hidden-xs"></div>
+                        </div>
                     </div>
-                </div>
             <?php 
                 }
             ?>
@@ -251,7 +258,7 @@
                                             <button type="submit" form="ProductSale" class="button size-2 style-2">
                                                 <span class="button-wrapper">
                                                     <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
-                                                    <span class="text">Add To Cart</span>
+                                                    <span class="text">View Products</span>
                                                 </span>
                                             </button>
                                         </div>

@@ -12,8 +12,11 @@ require_once $rootPath . "security/formSpam.php";
 if(isset($_SESSION['name'])){
     if($validated){
         //Does not work locally!
-        //mail("✒️ INSERT EMAIL HERE AND UNCOMMENT!", $_POST['subject'], $_POST['name'] . " " . $_POST['email'] . " " . $_POST['phone'] . " " . $_POST['message']);
-        
+        mail("✒️ INSERT EMAIL HERE AND UNCOMMENT!", $_POST['subject'], $_POST['name'] . " " . 
+        $_POST['email'] . " " . $_POST['phone'] . " " . $_POST['message']);
+        /* need to make and use a mail from the domain */
+        /* https://mailtrap.io/blog/php-email-sending/ */
+
         header("location: /Contact");
     } else{
         header("location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");

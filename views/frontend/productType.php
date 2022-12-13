@@ -62,7 +62,7 @@
     <?php
         foreach($types as $type){
     ?>
-            <button type="submit" form="type<?php echo $type['id'] ?>" class="button size-2 style-2 button-size">
+            <button <?php echo $_POST['type'] == $type['id'] ? "style='background: #B2A6CE !important'" : "" ?> type="submit" form="type<?php echo $type['id'] ?>" class="button size-2 style-2 button-size">
                 <span class="button-wrapper">
                     <span class="icon">
                         <img src="assets/icons/icon-1.png" alt="">

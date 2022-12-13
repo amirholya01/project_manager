@@ -100,8 +100,6 @@
             /* Previous button */
             if($page > 0){
         ?>
-
-            
                 <form method="POST" action="adminProducts">
                     <input type="hidden" name="id" value="<?php echo ($id != null) ? $id : ""; ?>">
                     <input type="hidden" name="search" value="<?php echo ($search != null) ? $search : ""; ?>">
@@ -109,12 +107,9 @@
                     <input type="hidden" name="page" value="<?php echo ($page - 1) ?>">
                     <input class="Prev-button button-pagination" type="submit" value="Prev">
                 </form>
-
         <?php
             }
         ?>
-
-
 
         <?php
             /* Next button */

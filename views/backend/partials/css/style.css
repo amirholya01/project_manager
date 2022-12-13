@@ -312,6 +312,10 @@ figure img{
   top: -45px;
 }
 
+.Next-button, .Next-button-lowest{
+  margin-left: 100px;
+}
+
 .Prev-button-lowest, .Next-button-lowest{
   position: absolute;
   bottom: 65px;

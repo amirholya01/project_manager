@@ -18,18 +18,29 @@ if(isset($_POST['product'])){
         }
     }
 
+    /* Allows to add more than one product at a time */
+    $amountToAdd = 1;
+    if($_POST['amountToAdd']){
+        $amountToAdd = $_POST['amountToAdd'];
+    }
+
     if($inCart > -1){
         /* if the product is already in the cart increase the quanitity by 1 */
-        $_SESSION['cart'][$inCart]['quantity']++;
+        $_SESSION['cart'][$inCart]['quantity'] += $amountToAdd;
     }else{
         /* if the product is not in the cart, add it */
-        array_push($_SESSION['cart'], array("product" => $_POST['product'], "quantity" => 1));
+        array_push($_SESSION['cart'], array("product" => $_POST['product'], "quantity" => $amountToAdd));
+    }
+
+
+    /* Goes back a set amount of pages */
+    $historie = -1;
+    
+    if(isset($_POST['minusHistorie'])){
+        $historie = $_POST['minusHistorie'];
     }
 }
-
-$previous = "javascript:history.go(-1)";
-if(isset($_SERVER['HTTP_REFERER'])) {
-    $previous = $_SERVER['HTTP_REFERER'];
-}
-
-header("location: $previous");
+?>
+<script>
+    window.history.go(<?php echo $historie; ?>);
+</script>
