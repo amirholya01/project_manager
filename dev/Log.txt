@@ -5,6 +5,5 @@
 
 ToDo
  * add disabled to products instead of hard deleting them
- * posts should be handled in an isolated controller and on a page
  * fix casing on files. Someone like stating with uppercase even though we use camelcase
  * 2 Trigger and 2 views

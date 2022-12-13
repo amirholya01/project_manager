@@ -40,16 +40,21 @@
         $address = $_POST['address'];
     }
     $page = 0;
-    if(isset($_POST['page'])){
+    if($_SESSION['pageNrName'] != 'orders'){
+        $_SESSION['pageNr'] = 0;
+    }elseif(isset($_POST['page'])){
         if($_SESSION['pageNrName'] == 'orders'){
             $page = $_POST['page'];
             $_SESSION['pageNr'] = $page;
         }else{
-            $_SESSION['pageNrName'] = 'orders';
+            $_SESSION['pageNr'] = 0;
         }
     }else{
-        $page = $_SESSION['pageNr'];
+        if($_SESSION['pageNrName'] == 'orders'){
+            $page = $_SESSION['pageNr'];
+        }
     }
+    $_SESSION['pageNrName'] = 'orders';
 ?>
 <div class="wrapper">
 

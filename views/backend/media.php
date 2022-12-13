@@ -45,16 +45,19 @@
         $searchType = $_POST['type'];
     }
     $page = 0;
-    if(isset($_POST['page'])){
+    if($_SESSION['pageNrName'] != 'media'){
+        $_SESSION['pageNr'] = 0;
+    }elseif(isset($_POST['page'])){
         if($_SESSION['pageNrName'] == 'media'){
             $page = $_POST['page'];
             $_SESSION['pageNr'] = $page;
-        }else{
-            $_SESSION['pageNrName'] = 'media';
         }
     }else{
-        $page = $_SESSION['pageNr'];
+        if($_SESSION['pageNrName'] == 'media'){
+            $page = $_SESSION['pageNr'];
+        }
     }
+    $_SESSION['pageNrName'] = 'media';
 ?>
 <div class="wrapper">
 

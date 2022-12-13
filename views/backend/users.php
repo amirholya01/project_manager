@@ -45,16 +45,19 @@
         $role = $_POST['role'];
     }
     $page = 0;
-    if(isset($_POST['page'])){
+    if($_SESSION['pageNrName'] != 'users'){
+        $_SESSION['pageNr'] = 0;
+    }elseif(isset($_POST['page'])){
         if($_SESSION['pageNrName'] == 'users'){
             $page = $_POST['page'];
             $_SESSION['pageNr'] = $page;
-        }else{
-            $_SESSION['pageNrName'] = 'users';
         }
     }else{
-        $page = $_SESSION['pageNr'];
+        if($_SESSION['pageNrName'] == 'users'){
+            $page = $_SESSION['pageNr'];
+        }
     }
+    $_SESSION['pageNrName'] = 'users';
 ?>
 
 <div class="wrapper">
