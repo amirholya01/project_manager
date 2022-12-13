@@ -32,8 +32,25 @@
         $_SESSION["adminLayout"] = false;
     }
 
-    if(!isset($_SESSION["savedPage"])){
-        $_SESSION["savedPost"] = array();
+    if(!isset($_SESSION["savedPost"])){
+        $_SESSION["savedPost"] = array(
+            'adminEditMedia' => array(),
+            'adminEditNews' => array(),
+            'adminEditProduct' => array(),
+            'adminEditSale' => array(),
+            'adminEditUser' => array(),
+            'adminFrontpage' => array(),
+            'adminMedia' => array(),
+            'adminNewOrders' => array(),
+            'adminNews' => array(),
+            'adminOrders' => array(),
+            'adminProducts' => array(),
+            'adminUsers' => array(),
+            'newsShow' => array(),
+            'productSale' => array(),
+            'productShow' => array(),
+            'productType' => array()
+        );
     }
 
     $request = $_SERVER["REQUEST_URI"];
