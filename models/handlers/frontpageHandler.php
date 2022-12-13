@@ -130,7 +130,13 @@ class FrontpageHandler extends Frontpage{
         $update->bindParam(":id", $id);
         $update->execute();
     }
-
+    public function editBannerImageTwo($bannerImageTwo){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'bannerImageTwo';
+        $update->bindParam(":text", $bannerImageTwo);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
     /* Banner2 section Handlers */
 
     public function editPhoneNumber($phone){

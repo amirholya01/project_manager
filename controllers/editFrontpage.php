@@ -133,6 +133,16 @@ if(isset($_POST['banner2Text1'])){
         $FrontpageHandler->editBanner2Text1($text);
     }
 }
+
+if(isset($_POST['bannerImageTwo'])){
+    $text = $stringSanitation->sanitice($_POST['bannerImageTwo']);
+
+    $validStrings = $stringSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editBannerImageTwo($text);
+    }
+}
 /* Banner2 section Handlers */
 
 

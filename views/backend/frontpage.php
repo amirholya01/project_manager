@@ -194,9 +194,9 @@
         </h3>
         <div class="ImageUploadHandlersStyle">
             <div class="BannerImage">
-                <img  src="uploads/<?php echo $bannerImageOne?>" alt="" />
+                <img  src="uploads/<?php echo $bannerImageTwo?>" alt="" />
             </div>
-            <a class="ChooseImageButton height-button button submit" href="/bannerOneImagePicker">Choose Image</a>
+            <a class="ChooseImageButton height-button button submit" href="/bannerTwoImagePicker">Choose Image</a>
         </div>
     </div>
 <!-- Banner2 section  -->
@@ -266,6 +266,18 @@
         <textarea name="aboutPageText1" id="" cols="60" rows="10"><?php echo $aboutPageText1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </form>
+
+    <div>
+        <h3>
+                About uS / Image 1
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $bannerImageTwo?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/bannerTwoImagePicker">Choose Image</a>
+        </div>
+    </div>
 
     <form method="POST" action="/adminFrontpage"> 
         <h3>

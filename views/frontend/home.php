@@ -41,7 +41,7 @@
                 <div class="swiper-slide" style="background-image: url(assets/img/background-1.jpg);">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6  margin-minus">
                                 <div class="cell-view page-height">
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                     <div data-swiper-parallax-x="-600">
@@ -114,8 +114,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-product-preview align-left" data-swiper-parallax-x="-600">
-                            <img class="slider-2-img" src="assets/img/product-preview-13.png" alt="" />
+                        <div class="slider-product-preview align-left width-left" data-swiper-parallax-x="-600">
+                                <img src="uploads/<?php echo $bannerImageTwo?>" alt="" />
                         </div>
                         <div class="empty-space col-xs-b80 col-sm-b0"></div>
                     </div>

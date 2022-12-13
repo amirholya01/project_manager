@@ -115,18 +115,18 @@
                                                             <div class="simple-article size-1">QUANTITY: <?php echo $item['quantity'] ?></div>
                                                         </td>
                                                         <td>
-                                                            <div class="simple-article size-3 grey"><?php echo $item['product'][0]['price'] ?> DKK</div>
+                                                            <div class="simple-article size-3 grey black"><?php echo $item['product'][0]['price'] ?> DKK</div>
                                                             <div class="simple-article size-1">TOTAL: <?php print_r( $item['total']) ?> DKK</div>
                                                         </td>
                                                         <td>
                                                             <form action="/removeFromCart" method="POST">
                                                                 <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
-                                                                <button type="submit">X</button>
+                                                                <button class="button-shoping-cart" type="submit">X</button>
                                                             </form>
                                                             <form action="/editQuantityInCart" method="POST">
                                                                 <input type="hidden" name="id" value="<?php print_r($item['product'][0]['products_id']) ?>">
                                                                 <input type="number" name="quantity" value="<?php echo $item['quantity'] ?>">
-                                                                <button type="submit">edit</button>
+                                                                <button class="button-shoping-cart" type="submit">edit</button>
                                                             </form>
                                                         </td>
                                                     </tr>
