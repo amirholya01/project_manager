@@ -53,7 +53,7 @@
                 </li>
                 <li>
                     <div class="Nav-icon link-icon">
-                        <img src="assets/icons/news.png" alt="">
+                        <img src="assets/icons/shopping-list.png" alt="">
                     </div>
                     <a href="/adminOrders">Orders</a>
                 </li>

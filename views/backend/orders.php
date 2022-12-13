@@ -130,23 +130,23 @@
                 ?>
                         <div class="product">
                             <div class="product-info">
-                                <p>
+                                <p class="order-title">
                                     Status
                                 </p>
                                 <p><?php echo $indData['payed'] == 0 ? "NOT payed" : "Has payed" ?></p>
                                 <p><?php echo $indData['send'] == 0 ? "NOT send" : "Is send" ?></p>
                                 <br>
                                 <p><?php echo $indData['time'] ?></p>
-                                <p>Order id: <?php echo $indData['id'] ?></p>
+                                <p class="order-subtitle"> Order id: <?php echo $indData['id'] ?></p>
                                 <br>
-                                <p>
+                                <p class="order-subtitle">
                                     Contact
                                 </p>
                                 <p><?php echo $indData['fname']; echo " " . $indData['lname'] ?></p>
                                 <p><?php echo $indData['email'] ?></p>
                                 <p><?php echo $indData['phone'] ?></p>
                                 <br>
-                                <p>
+                                <p class="order-subtitle">
                                     Address
                                 </p>
                                 <p><?php echo $indData['country'] ?></p>
@@ -156,22 +156,24 @@
                                 <p><?php echo $indData['state'] ?></p>
                                 <p><?php echo $indData['postcode'] ?></p>
                                 <br>
-                                <p>
+                                <p class="order-subtitle">
                                     Note
                                 </p>
                                 <br>
                                 <p><?php echo $indData['note'] ?></p>
-                                <form action="/addPayedToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
-                                    <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
-                                    <input type="submit" value="Toggle Payed">
-                                </form>
-                                <form action="/addSendToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
-                                    <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
-                                    <input type="submit" value="Toggle send">
-                                </form>
-                                <p>
+                                <div class="alignment">
+                                    <form action="/addPayedToOrder" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                        <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
+                                        <input class="button order-submit" type="submit" value="Toggle Payed">
+                                    </form>
+                                    <form action="/addSendToOrder" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                        <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
+                                        <input class="button order-submit" type="submit" value="Toggle send">
+                                    </form>
+                                </div>
+                                <p class="order-subtitle">
                                     <br>
                                     Order:
                                 </p>
