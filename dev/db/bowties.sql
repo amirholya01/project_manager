@@ -301,8 +301,9 @@ CREATE TABLE IF NOT EXISTS `product_types` (
 --
 
 INSERT INTO `product_types` (`id`, `type`) VALUES
-(1, 'Pineapple'),
-(5, 'Aaargh');
+(1, 'Normal'),
+(3, 'Special theme'),
+(5, 'Costumized');
 
 -- --------------------------------------------------------
 
@@ -379,9 +380,7 @@ INSERT INTO `users` (`user_id`, `name`, `password`, `role`) VALUES
 (19, 'roletest', '1234', 0),
 (20, 'roleShouldWork', '1234', 1),
 (21, 'Kim', '1234', 1),
-(22, 'HopeThisWorks', '1324', 1);
+(23, 'HopeThisWorks', '1324', 1),
+(24, 'Behdin', '$2y$05$aD0uCVDRFJIfjN.8TIeRb.K9FlNEs1UeIl9QTlyvqh86PkWRKD4w2', 1);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

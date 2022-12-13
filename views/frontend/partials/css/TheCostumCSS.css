@@ -88,7 +88,7 @@ button {
 .product-flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 .side-padding{
     padding: 0 65px;
