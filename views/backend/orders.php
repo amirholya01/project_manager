@@ -41,7 +41,14 @@
     }
     $page = 0;
     if(isset($_POST['page'])){
-        $page = $_POST['page'];
+        if($_SESSION['pageNrName'] == 'orders'){
+            $page = $_POST['page'];
+            $_SESSION['pageNr'] = $page;
+        }else{
+            $_SESSION['pageNrName'] = 'orders';
+        }
+    }else{
+        $page = $_SESSION['pageNr'];
     }
 ?>
 <div class="wrapper">

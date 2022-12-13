@@ -43,7 +43,14 @@
     }
     $page = 0;
     if(isset($_POST['page'])){
-        $page = $_POST['page'];
+        if($_SESSION['pageNrName'] == 'news'){
+            $page = $_POST['page'];
+            $_SESSION['pageNr'] = $page;
+        }else{
+            $_SESSION['pageNrName'] = 'news';
+        }
+    }else{
+        $page = $_SESSION['pageNr'];
     }
 ?>
 <div class="wrapper">

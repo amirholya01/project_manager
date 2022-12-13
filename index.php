@@ -53,6 +53,12 @@
         );
     }
 
+    /* Used in admin page, should probably find a way so customers don't get it */
+    if(!isset($_SESSION["pageNr"])){
+        $_SESSION["pageNr"] = 0;
+        $_SESSION["pageNrName"] = '';
+    }
+
     $request = $_SERVER["REQUEST_URI"];
     $router = new Router($request);
 
