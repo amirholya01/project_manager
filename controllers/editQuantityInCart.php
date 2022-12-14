@@ -19,5 +19,6 @@ $_SESSION['cart'] = $newCart;
 ?>
 
 <script>
+    //This works
     window.history.go(-1);
 </script>

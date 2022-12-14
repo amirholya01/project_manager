@@ -21,5 +21,6 @@ if(isset($_POST['id'])){
 
 ?>
 <script>
+    //Backend / no breadcrums to go backwards
     window.history.go(-1);
 </script>

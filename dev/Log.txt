@@ -6,7 +6,6 @@
 ToDo
     - High Priority
  * 2 Trigger and 2 views
- * Fix history system on the rest of the site
  * add disabled to products instead of hard deleting them
  
     - Low Priority

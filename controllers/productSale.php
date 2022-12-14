@@ -3,6 +3,7 @@
 if(!isset($_POST['sale'])){
 ?>
 <script>
+    //This works
     window.history.go(-1);
 </script>
 <?php

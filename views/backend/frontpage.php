@@ -30,7 +30,9 @@
         WARNING! <br>
         You can only fill out one formular at a time <br>
         Upon submission all other fields will be resat <br>
-        Work in progress of a better solution
+        Work in progress of a better solution <br><br>
+
+        Refresh the page after submitting to see the changes
     </h3>
 
     <hr class="solid">
