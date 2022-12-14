@@ -117,7 +117,12 @@
     $router->get('/addSendToOrder', 'controllers/addSendToOrder');
 
 
+
     $router->get('/adminCreateProductFunction', 'controllers/createProduct');
+
     $router->get('/adminCreateSaleFunction', 'controllers/createSale');
+
     $router->get('/adminCreateUserFunction', 'controllers/createUser');
+
     $router->get('/adminCreateMediaFunction', 'controllers/createMedia');
+    $router->get('/adminDeleteMediaFunction', 'controllers/deleteMedia');
