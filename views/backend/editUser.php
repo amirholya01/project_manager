@@ -28,7 +28,7 @@
 
             <input class="input" type="hidden" name="editId" value="<?php echo $_POST['id'] ?>">
             <input class="input" type="text" name="editName" value="<?php echo $_POST['name'] ?>">
-            <input class="input" type="text" name="password">
+            <input class="input" type="password" name="password">
             <select name="editRole">
                 <option <?php echo ($_POST['role'] == 0 ? "selected" : "") ?> value="0">Customer</option>
                 <option <?php echo ($_POST['role'] == 1 ? "selected" : "") ?> value="1">Admin</option>
