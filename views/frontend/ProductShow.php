@@ -97,7 +97,7 @@
                 <div class="col-sm-9">
                     <div class="quantity-select">
                         <span class="minus" id="minus"></span>
-                        <input class="number" name="amountToAdd" form="addToCart" value="1" id="number">
+                        <input type="number" class="number" name="amountToAdd" form="addToCart" value="1" id="number">
                         <span class="plus" id="plus"></span>
                         <script>
                             const minus = document.querySelector('#minus');

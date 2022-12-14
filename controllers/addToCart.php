@@ -1,5 +1,7 @@
 <?php
 
+require_once $rootPath . "security/stringSanitation.php";
+
 /* 
     If you want to get rid of the refresh the easiest way would be to use javascript,
     but we tried using as little javascript as possible in this project
@@ -21,7 +23,10 @@ if(isset($_POST['product'])){
     /* Allows to add more than one product at a time */
     $amountToAdd = 1;
     if($_POST['amountToAdd']){
-        $amountToAdd = $_POST['amountToAdd'];
+        $amountToAdd = $stringSanitation->numberSanitice($_POST['amountToAdd']);
+        if($amountToAdd < 1){
+            $amountToAdd = 1;
+        }
     }
 
     if($inCart > -1){
