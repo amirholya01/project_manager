@@ -31,47 +31,7 @@ class PurchaseHandler extends Purchase{
         $user_id = null,
         $cart
     ) {
-        if($_SESSION['cart'] != array()){
-            echo $country;
-            echo "<br>";
-            echo "<br>";
-            echo $fname;
-            echo "<br>";
-            echo "<br>";
-            echo $lname;
-            echo "<br>";
-            echo "<br>";
-            echo $address;
-            echo "<br>";
-            echo "<br>";
-            echo $appartment;
-            echo "<br>";
-            echo "<br>";
-            echo $city;
-            echo "<br>";
-            echo "<br>";
-            echo $state;
-            echo "<br>";
-            echo "<br>";
-            echo $postcode;
-            echo "<br>";
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo "<br>";
-            echo $phone;
-            echo "<br>";
-            echo "<br>";
-            echo $note;
-            echo "<br>";
-            echo "<br>";
-            echo $company;
-            echo "<br>";
-            echo "<br>";
-            echo $user_id;
-            echo "<br>";
-            echo "<br>";
-            
+        if($_SESSION['cart'] != array()){            
             $createOrder = $this->db->prepare($this->createOrderQuery);
             $createOrder->bindParam(":country", $country);
             $createOrder->bindParam(":fname", $fname);
@@ -89,10 +49,6 @@ class PurchaseHandler extends Purchase{
             $createOrder->execute();
     
             $purchase_id = $this->db->lastInsertId();
-
-            echo $purchase_id;
-
-            print_r($cart);
     
             foreach($cart as $item){
                 $assignProductToPurchase = $this->db->prepare($this->assignProductToPurchaseQuery);
