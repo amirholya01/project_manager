@@ -33,11 +33,8 @@ if(isset($_POST['product'])){
     }
 
 
-    /* Goes back a set amount of pages */
-    $historie = -1;
-
+    /* Goes back to the previous page */
     $linkToPrevPage = end($_SESSION['breadcrumbsLinks']);
-    
     header("location: $linkToPrevPage");
 }
 ?>

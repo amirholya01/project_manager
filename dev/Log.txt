@@ -4,6 +4,10 @@
 
 
 ToDo
- * add disabled to products instead of hard deleting them
- * fix casing on files. Someone like stating with uppercase even though we use camelcase
+    - High Priority
  * 2 Trigger and 2 views
+ * Fix history system on the rest of the site
+ * add disabled to products instead of hard deleting them
+ 
+    - Low Priority
+ * fix casing on files. Someone like stating with uppercase even though we use camelcase

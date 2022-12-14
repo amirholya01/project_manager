@@ -21,9 +21,9 @@
 
     require_once $rootPath . "controllers/imageUpload.php";
 
-    require_once $rootPath . "controllers/createMedia.php";
+    //require_once $rootPath . "controllers/createMedia.php";
     require_once $rootPath . "controllers/editMedia.php";
-    require_once $rootPath . "controllers/deleteMedia.php";
+    //require_once $rootPath . "controllers/deleteMedia.php";
 
     require_once $rootPath . "controllers/getMediaWithFilters.php";
 
@@ -147,7 +147,7 @@
                                 <input class="button-pagination" type="submit" value="Edit">
                             </form>
 
-                            <form method="POST" action="adminMedia">
+                            <form method="POST" action="adminDeleteMediaFunction">
                                 <input type="hidden" name="delete" value="<?php echo $indData['media_id'] ?>">
                                 <input class="button-pagination" type="submit" value="Delete">
                             </form>

@@ -1,5 +1,20 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+
+require_once $rootPath . "public/dbconn.php";
+
+require_once $rootPath . "models/handlers/productsHandler.php";
+require_once $rootPath . "models/handlers/Usershandler.php";
+
+/* 🔥 Admin check is not inabled check the create controllers for the same issue */
+require_once $rootPath . "security/adminCheck.php";
+require_once $rootPath . "security/formSpam.php";
+require_once $rootPath . "security/stringSanitation.php";
+
 $media_id = null;
 
 /* 
@@ -24,3 +39,5 @@ if(isset($_POST['delete'])){
 
     }
 }
+
+header("location: /adminMedia");
