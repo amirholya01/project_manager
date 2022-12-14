@@ -118,7 +118,6 @@
                 <div class="col-sm-6 col-xs-b10 col-sm-b0">
                     <form class="button size-2 style-3" id="addToCart" action="addToCart" method="POST">
                         <input type="hidden" name="product" value="<?php echo $_POST['id'] ?>">
-                        <input type="hidden" name="minusHistorie" value="-2">
                         <button class="product-button" type="submit">
                             <span class="button-wrapper">
                                 <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>

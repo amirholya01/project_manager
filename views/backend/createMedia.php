@@ -12,7 +12,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form class="Admin-handlers" method="POST" action="adminMedia" enctype="multipart/form-data">
+    <form class="Admin-handlers" method="POST" action="adminCreateMediaFunction" enctype="multipart/form-data">
         <!-- 
             i send createMedia to tell the controller that it should run create user
         -->

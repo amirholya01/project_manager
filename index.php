@@ -120,3 +120,4 @@
     $router->get('/adminCreateProductFunction', 'controllers/createProduct');
     $router->get('/adminCreateSaleFunction', 'controllers/createSale');
     $router->get('/adminCreateUserFunction', 'controllers/createUser');
+    $router->get('/adminCreateMediaFunction', 'controllers/createMedia');

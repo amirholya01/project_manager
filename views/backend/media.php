@@ -21,7 +21,7 @@
 
     require_once $rootPath . "controllers/imageUpload.php";
 
-    require_once $rootPath . "controllers/createMedia.php";
+    //require_once $rootPath . "controllers/createMedia.php";
     require_once $rootPath . "controllers/editMedia.php";
     require_once $rootPath . "controllers/deleteMedia.php";
 
