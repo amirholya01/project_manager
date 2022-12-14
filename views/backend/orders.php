@@ -82,7 +82,7 @@
 
         <?php
             $pageNr = $page;
-            $productsPrPage = 10;
+            $productsPrPage = 12;
             $pageMinIndex = $pageNr * $productsPrPage;
             $pageMaxIndex = $pageMinIndex + $productsPrPage;
         ?>
