@@ -11,4 +11,5 @@ ToDo
  
     - Low Priority
  * fix casing on files. Someone like stating with uppercase even though we use camelcase
- * product colors CRUD
+ * product colors CRUD and use the colors on frontpage
+ * search/filter products by color
