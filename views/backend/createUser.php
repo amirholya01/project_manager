@@ -11,7 +11,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form class="Admin-handlers" method="POST" action="adminUsers">
+    <form class="Admin-handlers" method="POST" action="adminCreateUserFunction">
         <!-- 
             i send createUser to tell the controller that it should run create user
         -->
@@ -21,7 +21,7 @@
             <input class="input" type="hidden" name="createUser" value="true">
 
             <input class="input" type="text" name="createName" placeholder="Username">
-            <input class="input" type="text" name="createPassword" placeholder="Password">
+            <input class="input" type="password" name="createPassword" placeholder="Password">
             <select name="createRole">
                 <option value="0">Customer</option>
                 <option value="1">Admin</option>
