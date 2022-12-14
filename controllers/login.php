@@ -23,14 +23,18 @@
     $data = $db->query($sql)->fetchAll();
 
     /* Checks if the user exists */
+    $loginFail = false;
     if( isset($data[0]['name']) ){
         if(password_verify($password, $data[0]['password'])){
             $validated = true;
         }else{
-            header("Location: /?err=wronginfo");
+            $loginFail = true;
         }
     }else{
-        header("Location: /?err=wronginfo");
+        $loginFail = true;
+    }
+    if($loginFail){
+        header("Location: /loginFailedFunction");
     }
 
     if($validated == true){

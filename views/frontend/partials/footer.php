@@ -56,28 +56,33 @@
                 </div>
             </div>
         </footer>
-        <div class="popup-wrapper">
+        <div class="popup-wrapper <?php echo isset($_POST['loginFailed']) ? "active" : ""; ?>">
         <div class="bg-layer"></div>
 
-        <div class="popup-content" data-rel="1">
+        <div class="popup-content <?php echo isset($_POST['loginFailed']) ? "active" : ""; ?>" data-rel="1">
             <div class="layer-close"></div>
             <div class="popup-container size-1">
                 <div class="popup-align">
                     
                     <form method="POST" action="/loginFunction">
-
+                        
                         <h3 class="h3 text-center">Log in</h3>
                         <div class="empty-space col-xs-b30"></div>
-
-
+                        
+                        
                         <input class="simple-input" type="text" name="name" value="" placeholder="Username" />
-
-
+                        
+                        
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
-
-
+                        
+                        
                         <input class="simple-input" type="password" name="password" value="" placeholder="Enter password" />
-
+                        
+                        <?php if(isset($_POST['loginFailed'])){ ?>
+                            <h3 style="font-size: 20px; margin-top: 10px; text-align:center; color: red;">
+                                You typed something wrong!
+                            </h3>
+                        <?php } ?>
 
                         <div class="empty-space col-xs-b10 col-sm-b20"></div>
                         <div class="row">
