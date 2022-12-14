@@ -308,7 +308,7 @@ FROM `spam_prevention`
 WHERE `id` = 1;
 
 
-CREATE VIEW getSecurityDataQuery AS
+CREATE VIEW getSalesQuery AS
 SELECT * 
 FROM `sales`
 ORDER BY end DESC

@@ -6,10 +6,10 @@
 ToDo
     - High Priority
  * add disabled to products instead of hard deleting them
- * Sign up error feedback
+ * forgot password system
  
     - Low Priority
- * fix casing on files. Someone like stating with uppercase even though we use camelcase
  * product colors CRUD and use the colors on frontpage
- * search/filter products by color
+ * search/filter products by color in frontend
  * intergrade total and new order counter on the backend (decrease new counter on handled order)
+ * fix casing on files. Someone like stating with uppercase even though we use camelcase
