@@ -175,3 +175,18 @@ button {
 .margin-bottom{
     margin-bottom: 10px;
 }
+.date, .description{
+    margin-bottom: 15px;
+    color: white;
+}
+.description:hover{
+    color: #B2A6CE;
+}
+.margin-15{
+    margin-bottom: 15px;
+}
+.footer-links-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 80% !important;
+}
