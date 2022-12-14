@@ -5,7 +5,7 @@
 
 ToDo
     - High Priority
- * 2 Trigger and 2 views
+ * 2 views
  * add disabled to products instead of hard deleting them
  * Sign up error feedback
  
