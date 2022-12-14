@@ -159,7 +159,7 @@
                                 foreach($colorAssignments as $color){
                                     if($color['product_id'] == $indData['products_id']){
                             ?>
-                                <p><?php echo $color['color'] ?></p>
+                                <p><?php echo $color['color_id'] ?></p>
                             <?php
                                     }
                                 }

@@ -38,7 +38,7 @@
                 <?php 
                     foreach($allColors as $color){
                 ?>
-                    <option value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?></option>
+                    <option value="<?php echo $color['color_id'] ?>"><?php echo $color['color'] ?></option>
                 <?php
                     }
                 ?>

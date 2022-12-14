@@ -53,7 +53,7 @@
                         <?php
                             $assigned = false;
                             foreach($colorsAssignedToProduct as $assignedColor){
-                                if($assignedColor["color_id"] == $color['id']){
+                                if($assignedColor["color_id"] == $color['color_id']){
                                     $assigned = true;
                                 }
                             }
@@ -61,7 +61,7 @@
                             echo $assigned == true ? "selected" : "";
                         ?>
                     
-                        value="<?php echo $color['id'] ?>"><?php echo $color['color'] ?>
+                        value="<?php echo $color['color_id'] ?>"><?php echo $color['color_id'] ?>
                     </option>
                 <?php
                     }

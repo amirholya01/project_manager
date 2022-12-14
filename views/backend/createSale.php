@@ -30,7 +30,7 @@
             <?php
                 foreach($sales as $sale){
             ?>
-                    <option value="<?php echo $sale['id']; ?>"><?php echo $sale['title']; ?></option>
+                    <option value="<?php echo $sale['sale_id']; ?>"><?php echo $sale['title']; ?></option>
             <?php
                 }
             ?>

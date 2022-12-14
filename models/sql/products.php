@@ -66,10 +66,10 @@ class Products{
     //Sale Queries
     public $createSaleQuery = "INSERT INTO sales (title, description, start, end) VALUES (:title, :description, :start, :end);";
     public $getSalesQuery = "SELECT * FROM sales ORDER BY end DESC";
-    public $editSaleQuery = "UPDATE sales SET title = :title, description = :description, start = :start, end = :end WHERE id = :id;";
+    public $editSaleQuery = "UPDATE sales SET title = :title, description = :description, start = :start, end = :end WHERE sale_id = :id;";
     public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, product_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
-    public $deleteSaleById = "DELETE FROM sales WHERE id = :id";
+    public $deleteSaleById = "DELETE FROM sales WHERE sale_id = :id";
     public $deleteAssignedProductsToSaleQuery = "DELETE FROM assign_products_to_sales WHERE sale_id = :id";
-    public $getSaleByIdQuery = "SELECT * FROM `sales` WHERE `id` = :id";
+    public $getSaleByIdQuery = "SELECT * FROM `sales` WHERE `sale_id` = :id";
     public $getProductSalesBySaleIdQuery = "SELECT * FROM `assign_products_to_sales` WHERE `sale_id` = :id";
 }

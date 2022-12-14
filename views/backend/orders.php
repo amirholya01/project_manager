@@ -149,7 +149,7 @@
                                 <p><?php echo $indData['send'] == 0 ? "NOT send" : "Is send" ?></p>
                                 <br>
                                 <p><?php echo $indData['time'] ?></p>
-                                <p class="order-subtitle"> Order id: <?php echo $indData['id'] ?></p>
+                                <p class="order-subtitle"> Order id: <?php echo $indData['purchases_id'] ?></p>
                                 <br>
                                 <p class="order-subtitle">
                                     Contact
@@ -175,12 +175,12 @@
                                 <p><?php echo $indData['note'] ?></p>
                                 <div class="alignment">
                                     <form action="/addPayedToOrder" method="POST">
-                                        <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                        <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
                                         <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
                                         <input class="button order-submit" type="submit" value="Toggle Payed">
                                     </form>
                                     <form action="/addSendToOrder" method="POST">
-                                        <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                        <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
                                         <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
                                         <input class="button order-submit" type="submit" value="Toggle send">
                                     </form>

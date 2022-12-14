@@ -26,7 +26,7 @@ foreach($allSales as $sale){
 
     if (($currentDate >= $saleBeginDate) && ($currentDate <= $saleEndDate)){
         /* If the sale is going on, add all the products on sale to roughProductSales */
-        $prodSales = $ProductsHandler->getProductSalesBySaleId($sale['id']);
+        $prodSales = $ProductsHandler->getProductSalesBySaleId($sale['sale_id']);
         foreach($prodSales as $prodSale){
             array_push($roughProductSales, $prodSale);
         }

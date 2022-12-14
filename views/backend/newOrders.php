@@ -143,7 +143,7 @@
                                 <p><?php echo $indData['payed'] == 0 ? "NOT payed" : "Has payed" ?></p>
                                 <p><?php echo $indData['send'] == 0 ? "NOT send" : "Is send" ?></p>
                                 <p><?php echo $indData['time'] ?></p>
-                                <p><?php echo $indData['id'] ?></p>
+                                <p><?php echo $indData['purchases_id'] ?></p>
                                 <p><?php echo $indData['fname'] ?></p>
                                 <p><?php echo $indData['lname'] ?></p>
                                 <p><?php echo $indData['email'] ?></p>
@@ -156,12 +156,12 @@
                                 <p><?php echo $indData['postcode'] ?></p>
                                 <p><?php echo $indData['note'] ?></p>
                                 <form action="/addPayedToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                    <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
                                     <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
                                     <input type="submit" value="Toggle Payed">
                                 </form>
                                 <form action="/addSendToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['id'] ?>">
+                                    <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
                                     <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
                                     <input type="submit" value="Toggle send">
                                 </form>

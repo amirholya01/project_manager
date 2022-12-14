@@ -223,7 +223,7 @@
                                         
                                     <?php
                                     /* Exception this can´t be in controllers */
-                                    $productsOnSale = $ProductsHandler->getProductSalesBySaleId($Sale['id']);
+                                    $productsOnSale = $ProductsHandler->getProductSalesBySaleId($Sale['sale_id']);
                                     $productOnSale = $ProductsHandler->getProducts('', $productsOnSale[0]['product_id']);
                                     
                                     echo $productOnSale[0]['primary_image'];

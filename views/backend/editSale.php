@@ -34,7 +34,7 @@
         <div class="Admin-handlers">
             <div class="Admin-search-product">
                 <input type="hidden" name="editSale" value="true">
-                <input type="hidden" name="sale_id" value="<?php echo $saleData['id']; ?>">
+                <input type="hidden" name="sale_id" value="<?php echo $saleData['sale_id']; ?>">
                 <input class="input" type="text" name="title" value="<?php echo $saleData['title']; ?>" placeholder="Title">
                 From <input class="input" type="date" name="start" value="<?php echo $saleData['start']; ?>" placeholder="Starts">
                 To <input class="input" type="date" name="end" value="<?php echo $saleData['end']; ?>" placeholder="Ends">
@@ -68,7 +68,7 @@
                                     foreach($colorAssignments as $color){
                                         if($color['product_id'] == $indData['products_id']){
                                 ?>
-                                    <p><?php echo $color['color'] ?></p>
+                                    <p><?php echo $color['color_id'] ?></p>
                                 <?php
                                         }
                                     }
