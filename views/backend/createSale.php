@@ -72,7 +72,7 @@
                                 <!-- Adds colors -->
                                 <?php 
                                     foreach($colorAssignments as $color){
-                                        if($color['product_id'] == $indData['products_id']){
+                                        if($color['products_id'] == $indData['products_id']){
                                 ?>
                                     <p><?php echo $color['color'] ?></p>
                                 <?php

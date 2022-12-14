@@ -13,7 +13,7 @@ class Users{
 
 
     public $updateUserByIdQuery = "UPDATE users SET name = :name, password = :password, role = :role WHERE `user_id` = :id";
-    public $updateUserByIdWithoutPasswordQuery = "UPDATE users SET name = :name WHERE `user_id` = :id";
+    public $updateUserByIdWithoutPasswordQuery = "UPDATE users SET name = :name, role = :role WHERE `user_id` = :id";
     public $updateUserByIdWithoutRoleQuery = "UPDATE users SET name = :name, password = :password, role = :role WHERE `user_id` = :id";
     public $updateUserByIdWithoutPasswordAndRoleQuery = "UPDATE users SET name = :name WHERE `user_id` = :id";
 

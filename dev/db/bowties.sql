@@ -276,6 +276,19 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('banner2Slogan3', 'Made to be unique '),
 ('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! ');
 
+
+DROP TABLE IF EXISTS `spam_prevention`;
+CREATE TABLE IF NOT EXISTS `spam_prevention` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) COLLATE utf8_bin NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2;
+
+INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
+(1, 'Niclas', '2022-12-09 10:43:37');
+
+
 DROP TRIGGER IF EXISTS `increaseTotalSales`;
 DELIMITER $$
 CREATE TRIGGER `increaseTotalSales` AFTER INSERT ON `purchases` FOR EACH ROW UPDATE `order_counters` SET `count` = `count` + 1 WHERE `name` = 'total'
