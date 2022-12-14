@@ -279,10 +279,9 @@ INSERT INTO frontpage (id, `text`) VALUES
 
 DROP TABLE IF EXISTS `spam_prevention`;
 CREATE TABLE IF NOT EXISTS `spam_prevention` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) COLLATE utf8_bin NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(45) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM AUTO_INCREMENT=2;
 
 INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
@@ -301,3 +300,15 @@ DELIMITER $$
 CREATE TRIGGER `increaseNewSales` AFTER INSERT ON `purchases` FOR EACH ROW UPDATE `order_counters` SET `count` = `count` + 1 WHERE `name` = 'new'
 $$
 DELIMITER ;
+
+
+CREATE VIEW spamPrevention AS
+SELECT name, time 
+FROM `spam_prevention`
+WHERE `id` = 1;
+
+
+CREATE VIEW getSecurityDataQuery AS
+SELECT * 
+FROM `sales`
+ORDER BY end DESC
