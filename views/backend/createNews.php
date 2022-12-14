@@ -14,7 +14,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form class="Admin-handlers" method="POST" action="adminNews">
+    <form id="createNews" class="Admin-handlers" method="POST" action="adminNewsMediaFunction">
         <!-- 
             i send createNews to tell the controller that it should run create user
         -->
@@ -42,12 +42,10 @@
                         </figure>
                     </div>
                 </label>
-                <input type="radio" id="<?php echo $indData['media_id']; ?>" name="createMedia" value="<?php echo $indData['media_id']; ?>">
+                <input type="radio" form="createNews" id="<?php echo $indData['media_id']; ?>" name="createMedia" value="<?php echo $indData['media_id']; ?>">
         <?php
             }
         ?>
-    
-
 </div>
 
 <?php 

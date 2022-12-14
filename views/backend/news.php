@@ -20,7 +20,7 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/stringSanitation.php";
 
-    require_once $rootPath . "controllers/createNews.php";
+    //require_once $rootPath . "controllers/createNews.php";
     require_once $rootPath . "controllers/editNews.php";
     require_once $rootPath . "controllers/deleteNews.php";
 
