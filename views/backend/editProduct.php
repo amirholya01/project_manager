@@ -61,7 +61,7 @@
                             echo $assigned == true ? "selected" : "";
                         ?>
                     
-                        value="<?php echo $color['color_id'] ?>"><?php echo $color['color_id'] ?>
+                        value="<?php echo $color['color_id'] ?>"><?php echo $color['color'] ?>
                     </option>
                 <?php
                     }
