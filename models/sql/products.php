@@ -48,8 +48,8 @@ class Products{
     public $getAllTypesQuery = "SELECT id, type FROM product_types;";
     
     public $getColorAssigmentsQuery = "SELECT actp.products_id, pc.color
-                            FROM assign_colors_to_products actp, product_colors pc
-                            WHERE actp.color_id = pc.id;";
+                                        FROM assign_colors_to_products actp, product_colors pc
+                                        WHERE actp.color_id = pc.color_id;";
     public $getColorAssigmentsByProductIdQuery = "SELECT color_id FROM assign_colors_to_products WHERE products_id = :id";
     public $getMediaAssigmentsByProductIdQuery = "SELECT media_id FROM assign_media_to_products WHERE products_id = :id";
     

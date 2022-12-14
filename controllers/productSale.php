@@ -13,7 +13,7 @@ $productSales = $ProductsHandler->getProductSalesBySaleId($_POST['sale']);
 
 $products = array();
 foreach($productSales as $sale){
-    $product = $ProductsHandler->getProducts('', $sale['product_id']);
+    $product = $ProductsHandler->getProducts('', $sale['products_id']);
     if($sale['saleType'] == '%'){
         $product[0]['price'] -= (($product[0]['price'] / 100) * $sale['sale']);
     }else{
