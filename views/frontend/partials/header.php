@@ -2,8 +2,6 @@
     require_once $rootPath . "models/handlers/frontpageHandler.php"; 
     require_once $rootPath . "models/handlers/ProductsHandler.php"; 
 
-    require_once $rootPath . "security/stringSanitation.php";
-    
     require_once $rootPath . "controllers/frontpage.php";
     require_once $rootPath . "controllers/cartManager.php";
 ?>
