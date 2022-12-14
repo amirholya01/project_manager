@@ -24,8 +24,8 @@
 
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
-
-<div class="wrapper frontpage">
+<form class="wrapper frontpage" method="POST" action="/adminFrontpage">
+    <input type="hidden" name="editFrontpage" value="true">
     <h3>
         WARNING! <br>
         You can only fill out one formular at a time <br>
@@ -40,25 +40,25 @@
     <h2>
         Header
     </h2>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Phone  -->
+    <div > <!--  <- Phone  -->
         <h3>
             Phone Number
         </h3>
         <p>The same as in contact</p>
         <input class="input" type="text" name="phone" value="<?php echo $phone ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Email  -->
+    <div > <!--  <- Email  -->
         <h3>
             Email
         </h3>
         <p>The same as in contact</p>
         <input class="input" type="text" name="email" value="<?php echo $email ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Navigation  -->
+    <div > <!--  <- Navigation  -->
         <h3>
             Navigation
         </h3>
@@ -67,7 +67,7 @@
         <input class="input" type="text" name="navAboutUs" value="<?php echo $nav3 ?>">
         <input class="input" type="text" name="navContact" value="<?php echo $nav4 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
 
     <hr class="solid">
@@ -77,53 +77,53 @@
         Banner 1
     </h2>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Sub title  -->
+    <div > <!--  <- Banner Sub title  -->
         <h3>
             Sub title
         </h3>
         <input class="input" type="text" name="bannerSubtitle" value="<?php echo $bannerSubtitle1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Title  -->
+    <div > <!--  <- Banner Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="bannerTitle" value="<?php echo $bannerTitle1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan1  -->
+    <div > <!--  <- Banner Slogan1  -->
         <h3>
             Banner Slogan - 1
         </h3>
         <input class="input" type="text" name="banner1Slogan1" value="<?php echo $banner1Slogan1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan2  -->
+    <div > <!--  <- Banner Slogan2  -->
         <h3>
             Banner Slogan - 2
         </h3>
         <input class="input" type="text" name="banner1Slogan2" value="<?php echo $banner1Slogan2 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan3  -->
+    <div > <!--  <- Banner Slogan3  -->
         <h3>
             Banner Slogan - 3
         </h3>
         <input class="input" type="text" name="banner1Slogan3" value="<?php echo $banner1Slogan3 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
+    <div > <!--  <- Banner section 1  -->
         <h3>
             Banner Tekst
         </h3>
         <textarea name="bannerText" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
     <div>
         <h3>
@@ -147,53 +147,53 @@
         Banner 2
     </h2>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Sub title  -->
+    <div > <!--  <- Banner Sub title  -->
         <h3>
             Sub title
         </h3>
         <input class="input" type="text" name="bannerSubtitle2" value="<?php echo $bannerSubtitle2 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Title  -->
+    <div > <!--  <- Banner Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="bannerTitle2" value="<?php echo $bannerTitle2 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan1  -->
+    <div > <!--  <- Banner Slogan1  -->
         <h3>
             Banner Slogan 1
         </h3>
         <input class="input" type="text" name="banner2Slogan1" value="<?php echo $banner2Slogan1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan2  -->
+    <div > <!--  <- Banner Slogan2  -->
         <h3>
             Banner Slogan - 2
         </h3>
         <input class="input" type="text" name="banner2Slogan2" value="<?php echo $banner2Slogan2 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner Slogan3  -->
+    <div > <!--  <- Banner Slogan3  -->
         <h3>
             Banner Slogan - 3
         </h3>
         <input class="input" type="text" name="banner2Slogan3" value="<?php echo $banner2Slogan3 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Banner section 1  -->
+    <div > <!--  <- Banner section 1  -->
         <h3>
             Banner Tekst
         </h3>
         <textarea name="banner2Text1" id="" cols="60" rows="10"><?php echo $banner2Text1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
     <div>
         <h3>
@@ -216,34 +216,34 @@
     </h2>
     <!-- Main slider -->
     <!-- ^ should have create and delete -->
-    <forms method="POST" action="/adminFrontpage"> <!--  <- About us  -->
+    <divs > <!--  <- About us  -->
         <h3>
             About us
         </h3>
         <p>This is the same one as on the about us page</p>
         <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
     <hr class="solid">
 
     <h2>
         Products
     </h2>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Sub title  -->
+    <div > <!--  <- Sub title  -->
         <h3>
             Sub title
         </h3>
         <input class="input" type="text" name="productsSubtitle" value="<?php echo $productsSubtitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
+    </div>
+    <div > <!--  <- Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="productsTitle" value="<?php echo $productsTitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
     <!-- Categories  - Product types! -->
 
 
@@ -257,22 +257,22 @@
     </h2>
 
 <!-- AboutUSpage section  -->
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - title 1 
         </h3>
         <input class="input" type="text" name="aboutPageTitle1" value="<?php echo $aboutPageTitle1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - text 1 
         </h3>
         <p>This is the same one as on the frontpage</p>
         <textarea name="aboutPageText1" id="" cols="60" rows="10"><?php echo $aboutPageText1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
     <div>
         <h3>
@@ -286,85 +286,85 @@
         </div>
     </div>
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - title 2 
         </h3>
         <input class="input" type="text" name="aboutPageTitle2" value="<?php echo $aboutPageTitle2 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - text 2 
         </h3>
         <p>This is the same one as on the frontpage</p>
         <textarea name="aboutPageText2" id="" cols="60" rows="10"><?php echo $aboutPageText2 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - title 3 
         </h3>
         <input class="input" type="text" name="aboutPageTitle3" value="<?php echo $aboutPageTitle3 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             About us Page - text 3 
         </h3>
         <p>This is the same one as on the frontpage</p>
         <textarea name="aboutPageText3" id="" cols="60" rows="10"><?php echo $aboutPageText3 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
 <!-- AboutUSpage section  -->
 
-    <form method="POST" action="/adminFrontpage"> 
+    <div > 
         <h3>
             Sub title
         </h3>
         <input class="input" type="text" name="aboutusSubtitle" value="<?php echo $aboutusSubtitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
+    <div > <!--  <- Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="aboutusTitle" value="<?php echo $aboutusTitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- Slogan  -->
+    <div > <!--  <- Slogan  -->
         <h3>
            Slogan
         </h3>
         <input class="input" type="text" name="aboutusSlogan" value="<?php echo $aboutusSlogan ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
     <!-- Descriptions -->
     <!-- ^ should have create and delete -->
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- About us  -->
+    <div > <!--  <- About us  -->
         <h3>
             About us / part-1
         </h3>
         <p>This is the same one as on the frontpage</p>
         <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
-    <form method="POST" action="/adminFrontpage"> <!--  <- About us  -->
+    <div > <!--  <- About us  -->
         <h3>
             About us / part-2
         </h3>
         <p>This is the same one as on the frontpage</p>
         <textarea name="aboutUs2" id="" cols="60" rows="10"><?php echo $aboutUs2 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
 
 
@@ -375,21 +375,21 @@
     <h2>
         Contact
     </h2>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Sub title  -->
+    <div > <!--  <- Sub title  -->
         <h3>
             Sub title
         </h3>
         <input class="input" type="text" name="contactSubtitle" value="<?php echo $contactSubtitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Title  -->
+    </div>
+    <div > <!--  <- Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="contactTitle" value="<?php echo $contactTitle ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
-    <form method="POST" action="/adminFrontpage"> <!--  <- Contact forms  -->
+    </div>
+    <div > <!--  <- Contact forms  -->
         <h3>
             Contact forms
         </h3>
@@ -398,7 +398,7 @@
         <input class="input" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
         <input class="input" type="text" name="follow" placeholder="Follow us" value="<?php echo $follow ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </form>
+    </div>
 
     <br>
     <br>
@@ -410,7 +410,7 @@
 
     <!-- FOOTER -->
     
-</div>
+</form>
 
 <?php 
     require_once $rootPath . "views/backend/partials/footer.php";

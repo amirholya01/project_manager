@@ -127,4 +127,4 @@
     $router->get('/adminCreateMediaFunction', 'controllers/createMedia');
     $router->get('/adminDeleteMediaFunction', 'controllers/deleteMedia');
     
-    $router->get('/adminNewsMediaFunction', 'controllers/createNews');
+    $router->get('/adminCreateNewsFunction', 'controllers/createNews');

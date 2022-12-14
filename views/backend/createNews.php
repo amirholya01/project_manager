@@ -14,7 +14,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form id="createNews" class="Admin-handlers" method="POST" action="adminNewsMediaFunction">
+    <form id="createNews" class="Admin-handlers" method="POST" action="adminCreateNewsFunction">
         <!-- 
             i send createNews to tell the controller that it should run create user
         -->
