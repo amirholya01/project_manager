@@ -26,8 +26,7 @@
 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
-<div class="row ProductShow-container">
-    <div class="col-sm-6 col-xs-b30 col-sm-b0">
+    
         <!-- impelementing the sitemap with a for loop (breadcrumb) -->
         <div class="breadcrumbs SiteMap">
             <?php 
@@ -37,25 +36,29 @@
             }
             ?>
         </div>
-
+<div class="col-sm-6 col-xs-b30 col-sm-b0 width-100">
         <!-- Gets the right image from the chosen product and implement it in the frontEnd with a foreach loop -->
         <div class="valign-middle-cell">
             <div class="valign-middle-content flex-center">
                 
                 <!--  News title loaded from database  -->
-                <h3 class="h3"><?php echo $_POST['title'] ?></h3>
-                <div class="title-underline light center"><span></span></div>
-
-                <!--  News image loaded from database  -->
-                <div class="news-image-div">
-                    <?php 
-                        $image = explode(".", $_POST['media']);
-                    ?>
-                    <img src="uploads/<?php echo $image[0] ?>.<?php echo $image[1] ?>" alt="">
+                <div class="NewsShowTitle">
+                    <h3 class="h3"><?php echo $_POST['title'] ?></h3>
+                    <div class="title-underline center"><span></span></div>
                 </div>
 
-                <!--  News description loaded from database  -->
-                <div class="simple-article size-4 transparent col-xs-b30"><?php echo $_POST['description'] ?></div>
+                <div class="NewsMainSection">
+                    <!--  News image loaded from database  -->
+                    <div class="news-image-div bigger-width">
+                        <?php 
+                            $image = explode(".", $_POST['media']);
+                        ?>
+                        <img src="uploads/<?php echo $image[0] ?>.<?php echo $image[1] ?>" alt="">
+                    </div>
+
+                    <!--  News description loaded from database  -->
+                    <div class="simple-article size-4 transparent col-xs-b30 NewsDescription"><?php echo $_POST['description'] ?></div>
+                </div>
             </div>
         </div>
     </div>
