@@ -18,7 +18,7 @@
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
-                            <h6 class="h6 light">queck links</h6>
+                            <h6 class="h6 light">quick links</h6>
                             <div class="empty-space col-xs-b20"></div>
                             <div class="footer-column-links">
                                 <div class="row">
