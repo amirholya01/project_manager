@@ -11,7 +11,10 @@
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
                             <h6 class="h6 light"><?php echo $aboutusSubtitle ?></h6>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2 light fulltransparent"><?php echo $aboutusSlogan ?></div>
+                            <div class="simple-article size-2 light fulltransparent margin-15"><?php echo $aboutusSlogan ?></div>
+                            <div class="description">
+                                    <a href="/AboutUS" class="title">Read more about TheCustomTies</a>
+                            </div>
                             <div class="empty-space col-xs-b20"></div>
                         </div>
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-md-b0">
@@ -19,28 +22,23 @@
                             <div class="empty-space col-xs-b20"></div>
                             <div class="footer-column-links">
                                 <div class="row">
-                                    <div class="col-xs-6">
-                                        <a href="#">home</a>
-                                        <a href="#">about us</a>
-                                        <a href="#">products</a>
-                                    </div>
-                                    <div class="col-xs-6 footer-links-2">
-                                        <a href="#">privacy policy</a>
-                                        <a href="#">warranty</a>
-                                        <a href="#">login</a>
+                                    <div class="col-xs-6 footer-links-flex">
+                                        <a href="/">home</a>
+                                        <a href="/AboutUS">about us</a>
+                                        <a href="/Product">products</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="clear visible-sm"></div>
                         <div class="col-sm-6 col-md-3 col-xs-b30 col-sm-b0">
-                            <h6 class="h6 light">Contact</h6>
+                            <h6 class="h6 light">Products</h6>
                             <div class="empty-space col-xs-b20"></div>
                             <div class="footer-post-preview clearfix">
                                 <a class="image" href="#"><img src="assets/img/thumbnail-1.jpg" alt="" /></a>
                                 <div class="description">
-                                    <div class="date">apr 07 / 15</div>
-                                    <a class="title">Fusce tincidunt accumsan pretium sit amet</a>
+                                    <div class="date">See our product variations</div>
+                                    <a href="/Product" class="title">See products</a>
                                 </div>
                             </div>
                         </div>

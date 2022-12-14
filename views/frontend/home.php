@@ -63,12 +63,6 @@
                                         </div>
                                         <div class="col-xs-b30"></div>
                                     </div>
-                                    <div data-swiper-parallax-x="-300">
-                                        <div class="buttons-wrapper">
-                                            <div class="simple-article size-5 light transparent">BEST PRICE: 150 DKK
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                 </div>
                             </div>
@@ -103,12 +97,6 @@
                                             </ul>
                                         </div>
                                         <div class="col-xs-b30"></div>
-                                    </div>
-                                    <div data-swiper-parallax-x="-300">
-                                        <div class="buttons-wrapper">
-                                            <div class="simple-article size-5 light transparent">BEST PRICE: 150 DKK
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                 </div>
