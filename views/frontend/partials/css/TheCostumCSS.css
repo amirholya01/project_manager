@@ -211,3 +211,12 @@ button {
     max-width: 450px !important;
     min-width: 450px !important;
 }
+
+.productShow_button{
+    display: flex !important;
+}
+.number{
+    font-size: 16px !important;
+    color: black !important;
+    padding-right: 20px !important;
+}
