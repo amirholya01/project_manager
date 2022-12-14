@@ -1,5 +1,18 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+require_once $rootPath . "public/dbconn.php";
+    
+require_once $rootPath . "models/handlers/Usershandler.php";
+require_once $rootPath . "security/adminCheck.php";
+
+require_once $rootPath . "security/formSpam.php";
+require_once $rootPath . "security/stringSanitation.php";
+
+
 /* 🔥 Needs sanitation */
 
 /* Checks if there is a createUser request */
@@ -29,3 +42,5 @@ if( isset( $_POST['createUser'] ) ){
         $UsersHandler->createUser($name, $password, $role);
     }
 }
+
+header("location: /adminUsers");
