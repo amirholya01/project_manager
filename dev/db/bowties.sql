@@ -1,8 +1,8 @@
 
 
-DROP DATABASE IF EXISTS TheCustomTies;
-CREATE DATABASE TheCustomTies;
-USE TheCustomTies;
+DROP DATABASE IF EXISTS bowties;
+CREATE DATABASE bowties;
+USE bowties;
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products (
@@ -37,6 +37,17 @@ INSERT INTO products (products_id, `name`, `type`, `description`, price, primary
 (21, 'Blue 3d bowtie', 1, 'Blue 3d bowtie, custom hand made ', '150', '6395d1adde5ff.png'),
 (22, 'Black cartoon patern bowtie', 5, 'Black cartoon patern, custom hand made ', '150', '6395d223c4c60.png'),
 (23, 'Black and white bowtie', 5, 'Black and white bowtie, custom hand made ', '150', '6395d2ada2be0.png');
+
+
+DROP TABLE IF EXISTS order_counters;
+CREATE TABLE IF NOT EXISTS order_counters (
+    `name` varchar(20) NOT NULL PRIMARY KEY,
+    `count` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB;
+
+INSERT INTO order_counters (`name`, `count`) VALUES
+('total', 0),
+('new', 0);
 
 
 DROP TABLE IF EXISTS media;
@@ -92,6 +103,7 @@ CREATE TABLE IF NOT EXISTS purchases (
     fname varchar(100) NOT NULL,
     lname varchar(100) NOT NULL,
     `address` varchar(150) NOT NULL,
+    `appartment` varchar(150) NOT NULL,
     city varchar(100) NOT NULL,
     `state` varchar(100) NOT NULL,
     postcode varchar(50) NOT NULL,
@@ -264,3 +276,16 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('banner2Slogan2', 'Quality oriented approach'),
 ('banner2Slogan3', 'Made to be unique '),
 ('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! ');
+
+DROP TRIGGER IF EXISTS `increaseTotalSales`;
+DELIMITER $$
+CREATE TRIGGER `increaseTotalSales` AFTER INSERT ON `purchases` FOR EACH ROW UPDATE `order_counters` SET `count` = `count` + 1 WHERE `name` = 'total'
+$$
+DELIMITER ;
+
+
+DROP TRIGGER IF EXISTS `increaseNewSales`;
+DELIMITER $$
+CREATE TRIGGER `increaseNewSales` AFTER INSERT ON `purchases` FOR EACH ROW UPDATE `order_counters` SET `count` = `count` + 1 WHERE `name` = 'new'
+$$
+DELIMITER ;
