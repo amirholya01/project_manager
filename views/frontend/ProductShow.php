@@ -119,7 +119,7 @@
                     <form class="button size-2 style-3" id="addToCart" action="addToCart" method="POST">
                         <input type="hidden" name="product" value="<?php echo $_POST['id'] ?>">
                         <button class="product-button" type="submit">
-                            <span class="button-wrapper">
+                            <span class="button-wrapper productShow_button">
                                 <span class="icon"><img src="assets/icons/icon-3.png" alt=""></span>
                                 <span class="text">Add To Cart</span>
                             </span>
@@ -131,8 +131,6 @@
 
 </div>
 
-
-<div class="empty-space col-xs-b35 col-md-b70"></div>
 
 
 <!-- Realted products area should be cleaned more up -->
