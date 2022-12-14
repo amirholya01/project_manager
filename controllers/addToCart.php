@@ -35,12 +35,9 @@ if(isset($_POST['product'])){
 
     /* Goes back a set amount of pages */
     $historie = -1;
+
+    $linkToPrevPage = end($_SESSION['breadcrumbsLinks']);
     
-    if(isset($_POST['minusHistorie'])){
-        $historie = $_POST['minusHistorie'];
-    }
+    header("location: $linkToPrevPage");
 }
 ?>
-<script>
-    window.history.go(<?php echo $historie; ?>);
-</script>
