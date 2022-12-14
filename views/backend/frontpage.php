@@ -20,22 +20,12 @@
     require_once $rootPath . "models/handlers/productsHandler.php";
 
     require_once $rootPath . "controllers/adminFrontpage.php";
-    require_once $rootPath . "controllers/editFrontpage.php";
+    //require_once $rootPath . "controllers/editFrontpage.php";
 
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
-<form class="wrapper frontpage" method="POST" action="/adminFrontpage">
+<form class="wrapper frontpage" method="POST" action="/adminEditFrontpageFunction">
     <input type="hidden" name="editFrontpage" value="true">
-    <h3>
-        WARNING! <br>
-        You can only fill out one formular at a time <br>
-        Upon submission all other fields will be resat <br>
-        Work in progress of a better solution <br><br>
-
-        Refresh the page after submitting to see the changes
-    </h3>
-
-    <hr class="solid">
 
     <h2>
         Header

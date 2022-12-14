@@ -118,6 +118,8 @@
 
 
 
+    $router->get('/adminEditFrontpageFunction', 'controllers/editFrontpage');
+
     $router->get('/adminCreateProductFunction', 'controllers/createProduct');
 
     $router->get('/adminCreateSaleFunction', 'controllers/createSale');
