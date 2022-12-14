@@ -146,7 +146,6 @@ DROP TABLE IF EXISTS assign_colors_to_products;
 CREATE TABLE IF NOT EXISTS assign_colors_to_products (
     products_id int(11) NOT NULL,
     color_id int(11) NOT NULL,
-    /* PRIMARY KEY (products_id,color_id)  */
     CONSTRAINT PK_assign_colors_to_products PRIMARY KEY (products_id, color_id),
     FOREIGN KEY (products_id) REFERENCES products (products_id),
     FOREIGN KEY (color_id) REFERENCES product_colors (color_id) 
@@ -226,7 +225,7 @@ CREATE TABLE IF NOT EXISTS news (
 
 INSERT INTO news (news_id, title, `description`, `time`, media) VALUES
 (1, 'About 2023 ', 'It is that time of the year when we reflect on things we have done and look forwards. In March of 2023 we will celebrate our one year anniversary, stay tuned for some surprises from us to you!  We promise to grow even more this upcoming year ', '2022-12-02 11:19:07', '6395d2ada2be0.png'),
-(7, 'New Fabric! ', 'We have some great news! From this day and onwards we are partnered with a new supplier for our fabrics used for the bow ties. This supplier is not only nature friendly, but also provides jobs to some of our community members that might find it hard otherwise. ', '2022-12-05 11:27:13', '6395d190c5741.png'),
+(7, 'New Fabric! ', 'We have some great news! From this day and onwards we are partnered with a new supplier for our fabrics used for the bow ties. This supplier is not only nature friendly, but also provides jobs to some of our community members that might find it hard otherwise. ', '2022-12-05 11:27:13', '6395d07c24500.png'),
 (6, 'New Collection', 'Winter is already here, and may the new year have not dropped yet, but we want to introduce our new collection for the 2023 valentines day. It is a great time to look for a perfect bow tie for the occasion now and be ready for the special day ahead of  time. ', '2022-12-02 11:44:58', '6395d097c6943.png');
 
 
