@@ -1,19 +1,19 @@
 <?php
 
     if(isset($_POST['id'])){
-        $id = $inputSanitation->sanitice($_POST['id']);
+        $id = $inputSanitation->sanitice($_POST ['id']);
     }else{
         $id = null;
     }
     
     if(isset($_POST['role'])){
-        $role = $inputSanitation->sanitice($_POST['role']);
+        $role = $inputSanitation->sanitice($_POST ['role']);
     }else{
         $role = null;
     }
     
     if(isset($_POST['name'])){
-        $name = $inputSanitation->sanitice($_POST['name']);
+        $name = $inputSanitation->sanitice($_POST ['name']);
     }else{
         $name = null;
     }

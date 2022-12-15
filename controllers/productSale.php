@@ -9,6 +9,8 @@ if(!isset($_POST['sale'])){
 <?php
 }
 
+/* 🔥 Needs a special type of sanitation */
+
 $productSales = $ProductsHandler->getProductSalesBySaleId($_POST['sale']);
 
 $products = array();

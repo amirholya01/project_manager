@@ -20,7 +20,7 @@ $media_id = null;
     If a delete is posted then delete the media with the given id 
 */
 if(isset($_POST['delete'])){
-    $media_id = $inputSanitation->numberSanitice($_POST['delete']);
+    $media_id = $inputSanitation->numberSanitice($_POST ['delete']);
 
     $validStrings = $inputSanitation->getValidationStatus();
 

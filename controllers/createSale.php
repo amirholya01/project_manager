@@ -17,11 +17,11 @@ require_once $rootPath . "security/inputSanitation.php";
 /* Check if there is sent a post */
 if( isset( $_POST['createSale'] ) ){
     /* Gets all the values from the post request */
-    $title = $inputSanitation->sanitice($_POST['title']);
-    $description = $inputSanitation->sanitice($_POST['description']);
+    $title = $inputSanitation->sanitice($_POST ['title']);
+    $description = $inputSanitation->sanitice($_POST ['description']);
 
-    $start = $inputSanitation->dateSanitice($_POST['start']);
-    $end = $inputSanitation->dateSanitice($_POST['end']);
+    $start = $inputSanitation->dateSanitice($_POST ['start']);
+    $end = $inputSanitation->dateSanitice($_POST ['end']);
 
 
     /* Checks if all the strings pass validation */

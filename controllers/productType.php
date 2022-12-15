@@ -9,6 +9,12 @@ if(!isset($_POST['type'])){
 <?php
 }
 
-$products = $ProductsHandler->getProducts('', '', $_POST['type']);
+$inputSanitation->numberSanitice($_POST['type']);
 
-$types = $ProductsHandler->getTypes();
+$validStrings = $inputSanitation->getValidationStatus();
+
+if($validStrings == true){
+    $products = $ProductsHandler->getProducts('', '', $_POST['type']);
+    
+    $types = $ProductsHandler->getTypes();
+}

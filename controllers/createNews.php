@@ -22,9 +22,9 @@ if($validated == true){
     /* Check if there is sent a post */
     if( isset( $_POST['createNews'] ) ){
         /* Gets all the values from the post request */
-        $title = $inputSanitation->sanitice($_POST['createTitle']);
-        $description = $inputSanitation->sanitice($_POST['createDescription']);
-        $media = $inputSanitation->sanitice($_POST['createMedia']);
+        $title = $inputSanitation->sanitice($_POST ['createTitle']);
+        $description = $inputSanitation->sanitice($_POST ['createDescription']);
+        $media = $inputSanitation->sanitice($_POST ['createMedia']);
 
         echo $media;
         /* Checks if all the strings pass validation */

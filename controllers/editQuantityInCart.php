@@ -4,17 +4,24 @@ $newCart = array();
 
 // needs $_POST['quantity']
 
-/* remove $_POST['id'] from $_SESSION['cart'] */
-foreach($_SESSION['cart'] as $cart){
-    if($cart['product'] != $_POST['id']){
-        array_push($newCart, $cart);
-    }elseif($_POST['quantity'] > 0){
-        $cart['quantity'] = $_POST['quantity'];
-        array_push($newCart, $cart);
-    }
-}
+$inputSanitation->numberSanitice($_POST['id']);
+$inputSanitation->numberSanitice($_POST['quantity']);
 
-$_SESSION['cart'] = $newCart;
+$validStrings = $inputSanitation->getValidationStatus();
+
+if($validStrings == true){
+    /* remove $_POST['id'] from $_SESSION['cart'] */
+    foreach($_SESSION['cart'] as $cart){
+        if($cart['product'] != $_POST['id']){
+            array_push($newCart, $cart);
+        }elseif($_POST['quantity'] > 0){
+            $cart['quantity'] = $_POST['quantity'];
+            array_push($newCart, $cart);
+        }
+    }
+    
+    $_SESSION['cart'] = $newCart;
+}
 
 ?>
 

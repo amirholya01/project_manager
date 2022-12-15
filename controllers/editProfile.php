@@ -3,6 +3,8 @@
     while(!file_exists($rootPath . "index.php")){
         $rootPath = "../$rootPath";
     }
+
+    /* 🔥 Do we even use this file? it is reaaally outdated */
     
     require_once $rootPath . "models/handlers/Usershandler.php";
 
