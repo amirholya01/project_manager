@@ -82,7 +82,7 @@
 
     <?php
         $pageNr = $page;
-        $MediaPrPage = 10;
+        $MediaPrPage = 12;
         $pageMinIndex = $pageNr * $MediaPrPage;
         $pageMaxIndex = $pageMinIndex + $MediaPrPage;
     ?>    

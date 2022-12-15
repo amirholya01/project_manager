@@ -69,13 +69,13 @@
                     <!-- Adds types to the search select field -->
                     <?php
                         foreach($allTypes as $type){
-                            if($type['type'] == $searchType){
+                            if($type['id'] == $searchType){
                     ?>
-                        <option selected value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+                        <option selected value="<?php echo $type['id']; ?>"><?php echo $type['type']; ?></option>
                     <?php
                             } else {
                     ?>
-                        <option value="<?php echo $type['type']; ?>"><?php echo $type['type']; ?></option>
+                        <option value="<?php echo $type['id']; ?>"><?php echo $type['type']; ?></option>
                     <?php
                             }
                         }
@@ -97,7 +97,7 @@
 
         <?php
             $pageNr = $page;
-            $productsPrPage = 10;
+            $productsPrPage = 12;
             $pageMinIndex = $pageNr * $productsPrPage;
             $pageMaxIndex = $pageMinIndex + $productsPrPage;
         ?>
@@ -166,10 +166,16 @@
                             ?>
                             <p><?php echo $indData['description'] ?></p>
                             <p><?php echo $indData['price'] ?> DKK</p>
-                            <div class="BannerImage">
-                                <?php $image = explode(".", $indData['primary_image']) ?>
-                                <img  src="/uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>">
-                            </div>
+                            <?php 
+                                if(isset($indData['primary_image'])){
+                                $image = explode(".", $indData['primary_image']) 
+                            ?>
+                                <div class="BannerImage">
+                                    <img  src="/uploads/thumbs/<?php echo $image[0] . "_thumb." . $image[1] ?>">
+                                </div>
+                            <?php
+                                }
+                            ?>
                         </div>
 
                             <div class="Edit-Delete-div">
