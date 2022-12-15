@@ -1,15 +1,21 @@
 <?php
 
-$newCart = array();
+$inputSanitation->numberSanitice($_POST['id']);
 
-/* remove $_POST['id'] from $_SESSION['cart'] */
-foreach($_SESSION['cart'] as $cart){
-    if($cart['product'] != $_POST['id']){
-        array_push($newCart, $cart);
+$validStrings = $inputSanitation->getValidationStatus();
+
+if($validStrings == true){
+    $newCart = array();
+    
+    /* remove $_POST['id'] from $_SESSION['cart'] */
+    foreach($_SESSION['cart'] as $cart){
+        if($cart['product'] != $_POST['id']){
+            array_push($newCart, $cart);
+        }
     }
+    
+    $_SESSION['cart'] = $newCart;
 }
-
-$_SESSION['cart'] = $newCart;
 
 ?>
 

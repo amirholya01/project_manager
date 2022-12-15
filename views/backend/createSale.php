@@ -12,8 +12,6 @@
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/inputSanitation.php";
 
-    //require_once $rootPath . "controllers/createSale.php";
-
     require_once $rootPath . "controllers/editSale.php";
     require_once $rootPath . "controllers/deleteSale.php";
     
@@ -25,7 +23,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="salesActionDecider">    
+    <form method="POST" action="salesActionDecider">
         <select name="sale" id="sale">
             <?php
                 foreach($sales as $sale){
@@ -92,10 +90,6 @@
                                      * sales[new array[i]] and product_ids[new array[i]] are matching
                                      * saleType[new array[i]] will give the type of sail
                                  -->
-
-                                <!-- saleTypes should be radio
-                                    🔥 way to big room for user error    
-                                -->
                                 <input type="hidden" name="product_ids[]" value="<?php echo $indData['products_id'] ?>">
                                 <input required value="0" class="input" type="number" name="sales[]" placeholder="Sale" id="<?php echo $indData['products_id'] ?>">
                                 <input checked class="input" type="radio" name="saleTypes[<?php echo $i; ?>]" value="%" id="%<?php echo $indData['products_id'] ?>">

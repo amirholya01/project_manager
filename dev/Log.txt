@@ -7,6 +7,9 @@ ToDo
     - High Priority
  * add disabled to products instead of hard deleting them
  * forgot password system
+ * limited amount of user feedback when filling out something wrong
+ * limited input requirements (email fields don't need @ and .  etc..)
+ * sanitice output to the user
  
     - Low Priority
  * product colors CRUD and use the colors on frontpage

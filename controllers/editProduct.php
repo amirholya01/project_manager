@@ -2,12 +2,12 @@
 
 // Checks if there is an edit field send with the form
 if(isset($_POST['editProduct'])){
-    $id = $inputSanitation->numberSanitice($_POST['editId']);
-    $name = $inputSanitation->sanitice($_POST['editName']);
-    $description = $inputSanitation->sanitice($_POST['editDescription']);
-    $price = $inputSanitation->numberSanitice($_POST['editPrice']);
-    $type = $inputSanitation->numberSanitice($_POST['editType']);
-    $primaryImage = $inputSanitation->numberSanitice($_POST['editPrimaryImage']);
+    $id = $inputSanitation->numberSanitice($_POST ['editId']);
+    $name = $inputSanitation->sanitice($_POST ['editName']);
+    $description = $inputSanitation->sanitice($_POST ['editDescription']);
+    $price = $inputSanitation->numberSanitice($_POST ['editPrice']);
+    $type = $inputSanitation->numberSanitice($_POST ['editType']);
+    $primaryImage = $inputSanitation->numberSanitice($_POST ['editPrimaryImage']);
     $colors = null;
     $medias = null;
 

@@ -6,6 +6,13 @@ $allColors = $ProductsHandler->getColors();
 
 $mediaData = $ProductsHandler->getMedia();
 
-$mediaAssignedToProduct = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
 
-$colorsAssignedToProduct = $ProductsHandler->getAssignedColorsToProductsByProductId($_POST['id']);
+$inputSanitation->numberSanitice($_POST['id']);
+
+$validStrings = $inputSanitation->getValidationStatus();
+
+if($validStrings == true){
+    $mediaAssignedToProduct = $ProductsHandler->getAssignedMediaToProductsByProductId($_POST['id']);
+
+    $colorsAssignedToProduct = $ProductsHandler->getAssignedColorsToProductsByProductId($_POST['id']);
+}

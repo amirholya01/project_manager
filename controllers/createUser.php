@@ -13,33 +13,35 @@ require_once $rootPath . "security/formSpam.php";
 require_once $rootPath . "security/inputSanitation.php";
 
 
-/* 🔥 Needs sanitation */
-
 /* Checks if there is a createUser request */
 if( isset( $_POST['createUser'] ) ){
     /* Gets the data from the post request */
-    $name = $_POST['createName'];
-    $role = $_POST['createRole'];
+    $name = $inputSanitation->sanitice($_POST ['createName']);
+    $role = $inputSanitation->numberSanitice($_POST ['createRole']);
+    $password = $inputSanitation->sanitice($_POST ['createPassword']);
 
-    $data = $UsersHandler->checkIfUserExists($name);
+    $validStrings = $inputSanitation->getValidationStatus();
 
-    /* 
-        validName keeps track if the name is already taken or not 
-        (True = not taken | Fales = taken) 
-    */
-    $validName = true;
-    if($data != ""){
-        $validName = false;
-    }
-
-    if($validName && $name != "" && $name != null){
-        /* Creates the user in the db */
-
-        /*🔥 Validate password and name and role! */
-        /* The salt is pretty low, should be higher in none testing environment */
-        $password = password_hash($_POST['createPassword'], PASSWORD_BCRYPT, ["cost" => 5]);
-
-        $UsersHandler->createUser($name, $password, $role);
+    if($validStrings == true){
+        $data = $UsersHandler->checkIfUserExists($name);
+    
+        /* 
+            validName keeps track if the name is already taken or not 
+            (True = not taken | Fales = taken) 
+        */
+        $validName = true;
+        if($data != ""){
+            $validName = false;
+        }
+    
+        if($validName && $name != "" && $name != null){
+            /* Creates the user in the db */
+    
+            /* The salt is pretty low, should be higher in none testing environment */
+            $password = password_hash($_POST['createPassword'], PASSWORD_BCRYPT, ["cost" => 5]);
+    
+            $UsersHandler->createUser($name, $password, $role);
+        }
     }
 }
 
