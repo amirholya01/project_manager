@@ -59,7 +59,6 @@
             Sub title
         </h3>
         <input class="input" type="text" name="bannerSubtitle1" value="<?php echo $bannerSubtitle1 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Title  -->
@@ -67,7 +66,6 @@
             Title
         </h3>
         <input class="input" type="text" name="bannerTitle1" value="<?php echo $bannerTitle1 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan1  -->
@@ -75,7 +73,6 @@
             Banner Slogan - 1
         </h3>
         <input class="input" type="text" name="banner1Slogan1" value="<?php echo $banner1Slogan1 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan2  -->
@@ -83,7 +80,6 @@
             Banner Slogan - 2
         </h3>
         <input class="input" type="text" name="banner1Slogan2" value="<?php echo $banner1Slogan2 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan3  -->
@@ -91,15 +87,16 @@
             Banner Slogan - 3
         </h3>
         <input class="input" type="text" name="banner1Slogan3" value="<?php echo $banner1Slogan3 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner section 1  -->
         <h3>
             Banner Tekst
         </h3>
-        <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="Banner1Div">
+            <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
     <div>
