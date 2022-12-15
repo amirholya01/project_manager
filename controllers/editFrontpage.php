@@ -133,6 +133,7 @@ if(isset($_POST['banner2Slogan2'])){
 }
 
 if(isset($_POST['banner2Slogan3'])){
+    
     $text = $inputSanitation->sanitice($_POST['banner2Slogan3']);
 
     $validStrings = $inputSanitation->getValidationStatus();
