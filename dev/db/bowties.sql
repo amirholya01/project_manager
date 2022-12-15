@@ -81,8 +81,9 @@ INSERT INTO media (media_id, `name`) VALUES
 ('6395d2ada2be0.png', 'Black rythm bowtie'),
 ('6395d2d637da5.png', 'Black lemon edition bowtie'),
 ('639b5c4757587.png', 'Renata'),
-('639b5c50584f8.jpg', 'Behdin');
-('639b6938de612.jpg', 'Niclas');
+('639b5c50584f8.jpg', 'Behdin'),
+('639b6938de612.jpg', 'Niclas'),
+('639b6d17373ca.png', 'Christmas sale');
 
 
 DROP TABLE IF EXISTS users;
@@ -184,8 +185,9 @@ CREATE TABLE IF NOT EXISTS sales (
 ) ENGINE=InnoDB AUTO_INCREMENT=6;
 
 INSERT INTO sales (sale_id, title, `start`, `end`) VALUES
-(1, 'black friday 2022', '2022-11-25', '2022-11-25'),
-(5, 'Pineapple', '2022-12-10', '2022-12-11');
+(5, 'Christmas sales', '2022-12-10', '2022-12-11', '639b6d17373ca.png', 'Christmas is one of the most beautiful holidays of the year. It fills people’s hearts with joy and brings families together.\r\n\r\nHowever, there is also a mad side of Christmas. Running around the shops or scrolling online, trying to find the perfect gift for your loved ones might be a pain. Therefore, marketers use this time wisely and approach subscribers with special offers and deals to make their lives slightly easier.'),
+(1, 'black friday 2022', '2022-11-25', '2022-11-25');
+
 
 
 DROP TABLE IF EXISTS assign_products_to_sales;
@@ -250,12 +252,13 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
-('aboutPageTitle1', 'Niclas, Developer'),
+('aboutUsImageOne', '639b6938de612.jpg'), 
+('aboutPageTitle1', 'Nicklas, Developer'),
 ('aboutPageText1', 'The creative mind behind the system that we use for our website. Bringing the technical solutions to the table to ensure a smooth shopping experience.'),
 ('aboutUsImageTwo', '639b5c50584f8.jpg'),
 ('aboutPageTitle2', 'Behdin, Developer'),
 ('aboutPageText2', 'The creative mind behind user experience on the site. Not only are they responsible for bringing the spirit of the brand to the site, but also the team workflow here in The Custom Ties.'),
-('aboutUsImageThree', '639b6938de612.jpg'),
+('aboutUsImageThree', '639b5c4757587.png'),
 ('aboutPageTitle3', 'Renata , Developer'), 
 ('aboutPageText3', 'Creative mind behind creative writing. Working with testing the features and making sure users have the best and fastest experience.'),
 ('aboutusSubtitle', 'ABOUT US'),

@@ -80,11 +80,11 @@
                                 <div class="cell-view page-height">
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                     <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3"><?php echo $bannerSubtitle1 ?></div>
+                                        <div class="simple-article light transparent size-3 uppercase"><?php echo $bannerSubtitle2 ?></div>
                                         <div class="col-xs-b5"></div>
                                     </div>
                                     <div data-swiper-parallax-x="-500">
-                                        <h1 class="h1 light"><?php echo $bannerTitle1 ?></h1>
+                                        <h1 class="h1 light"><?php echo $bannerTitle2 ?></h1>
                                         <div class="title-underline light left"><span></span></div>
                                     </div>
                                     <div data-swiper-parallax-x="-400">
@@ -210,7 +210,7 @@
                 <div class="swiper-button-prev hidden"></div>
                 <div class="swiper-button-next hidden"></div>
                 <div class="swiper-container" data-parallax="1">
-                   <div class="swiper-wrapper Discount-wrapper">
+                   <div class="swiper-wrapper Discount-wrapper padding_80">
 
                    <?php 
                         /* Loop through the Discounts */
@@ -241,7 +241,7 @@
                                         <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
                                         <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
                                         <div class="simple-article size-3 col-xs-b30"><?php echo $Sale['description'] ?></div>
-                                        <div class="simple-article size-3 col-xs-b30">Praesent nec finibus massa. Phasellus id auctor lacus, at iaculis lorem. Donec quis arcu elit. In vehicula purus sem, eu mattis est lacinia sit amet.</div>
+
                                         <div class="buttons-wrapper">
                                             <button type="submit" form="ProductSale" class="button size-2 style-2">
                                                 <span class="button-wrapper">
