@@ -30,23 +30,6 @@
     <h2>
         Header
     </h2>
-    <div > <!--  <- Phone  -->
-        <h3>
-            Phone Number
-        </h3>
-        <p>The same as in contact</p>
-        <input class="input" type="text" name="phone" value="<?php echo $phone ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </div>
-
-    <div > <!--  <- Email  -->
-        <h3>
-            Email
-        </h3>
-        <p>The same as in contact</p>
-        <input class="input" type="text" name="email" value="<?php echo $email ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </div>
 
     <div > <!--  <- Navigation  -->
         <h3>
@@ -62,6 +45,10 @@
 
     <hr class="solid">
 
+    
+    <h2>
+        Frontpage
+    </h2>
 <!-- Banner1 section  -->
     <h2>
         Banner 1
@@ -197,25 +184,6 @@
         </div>
     </div>
 <!-- Banner2 section  -->
-
-
-    <hr class="solid">
-
-    <h2>
-        Frontpage
-    </h2>
-    <!-- Main slider -->
-    <!-- ^ should have create and delete -->
-    <divs > <!--  <- About us  -->
-        <h3>
-            About us
-        </h3>
-        <p>This is the same one as on the about us page</p>
-        <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
-    </div>
-
-    <hr class="solid">
 
     <h2>
         Products
