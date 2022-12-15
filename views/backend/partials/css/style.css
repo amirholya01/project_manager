@@ -339,3 +339,7 @@ figure img{
 .order-submit{
   margin-bottom: 5px;
 }
+.Banner1Div{
+  display: flex;
+  align-items: flex-end;
+}
