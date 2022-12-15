@@ -20,10 +20,18 @@
 
     $validStrings = $inputSanitation->getValidationStatus();
 
+    
+    /* Editing images on sales makes something not pass sanitation so we put a default */
+    if($validStrings == false){
+        $data = $ProductsHandler->getProducts("", "", "");
+    }
+
     if($validStrings == true){
         $data = $ProductsHandler->getProducts(
             $search,
             $id,
             $type
         );
+        
+        
     }

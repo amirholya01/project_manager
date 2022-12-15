@@ -103,6 +103,31 @@
                     }
                 ?>
             </div>
+            <div class="choose-image">
+                <?php
+                    for($i = 0; $i < count($mediaData); $i++){
+                        $indData = $mediaData[$i];
+                ?>
+                    <div class="image">
+                            <label for="<?php echo $indData['media_id']; ?>">
+                                <div>
+                                    <p><?php echo $indData['name'] ?></p>
+                                    <figure class="figure">
+                                        <!-- ✒️ should be styled with seperate css file -->
+                                        <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                                    </figure>
+                                </div>
+                            </label>
+                            <input class="input-checkbox-hidden" type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
+                            <div class="alignment">
+                                <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
+                                <input name="primaryImage" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
+                            </div>
+                    </div>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
     </form>
 </div>

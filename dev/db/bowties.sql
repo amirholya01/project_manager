@@ -176,6 +176,7 @@ CREATE TABLE IF NOT EXISTS sales (
     title varchar(100) NOT NULL,
     `start` date NOT NULL,
     `end` date NOT NULL,
+    `media` varchar(100),
     `description` text
 ) ENGINE=InnoDB AUTO_INCREMENT=6;
 

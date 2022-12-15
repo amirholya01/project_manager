@@ -97,11 +97,12 @@ class ProductsHandler extends Products{
         }
     }
 
-    public function createSale($title, $description, $start, $end, $ids, $sales, $saleTypes){
+    public function createSale($title, $description, $image, $start, $end, $ids, $sales, $saleTypes){
         $this->db->beginTransaction();
         $createSale = $this->db->prepare($this->createSaleQuery);
         $createSale->bindParam(':title', $title);
         $createSale->bindParam(':description', $description);
+        $createSale->bindParam(':image', $image);
         $createSale->bindParam(':start', $start);
         $createSale->bindParam(':end', $end);
         $createSale->execute();
@@ -122,7 +123,7 @@ class ProductsHandler extends Products{
         $this->db->commit();
     }
 
-    public function updateSale($sale_id, $title, $description, $start, $end, $product_ids, $sales, $saleTypes){
+    public function updateSale($sale_id, $title, $description, $image, $start, $end, $product_ids, $sales, $saleTypes){
         /* Update sale, delete/replace products */
 
         $this->db->beginTransaction();
@@ -130,6 +131,7 @@ class ProductsHandler extends Products{
         $editSale->bindParam(':id', $sale_id);
         $editSale->bindParam(':title', $title);
         $editSale->bindParam(':description', $description);
+        $editSale->bindParam(':image', $image);
         $editSale->bindParam(':start', $start);
         $editSale->bindParam(':end', $end);
         $editSale->execute();
