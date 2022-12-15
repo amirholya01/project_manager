@@ -32,10 +32,13 @@ $nav4 = '';
 $productsSubtitle = '';
 $productsTitle = '';
 
+$aboutUsImageOne = '';
 $aboutPageTitle1 = '';
 $aboutPageText1 = '';
+$aboutUsImageTwo = '';
 $aboutPageTitle2 = '';
 $aboutPageText2 = '';
+$aboutUsImageThree = '';
 $aboutPageTitle3 = '';
 $aboutPageText3 = '';
 $aboutusSubtitle = '';
@@ -135,17 +138,26 @@ foreach($dataset as $data){
 
 
     /* AboutUS Page section Handlers */
+    if($data['id'] == 'aboutUsImageOne'){
+        $aboutUsImageOne = $data['text'];
+    }
     if($data['id'] == 'aboutPageTitle1'){
         $aboutPageTitle1 = $data['text'];
     }
     if($data['id'] == 'aboutPageText1'){
         $aboutPageText1 = $data['text'];
     }
+    if($data['id'] == 'aboutUsImageTwo'){
+        $aboutUsImageTwo = $data['text'];
+    }
     if($data['id'] == 'aboutPageTitle2'){
         $aboutPageTitle2 = $data['text'];
     }
     if($data['id'] == 'aboutPageText2'){
         $aboutPageText2 = $data['text'];
+    }
+    if($data['id'] == 'aboutUsImageThree'){
+        $aboutUsImageThree = $data['text'];
     }
     if($data['id'] == 'aboutPageTitle3'){
         $aboutPageTitle3 = $data['text'];

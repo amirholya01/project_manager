@@ -103,6 +103,9 @@
     $router->get('/adminEditProduct', 'views/backend/editProduct');
     $router->get('/bannerOneImagePicker', 'views/backend/bannerOneImagePicker');
     $router->get('/bannerTwoImagePicker', 'views/backend/bannerTwoImagePicker');
+    $router->get('/aboutUsOneImagePicker', 'views/backend/aboutUsOneImagePicker');
+    $router->get('/aboutUsTwoImagePicker', 'views/backend/aboutUsTwoImagePicker');
+    $router->get('/aboutUsThreeImagePicker', 'views/backend/aboutUsThreeImagePicker');
 
     $router->get('/adminSale', 'views/backend/createSale');
     $router->get('/salesActionDecider', 'controllers/salesActionDecider');

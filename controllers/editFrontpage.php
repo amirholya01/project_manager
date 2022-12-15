@@ -167,6 +167,16 @@ if(isset($_POST['bannerImageTwo'])){
 
 
 /* AboutUS Page section Handlers */
+if(isset($_POST['aboutUsImageOne'])){
+    $text = $inputSanitation->sanitice($_POST['aboutUsImageOne']);
+
+    $validStrings = $inputSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutUsImageOne($text);
+    }
+}
+
 if(isset($_POST['aboutPageTitle1'])){
     $text = $inputSanitation->sanitice($_POST['aboutPageTitle1']);
 
@@ -187,6 +197,16 @@ if(isset($_POST['aboutPageText1'])){
     }
 }
 
+if(isset($_POST['aboutUsImageTwo'])){
+    $text = $inputSanitation->sanitice($_POST['aboutUsImageTwo']);
+
+    $validStrings = $inputSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutUsImageTwo($text);
+    }
+}
+
 if(isset($_POST['aboutPageTitle2'])){
     $text = $inputSanitation->sanitice($_POST['aboutPageTitle2']);
 
@@ -204,6 +224,16 @@ if(isset($_POST['aboutPageText2'])){
 
     if($validStrings == true){
         $FrontpageHandler->editAboutPageText2($text);
+    }
+}
+
+if(isset($_POST['aboutUsImageThree'])){
+    $text = $inputSanitation->sanitice($_POST['aboutUsImageThree']);
+
+    $validStrings = $inputSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        $FrontpageHandler->editAboutUsImageThree($text);
     }
 }
 

@@ -93,7 +93,7 @@
         <h3>
             Banner Tekst
         </h3>
-        <div class="Banner1Div">
+        <div class="BannerDiv">
             <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
             <button class="height-button button submit" type="submit">Submit/Edit</button>
         </div>
@@ -126,7 +126,6 @@
             Sub title
         </h3>
         <input class="input" type="text" name="bannerSubtitle2" value="<?php echo $bannerSubtitle2 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Title  -->
@@ -134,7 +133,6 @@
             Title
         </h3>
         <input class="input" type="text" name="bannerTitle2" value="<?php echo $bannerTitle2 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan1  -->
@@ -142,7 +140,6 @@
             Banner Slogan 1
         </h3>
         <input class="input" type="text" name="banner2Slogan1" value="<?php echo $banner2Slogan1 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan2  -->
@@ -150,7 +147,6 @@
             Banner Slogan - 2
         </h3>
         <input class="input" type="text" name="banner2Slogan2" value="<?php echo $banner2Slogan2 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner Slogan3  -->
@@ -158,15 +154,16 @@
             Banner Slogan - 3
         </h3>
         <input class="input" type="text" name="banner2Slogan3" value="<?php echo $banner2Slogan3 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Banner section 1  -->
         <h3>
             Banner Tekst
         </h3>
-        <textarea name="banner2Text1" id="" cols="60" rows="10"><?php echo $banner2Text1 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="banner2Text1" id="" cols="60" rows="10"><?php echo $banner2Text1 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
     <div>
@@ -193,14 +190,15 @@
             Sub title
         </h3>
         <input class="input" type="text" name="productsSubtitle" value="<?php echo $productsSubtitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
     <div > <!--  <- Title  -->
         <h3>
             Title
         </h3>
-        <input class="input" type="text" name="productsTitle" value="<?php echo $productsTitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <input class="input" type="text" name="productsTitle" value="<?php echo $productsTitle ?>">
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
     <!-- Categories  - Product types! -->
 
@@ -215,12 +213,22 @@
     </h2>
 
 <!-- AboutUSpage section  -->
-    <div > 
+    <div>
+        <h3>
+                About us / Image 1
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $aboutUsImageOne?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/aboutUsOneImagePicker">Choose Image</a>
+        </div>
+    </div>
+    <div> 
         <h3>
             About us Page - title 1 
         </h3>
         <input class="input" type="text" name="aboutPageTitle1" value="<?php echo $aboutPageTitle1 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > 
@@ -228,27 +236,52 @@
             About us Page - text 1 
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutPageText1" id="" cols="60" rows="10"><?php echo $aboutPageText1 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="aboutPageText1" id="" cols="60" rows="10"><?php echo $aboutPageText1 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
-   
+    <div>
+        <h3>
+                About us / Image 2
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $aboutUsImageTwo?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/aboutUsTwoImagePicker">Choose Image</a>
+        </div>
+    </div>
 
     <div > 
         <h3>
             About us Page - title 2 
         </h3>
         <input class="input" type="text" name="aboutPageTitle2" value="<?php echo $aboutPageTitle2 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > 
         <h3>
-            About us Page - text 2 
+            About us Page - text 2  
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutPageText2" id="" cols="60" rows="10"><?php echo $aboutPageText2 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="aboutPageText2" id="" cols="60" rows="10"><?php echo $aboutPageText2 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
+    </div>
+
+    <div>
+        <h3>
+                About us / Image 2
+        </h3>
+        <div class="ImageUploadHandlersStyle">
+            <div class="BannerImage">
+                <img  src="uploads/<?php echo $aboutUsImageThree?>" alt="" />
+            </div>
+            <a class="ChooseImageButton height-button button submit" href="/aboutUsThreeImagePicker">Choose Image</a>
+        </div>
     </div>
 
     <div > 
@@ -256,7 +289,6 @@
             About us Page - title 3 
         </h3>
         <input class="input" type="text" name="aboutPageTitle3" value="<?php echo $aboutPageTitle3 ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > 
@@ -264,8 +296,10 @@
             About us Page - text 3 
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutPageText3" id="" cols="60" rows="10"><?php echo $aboutPageText3 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="aboutPageText3" id="" cols="60" rows="10"><?php echo $aboutPageText3 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
 <!-- AboutUSpage section  -->
@@ -275,7 +309,6 @@
             Sub title
         </h3>
         <input class="input" type="text" name="aboutusSubtitle" value="<?php echo $aboutusSubtitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Title  -->
@@ -283,7 +316,6 @@
             Title
         </h3>
         <input class="input" type="text" name="aboutusTitle" value="<?php echo $aboutusTitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
     <div > <!--  <- Slogan  -->
@@ -291,7 +323,6 @@
            Slogan
         </h3>
         <input class="input" type="text" name="aboutusSlogan" value="<?php echo $aboutusSlogan ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
     <!-- Descriptions -->
     <!-- ^ should have create and delete -->
@@ -301,8 +332,10 @@
             About us / part-1
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="aboutUs1" id="" cols="60" rows="10"><?php echo $aboutUs1 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
     <div > <!--  <- About us  -->
@@ -310,8 +343,10 @@
             About us / part-2
         </h3>
         <p>This is the same one as on the frontpage</p>
-        <textarea name="aboutUs2" id="" cols="60" rows="10"><?php echo $aboutUs2 ?></textarea>
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
+        <div class="BannerDiv">
+            <textarea name="aboutUs2" id="" cols="60" rows="10"><?php echo $aboutUs2 ?></textarea>
+            <button class="height-button button submit" type="submit">Submit/Edit</button>
+        </div>
     </div>
 
 
@@ -328,14 +363,12 @@
             Sub title
         </h3>
         <input class="input" type="text" name="contactSubtitle" value="<?php echo $contactSubtitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
     <div > <!--  <- Title  -->
         <h3>
             Title
         </h3>
         <input class="input" type="text" name="contactTitle" value="<?php echo $contactTitle ?>">
-        <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
     <div > <!--  <- Contact forms  -->
         <h3>

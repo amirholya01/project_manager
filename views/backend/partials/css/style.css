@@ -51,6 +51,7 @@ aside nav{
 .ImageUploadHandlersStyle{
   display: flex;
   align-items: center;
+  margin: 80px 0;
 }
 
 .ChooseImageButton{
@@ -339,7 +340,7 @@ figure img{
 .order-submit{
   margin-bottom: 5px;
 }
-.Banner1Div{
+.BannerDiv{
   display: flex;
   align-items: flex-end;
 }

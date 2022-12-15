@@ -39,7 +39,6 @@
     </div>
 </div>
 
-<div class="empty-space col-xs-b35 col-md-b70"></div>
 
 <div class="container">
     <div class="slider-wrapper">
@@ -50,7 +49,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="icon-description-shortcode style-2">
-                        <img class="image-icon image-thumbnail rounded-image" src="uploads/<?php echo $bannerImageOne?>"
+                        <img class="image-icon image-thumbnail rounded-image" src="uploads/<?php echo $aboutUsImageOne?>"
                             alt="" />
                         <div class="content">
                             <h6 class="title h6"><?php echo $aboutPageTitle1?></h6>
@@ -60,7 +59,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="icon-description-shortcode style-2">
-                        <img class="image-icon image-thumbnail rounded-image" src="assets/img/thumbnail-36.jpg"
+                        <img class="image-icon image-thumbnail rounded-image" src="uploads/<?php echo $aboutUsImageTwo?>"
                             alt="" />
                         <div class="content">
                             <h6 class="title h6"><?php echo $aboutPageTitle2?></h6>
@@ -70,7 +69,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="icon-description-shortcode style-2">
-                        <img class="image-icon image-thumbnail rounded-image" src="assets/img/thumbnail-37.jpg"
+                        <img class="image-icon image-thumbnail rounded-image" src="uploads/<?php echo $aboutUsImageThree?>"
                             alt="" />
                         <div class="content">
                             <h6 class="title h6"><?php echo $aboutPageTitle3?></h6>

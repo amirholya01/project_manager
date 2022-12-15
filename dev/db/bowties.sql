@@ -79,7 +79,10 @@ INSERT INTO media (media_id, `name`) VALUES
 ('6395d223c4c60.png', 'Cartoon2 bowtie'),
 ('6395d2599109c.png', 'White and black pattern bowtie'),
 ('6395d2ada2be0.png', 'Black rythm bowtie'),
-('6395d2d637da5.png', 'Black lemon edition bowtie');
+('6395d2d637da5.png', 'Black lemon edition bowtie'),
+('639b5c4757587.png', 'Renata'),
+('639b5c50584f8.jpg', 'Behdin');
+('639b6938de612.jpg', 'Niclas');
 
 
 DROP TABLE IF EXISTS users;
@@ -246,14 +249,17 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
+('aboutUsImageOne', ''), 
 ('aboutPageTitle1', 'Nicklas, Developer'),
 ('aboutPageText1', 'The creative mind behind the system that we use for our website. Bringing the technical solutions to the table to ensure a smooth shopping experience.'),
+('aboutUsImageTwo', '639b5c50584f8.jpg'),
 ('aboutPageTitle2', 'Behdin, Developer'),
 ('aboutPageText2', 'The creative mind behind user experience on the site. Not only are they responsible for bringing the spirit of the brand to the site, but also the team workflow here in The Custom Ties.'),
-('aboutPageTitle3', 'Renata , Developer'),
+('aboutUsImageThree', '639b6938de612.jpg'),
+('aboutPageTitle3', 'Renata , Developer'), 
 ('aboutPageText3', 'Creative mind behind creative writing. Working with testing the features and making sure users have the best and fastest experience.'),
 ('aboutusSubtitle', 'ABOUT US'),
-('aboutusTitle', 'THE COUSTUME TIE'),
+('aboutusTitle', 'THE COUSTUME TIE'), 
 ('aboutusSlogan', 'Unique ties that are made with love'),
 ('contactSubtitle', 'CONTACT US'),
 ('contactTitle', 'YOU CAN ASK US ABOUT EVERYTHING'),
@@ -267,7 +273,7 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('banner1Slogan2', 'Huge range to choose from'),
 ('banner1Slogan3', 'Easy communication with our live chat'),
 ('bannerText1', 'We strive to offer our customers the lowest possible prices, the best available selection while giving them a chance to bring their own ideas, and the utmost convenience. All this while keeping to on demand production making us as sustainable as we can. '),
-('bannerImageOne', ''),
+('bannerImageOne', '6395d097c6943.png'),
 
 ('bannerSubtitle2', 'Professional edition'),
 ('bannerTitle2', 'Your bowties'),
@@ -275,7 +281,7 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('banner2Slogan2', 'Quality oriented approach'),
 ('banner2Slogan3', 'Made to be unique '),
 ('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! '),
-('bannerImageTwo', '');
+('bannerImageTwo', '6395d181babdf.png');
 
 DROP TABLE IF EXISTS `spam_prevention`;
 CREATE TABLE IF NOT EXISTS `spam_prevention` (

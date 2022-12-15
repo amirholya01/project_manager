@@ -41,7 +41,7 @@
                             </label>
                             <div class="alignment">
                                 <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
-                                <input name="aboutUsImageOne" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
+                                <input name="aboutUsImageThree" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
                             </div>
                         </div>
                 <?php

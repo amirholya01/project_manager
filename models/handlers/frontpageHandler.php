@@ -204,6 +204,15 @@ class FrontpageHandler extends Frontpage{
 
 
     /* AboutUS Page section Handlers */
+
+    public function editAboutUsImageOne($aboutUsImageOne){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutUsImageOne';
+        $update->bindParam(":text", $aboutUsImageOne);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
     public function editAboutPageTitle1($aboutPageTitle1){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutPageTitle1';
@@ -220,6 +229,14 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
 
+    public function editAboutUsImageTwo($aboutUsImageTwo){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutUsImageTwo';
+        $update->bindParam(":text", $aboutUsImageTwo);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
     public function editAboutPageTitle2($aboutPageTitle2){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutPageTitle2';
@@ -232,6 +249,14 @@ class FrontpageHandler extends Frontpage{
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'aboutPageText2';
         $update->bindParam(":text", $aboutPageText2);
+        $update->bindParam(":id", $id);
+        $update->execute();
+    }
+
+    public function editAboutUsImageThree($aboutUsImageThree){
+        $update = $this->db->prepare($this->UniversalEditQuery);
+        $id = 'aboutUsImageThree';
+        $update->bindParam(":text", $aboutUsImageThree);
         $update->bindParam(":id", $id);
         $update->execute();
     }
