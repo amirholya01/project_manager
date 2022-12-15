@@ -6,7 +6,7 @@
 
     /* 🔥 Do we even use this file? it is reaaally outdated */
     
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/UsersHandler.php";
 
     /* gets the name of the user you are currently logged in as */
     $currentName = $_SESSION['name'];

@@ -12,8 +12,8 @@
 
     require_once $rootPath . "public/dbconn.php";
 
-    require_once $rootPath . "models/handlers/productsHandler.php";
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/ProductsHandler.php";
+    require_once $rootPath . "models/handlers/UsersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
     require_once $rootPath . "security/formSpam.php";
@@ -59,12 +59,14 @@
 <div class="wrapper">
 
 
-    <form class="Admin-handlers" method="POST" action="adminProducts">
+    <form id="reset" method="POST" action="adminProducts"></form>
+    <form id="search" method="POST" action="adminProducts"></form>
+    <div class="Admin-handlers">
 
         <div class="Admin-search-product">
-            <input class="input" type="text" name="id" placeholder="ID" value="<?php echo ($id != null) ? $id : ""; ?>">
-            <input class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
-                <select name="type" id="type">
+            <input form="search" class="input" type="text" name="id" placeholder="ID" value="<?php echo ($id != null) ? $id : ""; ?>">
+            <input form="search" class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
+                <select form="search" name="type" id="type">
                     <option value="">Nothing</option>
                     <!-- Adds types to the search select field -->
                     <?php
@@ -81,15 +83,18 @@
                         }
                     ?>
                 </select>
-            <input class="button submit" type="submit">
+            <input form="search" class="button submit" type="submit">
         </div>
 
         <div class="Reset_create_div">
-            <a class="button" href="/adminProducts">Reset</a>
+            <input type="hidden" form="reset" value="" name="id">
+            <input type="hidden" form="reset" value="" name="search">
+            <input type="hidden" form="reset" value="" name="type">
+            <button type="submit" class="button" form="reset">Reset</button>
             <a class="button" href="/adminCreateProduct">Create new product</a>
             <a class="button" href="/adminSale">Discounts</a>
         </div>
-    </form>
+    </div>
 
   
 

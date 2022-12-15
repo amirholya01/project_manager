@@ -5,6 +5,7 @@ if(isset($_SESSION['name'])){
     $user = $UsersHandler->getUsers('','',$_SESSION['name']);
     $user_id = $user[0]['user_id'];
 }
+require_once $rootPath . "security/inputSanitation.php";
 
 $inputSanitation->sanitice($_POST['country']);
 $inputSanitation->sanitice($_POST['firstname']);

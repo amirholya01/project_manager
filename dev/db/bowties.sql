@@ -1,8 +1,8 @@
 
 
-DROP DATABASE IF EXISTS bowties;
-CREATE DATABASE bowties;
-USE bowties;
+DROP DATABASE IF EXISTS piratelifesmatter_orgbowties;
+CREATE DATABASE piratelifesmatter_orgbowties;
+USE piratelifesmatter_orgbowties;
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE IF NOT EXISTS products (

@@ -6,7 +6,7 @@ while(!file_exists($rootPath . "index.php")){
     $rootPath = "../$rootPath";
 }
 
-require_once $rootPath . "models/handlers/Usershandler.php";
+require_once $rootPath . "models/handlers/UsersHandler.php";
 require_once $rootPath . "security/formSpam.php";
 
 

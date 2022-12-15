@@ -16,7 +16,7 @@
 
     require $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
-    require_once $rootPath . "models/handlers/productsHandler.php";
+    require_once $rootPath . "models/handlers/ProductsHandler.php";
     require_once $rootPath . "controllers/productShow.php";
     require_once $rootPath . "security/inputSanitation.php";
     

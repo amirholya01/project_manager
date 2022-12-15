@@ -1,5 +1,5 @@
 <?php
-    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "models/handlers/FrontpageHandler.php"; 
     require_once $rootPath . "controllers/frontpage.php"; 
 ?>
 

@@ -63,7 +63,7 @@
     $router = new Router($request);
 
     /* Frontend */
-    $router->get('/', 'views/frontend/Home');
+    $router->get('/', 'views/frontend/home');
     //$router->get('/login', 'views/login/login');
     //$router->get('/signup', 'views/login/signup');
     $router->get('/profile', 'views/login/profile');

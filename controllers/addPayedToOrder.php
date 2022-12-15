@@ -9,7 +9,7 @@ while(!file_exists($rootPath . "index.php")){
 $filter = false;
 require_once $rootPath . "public/dbconn.php";
 
-require_once $rootPath . "models/handlers/purchaseHandler.php";
+require_once $rootPath . "models/handlers/PurchaseHandler.php";
 
 
 $inputSanitation->numberSanitice($_POST['id']);

@@ -12,8 +12,8 @@
 
     require_once $rootPath . "public/dbconn.php";
 
-    require_once $rootPath . "models/handlers/productsHandler.php";
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/ProductsHandler.php";
+    require_once $rootPath . "models/handlers/UsersHandler.php";
 
     require_once $rootPath . "security/adminCheck.php";
     require_once $rootPath . "security/formSpam.php";
@@ -61,20 +61,23 @@
 ?>
 <div class="wrapper">
 
-
-    <form class="Admin-handlers" method="POST" action="/adminMedia">
+    
+    <form id="reset" method="POST" action="/adminMedia"></form>
+    <form id="search" method="POST" action="/adminMedia"></form>
+    <div class="Admin-handlers" method="POST" action="/adminMedia">
 
         <div class="Admin-search-product">
             <!-- ✒️ Make it not case sensitive -->
-            <input class="input" type="text" name="name" placeholder="Name">
-            <input class="height-button button submit" type="submit" value="Search">
+            <input form="search" class="input" type="text" name="name" placeholder="Name">
+            <input form="search" class="height-button button submit" type="submit" value="Search">
         </div>
 
         <div class="Reset_create_div">
-            <a class="button" href="/adminMedia">Reset</a>
+            <input form="reset" type="hidden" name="name" value="">
+            <button form="search" class="button" type="submit">Reset</button>
             <a class="button" href="/adminCreateMedia">Create new media</a>
         </div>
-    </form>
+    </div>
 
   
 
