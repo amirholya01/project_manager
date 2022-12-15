@@ -38,7 +38,7 @@ foreach($roughProductSales as $sale){
     /* Refine the prices. cut % of price to get the new price */
     if($sale['saleType'] == '%') {
         /* % */
-        $prod = $ProductsHandler->getProducts('', $sale['product_id']);
+        $prod = $ProductsHandler->getProducts('', $sale['products_id']);
         $originalPrice = $prod[0]['price'];
         $newPrice = $originalPrice - (($originalPrice / 100) * $sale['sale']);
     } else {
@@ -68,7 +68,7 @@ foreach($roughProductSales as $sale){
     if($pushToCart == true){
         $newSale = array(
             'sale_id' => $sale['sale_id'],
-            'product_id' => $sale['product_id'],
+            'product_id' => $sale['products_id'],
             'sale' => $newPrice
         );
         array_push($productSales, $newSale);

@@ -21,7 +21,7 @@
     require_once $rootPath . "models/handlers/ProductsHandler.php";
     require_once $rootPath . "controllers/productSale.php";
 
-    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "models/handlers/FrontpageHandler.php"; 
     require_once $rootPath . "controllers/frontpage.php"; 
      
     require_once $rootPath . "controllers/discount.php";

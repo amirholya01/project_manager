@@ -11,13 +11,13 @@
     require_once $rootPath . "views/frontend/partials/header.php";
     require_once $rootPath . "views/frontend/Breadcrumb.php";
 
-    require_once $rootPath . "models/handlers/newsHandler.php";
+    require_once $rootPath . "models/handlers/NewsHandler.php";
     require_once $rootPath . "controllers/frontendNews.php"; 
 
     require_once $rootPath . "models/handlers/ProductsHandler.php";
     require_once $rootPath . "controllers/frontendDiscount.php"; 
 
-    require_once $rootPath . "models/handlers/frontpageHandler.php"; 
+    require_once $rootPath . "models/handlers/FrontpageHandler.php"; 
     require_once $rootPath . "controllers/frontpage.php"; 
     
 ?>

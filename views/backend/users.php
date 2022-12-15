@@ -12,7 +12,7 @@
 
     require_once $rootPath . "public/dbconn.php";
     
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/UsersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
     require_once $rootPath . "security/formSpam.php";
@@ -56,25 +56,30 @@
 ?>
 
 <div class="wrapper">
-    <form class="Admin-handlers" method="POST" action="adminUsers">
+    <form id="reset" method="POST" action="adminUsers"></form>
+    <form id="search" method="POST" action="adminUsers"></form>
+    <div class="Admin-handlers" method="POST" action="adminUsers">
 
         <div class="Admin-search-product">
-            <input class="input" type="text" name="id" placeholder="ID"  value="<?php echo ($id != null) ? $id : ""; ?>">
-            <input class="input" type="text" name="name" placeholder="Name"  value="<?php echo ($name != null) ? $name : ""; ?>">
-            <select name="role">
+            <input form="search" class="input" type="text" name="id" placeholder="ID"  value="<?php echo ($id != null) ? $id : ""; ?>">
+            <input form="search" class="input" type="text" name="name" placeholder="Name"  value="<?php echo ($name != null) ? $name : ""; ?>">
+            <select form="search" name="role">
                 <option value="">None</option>
                 <option <?php echo ($role === "0") ? "selected" : ""; ?> value="0">Customer</option>
                 <option <?php echo ($role == 1) ? "selected" : ""; ?> value="1">Admin</option>
             </select>
-            <input class="button submit" type="submit">
+            <input form="search" class="button submit" type="submit">
         </div>
 
         <div class="Reset_create_div">
-            <a class="button" href="/adminUsers">Reset</a>
+            <input type="hidden" form="reset" name="id" value="">
+            <input type="hidden" form="reset" name="name" value="">
+            <input type="hidden" form="reset" name="search" value="">
+            <button type="submit" form="reset" class="button" href="/adminUsers">Reset</button>
             <a class="button" href="/adminCreateUser">Create new user</a>
         </div>
 
-    </form>
+    </div>
     
 
     <?php

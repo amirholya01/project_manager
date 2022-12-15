@@ -12,10 +12,10 @@
 
     require_once $rootPath . "public/dbconn.php";
 
-    require_once $rootPath . "models/handlers/Usershandler.php";
+    require_once $rootPath . "models/handlers/UsersHandler.php";
     require_once $rootPath . "security/adminCheck.php";
 
-    require_once $rootPath . "models/handlers/newsHandler.php";
+    require_once $rootPath . "models/handlers/NewsHandler.php";
     
     require_once $rootPath . "security/formSpam.php";
     require_once $rootPath . "security/inputSanitation.php";
@@ -58,18 +58,20 @@
 ?>
 <div class="wrapper">
 
-    <form class="Admin-product-handlers" method="POST" action="adminNews">
-        
+    <form id="reset" method="POST" action="/adminNews"></form>
+    <form id="search" method="POST" action="/adminNews"></form>
+    <div class="Admin-product-handlers">
         <div class="Admin-search-product">
-            <input class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
-            <input class="button submit" type="submit">
+            <input form="search" class="input" type="text" name="search" placeholder="Search!" value="<?php echo ($search != null) ? $search : ""; ?>">
+            <input form="search" class="button submit" type="submit">
         </div>
 
         <div class="Reset_create_div">
-            <a class="button" href="/adminNews">Reset</a>
+            <input form="reset" type="hidden" name="search" value="">
+            <button form="reset" class="button" href="/adminNews">Reset</button>
             <a class="button" href="/adminCreateNews">Create news</a>
         </div>
-    </form>
+    </div>
     
     <?php
         $pageNr = $page;

@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['name'])){
-        $name = $inputSanitation->sanitice($_POST('name'));
+        $name = $inputSanitation->sanitice($_POST['name']);
     }else{
         $name = "";
     }
