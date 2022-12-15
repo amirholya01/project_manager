@@ -206,7 +206,8 @@
     </h2>
     <!-- Main slider -->
     <!-- ^ should have create and delete -->
-    <divs > <!--  <- About us  -->
+
+    <div> <!--  <- About us  -->
         <h3>
             About us
         </h3>
@@ -264,17 +265,7 @@
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
-    <div>
-        <h3>
-                About us / Image 1
-        </h3>
-        <div class="ImageUploadHandlersStyle">
-            <div class="BannerImage">
-                <img  src="uploads/<?php echo $bannerImageTwo?>" alt="" />
-            </div>
-            <a class="ChooseImageButton height-button button submit" href="/bannerTwoImagePicker">Choose Image</a>
-        </div>
-    </div>
+   
 
     <div > 
         <h3>

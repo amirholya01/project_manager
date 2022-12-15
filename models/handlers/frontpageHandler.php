@@ -22,7 +22,6 @@ class FrontpageHandler extends Frontpage{
         return $getFrontpage->fetchAll();
     }
 
-
     /* Banner1 section Handlers */
     public function editBannerSubtitle1($bannerSubtitle1){
         $update = $this->db->prepare($this->UniversalEditQuery);
@@ -72,10 +71,10 @@ class FrontpageHandler extends Frontpage{
         $update->execute();
     }
     
-    public function editBannerImageOne($image){
+    public function editBannerImageOne($bannerImageOne){
         $update = $this->db->prepare($this->UniversalEditQuery);
         $id = 'bannerImageOne';
-        $update->bindParam(":text", $image);
+        $update->bindParam(":text", $bannerImageOne);
         $update->bindParam(":id", $id);
         $update->execute();
     }

@@ -267,22 +267,22 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('banner1Slogan2', 'Huge range to choose from'),
 ('banner1Slogan3', 'Easy communication with our live chat'),
 ('bannerText1', 'We strive to offer our customers the lowest possible prices, the best available selection while giving them a chance to bring their own ideas, and the utmost convenience. All this while keeping to on demand production making us as sustainable as we can. '),
-('bannerImageOne', ''),
+('bannerImageOne', '6395d097c6943.png'),
 
 ('bannerSubtitle2', 'Professional edition'),
 ('bannerTitle2', 'Your bowties'),
 ('banner2Slogan1', 'Sustainable mindset '),
 ('banner2Slogan2', 'Quality oriented approach'),
 ('banner2Slogan3', 'Made to be unique '),
-('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! ');
-
+('banner2Text1', 'The Custom ties was established at the start of 2022. It is a family business where every step in creation of your product is done with utmost passion and love. We strive to bring more colors and personality in everyday life by letting you find a perfect bowtie or even create your own! '),
+('bannerImageTwo', '6395d181babdf.png');
 
 DROP TABLE IF EXISTS `spam_prevention`;
 CREATE TABLE IF NOT EXISTS `spam_prevention` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(45) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=MyISAM AUTO_INCREMENT=2;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 
 INSERT INTO `spam_prevention` (`id`, `name`, `time`) VALUES
 (1, 'Niclas', '2022-12-09 10:43:37');
