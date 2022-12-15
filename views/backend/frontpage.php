@@ -58,7 +58,7 @@
         <h3>
             Sub title
         </h3>
-        <input class="input" type="text" name="bannerSubtitle" value="<?php echo $bannerSubtitle1 ?>">
+        <input class="input" type="text" name="bannerSubtitle1" value="<?php echo $bannerSubtitle1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
@@ -66,7 +66,7 @@
         <h3>
             Title
         </h3>
-        <input class="input" type="text" name="bannerTitle" value="<?php echo $bannerTitle1 ?>">
+        <input class="input" type="text" name="bannerTitle1" value="<?php echo $bannerTitle1 ?>">
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
@@ -98,7 +98,7 @@
         <h3>
             Banner Tekst
         </h3>
-        <textarea name="bannerText" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
+        <textarea name="bannerText1" id="" cols="60" rows="10"><?php echo $bannerText1 ?></textarea>
         <button class="height-button button submit" type="submit">Submit/Edit</button>
     </div>
 
