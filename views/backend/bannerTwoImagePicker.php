@@ -24,7 +24,7 @@
 </div>
     
 
-        <form method="POST" action="/adminFrontpage">
+        <form method="POST" action="/adminEditFrontpageFunction">
             <input class="height-button button" type="submit">
 <div class="choose-image">
             <?php

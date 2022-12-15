@@ -80,6 +80,7 @@ if(isset($_POST['bannerText1'])){
 }
 
 if(isset($_POST['bannerImageOne'])){
+    print_r($_POST['bannerImageOne']);
     $text = $inputSanitation->sanitice($_POST['bannerImageOne']);
 
     $validStrings = $inputSanitation->getValidationStatus();

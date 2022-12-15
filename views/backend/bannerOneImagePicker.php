@@ -22,36 +22,31 @@
 <div class="Admin-page-title margin-bottom">
     <h1>Choose image for banner 1</h1>
 </div>
-
-        <form method="POST" action="/adminFrontpage">
-            <input class="height-button button" type="submit">
-<div class="choose-image">
-            <?php
-                for($i = 0; $i < count($mediaData); $i++){
-                    $indData = $mediaData[$i];
-            ?>
-                <div class="image">
-                        <label for="<?php echo $indData['media_id']; ?>">
-                            <div>
-                                <p><?php echo $indData['name'] ?></p>
-                                <figure class="figure">
-                                    <!-- ✒️ should be styled with seperate css file -->
-                                    <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
-                                </figure>
+    <form method="POST" action="/adminEditFrontpageFunction">
+        <input class="height-button button" type="submit">
+            <div class="choose-image">
+                <?php
+                    for($i = 0; $i < count($mediaData); $i++){
+                        $indData = $mediaData[$i];
+                ?>
+                        <div class="image">
+                            <label for="<?php echo $indData['media_id']?>_primaryImage">
+                                <div>
+                                    <p><?php echo $indData['name'] ?></p>
+                                    <figure class="figure">
+                                        <!-- ✒️ should be styled with seperate css file -->
+                                        <img width="300px" src="<?php echo $rootPath."/uploads/".$indData['media_id'] ?>" alt="">
+                                    </figure>
+                                </div>
+                            </label>
+                            <div class="alignment">
+                                <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
+                                <input name="bannerImageOne" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
                             </div>
-                        </label>
-                        <div class="alignment">
-                            <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
-                            <input name="bannerImageOne" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
                         </div>
-                </div>
-            <?php
-                }
-            ?>
-            
-</div>    
-
-        </form>
-
-   
+                <?php
+                    }
+                ?> 
+            </div>
+    </form>
 </div>
