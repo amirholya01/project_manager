@@ -185,6 +185,9 @@
     </div>
 <!-- Banner2 section  -->
 
+
+<hr class="solid">
+
     <h2>
         Products
     </h2>
