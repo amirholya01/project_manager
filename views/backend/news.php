@@ -18,7 +18,7 @@
     require_once $rootPath . "models/handlers/newsHandler.php";
     
     require_once $rootPath . "security/formSpam.php";
-    require_once $rootPath . "security/stringSanitation.php";
+    require_once $rootPath . "security/inputSanitation.php";
 
     //require_once $rootPath . "controllers/createNews.php";
     require_once $rootPath . "controllers/editNews.php";

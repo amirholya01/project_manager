@@ -11,16 +11,16 @@ require_once $rootPath . "models/handlers/Usershandler.php";
 require_once $rootPath . "security/adminCheck.php";
 
 require_once $rootPath . "security/formSpam.php";
-require_once $rootPath . "security/stringSanitation.php";
+require_once $rootPath . "security/inputSanitation.php";
 
 /* Checks if it passes validation */
 if($validated == true){
     /* Check if there is sent a post */
     if( isset( $_POST['createProduct'] ) ){
         /* Gets all the values from the post request */
-        $name = $stringSanitation->sanitice($_POST['createName']);
+        $name = $inputSanitation->sanitice($_POST['createName']);
         $type = $_POST['createType'];
-        $description = $stringSanitation->sanitice($_POST['createDescription']);
+        $description = $inputSanitation->sanitice($_POST['createDescription']);
         $price = $_POST['createPrice'];
         $colors = null;
         $medias = null;
@@ -28,7 +28,7 @@ if($validated == true){
 
         
         /* Checks if all the strings pass validation */
-        $validStrings = $stringSanitation->getValidationStatus();
+        $validStrings = $inputSanitation->getValidationStatus();
 
         /* Disables the data from being send to the database - used for testing*/
         //$validStrings = false;

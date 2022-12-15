@@ -1,6 +1,6 @@
 <?php
 
-class stringSanitation {
+class inputSanitation {
 
     public $validated = true;
 
@@ -48,4 +48,4 @@ class stringSanitation {
     }
 }
 
-$stringSanitation = new stringSanitation();
+$inputSanitation = new inputSanitation();
