@@ -89,7 +89,7 @@
 
 
     <div class="Admin-page-title">
-        <h1>Media Added to Database</h1>
+        <h1>Media</h1>
     </div>
 
 <div class="wrapper-main-area">
