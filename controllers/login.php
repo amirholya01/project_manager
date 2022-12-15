@@ -33,7 +33,7 @@
     }else{
         $loginFail = true;
     }
-    if($loginFail){
+    if($loginFail == true){
         header("Location: /loginFailedFunction");
     }
 

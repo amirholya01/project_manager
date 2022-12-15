@@ -12,7 +12,7 @@ require_once $rootPath . "models/handlers/Usershandler.php";
 
 require_once $rootPath . "security/adminCheck.php";
 require_once $rootPath . "security/formSpam.php";
-require_once $rootPath . "security/stringSanitation.php";
+require_once $rootPath . "security/inputSanitation.php";
 
 require_once $rootPath . "controllers/imageUpload.php";
 
@@ -22,10 +22,10 @@ if($validated == true){
     /* Check if there is sent a post */
     if( isset( $_POST['createMedia'] ) ){
         /* Gets all the values from the post request */
-        $name = $stringSanitation->sanitice($_POST['createName']);
+        $name = $inputSanitation->sanitice($_POST['createName']);
         
         /* Checks if all the strings pass validation */
-        $validStrings = $stringSanitation->getValidationStatus();
+        $validStrings = $inputSanitation->getValidationStatus();
 
         /* Disables the data from being send to the database - used for testing*/
         //$validStrings = false;

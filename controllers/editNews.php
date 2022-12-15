@@ -2,12 +2,12 @@
 
 // Checks if there is an edit field send with the form
 if(isset($_POST['editNews'])){
-    $id = $stringSanitation->sanitice($_POST['editId']);
-    $name = $stringSanitation->sanitice($_POST['editTitle']);
-    $description = $stringSanitation->sanitice($_POST['editDescription']);
-    $media = $stringSanitation->sanitice($_POST['editMedia']);
+    $id = $inputSanitation->sanitice($_POST['editId']);
+    $name = $inputSanitation->sanitice($_POST['editTitle']);
+    $description = $inputSanitation->sanitice($_POST['editDescription']);
+    $media = $inputSanitation->sanitice($_POST['editMedia']);
 
-    $validStrings = $stringSanitation->getValidationStatus();
+    $validStrings = $inputSanitation->getValidationStatus();
     
     /* Checks if all the strings pass validation */
     if($validStrings == true){

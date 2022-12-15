@@ -8,7 +8,7 @@
     require $rootPath . "models/handlers/UsersHandler.php";
     
     require_once $rootPath . "security/formSpam.php";
-    require_once $rootPath . "security/stringSanitation.php";
+    require_once $rootPath . "security/inputSanitation.php";
 
     if(count($_SESSION['breadcrumbsLinks']) > 0){
         $linkToPrevPage = end($_SESSION['breadcrumbsLinks']);
