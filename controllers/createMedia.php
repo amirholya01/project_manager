@@ -22,7 +22,7 @@ if($validated == true){
     /* Check if there is sent a post */
     if( isset( $_POST['createMedia'] ) ){
         /* Gets all the values from the post request */
-        $name = $inputSanitation->sanitice($_POST ['createName']);
+        $name = $inputSanitation->sanitice($_POST['createName']);
         
         /* Checks if all the strings pass validation */
         $validStrings = $inputSanitation->getValidationStatus();

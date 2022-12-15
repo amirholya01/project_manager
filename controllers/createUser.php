@@ -16,9 +16,9 @@ require_once $rootPath . "security/inputSanitation.php";
 /* Checks if there is a createUser request */
 if( isset( $_POST['createUser'] ) ){
     /* Gets the data from the post request */
-    $name = $inputSanitation->sanitice($_POST ['createName']);
-    $role = $inputSanitation->numberSanitice($_POST ['createRole']);
-    $password = $inputSanitation->sanitice($_POST ['createPassword']);
+    $name = $inputSanitation->sanitice($_POST['createName']);
+    $role = $inputSanitation->numberSanitice($_POST['createRole']);
+    $password = $inputSanitation->sanitice($_POST['createPassword']);
 
     $validStrings = $inputSanitation->getValidationStatus();
 

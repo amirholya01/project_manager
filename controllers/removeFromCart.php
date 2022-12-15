@@ -1,5 +1,12 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+
+require_once $rootPath . "security/inputSanitation.php";
+
 $inputSanitation->numberSanitice($_POST['id']);
 
 $validStrings = $inputSanitation->getValidationStatus();

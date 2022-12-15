@@ -27,8 +27,8 @@
         </script>
 <?php
     }else{
-        $name = $inputSanitation->sanitice($_POST ['name']);
-        $password = $inputSanitation->sanitice($_POST ['password']);
+        $name = $inputSanitation->sanitice($_POST['name']);
+        $password = $inputSanitation->sanitice($_POST['password']);
 
         $validStrings = $inputSanitation->getValidationStatus();
 

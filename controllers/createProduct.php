@@ -18,9 +18,9 @@ if($validated == true){
     /* Check if there is sent a post */
     if( isset( $_POST['createProduct'] ) ){
         /* Gets all the values from the post request */
-        $name = $inputSanitation->sanitice($_POST ['createName']);
+        $name = $inputSanitation->sanitice($_POST['createName']);
         $type = $inputSanitation->numberSanitice($_POST['createType']);
-        $description = $inputSanitation->sanitice($_POST ['createDescription']);
+        $description = $inputSanitation->sanitice($_POST['createDescription']);
         $price = $inputSanitation->numberSanitice($_POST['createPrice']);
         $colors = null;
         $medias = null;

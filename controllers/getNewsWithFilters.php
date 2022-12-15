@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['search'])){
-        $search = $inputSanitation->sanitice($_POST ['search']);
+        $search = $inputSanitation->sanitice($_POST['search']);
     }else{
         $search = null;
     }

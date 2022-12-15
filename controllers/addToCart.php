@@ -28,7 +28,7 @@ if(isset($_POST['product'])){
     /* Allows to add more than one product at a time */
     $amountToAdd = 1;
     if(isset($_POST['amountToAdd'])){
-        $amountToAdd = $inputSanitation->numberSanitice($_POST ['amountToAdd']);
+        $amountToAdd = $inputSanitation->numberSanitice($_POST['amountToAdd']);
         if($amountToAdd < 1){
             $amountToAdd = 1;
         }
