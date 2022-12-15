@@ -117,18 +117,18 @@ body.mobile .fixed-background{background-attachment: scroll;}
 /*loader*/
 #loader-wrapper{position: fixed; left: 0; top: -100px; right: 0; bottom: -100px; background: #fff; z-index: 12;}
 /**/
-.simple-article{color: #888;}
+.simple-article{color: #666;}
 .simple-article.grey, .grey{color: #555;font-size: 18px !important;}
 .simple-article.dark, .dark{color: #343434;}
-.simple-article.light{color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,.1);}
-.simple-article.light.transparent, .light.transparent{color: rgba(255,255,255,.8);}
+.simple-article.light{color: #fff;}
+.simple-article.light.transparent, .light.transparent{color:#352c4c;}
 .simple-article.light.fulltransparent, .light.fulltransparent{color: rgba(255,255,255,.5);}
 .simple-article.color, .color{color: #B2A6CE;}
 
 .simple-article.size-1{font-size: 11px; line-height: 18px;}
 .simple-article.size-2{font-size: 14px; line-height: 22.4px;}
 .simple-article.size-3{font-size: 14px; line-height: 22px;}
-.simple-article.size-4{font-size: 18px; line-height: 28.8px;}
+.simple-article.size-4{font-size: 16px; line-height: 28.8px;}
 .simple-article.size-5{font-size: 18px; line-height: 24px;}
 
 .simple-article p, .simple-article ul, .simple-article ol, .simple-article img, .simple-article *[class*="col"], .simple-article h1, .simple-article h2, .simple-article h3, .simple-article h4, .simple-article h5, .simple-article h6, .simple-article .embed-responsive, .simple-article .swiper-container{margin-bottom: 22px;}
