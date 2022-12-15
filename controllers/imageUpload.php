@@ -8,7 +8,6 @@
     * Needs a media interface
 */
 
-/* ✒️ Needs polymorph https://hearthstone.fandom.com/wiki/Polymorph */
 class imageUpload extends ProductsHandler{
 
     function createImage ($img, $name = "pineapple") {

@@ -1,10 +1,18 @@
 <?php
 
+$rootPath = "";
+while(!file_exists($rootPath . "index.php")){
+    $rootPath = "../$rootPath";
+}
+
+require_once $rootPath . "security/inputSanitation.php";
+
 $allTypes = $ProductsHandler->getTypes();
 
 $allColors = $ProductsHandler->getColors();
 
 $mediaData = $ProductsHandler->getMedia();
+
 
 
 $inputSanitation->numberSanitice($_POST['id']);
