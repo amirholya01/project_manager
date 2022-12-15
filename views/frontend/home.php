@@ -228,7 +228,7 @@
                                     
                                     echo $productOnSale[0]['primary_image'];
                                     ?>
-                                    <img class="discount-image" src="uploads/<?php echo $productOnSale[0]['primary_image']; ?>" alt="">
+                                    <img class="discount-image" src="uploads/<?php echo $Sale['media']; ?>" alt="">
 
                                     </div>
                                     <div class="col-sm-6 col-md-4 col-md-offset-2">
