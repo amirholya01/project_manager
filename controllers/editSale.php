@@ -7,6 +7,7 @@ if( isset( $_POST['editSale'] ) ){
     $id = $inputSanitation->numberSanitice($_POST['sale_id']);
     $title = $inputSanitation->sanitice($_POST['title']);
     $description = $inputSanitation->sanitice($_POST['description']);
+    $image = $inputSanitation->sanitice($_POST['editPrimaryImage']);
     $start = $inputSanitation->dateSanitice($_POST['start']);
     $end = $inputSanitation->dateSanitice($_POST['end']);
 
@@ -25,7 +26,7 @@ if( isset( $_POST['editSale'] ) ){
 
         } */
         if((count($product_ids) + count($sales)) / 2 == count($saleTypes)){
-            $ProductsHandler->updateSale($id, $title, $description, $start, $end, $product_ids, $sales, $saleTypes);
+            $ProductsHandler->updateSale($id, $title, $description, $image, $start, $end, $product_ids, $sales, $saleTypes);
         } else {
             echo "Ehhh somethings burning!";
         }

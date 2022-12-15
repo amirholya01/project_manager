@@ -3,6 +3,8 @@
 
 $inputSanitation->numberSanitice($_POST['sale']);
 
+$mediaData = $ProductsHandler->getMedia();
+
 $validStrings = $inputSanitation->getValidationStatus();
 
 if($validStrings == true){

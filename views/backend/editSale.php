@@ -116,6 +116,47 @@
                     }
                 ?>
             </div>
+            <div class="choose-image"> 
+                <?php
+                    for($i = 0; $i < count($mediaData); $i++){
+                        $imageData = $mediaData[$i];
+                ?>  
+                    <div class="image">
+                        <label for="<?php echo $imageData['media_id']; ?>">
+                            <div>
+                                <p><?php echo $imageData['name'] ?></p>
+                                <figure class="figure">
+                                    <!-- ✒️ should be styled with seperate css file -->
+                                    <?php 
+                                        /* get the thumb version of the image 
+                                        (its the fullsize version that saved on the db so i have to do string manipulation) */
+                                        $image = explode(".", $imageData['media_id']);
+                                    ?>
+                                    <img width="300px" src="<?php echo $rootPath."/uploads/thumbs/".$image[0]."_thumb.".$image[1] ?>">
+                                </figure>
+                            </div>
+                        </label>
+                        <input class="input-checkbox-hidden"
+                        <?php 
+                            $assigned = false;
+                            if($saleData["media"] == $imageData['media_id']){
+                                $assigned = true;
+                            }
+
+                            echo $assigned == true ? "checked" : "";
+                        ?>
+                        type="checkbox" id="<?php echo $imageData['media_id']; ?>" name="media[]" value="<?php echo $imageData['media_id']; ?>">
+                        <div class="alignment">
+                            <label for="<?php echo $imageData['media_id']?>_primaryImage">Primary Image</label>
+                            <input 
+                            <?php echo $saleData['media'] == $imageData['media_id'] ? "checked" : ""; ?>
+                            name="editPrimaryImage" type="radio" id="<?php echo $imageData['media_id']?>_primaryImage" value="<?php echo $imageData['media_id']; ?>"> 
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
     </form>
 </div>

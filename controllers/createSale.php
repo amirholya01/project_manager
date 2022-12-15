@@ -19,6 +19,11 @@ if( isset( $_POST['createSale'] ) ){
     /* Gets all the values from the post request */
     $title = $inputSanitation->sanitice($_POST['title']);
     $description = $inputSanitation->sanitice($_POST['description']);
+    if($_POST['primaryImage']){
+        $image = $inputSanitation->sanitice($_POST['primaryImage']);
+    }else{
+        $image = null;
+    }
 
     $start = $inputSanitation->dateSanitice($_POST['start']);
     $end = $inputSanitation->dateSanitice($_POST['end']);
@@ -38,7 +43,7 @@ if( isset( $_POST['createSale'] ) ){
 
         } */
         if((count($product_ids) + count($sales)) / 2 == count($saleTypes)){
-            $ProductsHandler->createSale($title, $description, $start, $end, $product_ids, $sales, $saleTypes);
+            $ProductsHandler->createSale($title, $description, $image, $start, $end, $product_ids, $sales, $saleTypes);
         } else {
             echo "Ehhh somethings burning!";
         }

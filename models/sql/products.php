@@ -64,9 +64,9 @@ class Products{
     public $convertTypeToTypeIdQuery = "SELECT id FROM product_types WHERE type = :type";
 
     //Sale Queries
-    public $createSaleQuery = "INSERT INTO sales (title, description, start, end) VALUES (:title, :description, :start, :end);";
+    public $createSaleQuery = "INSERT INTO sales (title, description, media, start, end) VALUES (:title, :description, :image, :start, :end);";
     public $getSalesQuery = "SELECT * FROM getSalesQuery"; // SELECT * FROM sales ORDER BY end DESC
-    public $editSaleQuery = "UPDATE sales SET title = :title, description = :description, start = :start, end = :end WHERE sale_id = :id;";
+    public $editSaleQuery = "UPDATE sales SET title = :title, description = :description, media = :image, start = :start, end = :end WHERE sale_id = :id;";
     public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, products_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
     public $deleteSaleById = "DELETE FROM sales WHERE sale_id = :id";
     public $deleteAssignedProductsToSaleQuery = "DELETE FROM assign_products_to_sales WHERE sale_id = :id";

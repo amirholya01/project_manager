@@ -179,6 +179,7 @@ CREATE TABLE IF NOT EXISTS sales (
     title varchar(100) NOT NULL,
     `start` date NOT NULL,
     `end` date NOT NULL,
+    `media` varchar(100),
     `description` text
 ) ENGINE=InnoDB AUTO_INCREMENT=6;
 
@@ -249,8 +250,7 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
-('aboutUsImageOne', ''), 
-('aboutPageTitle1', 'Nicklas, Developer'),
+('aboutPageTitle1', 'Niclas, Developer'),
 ('aboutPageText1', 'The creative mind behind the system that we use for our website. Bringing the technical solutions to the table to ensure a smooth shopping experience.'),
 ('aboutUsImageTwo', '639b5c50584f8.jpg'),
 ('aboutPageTitle2', 'Behdin, Developer'),
