@@ -4,11 +4,11 @@
 if( isset( $_POST['editSale'] ) ){
     /* Gets all the values from the post request */
 
-    $id = $_POST['sale_id']; /* 🔥 needs sanitation */
+    $id = $inputSanitation->numberSanitice($_POST['sale_id']);
     $title = $inputSanitation->sanitice($_POST['title']);
     $description = $inputSanitation->sanitice($_POST['description']);
-    $start = $_POST['start']; /* 🔥 needs sanitation */
-    $end = $_POST['end']; /* 🔥 needs sanitation */
+    $start = $inputSanitation->dateSanitice($_POST['start']);
+    $end = $inputSanitation->dateSanitice($_POST['end']);
 
 
     /* Checks if all the strings pass validation */
@@ -18,9 +18,9 @@ if( isset( $_POST['editSale'] ) ){
     //$validStrings = false;
     
     if($validStrings == true){
-        $product_ids = $_POST['product_ids'];
-        $sales = $_POST['sales'];
-        $saleTypes = $_POST['saleTypes'];
+        $product_ids = $inputSanitation->numberArraySanitice($_POST['product_ids']); /* 🔥 sanitize arrays */
+        $sales = $inputSanitation->numberArraySanitice($_POST['sales']);
+        $saleTypes = $inputSanitation->saletypeArraySanitice($_POST['saleTypes']);
         /* if($start <= $end){
 
         } */

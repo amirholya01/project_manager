@@ -20,8 +20,8 @@ if( isset( $_POST['createSale'] ) ){
     $title = $inputSanitation->sanitice($_POST['title']);
     $description = $inputSanitation->sanitice($_POST['description']);
 
-    $start = $inputSanitation->dateSanitice($_POST['start']); /* 🔥 needs sanitation */
-    $end = $inputSanitation->dateSanitice($_POST['end']); /* 🔥 needs sanitation */
+    $start = $inputSanitation->dateSanitice($_POST['start']);
+    $end = $inputSanitation->dateSanitice($_POST['end']);
 
 
     /* Checks if all the strings pass validation */

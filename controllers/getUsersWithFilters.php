@@ -1,7 +1,29 @@
 <?php
-    /* 🔥 Should be saniticed */
-    $data = $UsersHandler->getUsers(
-        isset($_POST['id']) ? $_POST['id'] : "",
-        isset($_POST['role']) ? $_POST['role'] : "",
-        isset($_POST['name']) ? $_POST['name'] : ""
-    );
+
+    if(isset($_POST['id'])){
+        $id = $inputSanitation->sanitice($_POST['id']);
+    }else{
+        $id = null;
+    }
+    
+    if(isset($_POST['role'])){
+        $role = $inputSanitation->sanitice($_POST['role']);
+    }else{
+        $role = null;
+    }
+    
+    if(isset($_POST['name'])){
+        $name = $inputSanitation->sanitice($_POST['name']);
+    }else{
+        $name = null;
+    }
+
+    $validStrings = $inputSanitation->getValidationStatus();
+
+    if($validStrings == true){    
+        $data = $UsersHandler->getUsers(
+            isset($_POST['id']) ? $id : "",
+            isset($_POST['role']) ? $role : "",
+            isset($_POST['name']) ? $name : ""
+        );
+    }

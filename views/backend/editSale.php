@@ -86,10 +86,6 @@
                                      * sales[new array[i]] and product_ids[new array[i]] are matching
                                      * saleType[new array[i]] will give the type of sail
                                  -->
-                                 
-                                <!-- saleTypes should be radio
-                                    🔥 way to big room for user error    
-                                -->
                                 <?php
                                     if($onSale == false){
                                 ?>

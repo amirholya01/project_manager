@@ -43,12 +43,34 @@ class inputSanitation {
         return $number;
     }
 
+    
+    function numberArraySanitice ($array){
+        foreach($array as $number){
+            if(!intval($number)){
+                $this->validated = false;
+            }
+        }
+
+        return $array;
+    }
+
     function dateSanitice($date){
         if(!preg_match("/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/", $date)){
             $this->validated = false;
         }
 
         return $date;
+    }
+
+
+    function saletypeArraySanitice ($array){
+        foreach($array as $saletype){
+            if($saletype != "$" || $saletype != "%"){
+                $this->validated = false;
+            }
+        }
+
+        return $array;
     }
 
     function getValidationStatus (){

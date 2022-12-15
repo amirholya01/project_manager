@@ -29,13 +29,18 @@ if(isset($_POST['product'])){
         }
     }
 
-    if($inCart > -1){
-        /* if the product is already in the cart increase the quanitity by 1 */
-        $_SESSION['cart'][$inCart]['quantity'] += $amountToAdd;
-    }else{
-        /* if the product is not in the cart, add it */
-        array_push($_SESSION['cart'], array("product" => $_POST['product'], "quantity" => $amountToAdd));
+    $validStrings = $inputSanitation->getValidationStatus();
+
+    if($validStrings == true){
+        if($inCart > -1){
+            /* if the product is already in the cart increase the quanitity by 1 */
+            $_SESSION['cart'][$inCart]['quantity'] += $amountToAdd;
+        }else{
+            /* if the product is not in the cart, add it */
+            array_push($_SESSION['cart'], array("product" => $_POST['product'], "quantity" => $amountToAdd));
+        }
     }
+
 
 
     /* Goes back to the previous page */

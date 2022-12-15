@@ -27,37 +27,40 @@
         </script>
 <?php
     }else{
-        $name = $_POST['name'];
-        
-        /*🔥 Validate password! */
-        
-        $data = $UsersHandler->checkIfUserExists($name);
-        
-        $validName = true;
-        if(isset($data[0])){
-            $validName = false;
-        }
-        
-        if($validName && $name != ""){
-            /* The salt is pretty low, should be higher in none testing environment */
-            $password = password_hash($_POST['password'], PASSWORD_BCRYPT, ["cost" => 5]);
+        $name = $inputSanitation->sanitice($_POST['name']);
+        $password = $inputSanitation->sanitice($_POST['password']);
 
-            $UsersHandler->createUser($name, $password, 0);
+        $validStrings = $inputSanitation->getValidationStatus();
+
+        if($validStrings == true){
+            $data = $UsersHandler->checkIfUserExists($name);
             
-            $_SESSION['name'] = $name;
-            $_SESSION['loggedin'] = true;
+            $validName = true;
+            if(isset($data[0])){
+                $validName = false;
+            }
             
-            header("Location: $linkToPrevPage");
-        }else{
+            if($validName && $name != ""){
+                /* The salt is pretty low, should be higher in none testing environment */
+                $password = password_hash($_POST['password'], PASSWORD_BCRYPT, ["cost" => 5]);
+
+                $UsersHandler->createUser($name, $password, 0);
+                
+                $_SESSION['name'] = $name;
+                $_SESSION['loggedin'] = true;
+                
+                header("Location: $linkToPrevPage");
+            }else{
 ?>
-            <form id="submit" action="<?php echo $linkToPrevPage ?>" method="POST">
-                <input type="hidden" name="signupFailed" value="true">
-                <input type="hidden" name="signupFailedNameTaken" value="true">
-            </form>
-            <script type="text/javascript">
-                //Auto submits the form
-                document.querySelector('#submit').submit();
-            </script>
+                <form id="submit" action="<?php echo $linkToPrevPage ?>" method="POST">
+                    <input type="hidden" name="signupFailed" value="true">
+                    <input type="hidden" name="signupFailedNameTaken" value="true">
+                </form>
+                <script type="text/javascript">
+                    //Auto submits the form
+                    document.querySelector('#submit').submit();
+                </script>
 <?php
+            }
         }
     }
