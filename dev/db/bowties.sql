@@ -247,7 +247,7 @@ INSERT INTO frontpage (id, `text`) VALUES
 ('productsSubtitle', 'PRODUCTS'),
 
 ('productsTitle', 'CHOOSE YOUR FAVORITE BOWTIE'),
-('aboutPageTitle1', 'Nicklas, Developer'),
+('aboutPageTitle1', 'Niclas, Developer'),
 ('aboutPageText1', 'The creative mind behind the system that we use for our website. Bringing the technical solutions to the table to ensure a smooth shopping experience.'),
 ('aboutPageTitle2', 'Behdin, Developer'),
 ('aboutPageText2', 'The creative mind behind user experience on the site. Not only are they responsible for bringing the spirit of the brand to the site, but also the team workflow here in The Custom Ties.'),
