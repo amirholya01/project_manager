@@ -25,7 +25,7 @@
     require_once $rootPath . "views/backend/partials/header.php";
 ?>
 <div class="wrapper">
-    <form method="POST" action="salesActionDecider">    
+    <form method="POST" action="salesActionDecider">
         <select name="sale" id="sale">
             <?php
                 foreach($sales as $sale){

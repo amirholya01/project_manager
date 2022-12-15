@@ -43,6 +43,14 @@ class inputSanitation {
         return $number;
     }
 
+    function dateSanitice($date){
+        if(!preg_match("/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/", $date)){
+            $this->validated = false;
+        }
+
+        return $date;
+    }
+
     function getValidationStatus (){
         return $this->validated;
     }

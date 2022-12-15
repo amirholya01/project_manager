@@ -91,8 +91,8 @@ CREATE TABLE IF NOT EXISTS users (
 ) ENGINE=InnoDB AUTO_INCREMENT=23;
 
 INSERT INTO users (user_id, `name`, `password`, `role`) VALUES
-(1, 'Niclas', '1234', 1),
-(21, 'Kim', '1234', 1),
+(1, 'Niclas', '$2y$05$nxLJZLBFK3TFNKEve2sCJe6t5jebuoiJ1zNN3zSSBhfXPCGQ5zoey', 1),
+(21, 'Kim', '$2y$05$nxLJZLBFK3TFNKEve2sCJe6t5jebuoiJ1zNN3zSSBhfXPCGQ5zoey', 1),
 (24, 'Behdin', '$2y$05$aD0uCVDRFJIfjN.8TIeRb.K9FlNEs1UeIl9QTlyvqh86PkWRKD4w2', 1);
 
 

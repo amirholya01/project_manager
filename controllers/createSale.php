@@ -19,8 +19,9 @@ if( isset( $_POST['createSale'] ) ){
     /* Gets all the values from the post request */
     $title = $inputSanitation->sanitice($_POST['title']);
     $description = $inputSanitation->sanitice($_POST['description']);
-    $start = $_POST['start']; /* 🔥 needs sanitation */
-    $end = $_POST['end']; /* 🔥 needs sanitation */
+
+    $start = $inputSanitation->dateSanitice($_POST['start']); /* 🔥 needs sanitation */
+    $end = $inputSanitation->dateSanitice($_POST['end']); /* 🔥 needs sanitation */
 
 
     /* Checks if all the strings pass validation */
@@ -33,7 +34,7 @@ if( isset( $_POST['createSale'] ) ){
         $product_ids = $_POST['product_ids'];
         $sales = $_POST['sales'];
         $saleTypes = $_POST['saleTypes'];
-        /* if($start <= $end){
+        /* if($start <= $end){ ✒️
 
         } */
         if((count($product_ids) + count($sales)) / 2 == count($saleTypes)){
