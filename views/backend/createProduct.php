@@ -73,6 +73,10 @@
                             <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
                             <input name="primaryImage" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>">
                         </div>
+                        <div class="alignment">
+                            <label for="<?php echo $indData['media_id']?>_media">Assign Image</label>
+                            <input name="media[]" type="checkbox" id="<?php echo $indData['media_id']?>_media" value="<?php echo $indData['media_id']; ?>">
+                        </div>
                 </div>
             <?php
                 }
