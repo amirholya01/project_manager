@@ -96,23 +96,26 @@
                                 </figure>
                             </div>
                         </label>
-                        <input class="input-checkbox-hidden"
-                        <?php 
-                            $assigned = false;
-                            foreach($mediaAssignedToProduct as $assignedMedia){
-                                if($assignedMedia["media_id"] == $indData['media_id']){
-                                    $assigned = true;
-                                }
-                            }
-
-                            echo $assigned == true ? "checked" : "";
-                        ?>
-                        type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
                         <div class="alignment">
                             <label for="<?php echo $indData['media_id']?>_primaryImage">Primary Image</label>
                             <input 
                             <?php echo $_POST['primaryImage'] == $indData['media_id'] ? "checked" : ""; ?>
                             name="editPrimaryImage" type="radio" id="<?php echo $indData['media_id']?>_primaryImage" value="<?php echo $indData['media_id']; ?>"> 
+                        </div>
+                        <div class="alignment">
+                            <label for="<?php echo $indData['media_id']?>_primaryImage">Assign Image</label>
+                            <input
+                            <?php 
+                                $assigned = false;
+                                foreach($mediaAssignedToProduct as $assignedMedia){
+                                    if($assignedMedia["media_id"] == $indData['media_id']){
+                                        $assigned = true;
+                                    }
+                                }
+
+                                echo $assigned == true ? "checked" : "";
+                            ?>
+                            type="checkbox" id="<?php echo $indData['media_id']; ?>" name="media[]" value="<?php echo $indData['media_id']; ?>">
                         </div>
                 </div>
             <?php

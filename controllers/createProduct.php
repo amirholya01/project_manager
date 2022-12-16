@@ -35,13 +35,13 @@ if($validated == true){
         
         if($validStrings == true){
             if( isset($_POST['createColors']) ){
-                $colors = $inputSanitation->arraySanitice($_POST['createColors']);
+                $colors = $_POST['createColors'];
             }
             if( isset($_POST['media']) ){
                 $medias = $inputSanitation->arraySanitice($_POST['media']); /* 🔥 We should have a media sanitation */
             }
             if( isset($_POST['primaryImage']) ){
-                $primaryImage = $inputSanitation->arraySanitice($_POST['primaryImage']); /* 🔥 We should have a media sanitiation */
+                $primaryImage = $_POST['primaryImage']; /* 🔥 We should have a media sanitiation */
             }
 
             $validStrings = $inputSanitation->getValidationStatus();

@@ -90,7 +90,7 @@ class ProductsHandler extends Products{
                 if($media != $primaryImage){
                     $assignMediaToProduct = $this->db->prepare($this->assignMediaToProductQuery);
                     $assignMediaToProduct->bindParam(':media_id', $media);
-                    $assignMediaToProduct->bindParam(':product_id', $id);
+                    $assignMediaToProduct->bindParam(':products_id', $id);
                     $assignMediaToProduct->execute();
                 }
             }

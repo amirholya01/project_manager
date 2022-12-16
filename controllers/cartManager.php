@@ -39,8 +39,14 @@ foreach($roughProductSales as $sale){
     if($sale['saleType'] == '%') {
         /* % */
         $prod = $ProductsHandler->getProducts('', $sale['products_id']);
-        $originalPrice = $prod[0]['price'];
-        $newPrice = $originalPrice - (($originalPrice / 100) * $sale['sale']);
+
+        /* If product is soft deleted we need a fail safe */
+        if(isset($prod[0])){
+            $originalPrice = $prod[0]['price'];
+            $newPrice = $originalPrice - (($originalPrice / 100) * $sale['sale']);
+        }else{
+            $newPrice = $sale['sale'];
+        }
     } else {
         /* $ */
         $newPrice = $sale['sale'];
@@ -50,14 +56,14 @@ foreach($roughProductSales as $sale){
     $pushToCart = true;
     foreach($productSales as $index => $refinedSale){
         /* Check for dublicates */
-        if($sale['sale_id'] == $refinedSale['sale_id']){
+        if($sale['products_id'] == $refinedSale['sale_id']){
             /* 
                 If the new discount is better than the previous
                 overwrite the old one with the discount
             */
             if($refinedSale['sale'] > $newPrice){
                 $refinedSale['sale'] = $newPrice;
-                $refinedSale['sale_id'] = $sale['sale_id'];
+                $refinedSale['sale_id'] = $sale['products_id'];
             }
 
             $pushToCart = false;

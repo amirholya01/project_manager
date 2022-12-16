@@ -43,7 +43,9 @@ if($validStrings == true){
 }
 
 
-/* ✒️ Send email */
+/* ✒️ Send email
+    Ehmm one.com is not very clear on how to do this
+*/
 
 
 
