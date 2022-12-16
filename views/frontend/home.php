@@ -198,13 +198,19 @@
 
 
 <!--  Special offers section for the homepage  -->
-<div class="container">
-    <div class="text-center">
-        <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
-        <div class="h2">choose the best</div>
-        <div class="title-underline center"><span></span></div>
+<?php
+    if(count($Sales) > 0){
+?>
+    <div class="container">
+        <div class="text-center">
+            <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
+            <div class="h2">choose the best</div>
+            <div class="title-underline center"><span></span></div>
+        </div>
     </div>
-</div>
+<?php
+    }
+?>
 
 <div class="slider-wrapper">
                 <div class="swiper-button-prev hidden"></div>
