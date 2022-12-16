@@ -80,7 +80,7 @@
                                 <div class="cell-view page-height">
                                     <div class="col-xs-b40 col-sm-b80"></div>
                                     <div data-swiper-parallax-x="-600">
-                                        <div class="simple-article light transparent size-3 uppercase"><?php echo $bannerSubtitle2 ?></div>
+                                        <div class="simple-article light transparent size-3"><?php echo $bannerSubtitle2 ?></div>
                                         <div class="col-xs-b5"></div>
                                     </div>
                                     <div data-swiper-parallax-x="-500">
@@ -201,13 +201,13 @@
 <?php
     if(count($Sales) > 0){
 ?>
-    <div class="container">
-        <div class="text-center">
-            <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
-            <div class="h2">choose the best</div>
-            <div class="title-underline center"><span></span></div>
-        </div>
+<div class="container">
+    <div class="text-center">
+        <div class="simple-article size-3 grey uppercase col-xs-b5">special offers</div>
+        <div class="h2">choose the best</div>
+        <div class="title-underline center"><span></span></div>
     </div>
+</div>
 <?php
     }
 ?>
@@ -216,11 +216,11 @@
                 <div class="swiper-button-prev hidden"></div>
                 <div class="swiper-button-next hidden"></div>
                 <div class="swiper-container" data-parallax="1">
-                   <div class="swiper-wrapper Discount-wrapper padding_80">
+                   <div class="swiper-wrapper Discount-wrapper">
 
                    <?php 
                         /* Loop through the Discounts */
-                        foreach($Sales as $Sale){
+                        foreach($Sales as $index => $Sale){
                     ?>
                        <div class="swiper-slide">
                             <div class="container">
@@ -230,26 +230,22 @@
                                     <?php
                                     /* Exception this can´t be in controllers */
                                     $productsOnSale = $ProductsHandler->getProductSalesBySaleId($Sale['sale_id']);
-                                    $productOnSale = $ProductsHandler->getProducts('', $productsOnSale[0]['products_id']);
-                                    
-                                    echo $productOnSale[0]['primary_image'];
                                     ?>
                                     <img class="discount-image" src="uploads/<?php echo $Sale['media']; ?>" alt="">
 
                                     </div>
                                     <div class="col-sm-6 col-md-4 col-md-offset-2">
-                                        <form id="ProductSale" action="/ProductSale" method="POST">
-                                            <input type="hidden" value="BLACK FRIDAY" name="title">
-                                            <input type="hidden" value="1" name="sale">
+                                        <form id="ProductSale<?php echo $index ?>" action="/ProductSale" method="POST">
+                                            <input type="hidden" value="<?php echo $Sale['title'] ?>" name="title">
+                                            <input type="hidden" value="<?php echo $Sale['sale_id'] ?>" name="sale">
                                         </form>
 
                                         <h3 class="h3 col-xs-b15"><?php echo $Sale['title'] ?></h3>
                                         <div class="simple-article size-5 uppercase col-xs-b20">best Price: <span class="color"><?php echo $Sale['title'] ?></span></div>
                                         <!-- countdown <div class="countdown max-width col-xs-b20" data-end="Sep,1,2017"></div>-->
                                         <div class="simple-article size-3 col-xs-b30"><?php echo $Sale['description'] ?></div>
-
                                         <div class="buttons-wrapper">
-                                            <button type="submit" form="ProductSale" class="button size-2 style-2">
+                                            <button type="submit" form="ProductSale<?php echo $index ?>" class="button size-2 style-2">
                                                 <span class="button-wrapper">
                                                     <span class="icon"><img src="assets/icons/icon-2.png" alt=""></span>
                                                     <span class="text">View Products</span>

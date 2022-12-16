@@ -130,12 +130,12 @@ CREATE TABLE IF NOT EXISTS product_colors (
  ) ENGINE=InnoDB AUTO_INCREMENT=3;
 
  INSERT INTO product_colors (color_id, color) VALUES
-(1, 'red'),
+(1, 'Red'),
 (2, 'Yellow'),
-(3, 'green'),
-(4, 'cyan'),
-(5, 'blue'),
-(6, 'magenta');
+(3, 'Green'),
+(4, 'Cyan'),
+(5, 'Blue'),
+(6, 'Magenta');
 
 
 DROP TABLE IF EXISTS products_assigned_to_purchases;
