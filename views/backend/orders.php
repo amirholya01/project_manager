@@ -191,19 +191,19 @@
                                 </p>
                                 <?php
                                     /* ✒️ running out of time to find a better solution */
-                                    $getProducts = $db->prepare("SELECT * FROM `products_assigned_to_purchases` WHERE `purchase_id` = :id ");
-                                    $getProducts->bindParam(":id", $indData['id']);
+                                    $getProducts = $db->prepare("SELECT * FROM `products_assigned_to_purchases` WHERE `purchases_id` = :id ");
+                                    $getProducts->bindParam(":id", $indData['purchases_id']);
                                     $getProducts->execute();
                                     $getProducts = $getProducts->fetchAll();
 
                                     foreach($getProducts as $product){
                                         $getProd = $db->prepare("SELECT * FROM `products` WHERE `products_id` = :id ");
-                                        $getProd->bindParam(":id", $product['product_id']);
+                                        $getProd->bindParam(":id", $product['products_id']);
                                         $getProd->execute();
                                         $getProd = $getProd->fetch();
 
                                         echo "Name: ";
-                                        echo $getProd['name'];
+                                        print_r($getProd['name']);
                                         echo "<br>";
                                         echo " Qty: ";
                                         echo $product['quantity'];

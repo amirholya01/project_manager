@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS products (
     `type` int(11) NOT NULL,
     `description` varchar(250) NOT NULL,
     price decimal(10, 0) NOT NULL,
-    primary_image varchar(250) DEFAULT NULL
+    primary_image varchar(250) DEFAULT NULL,
+    `soft_delete` int(11) DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=4;
 
 INSERT INTO products (products_id, `name`, `type`, `description`, price, primary_image) VALUES
@@ -139,7 +140,7 @@ CREATE TABLE IF NOT EXISTS products_assigned_to_purchases (
     products_id int(11) NOT NULL,
     user varchar(100) NOT NULL,
     quantity int(11) NOT NULL,
-    price int(11) NOT NULL,
+    price decimal(10, 0) NOT NULL,
     CONSTRAINT PK_products_assigned_to_purchases PRIMARY KEY (purchases_id, products_id),
     FOREIGN KEY (purchases_id) REFERENCES purchases (purchases_id),
     FOREIGN KEY (products_id) REFERENCES products (products_id)
@@ -181,7 +182,8 @@ CREATE TABLE IF NOT EXISTS sales (
     `start` date NOT NULL,
     `end` date NOT NULL,
     `media` varchar(100),
-    `description` text
+    `description` text,
+    `soft_delete` int(11) DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=6;
 
 INSERT INTO sales (sale_id, title, `start`, `end`) VALUES
@@ -319,5 +321,6 @@ WHERE `id` = 1;
 
 CREATE VIEW getSalesQuery AS
 SELECT * 
-FROM `sales`
+FROM `sales` 
+WHERE `soft_delete` = 0 
 ORDER BY end DESC

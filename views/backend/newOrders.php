@@ -155,30 +155,32 @@
                                 <p><?php echo $indData['state'] ?></p>
                                 <p><?php echo $indData['postcode'] ?></p>
                                 <p><?php echo $indData['note'] ?></p>
-                                <form action="/addPayedToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
-                                    <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
-                                    <input type="submit" value="Toggle Payed">
-                                </form>
-                                <form action="/addSendToOrder" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
-                                    <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
-                                    <input type="submit" value="Toggle send">
-                                </form>
+                                <div class="alignment">
+                                    <form action="/addPayedToOrder" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
+                                        <input type="hidden" name="payed" value="<?php echo $indData['payed'] ?>">
+                                        <input class="button order-submit" type="submit" value="Toggle Payed">
+                                    </form>
+                                    <form action="/addSendToOrder" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $indData['purchases_id'] ?>">
+                                        <input type="hidden" name="send" value="<?php echo $indData['send'] ?>">
+                                        <input class="button order-submit" type="submit" value="Toggle send">
+                                    </form>
+                                </div>
                                 <p>
                                     <br>
                                     Order:
                                 </p>
                                 <?php
                                     /* ✒️ running out of time to find a better solution */
-                                    $getProducts = $db->prepare("SELECT * FROM `products_assigned_to_purchases` WHERE `purchase_id` = :id ");
-                                    $getProducts->bindParam(":id", $indData['id']);
+                                    $getProducts = $db->prepare("SELECT * FROM `products_assigned_to_purchases` WHERE `purchases_id` = :id ");
+                                    $getProducts->bindParam(":id", $indData['purchases_id']);
                                     $getProducts->execute();
                                     $getProducts = $getProducts->fetchAll();
 
                                     foreach($getProducts as $product){
                                         $getProd = $db->prepare("SELECT * FROM `products` WHERE `products_id` = :id ");
-                                        $getProd->bindParam(":id", $product['product_id']);
+                                        $getProd->bindParam(":id", $product['products_id']);
                                         $getProd->execute();
                                         $getProd = $getProd->fetch();
 

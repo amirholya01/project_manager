@@ -9,27 +9,31 @@ class Products{
                                         WHERE p.products_id = :id
                                         AND (p.name LIKE :search
                                         OR p.description LIKE :search)
-                                        AND p.type = pt.id;";
+                                        AND p.type = pt.id
+                                        AND p.soft_delete = 0;";
 
     public $getProductsDynamicSearchWithoutIdQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                     FROM products p, product_types pt
                                                     WHERE p.type = pt.id
                                                     AND (p.name LIKE :search
                                                     OR p.description LIKE :search)
-                                                    AND pt.id = :type;";
+                                                    AND pt.id = :type
+                                                    AND p.soft_delete = 0;";
                    
     public $getProductsDynamicSearchWithoutTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                     FROM products p, product_types pt
                                                     WHERE p.products_id = :id
                                                     AND (p.name LIKE :search
                                                     OR p.description LIKE :search)
-                                                    AND p.type = pt.id;";
+                                                    AND p.type = pt.id
+                                                    AND p.soft_delete = 0;";
 
     public $getProductsDynamicSearchWithoutIdAndTypeQuery = "SELECT p.products_id, p.name, p.description, p.price, pt.type, p.primary_image
                                                         FROM products p, product_types pt
                                                         WHERE p.type = pt.id
                                                         AND (p.name LIKE :search
-                                                        OR p.description LIKE :search);";
+                                                        OR p.description LIKE :search)
+                                                        AND p.soft_delete = 0;";
     
     public $getMediaDynamicSearchQuery = "SELECT * FROM media WHERE name LIKE :name;";
 
@@ -38,8 +42,8 @@ class Products{
 
     public $updateMediaQuery = "UPDATE media SET name = :name WHERE media_id = :media_id;";
 
-    /* ✒️ This should disable the product instead of deleting it for the purchase history to still be able to refrence it */
-    public $deleteProductByIdQuery = "DELETE FROM products WHERE `products_id` = :id;";
+    /* Disable the product instead of deleting it for the purchase history to still be able to refrence it */
+    public $deleteProductByIdQuery = "UPDATE products SET soft_delete = 1 WHERE `products_id` = :id;"; //DELETE FROM products WHERE `products_id` = :id;
 
     public $deleteMediaByIdQuery = "DELETE FROM media WHERE `media_id` = :id;";
 
@@ -65,10 +69,10 @@ class Products{
 
     //Sale Queries
     public $createSaleQuery = "INSERT INTO sales (title, description, media, start, end) VALUES (:title, :description, :image, :start, :end);";
-    public $getSalesQuery = "SELECT * FROM getSalesQuery"; // SELECT * FROM sales ORDER BY end DESC
+    public $getSalesQuery = "SELECT * FROM getSalesQuery"; // SELECT * FROM sales WHERE soft_delete = 0 ORDER BY end DESC
     public $editSaleQuery = "UPDATE sales SET title = :title, description = :description, media = :image, start = :start, end = :end WHERE sale_id = :id;";
     public $assignProductToSaleQuery = "INSERT INTO assign_products_to_sales (sale_id, products_id, sale, saleType) VALUES (:sale_id, :product_id, :sale, :saleType)";
-    public $deleteSaleById = "DELETE FROM sales WHERE sale_id = :id";
+    public $deleteSaleById = "UPDATE sales SET soft_delete = 1 WHERE sale_id = :id"; //DELETE FROM sales WHERE sale_id = :id
     public $deleteAssignedProductsToSaleQuery = "DELETE FROM assign_products_to_sales WHERE sale_id = :id";
     public $getSaleByIdQuery = "SELECT * FROM `sales` WHERE `sale_id` = :id";
     public $getProductSalesBySaleIdQuery = "SELECT * FROM `assign_products_to_sales` WHERE `sale_id` = :id";
